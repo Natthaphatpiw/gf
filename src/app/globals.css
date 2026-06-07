@@ -1,0 +1,157 @@
+@import "tailwindcss";
+
+@theme {
+  /* ----- Goodfill Care palette (cream / deep teal / soft gold) ----- */
+  --color-cream-50: #fbf8f2;
+  --color-cream-100: #f6f1e7;
+  --color-cream-200: #efe6d4;
+  --color-cream-300: #e4d6bc;
+
+  --color-teal-50: #eef5f1;
+  --color-teal-100: #deebe6;
+  --color-teal-200: #c2dcd2;
+  --color-teal-300: #95bfb1;
+  --color-teal-500: #2e8377;
+  --color-teal-600: #1a6b60;
+  --color-teal-700: #14524a;
+  --color-teal-800: #103d37;
+  --color-teal-900: #0b312c;
+
+  --color-sage-100: #e3ede6;
+  --color-sage-200: #cbdcd2;
+  --color-sage-300: #aec9bc;
+
+  --color-gold-100: #f0e7d3;
+  --color-gold-200: #e3d3ae;
+  --color-gold-400: #c8a86e;
+  --color-gold-500: #b99355;
+  --color-gold-600: #9a7740;
+
+  --color-ink: #1d2a27;
+  --color-ink-soft: #44544f;
+  --color-ink-faint: #74827d;
+
+  /* ----- Typography ----- */
+  --font-serif: var(--font-cormorant), var(--font-sarabun), "Cormorant Garamond", Georgia, serif;
+  --font-sans: var(--font-sarabun), var(--font-inter), Inter, system-ui, sans-serif;
+
+  /* ----- Shadows ----- */
+  --shadow-soft: 0 2px 16px rgba(16, 61, 55, 0.07);
+  --shadow-lift: 0 8px 32px rgba(16, 61, 55, 0.12);
+  --shadow-deep: 0 16px 48px rgba(11, 49, 44, 0.18);
+
+  /* ----- Motion ----- */
+  --ease-gentle: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-cream-100);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, .font-display {
+  font-family: var(--font-serif);
+  letter-spacing: 0;
+}
+
+p, li, button, input, textarea, select {
+  letter-spacing: 0;
+}
+
+/* Eyebrow label used across the site */
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-gold-600);
+}
+
+:lang(th) .eyebrow {
+  letter-spacing: 0.16em;
+}
+
+@media (max-width: 640px) {
+  body {
+    font-size: 15.5px;
+  }
+}
+
+/* Hairline divider with center diamond, used under section titles */
+.ornament {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  justify-content: center;
+}
+.ornament::before,
+.ornament::after {
+  content: "";
+  height: 1px;
+  width: 2.5rem;
+  background: var(--color-gold-400);
+  opacity: 0.6;
+}
+
+/* Mobile safe areas (app-like) */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* Hide scrollbar but keep scrolling (horizontal carousels) */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Gentle entrance animation */
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-rise {
+  animation: rise-in 0.7s var(--ease-gentle) both;
+}
+.animate-rise-1 { animation: rise-in 0.7s var(--ease-gentle) 0.08s both; }
+.animate-rise-2 { animation: rise-in 0.7s var(--ease-gentle) 0.16s both; }
+.animate-rise-3 { animation: rise-in 0.7s var(--ease-gentle) 0.24s both; }
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.animate-fade {
+  animation: fade-in 0.5s ease both;
+}
+
+/* Soft breathing pulse for decorative elements */
+@keyframes breathe {
+  0%, 100% { transform: scale(1); opacity: 0.85; }
+  50% { transform: scale(1.04); opacity: 1; }
+}
+.animate-breathe {
+  animation: breathe 5s ease-in-out infinite;
+}

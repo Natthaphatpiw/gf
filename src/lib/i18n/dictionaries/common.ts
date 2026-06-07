@@ -1,0 +1,152 @@
+import type { Locale } from "@/lib/types";
+
+/* ============================================================
+ * Shared strings — navigation, buttons, statuses, brand.
+ * ============================================================ */
+
+const common = {
+  th: {
+    brand: "Goodfill Care",
+    brandSub: "สมุย เวลเนส",
+    nav: {
+      home: "หน้าแรก",
+      assessment: "ประเมินตัวเอง",
+      packages: "แพ็กเกจ",
+      favorites: "รายการที่ถูกใจ",
+      bookings: "การจองของฉัน",
+    },
+    actions: {
+      start: "เริ่มเลย",
+      next: "ถัดไป",
+      back: "ย้อนกลับ",
+      skip: "ข้ามข้อนี้",
+      submit: "ส่งคำตอบ",
+      confirm: "ยืนยัน",
+      cancel: "ยกเลิก",
+      close: "ปิด",
+      seeDetail: "ดูรายละเอียด",
+      bookNow: "จองแพ็กเกจนี้",
+      favorite: "บันทึกเป็นรายการที่ถูกใจ",
+      unfavorite: "นำออกจากรายการที่ถูกใจ",
+      save: "บันทึก",
+      loading: "กำลังประมวลผล...",
+      tryAgain: "ลองอีกครั้ง",
+      copy: "คัดลอก",
+      copied: "คัดลอกแล้ว",
+    },
+    status: {
+      booked: "จองเสร็จสิ้น",
+      expert_review: "ปรึกษาผู้เชี่ยวชาญ",
+      processing: "กำลังดำเนินการ",
+      contacted: "ติดต่อกลับ",
+      completed: "เสร็จสิ้น",
+    },
+    tier: {
+      basic: "เบสิก",
+      premium: "พรีเมียม",
+      deluxe: "ดีลักซ์",
+    },
+    units: {
+      baht: "บาท",
+      perPerson: "ต่อท่าน",
+      day: "วัน",
+      days: "วัน",
+      night: "คืน",
+      nights: "คืน",
+      people: "คน",
+    },
+    match: "ตรงกับคุณ",
+    pdpa: {
+      title: "ความเป็นส่วนตัวของคุณ",
+      shortNotice:
+        "ข้อมูลของคุณจะถูกเก็บอย่างปลอดภัยตาม พ.ร.บ. คุ้มครองข้อมูลส่วนบุคคล (PDPA) ใช้เพื่อออกแบบประสบการณ์เวลเนสของคุณเท่านั้น และคุณขอให้ลบได้ทุกเมื่อ",
+      learnMore: "อ่านนโยบายฉบับเต็ม",
+      agree: "ฉันยินยอมให้เก็บและใช้ข้อมูลตามนโยบายความเป็นส่วนตัว",
+      required: "กรุณายอมรับนโยบายความเป็นส่วนตัวก่อนดำเนินการต่อ",
+    },
+    errors: {
+      generic: "ขออภัย เกิดข้อผิดพลาดบางอย่าง กรุณาลองใหม่อีกครั้ง",
+      notFound: "ไม่พบข้อมูลที่ต้องการ",
+    },
+    footer: {
+      tagline: "แพลตฟอร์มเวลเนสครบวงจรแห่งเกาะสมุย",
+      pillars: "พันธมิตรของเรา",
+      privacy: "นโยบายความเป็นส่วนตัว",
+      contact: "ติดต่อเรา",
+      rights: "สงวนลิขสิทธิ์",
+    },
+  },
+  en: {
+    brand: "Goodfill Care",
+    brandSub: "Samui Wellness",
+    nav: {
+      home: "Home",
+      assessment: "Assessment",
+      packages: "Packages",
+      favorites: "Favourites",
+      bookings: "My Bookings",
+    },
+    actions: {
+      start: "Begin",
+      next: "Next",
+      back: "Back",
+      skip: "Skip",
+      submit: "Submit",
+      confirm: "Confirm",
+      cancel: "Cancel",
+      close: "Close",
+      seeDetail: "View details",
+      bookNow: "Book this package",
+      favorite: "Save to favourites",
+      unfavorite: "Remove from favourites",
+      save: "Save",
+      loading: "Processing...",
+      tryAgain: "Try again",
+      copy: "Copy",
+      copied: "Copied",
+    },
+    status: {
+      booked: "Booking received",
+      expert_review: "Expert consultation",
+      processing: "In progress",
+      contacted: "We reached out",
+      completed: "Completed",
+    },
+    tier: {
+      basic: "Basic",
+      premium: "Premium",
+      deluxe: "Deluxe",
+    },
+    units: {
+      baht: "THB",
+      perPerson: "per person",
+      day: "day",
+      days: "days",
+      night: "night",
+      nights: "nights",
+      people: "people",
+    },
+    match: "match",
+    pdpa: {
+      title: "Your privacy",
+      shortNotice:
+        "Your information is stored securely under Thailand's Personal Data Protection Act (PDPA), used only to craft your wellness experience, and can be deleted at your request at any time.",
+      learnMore: "Read the full policy",
+      agree: "I consent to the collection and use of my data under the privacy policy",
+      required: "Please accept the privacy policy before continuing",
+    },
+    errors: {
+      generic: "Sorry, something went wrong. Please try again.",
+      notFound: "We could not find what you were looking for.",
+    },
+    footer: {
+      tagline: "The complete wellness platform of Koh Samui",
+      pillars: "Our partners",
+      privacy: "Privacy policy",
+      contact: "Contact us",
+      rights: "All rights reserved",
+    },
+  },
+} satisfies Record<Locale, unknown>;
+
+export default common;
