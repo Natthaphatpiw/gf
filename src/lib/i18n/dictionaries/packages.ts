@@ -43,9 +43,9 @@ const packages = {
       loadingBody:
         "ผู้เชี่ยวชาญด้านเวลเนสของเรากำลังจับคู่เส้นทางที่เหมาะกับคุณที่สุด",
       resultsEyebrow: "คัดสรรเพื่อคุณ",
-      resultsTitle: "หกเส้นทางที่เหมาะกับคุณ",
+      resultsTitle: "สามเส้นทางที่เหมาะกับคุณ",
       resultsBody:
-        "สองตัวเลือกในแต่ละระดับ คัดจากผลประเมินและเป้าหมายของคุณ",
+        "หนึ่งตัวเลือกในแต่ละระดับ คัดจากผลประเมินและเป้าหมายของคุณ",
       again: "ประมวลผลใหม่",
       tierBasic: "ระดับเบสิก",
       tierPremium: "ระดับพรีเมียม",
@@ -65,7 +65,7 @@ const packages = {
 
     /* ---- Stage C: explore all ---- */
     explore: {
-      eyebrow: "ทั้งหมด 15 เส้นทาง",
+      eyebrow: "ทุกเส้นทาง",
       title: "สำรวจแพ็กเกจทั้งหมด",
       all: "ทั้งหมด",
       empty: "ไม่พบแพ็กเกจในระดับนี้",
@@ -85,7 +85,7 @@ const packages = {
       portion: "ปริมาณที่วางแผน",
       calories: "พลังงาน",
       protein: "โปรตีน",
-      sugar: "น้ำตาล",
+      carbs: "คาร์โบไฮเดรต",
       fiber: "ใยอาหาร",
       sodium: "โซเดียม",
       wellnessNote: "ผลต่อสุขภาวะ",
@@ -147,9 +147,9 @@ const packages = {
       loadingBody:
         "Our wellness curators are matching the journeys that suit you best.",
       resultsEyebrow: "Curated for you",
-      resultsTitle: "Six journeys made for you",
+      resultsTitle: "Three journeys made for you",
       resultsBody:
-        "Two choices at each level, drawn from your assessment and goals.",
+        "One pick at each level, drawn from your assessment and goals.",
       again: "Curate again",
       tierBasic: "Basic",
       tierPremium: "Premium",
@@ -167,7 +167,7 @@ const packages = {
     },
 
     explore: {
-      eyebrow: "All 15 journeys",
+      eyebrow: "All journeys",
       title: "Explore all journeys",
       all: "All",
       empty: "No journeys at this level.",
@@ -186,7 +186,7 @@ const packages = {
       portion: "Planned portion",
       calories: "Energy",
       protein: "Protein",
-      sugar: "Sugar",
+      carbs: "Carbs",
       fiber: "Fiber",
       sodium: "Sodium",
       wellnessNote: "Wellness effect",

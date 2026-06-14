@@ -24,6 +24,7 @@ import {
   formatPrice,
 } from "@/components/packages/PackageCard";
 import { ConsultToggle } from "@/components/packages/ConsultToggle";
+import { ConsultButton } from "@/components/consult/ConsultButton";
 import { ItineraryTimeline } from "@/components/packages/ItineraryTimeline";
 
 /* ============================================================
@@ -187,6 +188,17 @@ export default function PackageDetailPage({
         {/* ---- Expert consult toggle ---- */}
         <section className="animate-rise-3 mt-10">
           <ConsultToggle packageId={pkg.id} />
+          <div className="mt-4">
+            <ConsultButton
+              item={{
+                itemType: "package",
+                itemId: pkg.id,
+                itemName: pkg.name,
+                itemImage: pkg.image,
+              }}
+              className="w-full"
+            />
+          </div>
         </section>
       </div>
 
@@ -265,7 +277,7 @@ function MealCard({ item }: { item: PackageMeal }) {
   const metrics = [
     { label: t.calories, value: item.nutrition.calories },
     { label: t.protein, value: item.nutrition.protein },
-    { label: t.sugar, value: item.nutrition.sugar },
+    { label: t.carbs, value: item.nutrition.carbs },
     { label: t.fiber, value: item.nutrition.fiber },
     ...(item.nutrition.sodium
       ? [{ label: t.sodium, value: item.nutrition.sodium }]

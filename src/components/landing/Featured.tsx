@@ -12,9 +12,9 @@ import landing from "@/lib/i18n/dictionaries/landing";
  * ============================================================ */
 
 const FEATURED_IDS = [
-  "basic-island-reset",
-  "premium-burnout-reset",
-  "deluxe-kamalaya-healing",
+  "samui-reset",
+  "deep-sleep-sanctuary",
+  "samui-recharge",
 ];
 
 export function Featured() {

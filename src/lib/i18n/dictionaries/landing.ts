@@ -80,6 +80,47 @@ const landing = {
         },
       ],
     },
+    wellnessTypes: {
+      title: "ประเภทเวลเนส",
+      items: [
+        "Spa & Thai Healing",
+        "Sleep Recovery",
+        "Healthy Food",
+        "Fitness",
+        "Medical Checkup",
+        "Nature Retreat",
+      ],
+    },
+    topBrands: {
+      title: "Top Brands",
+      intro:
+        "partner ที่เราคัดเข้ามาเพื่อช่วยออกแบบเส้นทางเวลเนสบนเกาะสมุยให้เป็นรูปธรรมมากขึ้น",
+      open: "ดูรายละเอียด partner",
+      previous: "เลื่อนไปแบรนด์ก่อนหน้า",
+      next: "เลื่อนไปแบรนด์ถัดไป",
+    },
+    careBridge: {
+      title: "จาก partner สู่แผนดูแลที่มั่นใจขึ้น",
+      body: "เราไม่ได้แค่รวมสถานที่ดี ๆ บนเกาะ แต่ให้ผู้เชี่ยวชาญช่วยมองภาพรวม เพื่อให้ทุกบริการที่เลือกมาเข้ากับร่างกาย เป้าหมาย และจังหวะชีวิตของคุณจริง ๆ",
+      points: [
+        "partner คือประสบการณ์จริงบนเกาะ",
+        "ผู้เชี่ยวชาญคือชั้นความมั่นใจ",
+        "AI ช่วยจับคู่ให้เร็วขึ้น",
+      ],
+    },
+    expertShowcase: {
+      eyebrow: "ทีมผู้เชี่ยวชาญ",
+      title: "มีคนช่วยดูแผนอยู่เบื้องหลัง",
+      intro:
+        "ผู้เชี่ยวชาญของเราเข้ามาช่วยให้แพ็กเกจที่ออกแบบด้วย AI ไม่ใช่แค่สวยบนหน้าจอ แต่มีเหตุผลด้านสุขภาพ โภชนาการ การพักฟื้น และการดูแลใจรองรับ",
+      cta: "ดูผู้เชี่ยวชาญทั้งหมด",
+      previous: "เลื่อนไปผู้เชี่ยวชาญก่อนหน้า",
+      next: "เลื่อนไปผู้เชี่ยวชาญถัดไป",
+      verified: "ยืนยันโปรไฟล์แล้ว",
+      viewProfile: "ดูโปรไฟล์",
+      rating: "คะแนน",
+      years: "ปีประสบการณ์",
+    },
     featured: {
       eyebrow: "เส้นทางคัดสรร",
       title: "สามเส้นทางที่ผู้คนหลงรัก",
@@ -183,6 +224,47 @@ const landing = {
           body: "A personal host who orchestrates every detail throughout your journey.",
         },
       ],
+    },
+    wellnessTypes: {
+      title: "Wellness Types",
+      items: [
+        "Spa & Thai Healing",
+        "Sleep Recovery",
+        "Healthy Food",
+        "Fitness",
+        "Medical Checkup",
+        "Nature Retreat",
+      ],
+    },
+    topBrands: {
+      title: "Top Brands",
+      intro:
+        "Partners we are bringing into Goodfill Care so each Koh Samui wellness journey can become more concrete and locally grounded.",
+      open: "View partner details",
+      previous: "Scroll to previous brands",
+      next: "Scroll to next brands",
+    },
+    careBridge: {
+      title: "From trusted partners to a more confident care plan",
+      body: "We do more than gather beautiful places on the island. Expert review helps each selected service fit your body, goals and real-life rhythm.",
+      points: [
+        "Partners create the island experience",
+        "Experts add a layer of confidence",
+        "AI makes matching faster",
+      ],
+    },
+    expertShowcase: {
+      eyebrow: "EXPERT TEAM",
+      title: "Real expertise behind the plan",
+      intro:
+        "Our experts help ensure AI-designed packages are not only beautiful on screen, but supported by practical thinking across health, nutrition, recovery and mind care.",
+      cta: "View all experts",
+      previous: "Scroll to previous experts",
+      next: "Scroll to next experts",
+      verified: "Verified profile",
+      viewProfile: "View profile",
+      rating: "rating",
+      years: "years of experience",
     },
     featured: {
       eyebrow: "CURATED JOURNEYS",

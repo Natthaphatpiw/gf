@@ -81,7 +81,7 @@ export function PackageItinerary({ pkg }: { pkg: WellnessPackage | null }) {
                   <span className="absolute -left-[1.32rem] top-1.5 h-2 w-2 rounded-full border-2 border-white bg-teal-300" />
                   <div className="flex items-center gap-2 text-[0.68rem] font-semibold tracking-wide text-teal-700">
                     <Clock className="h-3 w-3" />
-                    {item.time}
+                    {typeof item.time === "string" ? item.time : l(item.time)}
                   </div>
                   <p className="mt-0.5 text-sm leading-relaxed text-ink">
                     {l(item.activity)}

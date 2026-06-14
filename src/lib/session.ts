@@ -13,11 +13,11 @@ import type { GoalId, WellnessProfile } from "@/lib/types";
 const KEYS = {
   profile: "gc-profile",
   goals: "gc-goals",
-  favorites: "gc-favorites",
   consults: "gc-consults",
   bookings: "gc-booking-refs",
   familyIds: "gc-family-ids",
   customer: "gc-customer",
+  checkins: "gc-checkin-refs",
 };
 
 function read<T>(key: string): T | null {
@@ -58,25 +58,6 @@ export function getStoredGoals(): GoalId[] {
 
 export function storeGoals(goals: GoalId[]): void {
   write(KEYS.goals, goals);
-}
-
-/* ---------------- Favourites (heart) ---------------- */
-
-export function getFavorites(): string[] {
-  return read<string[]>(KEYS.favorites) ?? [];
-}
-
-export function toggleFavorite(packageId: string): string[] {
-  const current = getFavorites();
-  const next = current.includes(packageId)
-    ? current.filter((id) => id !== packageId)
-    : [...current, packageId];
-  write(KEYS.favorites, next);
-  return next;
-}
-
-export function isFavorite(packageId: string): boolean {
-  return getFavorites().includes(packageId);
 }
 
 /* ---------------- Consult-before-booking flags ---------------- */
@@ -123,6 +104,24 @@ export function getBookingRefs(): BookingRef[] {
 
 export function addBookingRef(ref: BookingRef): void {
   write(KEYS.bookings, [ref, ...getBookingRefs()]);
+}
+
+/* ---------------- Check-in references (T1/T2) ---------------- */
+
+export interface CheckinRef {
+  checkinId: string;
+  bookingId: string;
+  timepoint: "T1" | "T2";
+  createdAt: string;
+}
+
+export function getCheckinRefs(): CheckinRef[] {
+  return read<CheckinRef[]>(KEYS.checkins) ?? [];
+}
+
+export function addCheckinRef(ref: CheckinRef): void {
+  const rest = getCheckinRefs().filter((r) => r.checkinId !== ref.checkinId);
+  write(KEYS.checkins, [ref, ...rest]);
 }
 
 /* ---------------- Remembered customer info ---------------- */

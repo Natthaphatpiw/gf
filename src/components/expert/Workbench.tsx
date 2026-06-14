@@ -27,6 +27,7 @@ import common from "@/lib/i18n/dictionaries/common";
 import { Button } from "@/components/ui/Button";
 import { StatusPill } from "@/components/expert/StatusPill";
 import { RawDataBlock } from "@/components/expert/RawDataBlock";
+import { CheckinBriefPanel } from "@/components/checkin/CheckinBriefPanel";
 import { ProfileSummary } from "@/components/expert/ProfileSummary";
 import { PackageItinerary } from "@/components/expert/PackageItinerary";
 import { formatDateTime } from "@/components/expert/format";
@@ -342,6 +343,9 @@ export function Workbench({ bookingId }: { bookingId: string }) {
             ))}
           </div>
         </Section>
+
+        {/* 2b. T1/T2 CHECK-INS */}
+        <CheckinBriefPanel bookingId={bookingId} />
 
         {/* 3. PACKAGE */}
         <Section icon={<Layers className="h-4 w-4" />} title={t.sections.package}>

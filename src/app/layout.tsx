@@ -6,9 +6,12 @@ import {
 } from "next/font/google";
 import "./globals.css";
 import { LocaleProvider } from "@/lib/i18n";
+import { AccountProvider } from "@/lib/account";
 import { Header } from "@/components/layout/Header";
 import { MobileTabBar } from "@/components/layout/MobileTabBar";
 import { Footer } from "@/components/layout/Footer";
+import { AuthModal } from "@/components/account/AuthModal";
+import { CartDrawer } from "@/components/account/CartDrawer";
 
 /* ----- Typography: serif display for Latin + Sarabun for Thai readability. */
 
@@ -49,15 +52,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="th">
+    <html lang="th" data-scroll-behavior="smooth">
       <body
         className={`${cormorant.variable} ${inter.variable} ${sarabun.variable} antialiased`}
       >
         <LocaleProvider>
-          <Header />
-          <main className="min-h-[70vh] pb-24 md:pb-0">{children}</main>
-          <Footer />
-          <MobileTabBar />
+          <AccountProvider>
+            <Header />
+            <main className="min-h-[70vh] pb-24 md:pb-0">{children}</main>
+            <Footer />
+            <MobileTabBar />
+            <AuthModal />
+            <CartDrawer />
+          </AccountProvider>
         </LocaleProvider>
       </body>
     </html>

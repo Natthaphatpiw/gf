@@ -1,38 +1,24 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { Heart } from "lucide-react";
 import { useT } from "@/lib/i18n";
 import packagesDict from "@/lib/i18n/dictionaries/packages";
 import { getPackage } from "@/data/packages";
-import { getFavorites } from "@/lib/session";
+import { useAccount } from "@/lib/account";
 import { ButtonLink } from "@/components/ui/Button";
 import { PackageCard } from "@/components/packages/PackageCard";
 
 /* ============================================================
- * /favorites — the guest's saved packages. Live-updates on the
- * gc-session-change event fired by the session helpers.
+ * /favorites — the guest's saved programs (account favourites).
  * ============================================================ */
 
 export default function FavoritesPage() {
   const t = useT(packagesDict).favorites;
-  const [ids, setIds] = useState<string[]>([]);
-  const [ready, setReady] = useState(false);
+  const { favorites, ready } = useAccount();
 
-  useEffect(() => {
-    const sync = () => setIds(getFavorites());
-    sync();
-    setReady(true);
-    window.addEventListener("gc-session-change", sync);
-    window.addEventListener("storage", sync);
-    return () => {
-      window.removeEventListener("gc-session-change", sync);
-      window.removeEventListener("storage", sync);
-    };
-  }, []);
-
-  const packages = ids
-    .map((id) => getPackage(id))
+  const packages = favorites
+    .filter((f) => f.itemType === "program")
+    .map((f) => getPackage(f.itemId))
     .filter((p): p is NonNullable<typeof p> => Boolean(p));
 
   return (

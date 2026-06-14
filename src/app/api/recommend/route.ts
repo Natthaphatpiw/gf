@@ -21,7 +21,7 @@ import {
  *
  * Body: { assessmentId, goals, familyAssessmentIds?, locale }
  * Returns: { recommendations: PackageRecommendation[] } — always
- *          exactly 6 items (2 basic + 2 premium + 2 deluxe).
+ *          exactly 3 items (1 basic + 1 premium + 1 deluxe).
  *
  * Gracefully degrades to a deterministic, rule-based ranking when
  * no Gemini key is configured or the model call fails. Never 500s

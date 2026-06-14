@@ -30,20 +30,37 @@ export async function generateJson<T>(options: {
   system: string;
   user: string;
   temperature?: number;
+  timeoutMs?: number;
 }): Promise<T> {
   const ai = getGemini();
-  const response = await ai.models.generateContent({
-    model: GEMINI_MODEL,
-    contents: options.user,
-    config: {
-      systemInstruction: options.system,
-      temperature: options.temperature ?? 0.4,
-      responseMimeType: "application/json",
-    },
-  });
+  const response = await withTimeout(
+    ai.models.generateContent({
+      model: GEMINI_MODEL,
+      contents: options.user,
+      config: {
+        systemInstruction: options.system,
+        temperature: options.temperature ?? 0.4,
+        responseMimeType: "application/json",
+      },
+    }),
+    options.timeoutMs ?? 12000,
+  );
 
   const text = response.text ?? "";
   return parseJsonLoose<T>(text);
+}
+
+function withTimeout<T>(promise: Promise<T>, timeoutMs: number): Promise<T> {
+  let timer: ReturnType<typeof setTimeout> | undefined;
+  const timeout = new Promise<never>((_, reject) => {
+    timer = setTimeout(
+      () => reject(new Error(`Gemini request timed out after ${timeoutMs}ms`)),
+      timeoutMs,
+    );
+  });
+  return Promise.race([promise, timeout]).finally(() => {
+    if (timer) clearTimeout(timer);
+  });
 }
 
 /** Tolerant JSON parsing — strips code fences and leading prose if present. */

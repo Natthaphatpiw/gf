@@ -7,29 +7,29 @@ import type { Locale } from "@/lib/types";
 
 const assessment = {
   th: {
-    eyebrow: "การเดินทางบนเกาะ",
+    eyebrow: "เข็มทิศกายใจก่อนจอง",
     intro: {
-      title: "การเดินทางหนึ่งวันบนเกาะ",
-      lead: "ใช้เวลาประมาณสองนาที ผ่อนคลาย แล้วลองเดินทางผ่านหนึ่งวันในจินตนาการบนเกาะสมุย คำถาม 10 ข้อนี้ถูกคัดให้จับสัญญาณสำคัญของจังหวะชีวิต พลังงาน และสมดุลกายใจของคุณให้ชัดที่สุด",
+      title: "รู้จักจังหวะกายใจของคุณ",
+      lead: "ใช้เวลาประมาณสองนาที ตอบคำถาม 8 ข้อเพื่อบันทึกจุดตั้งต้นของกายใจ คำตอบชุดนี้จะใช้สร้างอาร์คีไทป์ เลือกเป้าหมาย และจับคู่แพ็กเกจที่เหมาะกับคุณตั้งแต่ก่อนจอง",
       whatYouGet: "สิ่งที่คุณจะได้รับเมื่อจบการเดินทาง",
       benefits: [
-        "ระดับความเครียดที่อ่านจากจังหวะชีวิตของคุณ",
-        "แนวโน้มอาการไมเกรนและความตึงของร่างกาย",
-        "สมดุลของจิตใจและพลังภายใน",
+        "คะแนนเข็มทิศ 5 ด้านที่คำนวณจากตัวเลือกแบบมีค่าคงที่",
+        "อาร์คีไทป์เวลเนสและรหัสประจำตัวของคุณ",
+        "เป้าหมายที่ระบบเลือกให้เพื่อใช้จับคู่แพ็กเกจทันที",
         "ข้อสังเกตที่อ่านง่ายเกี่ยวกับนิสัยและตัวตนของคุณ",
-        "อาร์คีไทป์เวลเนสประจำตัวจากทั้งหมด 16 แบบ",
+        "จุดตั้งต้นสำหรับเทียบผลอีกครั้งหลังจบโปรแกรม",
       ],
       reassure: "ไม่มีคำตอบถูกหรือผิด มีเพียงคำตอบที่เป็นคุณ",
-      start: "เริ่มการเดินทาง",
+      start: "เริ่มประเมิน",
       minutes: "ประมาณ 2 นาที",
-      questions: "10 ฉาก",
+      questions: "8 คำถาม",
       genderTitle: "เลือกคาแรกเตอร์สำหรับผลลัพธ์ของคุณ",
       genderHint: "ใช้เพื่อเลือกภาพคาแรกเตอร์ประจำอาร์คีไทป์เท่านั้น ไม่กระทบการประเมิน",
       genderFemale: "ผู้หญิง",
       genderMale: "ผู้ชาย",
     },
     progress: {
-      sceneOf: "ฉากที่ {current} จาก {total}",
+      sceneOf: "ข้อ {current} จาก {total}",
     },
     slider: {
       current: "ระดับของคุณตอนนี้",
@@ -45,10 +45,10 @@ const assessment = {
     loading: {
       title: "กำลังร้อยเรียงการเดินทางของคุณ",
       lines: [
-        "กำลังอ่านจังหวะของคุณ...",
-        "กำลังฟังเสียงทะเลในใจคุณ...",
+        "กำลังคำนวณเข็มทิศกายใจของคุณ...",
+        "กำลังอ่านจุดตั้งต้นก่อนจอง...",
         "กำลังเทียบกับอาร์คีไทป์ทั้ง 16 แบบ...",
-        "กำลังคัดสรรการพักผ่อนที่เหมาะกับคุณ...",
+        "กำลังคัดสรรเป้าหมายที่เหมาะกับแพ็กเกจของคุณ...",
       ],
     },
     error: {
@@ -93,8 +93,8 @@ const assessment = {
       cta: "ประมวลผลแพ็กเกจของฉัน",
       empty: {
         title: "ยังไม่มีผลการประเมิน",
-        lead: "เริ่มการเดินทางบนเกาะเพื่อค้นพบอาร์คีไทป์เวลเนสของคุณ",
-        cta: "เริ่มการเดินทาง",
+        lead: "เริ่มตอบเข็มทิศกายใจก่อนจองเพื่อค้นพบอาร์คีไทป์เวลเนสของคุณ",
+        cta: "เริ่มประเมิน",
       },
       band: {
         low: "ต่ำ",
@@ -104,29 +104,29 @@ const assessment = {
     },
   },
   en: {
-    eyebrow: "The Island Journey",
+    eyebrow: "Pre-booking body-mind compass",
     intro: {
-      title: "Craft your own island day",
-      lead: "Take about two minutes, settle in, and play through one imagined day on Koh Samui. These 10 scenes are selected to capture the clearest signals of your rhythm, energy and inner balance.",
+      title: "Meet your body-mind rhythm",
+      lead: "Take about two minutes to answer eight anchored questions. This single profile creates your archetype, goals and package match before booking, then becomes your baseline for a post-program check-in.",
       whatYouGet: "What you will receive at journey's end",
       benefits: [
-        "A reading of your stress, drawn from your own words",
-        "Your migraine tendency and bodily tension",
-        "The balance of your mind and inner energy",
+        "Five body-mind compass scores computed from anchored choices",
+        "Your wellness archetype and personal unlock code",
+        "Goals selected for package matching right away",
         "The habits and character that make you, you",
-        "Your personal wellness archetype — one of sixteen",
+        "A baseline we can compare with your post-program check-in",
       ],
       reassure: "There are no right or wrong answers — only the ones that are truly you.",
-      start: "Begin the journey",
+      start: "Start assessment",
       minutes: "About 2 minutes",
-      questions: "10 scenes",
+      questions: "8 questions",
       genderTitle: "Choose your result character",
       genderHint: "This only selects your archetype artwork and does not affect the assessment.",
       genderFemale: "Female",
       genderMale: "Male",
     },
     progress: {
-      sceneOf: "Scene {current} of {total}",
+      sceneOf: "Question {current} of {total}",
     },
     slider: {
       current: "Where you are right now",
@@ -142,10 +142,10 @@ const assessment = {
     loading: {
       title: "Composing your journey",
       lines: [
-        "Reading your rhythm...",
-        "Listening to the sea inside you...",
+        "Calculating your body-mind compass...",
+        "Reading your pre-booking baseline...",
         "Matching you to the sixteen archetypes...",
-        "Curating the rest that suits you...",
+        "Selecting goals that fit your package match...",
       ],
     },
     error: {
@@ -190,8 +190,8 @@ const assessment = {
       cta: "Craft my packages",
       empty: {
         title: "No assessment yet",
-        lead: "Begin the island journey to discover your wellness archetype.",
-        cta: "Begin the journey",
+        lead: "Start the pre-booking compass to discover your wellness archetype.",
+        cta: "Start assessment",
       },
       band: {
         low: "Low",

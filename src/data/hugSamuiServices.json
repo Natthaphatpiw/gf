@@ -1,0 +1,792 @@
+{
+  "partnerId": "hug-samui",
+  "contentVersion": "2026-06-poc",
+  "status": "draft",
+  "sourceNote": {
+    "th": "ข้อมูล POC จากภาพโปรโมชันและคำอธิบายเบื้องต้นของ Hug Samui",
+    "en": "POC data based on Hug Samui promotional images and early service notes."
+  },
+  "positioning": {
+    "name": {
+      "th": "Beach wellness lifestyle experience",
+      "en": "Beach wellness lifestyle experience"
+    },
+    "summary": {
+      "th": "Hug Samui ไม่ได้เป็นเพียงร้านอาหารริมทะเล แต่กำลังวางตัวเป็น destination ที่รวมอาหาร บรรยากาศชายหาด กิจกรรม wellness วัฒนธรรมท้องถิ่น และโปรโมชัน dining/spa ให้แขกใช้เวลากับแบรนด์ได้ตั้งแต่เช้าจนค่ำ",
+      "en": "Hug Samui is more than a beachside restaurant. It is shaped as a destination that combines dining, beach atmosphere, wellness activity, local culture and dining/spa promotions so guests can spend meaningful time with the brand from morning to evening."
+    },
+    "businessModel": {
+      "th": "กิจกรรมฟรีหรือกิจกรรมเบา ๆ ทำหน้าที่ดึง traffic และสร้างความผูกพัน จากนั้นต่อยอดรายได้ผ่านอาหาร เครื่องดื่ม สปา และแพ็กเกจจองล่วงหน้า",
+      "en": "Free and light-touch experiences drive traffic and attachment, then monetise through food, drinks, spa usage and reservation-led packages."
+    }
+  },
+  "futureRoutes": {
+    "partnerDetail": "/partners/hug-samui",
+    "services": "/partners/hug-samui/service",
+    "wellnessFood": "/partners/hug-samui/wellness-food"
+  },
+  "serviceGroups": [
+    {
+      "id": "wellness-activity",
+      "partnerId": "hug-samui",
+      "sortOrder": 1,
+      "name": {
+        "th": "Wellness Activity",
+        "en": "Wellness Activity"
+      },
+      "description": {
+        "th": "กิจกรรมสุขภาพเบา ๆ ริมทะเลที่ช่วยให้แขกเริ่มต้นหรือปิดท้ายวันด้วยการเคลื่อนไหวและการผ่อนคลาย",
+        "en": "Light beachside wellbeing activities that help guests begin or close the day with movement and relaxation."
+      }
+    },
+    {
+      "id": "local-culture-experience",
+      "partnerId": "hug-samui",
+      "sortOrder": 2,
+      "name": {
+        "th": "Local Culture / Experience",
+        "en": "Local Culture / Experience"
+      },
+      "description": {
+        "th": "ประสบการณ์วัฒนธรรมและ community ที่ช่วยให้พื้นที่ของร้านมีชีวิตมากกว่าการเป็นร้านอาหารทั่วไป",
+        "en": "Culture and community experiences that make the venue feel more alive than a typical restaurant."
+      }
+    },
+    {
+      "id": "dining-promotion-package",
+      "partnerId": "hug-samui",
+      "sortOrder": 3,
+      "name": {
+        "th": "Dining & Promotion Package",
+        "en": "Dining & Promotion Package"
+      },
+      "description": {
+        "th": "ข้อเสนอด้านอาหาร สปา และดินเนอร์ที่กระตุ้นให้แขกใช้เวลาและใช้บริการแบบ bundled experience",
+        "en": "Dining, spa and dinner offers that encourage guests to stay longer and use the venue as a bundled experience."
+      }
+    }
+  ],
+  "services": [
+    {
+      "id": "hug-aqua-aerobic",
+      "partnerId": "hug-samui",
+      "serviceGroupId": "wellness-activity",
+      "slug": "aqua-aerobic",
+      "sortOrder": 1,
+      "status": "draft",
+      "name": {
+        "th": "Aqua Aerobic",
+        "en": "Aqua Aerobic"
+      },
+      "shortName": {
+        "th": "Aqua Aerobic",
+        "en": "Aqua Aerobic"
+      },
+      "summary": {
+        "th": "กิจกรรมออกกำลังกายในน้ำช่วงเย็น แรงกระแทกต่ำ สนุก และเข้าถึงง่ายก่อนต่อด้วยอาหารหรือเครื่องดื่ม",
+        "en": "A low-impact, easygoing evening water workout before guests continue into food or drinks."
+      },
+      "description": {
+        "th": "กิจกรรมกลุ่มริมทะเลที่เหมาะกับนักท่องเที่ยว ครอบครัว และคนที่อยากขยับร่างกายแบบไม่หนักเกินไป บรรยากาศช่วงเย็นช่วยให้รู้สึกสดชื่นและเป็นจุดเริ่มต้นที่ดีของมื้อค่ำ",
+        "en": "A group beachside activity for travellers, families and guests who want gentle movement without a heavy workout. The evening atmosphere makes it a fresh entry point before dinner."
+      },
+      "schedule": {
+        "timeLabel": {
+          "th": "6 PM",
+          "en": "6 PM"
+        },
+        "startTime": "18:00",
+        "endTime": null,
+        "durationMinutes": null,
+        "period": "evening",
+        "dateRange": null
+      },
+      "price": {
+        "type": "free",
+        "currency": "THB",
+        "amount": 0,
+        "minimumSpend": null,
+        "label": {
+          "th": "Free to join",
+          "en": "Free to join"
+        }
+      },
+      "location": {
+        "name": {
+          "th": "Hug Samui beach area",
+          "en": "Hug Samui beach area"
+        },
+        "area": {
+          "th": "Bangpor Beach, Koh Samui",
+          "en": "Bangpor Beach, Koh Samui"
+        }
+      },
+      "audience": [
+        {
+          "th": "นักท่องเที่ยวสาย wellness",
+          "en": "wellness travellers"
+        },
+        {
+          "th": "ครอบครัว",
+          "en": "families"
+        },
+        {
+          "th": "ผู้ที่อยากมีกิจกรรมก่อนมื้อเย็น",
+          "en": "guests looking for a pre-dinner activity"
+        }
+      ],
+      "businessRole": {
+        "th": "ช่วยดึงคนเข้าร้านช่วงเย็น ทำให้แขกอยู่ต่อ และเพิ่มโอกาสสั่งอาหารหรือเครื่องดื่มหลังจบกิจกรรม",
+        "en": "Draws guests into the venue in the evening, keeps them on site and increases the chance of food or drink orders afterwards."
+      },
+      "booking": {
+        "required": false,
+        "intent": "join_at_venue",
+        "label": {
+          "th": "เข้าร่วมได้ที่หน้างาน",
+          "en": "Join at the venue"
+        }
+      },
+      "media": [
+        {
+          "id": "hug-aqua-aerobic-cover",
+          "partnerId": "hug-samui",
+          "serviceId": "hug-aqua-aerobic",
+          "assetType": "image",
+          "publicPath": "/partners/hug-samui/services/aqua-aerobic.jpg",
+          "sourceFileName": "ser1.jpg",
+          "sortOrder": 1,
+          "alt": {
+            "th": "โปสเตอร์ Aqua Aerobic ของ Hug Samui",
+            "en": "Hug Samui Aqua Aerobic poster"
+          }
+        }
+      ],
+      "tags": ["wellness", "movement", "evening", "free"]
+    },
+    {
+      "id": "hug-muay-thai-performance",
+      "partnerId": "hug-samui",
+      "serviceGroupId": "local-culture-experience",
+      "slug": "muay-thai-performance",
+      "sortOrder": 2,
+      "status": "draft",
+      "name": {
+        "th": "Muay Thai Performance",
+        "en": "Muay Thai Performance"
+      },
+      "shortName": {
+        "th": "Muay Thai",
+        "en": "Muay Thai"
+      },
+      "summary": {
+        "th": "โชว์มวยไทยริมชายหาดที่เพิ่มมิติทางวัฒนธรรมให้ประสบการณ์ก่อนมื้อเย็น",
+        "en": "A beachside Muay Thai show that adds a Thai cultural moment before dinner."
+      },
+      "description": {
+        "th": "เป็นการแสดงหรือสาธิต movement ของมวยไทย ไม่ใช่คลาสฝึกโดยตรง เหมาะกับนักท่องเที่ยวต่างชาติที่อยากเห็นวัฒนธรรมไทยในรูปแบบที่ดูง่าย สนุก และถ่ายภาพได้ดี",
+        "en": "A performance and movement demonstration rather than a formal training class. It works well for international travellers who want a clear, lively and photo-friendly Thai cultural experience."
+      },
+      "schedule": {
+        "timeLabel": {
+          "th": "5 PM",
+          "en": "5 PM"
+        },
+        "startTime": "17:00",
+        "endTime": null,
+        "durationMinutes": null,
+        "period": "evening",
+        "dateRange": null
+      },
+      "price": {
+        "type": "included",
+        "currency": "THB",
+        "amount": null,
+        "minimumSpend": null,
+        "label": {
+          "th": "Performance",
+          "en": "Performance"
+        }
+      },
+      "location": {
+        "name": {
+          "th": "Hug Samui beach area",
+          "en": "Hug Samui beach area"
+        },
+        "area": {
+          "th": "Bangpor Beach, Koh Samui",
+          "en": "Bangpor Beach, Koh Samui"
+        }
+      },
+      "audience": [
+        {
+          "th": "นักท่องเที่ยวต่างชาติ",
+          "en": "international travellers"
+        },
+        {
+          "th": "ผู้ที่สนใจวัฒนธรรมไทย",
+          "en": "guests interested in Thai culture"
+        }
+      ],
+      "businessRole": {
+        "th": "เป็น entertainment ก่อนมื้อเย็น ช่วยให้ร้านมีเหตุผลในการดึงแขกเข้ามาช่วง 5 โมงเย็น",
+        "en": "Works as pre-dinner entertainment and gives guests a reason to arrive around 5 PM."
+      },
+      "booking": {
+        "required": false,
+        "intent": "view_at_venue",
+        "label": {
+          "th": "ชมที่หน้างาน",
+          "en": "View at the venue"
+        }
+      },
+      "media": [
+        {
+          "id": "hug-muay-thai-performance-cover",
+          "partnerId": "hug-samui",
+          "serviceId": "hug-muay-thai-performance",
+          "assetType": "image",
+          "publicPath": "/partners/hug-samui/services/muay-thai-performance.jpg",
+          "sourceFileName": "ser2.jpg",
+          "sortOrder": 1,
+          "alt": {
+            "th": "โปสเตอร์ Muay Thai Performance ของ Hug Samui",
+            "en": "Hug Samui Muay Thai Performance poster"
+          }
+        }
+      ],
+      "tags": ["culture", "performance", "evening"]
+    },
+    {
+      "id": "hug-local-wellness-market",
+      "partnerId": "hug-samui",
+      "serviceGroupId": "local-culture-experience",
+      "slug": "local-wellness-market",
+      "sortOrder": 3,
+      "status": "draft",
+      "name": {
+        "th": "Local Wellness Market",
+        "en": "Local Wellness Market"
+      },
+      "shortName": {
+        "th": "Local Market",
+        "en": "Local Market"
+      },
+      "summary": {
+        "th": "ตลาด local craft และ wellness lifestyle สำหรับเดินเล่น ซื้อของฝาก และสัมผัสชุมชนสมุย",
+        "en": "A local craft and wellness lifestyle market for browsing, souvenirs and community connection."
+      },
+      "description": {
+        "th": "พื้นที่ตลาดสุขภาพท้องถิ่นที่อาจรวมงานคราฟต์ สมุนไพร ผลิตภัณฑ์ดูแลผิว ชา เครื่องดื่มสุขภาพ และของฝากจากชุมชน ช่วยให้ร้านกลายเป็น community space มากกว่าร้านอาหารอย่างเดียว",
+        "en": "A local wellness market that may include craft, herbs, skincare, tea, healthy drinks and community souvenirs. It turns the venue into a community space beyond restaurant dining."
+      },
+      "schedule": {
+        "timeLabel": {
+          "th": "4 - 6 PM",
+          "en": "4 - 6 PM"
+        },
+        "startTime": "16:00",
+        "endTime": "18:00",
+        "durationMinutes": 120,
+        "period": "afternoon",
+        "dateRange": null
+      },
+      "price": {
+        "type": "market",
+        "currency": "THB",
+        "amount": null,
+        "minimumSpend": null,
+        "label": {
+          "th": "Market experience",
+          "en": "Market experience"
+        }
+      },
+      "location": {
+        "name": {
+          "th": "Hug Samui market area",
+          "en": "Hug Samui market area"
+        },
+        "area": {
+          "th": "Bangpor Beach, Koh Samui",
+          "en": "Bangpor Beach, Koh Samui"
+        }
+      },
+      "audience": [
+        {
+          "th": "นักท่องเที่ยวที่อยากเดินเล่นก่อนมื้อค่ำ",
+          "en": "travellers who want to browse before dinner"
+        },
+        {
+          "th": "ผู้ที่สนใจงานคราฟต์และสินค้า local",
+          "en": "guests interested in local craft and products"
+        }
+      ],
+      "businessRole": {
+        "th": "เชื่อมภาพลักษณ์ของ Hug Samui กับความเป็น local, sustainable และ wellness lifestyle",
+        "en": "Connects Hug Samui with local, sustainable and wellness lifestyle associations."
+      },
+      "booking": {
+        "required": false,
+        "intent": "walk_in",
+        "label": {
+          "th": "เดินชมได้",
+          "en": "Walk-in browsing"
+        }
+      },
+      "media": [
+        {
+          "id": "hug-local-wellness-market-cover",
+          "partnerId": "hug-samui",
+          "serviceId": "hug-local-wellness-market",
+          "assetType": "image",
+          "publicPath": "/partners/hug-samui/services/local-wellness-market.jpg",
+          "sourceFileName": "ser3.jpg",
+          "sortOrder": 1,
+          "alt": {
+            "th": "โปสเตอร์ Local Wellness Market ของ Hug Samui",
+            "en": "Hug Samui Local Wellness Market poster"
+          }
+        }
+      ],
+      "tags": ["local", "market", "community", "craft"]
+    },
+    {
+      "id": "hug-complimentary-cash-coupon",
+      "partnerId": "hug-samui",
+      "serviceGroupId": "dining-promotion-package",
+      "slug": "complimentary-cash-coupon",
+      "sortOrder": 4,
+      "status": "draft",
+      "name": {
+        "th": "Complimentary 500 THB Cash Coupon",
+        "en": "Complimentary 500 THB Cash Coupon"
+      },
+      "shortName": {
+        "th": "500 THB Coupon",
+        "en": "500 THB Coupon"
+      },
+      "summary": {
+        "th": "คูปอง 500 บาทสำหรับอาหารหรือ spa treatment เมื่อใช้จ่ายขั้นต่ำ 2,000 บาท",
+        "en": "A 500 THB coupon for food or spa treatment with a 2,000 THB minimum spend."
+      },
+      "description": {
+        "th": "โปรโมชันนี้ออกแบบเพื่อกระตุ้นการใช้บริการแบบ bundled experience เช่น อาหารพร้อมสปา หรือการมาเป็นกลุ่มที่มียอดใช้จ่ายถึงขั้นต่ำ",
+        "en": "This promotion encourages a bundled experience such as food with spa usage, or group visits that reach the minimum spend."
+      },
+      "schedule": {
+        "timeLabel": {
+          "th": "Available with minimum spend",
+          "en": "Available with minimum spend"
+        },
+        "startTime": null,
+        "endTime": null,
+        "durationMinutes": null,
+        "period": "all_day",
+        "dateRange": null
+      },
+      "price": {
+        "type": "coupon",
+        "currency": "THB",
+        "amount": 500,
+        "minimumSpend": 2000,
+        "label": {
+          "th": "500 THB coupon / minimum 2,000 THB",
+          "en": "500 THB coupon / 2,000 THB minimum"
+        }
+      },
+      "location": {
+        "name": {
+          "th": "Hug Samui dining or spa area",
+          "en": "Hug Samui dining or spa area"
+        },
+        "area": {
+          "th": "Bangpor Beach, Koh Samui",
+          "en": "Bangpor Beach, Koh Samui"
+        }
+      },
+      "audience": [
+        {
+          "th": "คู่รัก",
+          "en": "couples"
+        },
+        {
+          "th": "กลุ่มเพื่อน",
+          "en": "groups of friends"
+        },
+        {
+          "th": "ครอบครัว",
+          "en": "families"
+        }
+      ],
+      "businessRole": {
+        "th": "เพิ่มยอดใช้จ่ายและชวนแขกต่อประสบการณ์จาก dining ไปสู่ spa/wellness",
+        "en": "Increases spend and nudges guests from dining into spa or wellness usage."
+      },
+      "booking": {
+        "required": false,
+        "intent": "redeem_at_venue",
+        "label": {
+          "th": "ใช้ตามเงื่อนไขร้าน",
+          "en": "Redeem under venue terms"
+        }
+      },
+      "media": [
+        {
+          "id": "hug-complimentary-cash-coupon-cover",
+          "partnerId": "hug-samui",
+          "serviceId": "hug-complimentary-cash-coupon",
+          "assetType": "image",
+          "publicPath": "/partners/hug-samui/services/complimentary-cash-coupon.jpg",
+          "sourceFileName": "ser4.jpg",
+          "sortOrder": 1,
+          "alt": {
+            "th": "โปสเตอร์ Complimentary 500 THB Cash Coupon ของ Hug Samui",
+            "en": "Hug Samui Complimentary 500 THB Cash Coupon poster"
+          }
+        }
+      ],
+      "tags": ["promotion", "dining", "spa", "coupon"]
+    },
+    {
+      "id": "hug-lovers-dinner-package",
+      "partnerId": "hug-samui",
+      "serviceGroupId": "dining-promotion-package",
+      "slug": "hug-lovers-dinner-package",
+      "sortOrder": 5,
+      "status": "draft",
+      "name": {
+        "th": "Hug Lovers Dinner Package",
+        "en": "Hug Lovers Dinner Package"
+      },
+      "shortName": {
+        "th": "Hug Lovers Dinner",
+        "en": "Hug Lovers Dinner"
+      },
+      "summary": {
+        "th": "แพ็กเกจดินเนอร์สำหรับคู่รักริมทะเล Bangpor Beach ช่วง 1 - 28 กุมภาพันธ์ 2026",
+        "en": "A reservation-only dinner package for couples at Bangpor Beach from 1 - 28 February 2026."
+      },
+      "description": {
+        "th": "แพ็กเกจดินเนอร์ที่เหมาะกับ Valentine season หรือทริปคู่รัก โดยเน้นวิวทะเล พระอาทิตย์ตก และบรรยากาศโรแมนติกที่จองล่วงหน้า",
+        "en": "A dinner package suited to Valentine season and couple trips, built around sea views, sunset mood and a reservation-led romantic setting."
+      },
+      "schedule": {
+        "timeLabel": {
+          "th": "1 - 28 Feb 2026",
+          "en": "1 - 28 Feb 2026"
+        },
+        "startTime": null,
+        "endTime": null,
+        "durationMinutes": null,
+        "period": "night",
+        "dateRange": {
+          "startDate": "2026-02-01",
+          "endDate": "2026-02-28"
+        }
+      },
+      "price": {
+        "type": "package",
+        "currency": "THB",
+        "amount": null,
+        "minimumSpend": null,
+        "label": {
+          "th": "Reservation only",
+          "en": "Reservation only"
+        }
+      },
+      "location": {
+        "name": {
+          "th": "Bangpor Beach",
+          "en": "Bangpor Beach"
+        },
+        "area": {
+          "th": "Koh Samui",
+          "en": "Koh Samui"
+        }
+      },
+      "audience": [
+        {
+          "th": "คู่รัก",
+          "en": "couples"
+        },
+        {
+          "th": "นักท่องเที่ยวฮันนีมูน",
+          "en": "honeymoon travellers"
+        },
+        {
+          "th": "ผู้ที่อยากจอง dinner พร้อม mood พิเศษ",
+          "en": "guests looking for a mood-led dinner"
+        }
+      ],
+      "businessRole": {
+        "th": "สร้างรายได้จากแพ็กเกจจองล่วงหน้าและยกระดับภาพลักษณ์ของร้านให้เป็น romantic beach dining destination",
+        "en": "Creates reservation-led revenue and positions the venue as a romantic beach dining destination."
+      },
+      "booking": {
+        "required": true,
+        "intent": "reservation",
+        "label": {
+          "th": "Reservation only",
+          "en": "Reservation only"
+        }
+      },
+      "media": [
+        {
+          "id": "hug-lovers-dinner-package-cover",
+          "partnerId": "hug-samui",
+          "serviceId": "hug-lovers-dinner-package",
+          "assetType": "image",
+          "publicPath": "/partners/hug-samui/services/hug-lovers-dinner-package.jpg",
+          "sourceFileName": "ser5.jpg",
+          "sortOrder": 1,
+          "alt": {
+            "th": "โปสเตอร์ Hug Lovers Dinner Package ของ Hug Samui",
+            "en": "Hug Samui Hug Lovers Dinner Package poster"
+          }
+        }
+      ],
+      "tags": ["dinner", "couples", "reservation", "sunset"]
+    },
+    {
+      "id": "hug-sound-bath-session",
+      "partnerId": "hug-samui",
+      "serviceGroupId": "wellness-activity",
+      "slug": "sound-bath-session",
+      "sortOrder": 6,
+      "status": "draft",
+      "name": {
+        "th": "Sound Bath Session",
+        "en": "Sound Bath Session"
+      },
+      "shortName": {
+        "th": "Sound Bath",
+        "en": "Sound Bath"
+      },
+      "summary": {
+        "th": "กิจกรรมผ่อนคลายด้วยเสียง 45 นาที สำหรับเริ่มวันแบบสงบและรีเซ็ตอารมณ์",
+        "en": "A 45-minute sound relaxation session for a calm start and emotional reset."
+      },
+      "description": {
+        "th": "กิจกรรม mindfulness ด้วยเสียง เช่น singing bowl, gong หรือ chime ผู้เข้าร่วมสามารถนั่งหรือนอนนิ่ง ๆ เพื่อให้ร่างกายและใจค่อย ๆ ผ่อนลง",
+        "en": "A mindfulness experience using instruments such as singing bowls, gongs or chimes. Guests can sit or lie still as the body and mind gradually settle."
+      },
+      "schedule": {
+        "timeLabel": {
+          "th": "8:10 - 9:00 AM",
+          "en": "8:10 - 9:00 AM"
+        },
+        "startTime": "08:10",
+        "endTime": "09:00",
+        "durationMinutes": 45,
+        "period": "morning",
+        "dateRange": null
+      },
+      "price": {
+        "type": "activity",
+        "currency": "THB",
+        "amount": null,
+        "minimumSpend": null,
+        "label": {
+          "th": "Morning wellness session",
+          "en": "Morning wellness session"
+        }
+      },
+      "location": {
+        "name": {
+          "th": "Hug Samui beach area",
+          "en": "Hug Samui beach area"
+        },
+        "area": {
+          "th": "Bangpor Beach, Koh Samui",
+          "en": "Bangpor Beach, Koh Samui"
+        }
+      },
+      "audience": [
+        {
+          "th": "นักท่องเที่ยวสาย wellness",
+          "en": "wellness travellers"
+        },
+        {
+          "th": "ผู้ที่ต้องการพักใจ",
+          "en": "guests seeking mental rest"
+        },
+        {
+          "th": "ผู้ที่ไม่อยากออกกำลังกายหนัก",
+          "en": "guests avoiding heavy exercise"
+        }
+      ],
+      "businessRole": {
+        "th": "ดึงคนเข้าร้านช่วงเช้าและทำให้ Hug Samui มีภาพลักษณ์เป็น wellness destination ชัดขึ้น",
+        "en": "Brings guests in during the morning and strengthens Hug Samui as a wellness destination."
+      },
+      "booking": {
+        "required": false,
+        "intent": "join_at_venue",
+        "label": {
+          "th": "Morning session",
+          "en": "Morning session"
+        }
+      },
+      "media": [
+        {
+          "id": "hug-sound-bath-session-cover",
+          "partnerId": "hug-samui",
+          "serviceId": "hug-sound-bath-session",
+          "assetType": "image",
+          "publicPath": "/partners/hug-samui/services/sound-bath-session.jpg",
+          "sourceFileName": "ser6.jpg",
+          "sortOrder": 1,
+          "alt": {
+            "th": "โปสเตอร์ Sound Bath Session ของ Hug Samui",
+            "en": "Hug Samui Sound Bath Session poster"
+          }
+        }
+      ],
+      "tags": ["sound-bath", "mindfulness", "morning", "relaxation"]
+    },
+    {
+      "id": "hug-light-yoga-stretching",
+      "partnerId": "hug-samui",
+      "serviceGroupId": "wellness-activity",
+      "slug": "light-yoga-stretching",
+      "sortOrder": 7,
+      "status": "draft",
+      "name": {
+        "th": "Greeting & Light Yoga Stretching",
+        "en": "Greeting & Light Yoga Stretching"
+      },
+      "shortName": {
+        "th": "Light Yoga Stretching",
+        "en": "Light Yoga Stretching"
+      },
+      "summary": {
+        "th": "ช่วงต้อนรับและยืดเหยียดเบา ๆ 15 นาทีริมทะเล ก่อนต่อด้วย sound bath",
+        "en": "A 15-minute beachside welcome and light stretching flow before sound bath."
+      },
+      "description": {
+        "th": "กิจกรรมเปิดเช้าสั้น ๆ สำหรับทุกระดับ ช่วยให้แขกค่อย ๆ ขยับร่างกายและเตรียมใจเข้าสู่ morning wellness flow",
+        "en": "A short morning opener for all levels, helping guests gently move the body and settle into the morning wellness flow."
+      },
+      "schedule": {
+        "timeLabel": {
+          "th": "7:30 - 7:45 AM",
+          "en": "7:30 - 7:45 AM"
+        },
+        "startTime": "07:30",
+        "endTime": "07:45",
+        "durationMinutes": 15,
+        "period": "morning",
+        "dateRange": null
+      },
+      "price": {
+        "type": "activity",
+        "currency": "THB",
+        "amount": null,
+        "minimumSpend": null,
+        "label": {
+          "th": "Light morning flow",
+          "en": "Light morning flow"
+        }
+      },
+      "location": {
+        "name": {
+          "th": "Hug Samui beach area",
+          "en": "Hug Samui beach area"
+        },
+        "area": {
+          "th": "Bangpor Beach, Koh Samui",
+          "en": "Bangpor Beach, Koh Samui"
+        }
+      },
+      "audience": [
+        {
+          "th": "ผู้เริ่มต้น",
+          "en": "beginners"
+        },
+        {
+          "th": "แขกที่อยากเริ่มเช้าแบบไม่เร่ง",
+          "en": "guests who want an unhurried morning"
+        }
+      ],
+      "businessRole": {
+        "th": "ช่วยจัดลำดับ morning wellness flow ให้เริ่มจากการยืดเหยียด แล้วต่อด้วย sound bath ได้อย่างเป็นธรรมชาติ",
+        "en": "Creates a natural morning wellness flow from light stretching into sound bath."
+      },
+      "booking": {
+        "required": false,
+        "intent": "join_at_venue",
+        "label": {
+          "th": "Morning welcome",
+          "en": "Morning welcome"
+        }
+      },
+      "media": [
+        {
+          "id": "hug-light-yoga-stretching-cover",
+          "partnerId": "hug-samui",
+          "serviceId": "hug-light-yoga-stretching",
+          "assetType": "image",
+          "publicPath": "/partners/hug-samui/services/light-yoga-stretching.jpg",
+          "sourceFileName": "ser7.jpg",
+          "sortOrder": 1,
+          "alt": {
+            "th": "โปสเตอร์ Greeting & Light Yoga Stretching ของ Hug Samui",
+            "en": "Hug Samui Greeting and Light Yoga Stretching poster"
+          }
+        }
+      ],
+      "tags": ["yoga", "stretching", "morning", "beginner"]
+    }
+  ],
+  "dailyFlow": [
+    {
+      "id": "morning-flow",
+      "partnerId": "hug-samui",
+      "sortOrder": 1,
+      "period": {
+        "th": "ช่วงเช้า",
+        "en": "Morning"
+      },
+      "serviceIds": ["hug-light-yoga-stretching", "hug-sound-bath-session"],
+      "summary": {
+        "th": "เริ่มจากการยืดเหยียดเบา ๆ แล้วต่อด้วย sound bath เพื่อรีเซ็ตร่างกายและใจ",
+        "en": "Begin with light stretching, then continue into sound bath to reset body and mind."
+      }
+    },
+    {
+      "id": "afternoon-evening-flow",
+      "partnerId": "hug-samui",
+      "sortOrder": 2,
+      "period": {
+        "th": "ช่วงบ่าย-เย็น",
+        "en": "Afternoon to evening"
+      },
+      "serviceIds": [
+        "hug-local-wellness-market",
+        "hug-muay-thai-performance",
+        "hug-aqua-aerobic"
+      ],
+      "summary": {
+        "th": "เดินตลาด local wellness ดูโชว์มวยไทย และปิดด้วยกิจกรรมในน้ำก่อนมื้อค่ำ",
+        "en": "Browse the local wellness market, watch Muay Thai and close with water movement before dinner."
+      }
+    },
+    {
+      "id": "night-flow",
+      "partnerId": "hug-samui",
+      "sortOrder": 3,
+      "period": {
+        "th": "ช่วงค่ำ",
+        "en": "Night"
+      },
+      "serviceIds": [
+        "hug-lovers-dinner-package",
+        "hug-complimentary-cash-coupon"
+      ],
+      "summary": {
+        "th": "ต่อยอดเป็นดินเนอร์ แพ็กเกจคู่รัก หรือคูปองอาหารและสปา",
+        "en": "Continue into dinner, the couples package, or food and spa coupon usage."
+      }
+    }
+  ]
+}

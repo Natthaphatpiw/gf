@@ -2,12 +2,12 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
-import { Heart, Clock } from "lucide-react";
+import { Check, Heart, Clock, ShoppingBag } from "lucide-react";
 import type { LText, WellnessPackage } from "@/lib/types";
 import { useL, useT } from "@/lib/i18n";
 import common from "@/lib/i18n/dictionaries/common";
-import { isFavorite, toggleFavorite } from "@/lib/session";
+import accountDict from "@/lib/i18n/dictionaries/account";
+import { useAccount } from "@/lib/account";
 
 /* ============================================================
  * PackageCard — the shared card used on the recommendation
@@ -39,14 +39,8 @@ export function FavoriteButton({
   className?: string;
 }) {
   const t = useT(common);
-  const [fav, setFav] = useState(false);
-
-  useEffect(() => {
-    setFav(isFavorite(packageId));
-    const update = () => setFav(isFavorite(packageId));
-    window.addEventListener("gc-session-change", update);
-    return () => window.removeEventListener("gc-session-change", update);
-  }, [packageId]);
+  const { isFavorite, toggleFavorite } = useAccount();
+  const fav = isFavorite("program", packageId);
 
   return (
     <button
@@ -56,7 +50,7 @@ export function FavoriteButton({
       onClick={(e) => {
         e.preventDefault();
         e.stopPropagation();
-        toggleFavorite(packageId);
+        toggleFavorite("program", packageId);
       }}
       className={`grid h-9 w-9 place-items-center rounded-full bg-cream-50/90 shadow-soft backdrop-blur transition-transform active:scale-90 ${className}`}
     >
@@ -65,6 +59,39 @@ export function FavoriteButton({
           fav ? "fill-gold-500 text-gold-500" : "text-teal-800"
         }`}
       />
+    </button>
+  );
+}
+
+export function CartButton({
+  packageId,
+  className = "",
+}: {
+  packageId: string;
+  className?: string;
+}) {
+  const ta = useT(accountDict);
+  const { isInCart, addToCart } = useAccount();
+  const inCart = isInCart("program", packageId);
+
+  return (
+    <button
+      type="button"
+      aria-label={inCart ? ta.item.inCart : ta.item.addToCart}
+      onClick={(e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        addToCart("program", packageId);
+      }}
+      className={`grid h-9 w-9 place-items-center rounded-full shadow-soft backdrop-blur transition-transform active:scale-90 ${
+        inCart ? "bg-teal-600 text-white" : "bg-cream-50/90 text-teal-800"
+      } ${className}`}
+    >
+      {inCart ? (
+        <Check className="h-[17px] w-[17px]" />
+      ) : (
+        <ShoppingBag className="h-[17px] w-[17px]" />
+      )}
     </button>
   );
 }
@@ -103,7 +130,10 @@ export function PackageCard({
         <div className="absolute left-3 top-3">
           <TierBadge tier={pkg.tier} />
         </div>
-        <FavoriteButton packageId={pkg.id} className="absolute right-3 top-3" />
+        <div className="absolute right-3 top-3 flex flex-col gap-2">
+          <FavoriteButton packageId={pkg.id} />
+          <CartButton packageId={pkg.id} />
+        </div>
         {typeof matchScore === "number" && (
           <span className="absolute bottom-3 left-3 rounded-full bg-cream-50/90 px-2.5 py-1 text-[0.62rem] font-bold tracking-wide text-teal-800 backdrop-blur">
             {matchScore}% {t.match}

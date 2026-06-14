@@ -1,4 +1,9 @@
 import { Hero } from "@/components/landing/Hero";
+import { WellnessTypes } from "@/components/landing/WellnessTypes";
+import { TopBrands } from "@/components/landing/TopBrands";
+import { ProgramsClient } from "@/components/programs/ProgramsClient";
+import { CareBridge } from "@/components/landing/CareBridge";
+import { ExpertShowcase } from "@/components/landing/ExpertShowcase";
 import { TrustStrip } from "@/components/landing/TrustStrip";
 import { HowItWorks } from "@/components/landing/HowItWorks";
 import { Pillars } from "@/components/landing/Pillars";
@@ -16,6 +21,11 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <WellnessTypes />
+      <TopBrands />
+      <ProgramsClient embedded />
+      <CareBridge />
+      <ExpertShowcase />
       <TrustStrip />
       <HowItWorks />
       <Pillars />

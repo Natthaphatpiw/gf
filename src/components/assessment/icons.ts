@@ -41,6 +41,10 @@ import {
   MessagesSquare,
   Zap,
   ShieldCheck,
+  Eye,
+  AlertTriangle,
+  BatteryFull,
+  CloudMoon,
   Circle,
   type LucideIcon,
 } from "lucide-react";
@@ -106,6 +110,11 @@ export const ICONS: Record<string, LucideIcon> = {
   // Goals (result page)
   Zap,
   ShieldCheck,
+  // Check-in (data/checkin.ts)
+  Eye,
+  AlertTriangle,
+  BatteryFull,
+  CloudMoon,
 };
 
 /** Resolve an icon name to a component, falling back to a neutral dot. */

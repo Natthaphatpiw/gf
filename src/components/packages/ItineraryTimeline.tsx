@@ -54,7 +54,7 @@ export function ItineraryTimeline({ days }: { days: ItineraryDay[] }) {
           <li key={i} className="relative">
             <span className="absolute -left-[1.95rem] top-1.5 h-2.5 w-2.5 rounded-full border-2 border-cream-100 bg-gold-500" />
             <p className="text-xs font-semibold tracking-wide text-gold-600">
-              {item.time}
+              {typeof item.time === "string" ? item.time : l(item.time)}
             </p>
             <p className="mt-1 text-sm leading-relaxed text-ink">
               {l(item.activity)}

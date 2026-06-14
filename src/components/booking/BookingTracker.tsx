@@ -12,6 +12,7 @@ import { PackageSummary } from "@/components/booking/PackageSummary";
 import { StatusTimeline } from "@/components/booking/StatusTimeline";
 import { ExpertPanel } from "@/components/booking/ExpertPanel";
 import { BookingNotFound } from "@/components/booking/BookingNotFound";
+import { CheckinCard } from "@/components/checkin/CheckinCard";
 
 /* ============================================================
  * BookingTracker — guest-facing status view for one booking.
@@ -99,6 +100,13 @@ export function BookingTracker({ id }: { id: string }) {
 
       <div className="animate-rise-2 mt-8 rounded-3xl border border-teal-900/10 bg-white p-6 shadow-soft md:p-7">
         <StatusTimeline data={data} />
+      </div>
+
+      <div className="animate-rise-2 mt-6">
+        <CheckinCard
+          bookingId={data.id}
+          hasAssessmentBaseline={Boolean(data.assessmentId)}
+        />
       </div>
 
       {data.expertReview && (

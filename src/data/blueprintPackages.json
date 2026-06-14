@@ -1,0 +1,2899 @@
+{
+  "version": "blueprint-v1-2026-06-14",
+  "status": "draft",
+  "sourceNote": {
+    "th": "ชุดโปรแกรมนี้สร้างตาม Goodfill Evidence-Based Blueprint System v1 เป็นโปรแกรมฟื้นฟูเชิงไลฟ์สไตล์ ไม่ใช่การวินิจฉัยหรือรักษาโรค บาง slot ยังไม่ระบุร้านพาร์ตเนอร์",
+    "en": "These programs follow the Goodfill Evidence-Based Blueprint System v1 — lifestyle recovery programs, not diagnosis or treatment. Some slots do not yet have an assigned partner shop."
+  },
+  "positioning": {
+    "name": {
+      "th": "Wellness Programs",
+      "en": "Wellness Programs"
+    },
+    "summary": {
+      "th": "โปรแกรมสุขภาพที่ออกแบบจากกลไกที่มีหลักฐานรองรับ แล้วให้ร้านพาร์ตเนอร์นำบริการและเมนูของตัวเองมาเสียบในแต่ละช่วงของโปรแกรม",
+      "en": "Wellness programs designed from evidence-grounded mechanisms, then filled slot-by-slot with partner shops’ own services and menus."
+    },
+    "disclaimer": {
+      "th": "โปรแกรมฟื้นฟูเชิงไลฟ์สไตล์เพื่อช่วยสนับสนุนการพักผ่อน ลดภาระความเครียด และปรับพฤติกรรมสุขภาพระยะสั้นระหว่างทริป ไม่ใช่การวินิจฉัยหรือการรักษาโรค",
+      "en": "Lifestyle recovery programs that help support rest, ease stress load, and adjust short-term health habits during your trip — not medical diagnosis or treatment."
+    }
+  },
+  "programs": [
+    {
+      "id": "program-deep-sleep-sanctuary",
+      "blueprintNumber": 1,
+      "sortOrder": 1,
+      "slug": "deep-sleep-sanctuary",
+      "status": "draft",
+      "category": "deep_sleep",
+      "tripPhase": "during",
+      "name": {
+        "th": "Deep Sleep Sanctuary",
+        "en": "Deep Sleep Sanctuary"
+      },
+      "subtitle": {
+        "th": "หลับลึก ฟื้นเต็มที่",
+        "en": "Sleep readiness & deep rest"
+      },
+      "image": "/programs/deep-sleep-sanctuary.png",
+      "durationLabel": {
+        "th": "ครึ่งวัน",
+        "en": "Half day"
+      },
+      "priceFrom": 3900,
+      "tagline": {
+        "th": "พื้นที่หลับลึก กลางทริปบนเกาะสมุย",
+        "en": "A half-day sanctuary that prepares body and mind for deep rest"
+      },
+      "programIntent": {
+        "th": "Deep Sleep Sanctuary คือโปรแกรมเตรียมความพร้อมสู่การพักผ่อนระหว่างเดินทาง ไม่ใช่การรักษาทางการแพทย์ เราช่วยปรับร่างกาย สภาพแวดล้อม และจังหวะของวันให้เอื้อต่อการหลับลึก ผ่านการผ่อนคลายกล้ามเนื้อ การหายใจ มื้ออาหารที่ย่อยง่าย และคำแนะนำเรื่องสุขอนามัยการนอน",
+        "en": "Deep Sleep Sanctuary is a sleep-readiness and deep-rest experience for travellers, not a medical treatment. It helps prepare your body, your environment and the rhythm of your day for rest through body relaxation, breathing, a sleep-friendly meal and sleep-hygiene guidance."
+      },
+      "scenarioClaim": {
+        "th": "หลังจากใช้ชีวิตเต็มที่บนเกาะมาทั้งวัน ทั้งแดด ทะเล และการเดินทางข้ามไทม์โซน บ่ายนี้คุณวางทุกอย่างลงและเดินเข้าสู่ Deep Sleep Sanctuary ในห้องที่แสงนวลและเงียบสงบ มือของนักบำบัดค่อย ๆ คลายความตึงออกจากร่างกาย ลมหายใจช้าลง แก้วมะพร้าวอ่อนเย็น ๆ และซุปไก่ขมิ้นอุ่น ๆ ช่วยให้ร่างกายรู้สึกเบาและพร้อมพัก เมื่อถึงเวลาเข้านอนคืนนี้ คุณจะรู้สึกว่าใจและกายพร้อมจะหลับลึกอีกครั้ง",
+        "en": "After a full day living the island to the fullest, sun, sea and a long flight across time zones, this afternoon you set everything down and step into the Deep Sleep Sanctuary. In a quiet room of soft, low light, trained hands ease the tension out of your body and your breath slows. A cool young coconut and a warm bowl of turmeric chicken soup leave you feeling light and ready to rest, so that when bedtime comes tonight, your body and mind feel prepared to sink into deep sleep again."
+      },
+      "suitableFor": {
+        "th": "เหมาะสำหรับนักเดินทางที่นอนไม่อิ่มในช่วงทริป รู้สึกเพลียหรือพลังงานตก ยังต้องทำงานระหว่างเที่ยว หรือเพิ่งบินไกลและเจ็ตแล็กจากการเปลี่ยนไทม์โซน ใครที่อยากกดปุ่มพักให้ร่างกายและสมองกลับมาตั้งจังหวะการนอนใหม่ระหว่างอยู่บนเกาะ โปรแกรมนี้ออกแบบมาเพื่อคุณ",
+        "en": "This is for travellers who are not sleeping well during their trip, who feel drained or low on energy, who still have to work while away, or who have just flown in and are jet-lagged from a change of time zone. If you want to press pause and let your body and mind reset their rhythm for rest while you are on the island, this program is designed for you."
+      },
+      "whyItWorks": {
+        "th": "ลำดับของโปรแกรมค่อย ๆ ลดระดับการตื่นตัวของร่างกายลงทีละขั้น เริ่มจากการผ่อนคลายกล้ามเนื้อและการนวด ตามด้วยการหายใจช้าและการคลายกล้ามเนื้อแบบทีละส่วน ซึ่งช่วยกระตุ้นการตอบสนองแบบผ่อนคลาย (relaxation response) จากนั้นมื้อเบา ๆ ที่ย่อยง่ายและเครื่องดื่มไร้คาเฟอีนช่วยให้ร่างกายไม่ถูกรบกวนก่อนนอน ปิดท้ายด้วยคำแนะนำสุขอนามัยการนอนที่คุณนำไปใช้ต่อได้เอง ทั้งหมดนี้คือการเตรียมความพร้อม ไม่ใช่การรักษา แต่ช่วยให้ร่างกายและสภาพแวดล้อมเอื้อต่อการหลับที่ดีขึ้น",
+        "en": "The sequence gently steps your body down from a state of arousal. It begins with body relaxation and massage, moves into slow breathing and progressive muscle relaxation that invites the body's relaxation response, then keeps the body undisturbed before rest with a light, easy-to-digest meal and a caffeine-free drink, and closes with sleep-hygiene guidance you can keep using on your own. None of this is treatment, it is preparation that helps make your body and your environment more ready for better sleep."
+      },
+      "coreMechanisms": [
+        {
+          "title": {
+            "th": "การตอบสนองแบบผ่อนคลาย (Relaxation response)",
+            "en": "The relaxation response"
+          },
+          "detail": {
+            "th": "การหายใจช้าและการคลายกล้ามเนื้อแบบทีละส่วนช่วยลดการตื่นตัวของระบบประสาท ทำให้ร่างกายเปลี่ยนจากโหมดตื่นตัวมาสู่โหมดพักผ่อน ซึ่งเป็นจังหวะที่เอื้อต่อการเริ่มต้นนอนหลับ",
+            "en": "Slow breathing and progressive muscle relaxation lower nervous-system arousal, helping the body shift from an alert state into a rested state, the kind of calm that makes it easier to settle into sleep."
+          }
+        },
+        {
+          "title": {
+            "th": "การลดการตื่นตัวของระบบประสาทอัตโนมัติ (Autonomic down-regulation)",
+            "en": "Autonomic down-regulation"
+          },
+          "detail": {
+            "th": "การนวดและการผ่อนคลายร่างกายในห้องที่เงียบและแสงนวลช่วยคลายความตึงของกล้ามเนื้อและพาร่างกายเข้าสู่ภาวะสงบ ลดสัญญาณความเครียดที่มักรบกวนการนอน",
+            "en": "Massage and body relaxation in a quiet, softly lit room release muscular tension and guide the body toward a calmer state, easing the stress signals that often interfere with rest."
+          }
+        },
+        {
+          "title": {
+            "th": "มื้ออาหารและความชุ่มชื้นที่เป็นมิตรกับการนอน (Sleep-friendly nourishment & hydration)",
+            "en": "Sleep-friendly nourishment and hydration"
+          },
+          "detail": {
+            "th": "มื้อเบาที่ย่อยง่าย ไม่เผ็ดไม่มัน และเครื่องดื่มไร้คาเฟอีน เช่น มะพร้าวอ่อนและซุปไก่ขมิ้น ช่วยให้ร่างกายไม่ถูกรบกวนด้วยการย่อยหนักหรือคาเฟอีนในช่วงก่อนเข้านอน",
+            "en": "A light, easy-to-digest meal that is neither spicy nor greasy, paired with caffeine-free options such as young coconut and turmeric chicken soup, keeps the body from being disturbed by heavy digestion or caffeine in the hours before bed."
+          }
+        }
+      ],
+      "triggers": [
+        {
+          "label": {
+            "th": "คุณภาพการนอนต่ำ",
+            "en": "Low sleep quality"
+          },
+          "criterion": {
+            "th": "คะแนนคุณภาพการนอน 60 หรือต่ำกว่า",
+            "en": "Sleep-quality score of 60 or below"
+          }
+        },
+        {
+          "label": {
+            "th": "พลังงานต่ำ",
+            "en": "Low energy"
+          },
+          "criterion": {
+            "th": "คะแนนพลังงาน 60 หรือต่ำกว่า",
+            "en": "Energy score of 60 or below"
+          }
+        },
+        {
+          "label": {
+            "th": "ทำงานระหว่างทริป",
+            "en": "Working during the trip"
+          },
+          "criterion": {
+            "th": "ยังต้องทำงานในช่วงที่เดินทาง",
+            "en": "Still working while travelling"
+          }
+        },
+        {
+          "label": {
+            "th": "เจ็ตแล็ก / เปลี่ยนไทม์โซน",
+            "en": "Jet lag or time-zone change"
+          },
+          "criterion": {
+            "th": "เพิ่งบินไกล หรือมีการเปลี่ยนไทม์โซน",
+            "en": "Recent long flight or a change of time zone"
+          }
+        }
+      ],
+      "safetyGate": {
+        "th": "โปรแกรมนี้ไม่บังคับคัดกรองสุขภาพก่อนจอง แต่จะส่งเคสให้แพทย์ตรวจทบทวนก่อน หากคุณมีอาการนอนไม่หลับเรื้อรังมานาน ใช้ยานอนหลับหรือยากล่อมประสาท มีโรคหัวใจ กำลังตั้งครรภ์ สงสัยภาวะหยุดหายใจขณะหลับ (sleep apnea) หรือมีอาการร่วมที่รุนแรง กรณีเหล่านี้จะได้รับการดูแลเป็นพิเศษเพื่อความปลอดภัยของคุณ",
+        "en": "This program does not require a mandatory health screen before booking, but a case is flagged for doctor review if you have long-standing chronic insomnia, use sleeping pills or sedatives, have heart disease, are pregnant, have suspected sleep apnea, or have severe co-occurring symptoms. These cases receive extra review before booking for your safety."
+      },
+      "safetyGateRequired": false,
+      "slots": [
+        {
+          "order": 1,
+          "slotCode": null,
+          "name": {
+            "th": "เช็กอินความพร้อมก่อนนอน",
+            "en": "Sleep readiness check-in"
+          },
+          "duration": {
+            "th": "5-8 นาที",
+            "en": "5-8 min"
+          },
+          "evidenceLevel": "A",
+          "mechanism": {
+            "th": "บันทึกค่าพื้นฐานของคุณภาพการนอน พลังงาน คาเฟอีน มื้อสุดท้าย และความเครียด เพื่อตั้งจุดเริ่มต้นและปรับจังหวะของวันให้เหมาะกับการพักผ่อน",
+            "en": "Captures your baseline sleep quality, energy, caffeine, last meal and stress so the day can be tuned toward rest and progress can be measured."
+          },
+          "fill": {
+            "type": "guidance",
+            "serviceId": null,
+            "menuId": null,
+            "partnerAssigned": true,
+            "partnerType": {
+              "th": "ทีม Goodfill (ผ่านแอป)",
+              "en": "Goodfill team (in-app)"
+            },
+            "note": {
+              "th": "ทำผ่านแอป Goodfill ก่อนเริ่มโปรแกรม เป็นชุดคำถามสั้น ๆ เพื่อตั้งค่าพื้นฐาน T1 ไม่ใช่การวินิจฉัย",
+              "en": "Delivered in the Goodfill app before the program begins, a short set of questions that sets the T1 baseline, not a diagnosis."
+            }
+          }
+        },
+        {
+          "order": 2,
+          "slotCode": "B01",
+          "name": {
+            "th": "นวดผ่อนคลายร่างกาย",
+            "en": "Gentle massage and body relaxation"
+          },
+          "duration": {
+            "th": "60-90 นาที",
+            "en": "60-90 min"
+          },
+          "evidenceLevel": "B",
+          "mechanism": {
+            "th": "การนวดในห้องที่เงียบและแสงนวลช่วยคลายความตึงของกล้ามเนื้อและลดการตื่นตัวของระบบประสาทอัตโนมัติ พาร่างกายเข้าสู่ภาวะสงบก่อนพัก",
+            "en": "Massage in a quiet, softly lit room releases muscular tension and supports autonomic down-regulation, easing the body into a calmer state before rest."
+          },
+          "fill": {
+            "type": "unassigned",
+            "serviceId": null,
+            "menuId": null,
+            "partnerAssigned": false,
+            "partnerType": {
+              "th": "พาร์ทเนอร์สปา / นวด (ห้องเงียบ แสงนวล นักบำบัดที่ผ่านการอบรม)",
+              "en": "Spa or massage partner (quiet room, soft light, trained therapist)"
+            },
+            "note": {
+              "th": "พาร์ทเนอร์สปาหรือร้านนวดที่ผ่านการคัดเลือกเสียบเข้ามาในช่องนี้ นำเสนอในฐานะการผ่อนคลาย ไม่ใช่การรักษา",
+              "en": "A vetted spa or massage partner plugs into this slot. Presented as relaxation, never as treatment."
+            }
+          }
+        },
+        {
+          "order": 3,
+          "slotCode": "R01",
+          "name": {
+            "th": "หายใจช้าและคลายกล้ามเนื้อทีละส่วน",
+            "en": "Slow breathing and progressive muscle relaxation"
+          },
+          "duration": {
+            "th": "10-15 นาที",
+            "en": "10-15 min"
+          },
+          "evidenceLevel": "A",
+          "mechanism": {
+            "th": "การหายใจช้าและการคลายกล้ามเนื้อแบบทีละส่วนช่วยกระตุ้นการตอบสนองแบบผ่อนคลาย ลดความเครียดและการตื่นตัวของร่างกาย ซึ่งมีหลักฐานสนับสนุน",
+            "en": "Slow breathing and progressive muscle relaxation invite the relaxation response, with evidence for reducing stress and arousal in the body."
+          },
+          "fill": {
+            "type": "guidance",
+            "serviceId": null,
+            "menuId": null,
+            "partnerAssigned": true,
+            "partnerType": {
+              "th": "ทีม Goodfill (มีไกด์นำ)",
+              "en": "Goodfill team (guided)"
+            },
+            "note": {
+              "th": "นำโดยทีม Goodfill ต่อเนื่องจากการนวด เพื่อพาร่างกายลงสู่ระดับผ่อนคลายลึกขึ้นก่อนพัก",
+              "en": "Guided by the Goodfill team, following the massage to step the body down into a deeper level of calm before rest."
+            }
+          }
+        },
+        {
+          "order": 4,
+          "slotCode": "S01",
+          "name": {
+            "th": "งีบในห้องเงียบ / nap pod",
+            "en": "Quiet nap pod or rest room"
+          },
+          "duration": {
+            "th": "งีบสั้น 20-30 นาที หรือ 90 นาที",
+            "en": "20-30 min power nap, or 90 min"
+          },
+          "evidenceLevel": "B",
+          "mechanism": {
+            "th": "การงีบสั้นหรือหนึ่งรอบการนอนเต็มในห้องเงียบช่วยฟื้นพลังงานโดยไม่รบกวนการนอนกลางคืน โดยจัดเวลาไม่ให้ดึกเกินไปของวัน",
+            "en": "A short nap or one full sleep cycle in a quiet room helps restore energy without disrupting night-time sleep, scheduled so it is not too late in the day."
+          },
+          "fill": {
+            "type": "unassigned",
+            "serviceId": null,
+            "menuId": null,
+            "partnerAssigned": false,
+            "partnerType": {
+              "th": "โรงแรม / สปา ที่มีห้องเงียบ",
+              "en": "Hotel or spa with quiet rooms"
+            },
+            "note": {
+              "th": "โรงแรมหรือสปาที่มีห้องเงียบเสียบเข้ามาในช่องนี้ จัดเวลางีบไม่ให้สายเกินไปของวันเพื่อไม่กระทบการนอนคืนนี้",
+              "en": "A hotel or spa with quiet rooms plugs in. The nap is timed early enough in the day so it does not affect tonight's sleep."
+            }
+          }
+        },
+        {
+          "order": 5,
+          "slotCode": "F01",
+          "name": {
+            "th": "เครื่องดื่มเป็นมิตรกับการนอน: มะพร้าวอ่อนสมุย",
+            "en": "Sleep-friendly drink: Samui young coconut"
+          },
+          "duration": {
+            "th": "ระหว่างพัก",
+            "en": "During the rest"
+          },
+          "evidenceLevel": "B",
+          "mechanism": {
+            "th": "เครื่องดื่มไร้คาเฟอีน น้ำตาลต่ำ ให้ความชุ่มชื้นและแร่ธาตุโพแทสเซียมและอิเล็กโทรไลต์ ช่วยเติมน้ำให้ร่างกายโดยไม่กระตุ้นการตื่นตัวก่อนนอน",
+            "en": "A caffeine-free, low-sugar drink that hydrates and provides potassium and electrolytes, replenishing the body without stimulating arousal before rest."
+          },
+          "fill": {
+            "type": "menu",
+            "serviceId": null,
+            "menuId": "ref-menu-samui-young-coconut",
+            "partnerAssigned": true,
+            "partnerType": {
+              "th": "เมนูพาร์ทเนอร์ Hug Samui (Samui Aromatic Young Coconut)",
+              "en": "Hug Samui partner menu (Samui Aromatic Young Coconut)"
+            },
+            "note": {
+              "th": "มะพร้าวอ่อนหอมสมุยจาก Hug Samui เสิร์ฟในช่วงพัก นำเสนอเป็นเครื่องดื่มไร้คาเฟอีนเพื่อความชุ่มชื้น ไม่ใช่ตัวช่วยให้หลับ",
+              "en": "Samui Aromatic Young Coconut from Hug Samui, served during the rest as a caffeine-free hydrating drink, not as a sleeping aid."
+            }
+          }
+        },
+        {
+          "order": 6,
+          "slotCode": null,
+          "name": {
+            "th": "มื้อเบาย่อยง่าย: ซุปไก่ขมิ้นปักษ์ใต้",
+            "en": "Light meal: Southern turmeric chicken soup"
+          },
+          "duration": {
+            "th": "30-45 นาที",
+            "en": "30-45 min"
+          },
+          "evidenceLevel": "B",
+          "mechanism": {
+            "th": "มื้ออุ่นเบา ย่อยง่าย ไม่เผ็ดไม่มัน ไร้คาเฟอีน โปรตีนสูง ช่วยให้ร่างกายอิ่มพอดีและไม่ถูกรบกวนด้วยการย่อยหนักก่อนเข้านอน",
+            "en": "A warm, light, easy-to-digest meal that is neither spicy nor greasy, caffeine-free and high in protein, leaving the body comfortably satisfied and undisturbed by heavy digestion before bed."
+          },
+          "fill": {
+            "type": "menu",
+            "serviceId": null,
+            "menuId": "ref-menu-southern-turmeric-chicken-soup",
+            "partnerAssigned": true,
+            "partnerType": {
+              "th": "เมนูพาร์ทเนอร์ Hug Samui (Southern Turmeric Free-Range Chicken Soup)",
+              "en": "Hug Samui partner menu (Southern Turmeric Free-Range Chicken Soup)"
+            },
+            "note": {
+              "th": "ซุปไก่บ้านขมิ้นปักษ์ใต้จาก Hug Samui เสิร์ฟเป็นมื้อเบาที่เอื้อต่อการนอน เลือกมื้อที่ย่อยง่ายและไร้คาเฟอีนตามหลักการ ไม่เน้นของเผ็ดหรือมัน",
+              "en": "Southern Turmeric Free-Range Chicken Soup from Hug Samui, served as a sleep-supportive light meal, chosen for being easy to digest and caffeine-free rather than spicy or greasy."
+            }
+          }
+        },
+        {
+          "order": 7,
+          "slotCode": null,
+          "name": {
+            "th": "การ์ดสุขอนามัยการนอน",
+            "en": "Sleep hygiene card"
+          },
+          "duration": {
+            "th": "5 นาที",
+            "en": "5 min"
+          },
+          "evidenceLevel": "A",
+          "mechanism": {
+            "th": "สรุปหลักการสุขอนามัยการนอนและ CBT-I เรื่องแสง เวลาเข้านอน คาเฟอีน หน้าจอ และห้องนอน ให้คุณนำไปปรับใช้ต่อเอง เป็นการให้ความรู้เท่านั้น",
+            "en": "Summarises sleep-hygiene and CBT-I principles on light, bedtime, caffeine, screens and the bedroom for you to keep applying on your own, education only."
+          },
+          "fill": {
+            "type": "guidance",
+            "serviceId": null,
+            "menuId": null,
+            "partnerAssigned": true,
+            "partnerType": {
+              "th": "ทีม Goodfill (ให้ความรู้)",
+              "en": "Goodfill team (education)"
+            },
+            "note": {
+              "th": "การ์ดสรุปจากทีม Goodfill ปิดท้ายโปรแกรม เป็นการให้ความรู้ตามหลักสุขอนามัยการนอนและ CBT-I ไม่ใช่คำสั่งการรักษา",
+              "en": "A summary card from the Goodfill team closes the program, built on sleep-hygiene and CBT-I principles as education, not a treatment prescription."
+            }
+          }
+        }
+      ],
+      "outcomeMetrics": [
+        {
+          "timepoint": {
+            "th": "T1 (ก่อนเริ่ม)",
+            "en": "T1 (baseline)"
+          },
+          "measures": {
+            "th": "คุณภาพการนอน ความเครียด พลังงาน คาเฟอีน และความคาดหวังเรื่องเวลาเข้านอน",
+            "en": "Sleep quality, stress, energy, caffeine and bedtime expectation"
+          }
+        },
+        {
+          "timepoint": {
+            "th": "Micro (ระหว่างโปรแกรม)",
+            "en": "Micro (in-session)"
+          },
+          "measures": {
+            "th": "รู้สึกผ่อนคลายขึ้นในระดับ 1-5 รู้สึกง่วงหรือมึนหรือไม่ และความสบายของห้องพัก",
+            "en": "How much more relaxed on a 1-5 scale, whether drowsy or groggy, and room comfort"
+          }
+        },
+        {
+          "timepoint": {
+            "th": "T2 (หลังโปรแกรม)",
+            "en": "T2 (post-session)"
+          },
+          "measures": {
+            "th": "ความพร้อมต่อการนอน ความเครียด และพลังงาน",
+            "en": "Sleep readiness, stress and energy"
+          }
+        },
+        {
+          "timepoint": {
+            "th": "T3 (วันที่ 7)",
+            "en": "T3 (day 7)"
+          },
+          "measures": {
+            "th": "นอนหลับดีขึ้นหรือไม่ ความสม่ำเสมอของเวลาเข้านอน และความตั้งใจกลับมาใช้ซ้ำ",
+            "en": "Whether sleeping better, bedtime consistency and repeat intent"
+          }
+        }
+      ],
+      "expertLayer": {
+        "th": "โครงสร้างโปรแกรมและถ้อยคำที่ใช้สื่อสารทั้งหมดได้รับการตรวจและอนุมัติโดยแพทย์หนึ่งครั้งแล้ว เพื่อให้มั่นใจว่าทุกคำกล่าวอยู่ในกรอบการเตรียมความพร้อม ไม่ใช่การรักษา ในการให้บริการจริง มีเพียงเคสที่เข้าเกณฑ์ความเสี่ยงเท่านั้นที่จะถูกส่งให้แพทย์ตรวจทบทวนก่อนการจอง เคสทั่วไปสามารถจองและเข้าร่วมได้ทันที",
+        "en": "The program blueprint and all of its claims have been reviewed and approved once by a doctor, ensuring every statement stays within readiness framing rather than treatment. In day-to-day delivery, only cases that meet the risk criteria are reviewed by a doctor before booking, while general cases can book and join right away."
+      },
+      "allowedClaim": {
+        "th": "ช่วยเตรียมร่างกายและสภาพแวดล้อมให้พร้อมต่อการพักผ่อน ด้วยการผ่อนคลายร่างกาย การหายใจ มื้ออาหารที่เป็นมิตรกับการนอน และคำแนะนำเรื่องสุขอนามัยการนอน",
+        "en": "Helps prepare your body and environment for rest with body relaxation, breathing, a sleep-friendly meal and sleep hygiene guidance."
+      },
+      "forbiddenClaims": [
+        {
+          "th": "ห้ามกล่าวว่า รักษาโรคนอนไม่หลับ",
+          "en": "Do not claim it treats insomnia"
+        },
+        {
+          "th": "ห้ามกล่าวว่า ทำให้หลับทันที",
+          "en": "Do not claim you will fall asleep instantly"
+        },
+        {
+          "th": "ห้ามกล่าวว่า ใช้แทนยานอนหลับได้",
+          "en": "Do not claim it replaces sleeping pills"
+        }
+      ],
+      "goals": [
+        "sleep",
+        "energy",
+        "stress",
+        "jetlag"
+      ],
+      "pillars": [
+        "mind",
+        "air",
+        "food"
+      ],
+      "tier": "premium"
+    },
+    {
+      "id": "program-calm-mind",
+      "blueprintNumber": 2,
+      "sortOrder": 2,
+      "slug": "calm-mind",
+      "status": "draft",
+      "category": "calm_mind",
+      "tripPhase": "during",
+      "name": {
+        "th": "Calm Mind",
+        "en": "Calm Mind"
+      },
+      "subtitle": {
+        "th": "ใจนิ่ง",
+        "en": "Stress downshift"
+      },
+      "image": "/programs/calm-mind.png",
+      "durationLabel": {
+        "th": "ครึ่งวัน",
+        "en": "Half day"
+      },
+      "priceFrom": 3200,
+      "tagline": {
+        "th": "Calm Mind (ใจนิ่ง) — ครึ่งวันที่ค่อย ๆ พาความวุ่นวายในหัวให้สงบลง",
+        "en": "Calm Mind — a half day that gently lets an over-stimulated mind settle."
+      },
+      "programIntent": {
+        "th": "Calm Mind ออกแบบมาเพื่อช่วยลดภาระความเครียดชั่วคราวสำหรับคนที่ถูกกระตุ้นมากเกินไปจากงานหรือการเดินทาง ผ่านการหายใจช้า การเคลื่อนไหวเบา ๆ การพักผ่านประสาทสัมผัสอย่างมีสติ และการผ่อนคลายร่างกาย โปรแกรมนี้เป็นประสบการณ์ wellness ไม่ใช่การบำบัดความวิตกกังวลหรือภาวะทางจิตใจ และไม่ใช่การรักษาทางการแพทย์",
+        "en": "Calm Mind is built to help ease temporary stress load for people who are over-stimulated by work or travel, through slow breathing, gentle movement, mindful sensory rest and body relaxation. It is a wellness experience, not treatment for anxiety or any mental-health condition, and not medical care."
+      },
+      "scenarioClaim": {
+        "th": "ช่วงกลางทริปที่หัวยังไม่ยอมหยุดคิดเรื่องงานและตารางที่อัดแน่น คุณวางมือถือลงแล้วเดินเข้าสู่ครึ่งวันของ Calm Mind ที่ Hug Samui เริ่มจากการบอกตัวเองเบา ๆ ว่าตอนนี้รู้สึกอย่างไร ค่อย ๆ ยืดเหยียดร่างกายริมทะเล หายใจช้าลงทีละจังหวะ แล้วปล่อยให้เสียงซิงกิ้งโบลและการนวดผ่อนคลายค่อย ๆ คลายความตึงออกไป จบด้วยมื้อเบา ๆ ที่ไม่มีคาเฟอีน คุณกลับออกไปเจอวันที่เหลือด้วยใจที่นิ่งขึ้นกว่าตอนเดินเข้ามา",
+        "en": "Mid-trip, with your head still racing through work and a packed schedule, you set your phone down and step into a Calm Mind half day at Hug Samui. It opens by gently naming how you feel right now, eases into a beachside stretch, slows your breath one count at a time, then lets singing-bowl tones and a relaxing massage loosen the tension you have been carrying. You close with a light, caffeine-free meal and walk back into the rest of your day with a quieter, steadier mind than the one you arrived with."
+      },
+      "suitableFor": {
+        "th": "เหมาะกับนักเดินทางและคนทำงานที่รู้สึกว่าหัวทำงานหนักเกินไป ถูกกระตุ้นตลอดเวลา ตารางแน่น หรือมีอาการล้าทางอารมณ์ระหว่างทริป และอยากได้ช่วงเวลาสงบ ๆ เพื่อรีเซ็ตชั่วคราว ไม่เหมาะสำหรับผู้ที่ต้องการการดูแลภาวะวิตกกังวล ซึมเศร้า หรือกำลังอยู่ระหว่างการรักษาทางจิตเวช ซึ่งควรปรึกษาผู้เชี่ยวชาญโดยตรง",
+        "en": "For travellers and professionals who feel mentally over-worked, constantly stimulated, scheduled to the brim, or emotionally fatigued during a trip and want a quiet window to reset for a while. It is not for people seeking care for anxiety, depression or anyone currently in psychiatric treatment, who should speak with a professional directly."
+      },
+      "whyItWorks": {
+        "th": "ลำดับของโปรแกรมพาร่างกายและใจจากโหมดตื่นตัวเข้าสู่โหมดพักทีละขั้น การเคลื่อนไหวช้า ๆ การหายใจ 5-6 ครั้งต่อนาที และการพักผ่านประสาทสัมผัสช่วยกระตุ้นการตอบสนองแบบผ่อนคลาย (relaxation response) และการปรับสมดุลระบบประสาทอัตโนมัติให้เอนเข้าหาฝั่งพักผ่อน เมื่อรวมกับการลดสิ่งกระตุ้นรอบตัวและมื้อที่ไม่มีคาเฟอีน จึงช่วยให้ภาระความเครียดชั่วคราวเบาลงได้ ทั้งหมดนี้เป็นการสนับสนุนการผ่อนคลาย ไม่ใช่การรักษาอาการทางการแพทย์",
+        "en": "The sequence walks body and mind from an activated state into rest, one step at a time. Slow movement, breathing at five to six breaths per minute and mindful sensory rest help invite the relaxation response and nudge the autonomic nervous system toward its resting side. Paired with a low-stimulation setting and a caffeine-free meal, this can help lighten temporary stress load. All of it supports relaxation rather than treating any medical condition."
+      },
+      "coreMechanisms": [
+        {
+          "title": {
+            "th": "การตอบสนองแบบผ่อนคลายผ่านการหายใจช้า",
+            "en": "Relaxation response through slow breathing"
+          },
+          "detail": {
+            "th": "การหายใจช้าราว 5-6 ครั้งต่อนาทีหรือการหายใจแบบ box breathing ช่วยชวนร่างกายเข้าสู่การตอบสนองแบบผ่อนคลาย ทำให้จังหวะหายใจและความรู้สึกตึงเครียดค่อย ๆ ลดลง",
+            "en": "Breathing at roughly five to six breaths per minute, or soft box breathing, helps invite the body's relaxation response so breath rhythm and felt tension gradually settle."
+          }
+        },
+        {
+          "title": {
+            "th": "การปรับสมดุลระบบประสาทอัตโนมัติ",
+            "en": "Autonomic down-regulation"
+          },
+          "detail": {
+            "th": "การเคลื่อนไหวเบา ๆ อย่างมีสติร่วมกับการหายใจช้า ช่วยให้ระบบประสาทอัตโนมัติเอนเข้าหาฝั่งพักผ่อน (parasympathetic) แทนที่จะค้างอยู่ในโหมดตื่นตัวจากงานและการเดินทาง",
+            "en": "Gentle, mindful movement combined with slow breath helps the autonomic nervous system lean toward its resting (parasympathetic) side instead of staying stuck in the activated mode of work and travel."
+          }
+        },
+        {
+          "title": {
+            "th": "การพักผ่านประสาทสัมผัสและการลดสิ่งกระตุ้น",
+            "en": "Mindful sensory rest and low stimulation"
+          },
+          "detail": {
+            "th": "การลดสิ่งกระตุ้นรอบตัว ไม่มีห้องเสียงดัง ไม่มีตารางเร่งรีบ ร่วมกับประสบการณ์เสียงและการนวดผ่อนคลาย ช่วยลดภาระทางประสาทสัมผัสที่สะสมจากการถูกกระตุ้นมากเกินไป",
+            "en": "Lowering ambient stimulation, with no loud rooms and no rushed scheduling, alongside a sound experience and a relaxing massage, helps reduce the sensory load built up from being over-stimulated."
+          }
+        }
+      ],
+      "triggers": [
+        {
+          "label": {
+            "th": "คะแนนความเครียดสูง",
+            "en": "High stress score"
+          },
+          "criterion": {
+            "th": "คะแนนความเครียดตั้งแต่ 70 ขึ้นไป",
+            "en": "Stress score of 70 or above."
+          }
+        },
+        {
+          "label": {
+            "th": "คะแนนความสมดุล/ความสงบต่ำ",
+            "en": "Low balance or calm score"
+          },
+          "criterion": {
+            "th": "คะแนนความสมดุลหรือความสงบ 50 หรือต่ำกว่า",
+            "en": "Balance or calm score of 50 or below."
+          }
+        },
+        {
+          "label": {
+            "th": "ภาระงานสูง",
+            "en": "High workload"
+          },
+          "criterion": {
+            "th": "มีสัญญาณภาระงานหรือความรับผิดชอบที่สูง",
+            "en": "Signs of a high workload or heavy responsibility."
+          }
+        },
+        {
+          "label": {
+            "th": "มีอาการล้าทางอารมณ์",
+            "en": "Mood fatigue present"
+          },
+          "criterion": {
+            "th": "มีสัญญาณของความล้าทางอารมณ์",
+            "en": "Mood fatigue is present."
+          }
+        }
+      ],
+      "safetyGate": {
+        "th": "หากพบสัญญาณของภาวะสุขภาพจิตที่เข้าข่ายทางคลินิก กำลังอยู่ระหว่างการรักษาทางจิตเวช หรือมีความทุกข์ใจรุนแรง เราจะแนะนำให้พบผู้เชี่ยวชาญด้านสุขภาพจิตโดยตรง Goodfill เป็นบริการ wellness ไม่ใช่การบำบัดหรือการรักษา และโปรแกรมนี้ออกแบบให้สิ่งกระตุ้นรอบตัวต่ำ ไม่มีห้องเสียงดังและไม่มีตารางที่เร่งรีบ เพื่อให้ช่วงเวลานี้สงบจริง",
+        "en": "If there are signs of a clinical mental-health condition, current psychiatric treatment, or severe distress, we will recommend seeing a mental-health professional directly. Goodfill is a wellness service, not therapy or treatment, and this program is designed to keep sensory load low, with no loud rooms and no rushed scheduling, so the time stays genuinely calm."
+      },
+      "safetyGateRequired": false,
+      "slots": [
+        {
+          "order": 1,
+          "slotCode": null,
+          "name": {
+            "th": "เช็กอินความรู้สึก 5 นาที",
+            "en": "5-minute emotional check-in"
+          },
+          "duration": {
+            "th": "5 นาที",
+            "en": "5 minutes"
+          },
+          "evidenceLevel": "A",
+          "mechanism": {
+            "th": "การหยุดบอกตัวเองว่าตอนนี้รู้สึกเครียดแค่ไหนก่อนเริ่ม ช่วยสร้างจุดอ้างอิงทางอารมณ์และพาความสนใจกลับมาที่ตัวเอง เป็นการเปิดประตูสู่การผ่อนคลายอย่างมีสติ",
+            "en": "Pausing to name how stressed you feel before starting creates an emotional reference point and brings attention back to yourself, opening the door to mindful relaxation."
+          },
+          "fill": {
+            "type": "guidance",
+            "serviceId": null,
+            "menuId": null,
+            "partnerAssigned": true,
+            "partnerType": {
+              "th": "Goodfill team (ผ่าน Goodfill app)",
+              "en": "Goodfill team (via the Goodfill app)"
+            },
+            "note": {
+              "th": "นำทางผ่าน Goodfill app ให้ผู้ร่วมโปรแกรมระบุสถานะความเครียดของตัวเองก่อนเริ่ม และใช้เป็นค่าตั้งต้นสำหรับเทียบความรู้สึกก่อน-หลัง",
+              "en": "Guided in the Goodfill app, the guest names their stress state before starting; it becomes the baseline for the before-and-after feeling comparison."
+            }
+          }
+        },
+        {
+          "order": 2,
+          "slotCode": "M01",
+          "name": {
+            "th": "โยคะช้าและการเคลื่อนไหวอย่างมีสติ",
+            "en": "Slow yoga and mindful mobility"
+          },
+          "duration": {
+            "th": "30-45 นาที",
+            "en": "30-45 minutes"
+          },
+          "evidenceLevel": "A",
+          "mechanism": {
+            "th": "การเคลื่อนไหวเบา ๆ อย่างมีสติ ไม่ใช่การออกกำลังกายหนัก ช่วยคลายความตึงของร่างกายและพาระบบประสาทอัตโนมัติให้เริ่มเอนเข้าหาฝั่งพักผ่อน",
+            "en": "Gentle, mindful movement, not a fitness workout, helps release physical tension and starts nudging the autonomic nervous system toward its resting side."
+          },
+          "fill": {
+            "type": "service",
+            "serviceId": "hug-light-yoga-stretching",
+            "menuId": null,
+            "partnerAssigned": true,
+            "partnerType": {
+              "th": "Hug Samui (กิจกรรม wellness)",
+              "en": "Hug Samui (wellness activity)"
+            },
+            "note": {
+              "th": "เติมด้วย Greeting & Light Yoga Stretching ของ Hug Samui ซึ่งเป็นการยืดเหยียดเบา ๆ ริมทะเล เป็นมิตรกับผู้เริ่มต้น เน้นช้าและผ่อนคลาย ไม่เน้นความฟิต",
+              "en": "Filled by Hug Samui's Greeting & Light Yoga Stretching, a beginner-friendly beachside stretch kept slow and relaxing rather than fitness-focused."
+            }
+          }
+        },
+        {
+          "order": 3,
+          "slotCode": "R01",
+          "name": {
+            "th": "ฝึกหายใจ",
+            "en": "Breathwork"
+          },
+          "duration": {
+            "th": "8-12 นาที",
+            "en": "8-12 minutes"
+          },
+          "evidenceLevel": "A",
+          "mechanism": {
+            "th": "การหายใจช้าราว 5-6 ครั้งต่อนาที หรือการหายใจแบบ box breathing นุ่ม ๆ ช่วยกระตุ้นการตอบสนองแบบผ่อนคลายและการปรับสมดุลระบบประสาทอัตโนมัติ",
+            "en": "Breathing slowly at about five to six breaths per minute, or soft box breathing, helps invite the relaxation response and autonomic regulation."
+          },
+          "fill": {
+            "type": "guidance",
+            "serviceId": null,
+            "menuId": null,
+            "partnerAssigned": true,
+            "partnerType": {
+              "th": "Goodfill team (นำทางการหายใจ)",
+              "en": "Goodfill team (guided breathwork)"
+            },
+            "note": {
+              "th": "นำทางโดย Goodfill ให้หายใจช้า 5-6 ครั้งต่อนาที หรือ box breathing แบบนุ่ม ๆ ในบรรยากาศที่สิ่งกระตุ้นต่ำ เพื่อให้ใจค่อย ๆ นิ่งลง",
+              "en": "Goodfill-guided slow breathing at five to six breaths per minute, or soft box breathing, in a low-stimulation setting so the mind can quietly settle."
+            }
+          }
+        },
+        {
+          "order": 4,
+          "slotCode": null,
+          "name": {
+            "th": "Sound bath รีเซ็ตประสาทสัมผัส",
+            "en": "Sound bath sensory reset"
+          },
+          "duration": {
+            "th": "45 นาที",
+            "en": "45 minutes"
+          },
+          "evidenceLevel": "C",
+          "mechanism": {
+            "th": "การปล่อยตัวให้จมอยู่กับเสียงซิงกิ้งโบลเป็นการพักผ่านประสาทสัมผัสอย่างมีสติ ช่วยลดภาระทางประสาทสัมผัสและสนับสนุนความรู้สึกผ่อนคลาย เป็นชั้นประสบการณ์ ไม่ใช่การรักษา",
+            "en": "Letting yourself sink into singing-bowl tones is a form of mindful sensory rest that helps reduce sensory load and supports a relaxed feeling. It is an experience layer, not treatment."
+          },
+          "fill": {
+            "type": "service",
+            "serviceId": "hug-sound-bath-session",
+            "menuId": null,
+            "partnerAssigned": true,
+            "partnerType": {
+              "th": "Hug Samui (ประสบการณ์เสียง)",
+              "en": "Hug Samui (sound experience)"
+            },
+            "note": {
+              "th": "เติมด้วย Sound Bath Session 45 นาทีของ Hug Samui สื่อสารเป็นประสบการณ์ผ่อนคลายเท่านั้น ไม่อ้างสรรพคุณการรักษาใด ๆ",
+              "en": "Filled by Hug Samui's 45-minute Sound Bath Session, communicated strictly as a relaxation experience with no treatment claims."
+            }
+          }
+        },
+        {
+          "order": 5,
+          "slotCode": null,
+          "name": {
+            "th": "นวดอโรมาหรือคลายต้นคอ-บ่า-ไหล่",
+            "en": "Aromatherapy massage or head and shoulder release"
+          },
+          "duration": {
+            "th": "45-60 นาที",
+            "en": "45-60 minutes"
+          },
+          "evidenceLevel": "B",
+          "mechanism": {
+            "th": "การนวดผ่อนคลายช่วยคลายความตึงของกล้ามเนื้อบริเวณที่มักสะสมความเครียด และสนับสนุนการผ่อนคลายร่างกายโดยรวมในบรรยากาศที่สิ่งกระตุ้นต่ำ",
+            "en": "A relaxing massage helps loosen muscle tension where stress tends to gather and supports overall body relaxation in a low-stimulation setting."
+          },
+          "fill": {
+            "type": "unassigned",
+            "serviceId": null,
+            "menuId": null,
+            "partnerAssigned": false,
+            "partnerType": {
+              "th": "พาร์ทเนอร์สปา",
+              "en": "Spa partner"
+            },
+            "note": {
+              "th": "พื้นที่สำหรับพาร์ทเนอร์สปา ด้วยนวดอโรมาหรือการคลายต้นคอและบ่า ในบรรยากาศที่อ่อนโยนต่อประสาทสัมผัส ไม่มีเสียงดัง ไม่เร่งรีบ",
+              "en": "An open slot for a spa partner, offering an aromatherapy massage or a head and shoulder release in a calm, low-sensory setting — no loud rooms, no rushing."
+            }
+          }
+        },
+        {
+          "order": 6,
+          "slotCode": null,
+          "name": {
+            "th": "มื้อสงบ: ยำผักกูดกุ้งสด",
+            "en": "Calm meal: Paco Fern Salad with Fresh Prawns"
+          },
+          "duration": {
+            "th": "ช่วงมื้อ",
+            "en": "Meal moment"
+          },
+          "evidenceLevel": "B",
+          "mechanism": {
+            "th": "มื้อที่ไม่มีคาเฟอีน ไม่มีแอลกอฮอล์ เบาและสมดุล ช่วยให้ไม่มีสิ่งกระตุ้นมารบกวนความสงบที่เพิ่งสร้างขึ้น และให้โปรตีนคุณภาพดีโดยไขมันอิ่มตัวต่ำ",
+            "en": "A caffeine-free, alcohol-free, light and balanced meal keeps stimulants from disturbing the calm just built, while offering quality protein with very low saturated fat."
+          },
+          "fill": {
+            "type": "menu",
+            "serviceId": null,
+            "menuId": "ref-menu-paco-fern-prawn-salad",
+            "partnerAssigned": true,
+            "partnerType": {
+              "th": "Hug Samui (Local Wellness Kitchen)",
+              "en": "Hug Samui (Local Wellness Kitchen)"
+            },
+            "note": {
+              "th": "เติมด้วยยำผักกูดกุ้งสดของ Hug Samui เฟิร์นท้องถิ่นให้ธาตุเหล็กและเบต้าแคโรทีน กุ้งสดให้โปรตีนสูงไขมันอิ่มตัวแทบเป็นศูนย์ ไม่มีคาเฟอีนและแอลกอฮอล์ตามกติกามื้อสงบ",
+              "en": "Filled by Hug Samui's Paco Fern Salad with Fresh Prawns: local fern brings iron and beta-carotene, fresh prawns add high protein with almost no saturated fat, and it stays caffeine-free and alcohol-free per the calm-meal rule."
+            }
+          }
+        },
+        {
+          "order": 7,
+          "slotCode": null,
+          "name": {
+            "th": "การ์ดรีเซ็ต 3 นาที",
+            "en": "3-minute reset card"
+          },
+          "duration": {
+            "th": "3 นาที",
+            "en": "3 minutes"
+          },
+          "evidenceLevel": "A",
+          "mechanism": {
+            "th": "เครื่องมือสั้น ๆ ที่นำกลับไปทำเองได้ ช่วยให้ผู้ร่วมโปรแกรมเรียกความสงบกลับมาด้วยตัวเองในวันที่เหลือของทริป ต่อยอดการตอบสนองแบบผ่อนคลายให้ติดตัว",
+            "en": "A short take-home tool helps the guest call calm back on their own through the rest of the trip, carrying the relaxation response beyond the program."
+          },
+          "fill": {
+            "type": "guidance",
+            "serviceId": null,
+            "menuId": null,
+            "partnerAssigned": true,
+            "partnerType": {
+              "th": "Goodfill team (คอนเทนต์)",
+              "en": "Goodfill team (content)"
+            },
+            "note": {
+              "th": "การ์ดรีเซ็ต 3 นาทีจาก Goodfill ให้ผู้ร่วมโปรแกรมนำไปทำต่อเองได้หลังจบโปรแกรม เป็นชุดหายใจและการตั้งสติแบบสั้น ๆ",
+              "en": "A 3-minute reset card from Goodfill for the guest to continue on their own after the program: a short breathing and grounding routine."
+            }
+          }
+        }
+      ],
+      "outcomeMetrics": [
+        {
+          "timepoint": {
+            "th": "T2 (หลังโปรแกรม วันเดียวกัน)",
+            "en": "T2 (post-session, same day)"
+          },
+          "measures": {
+            "th": "วัดระดับความเครียดก่อนและหลัง และระดับความรู้สึก (feeling state) แบบ 1-5 พร้อมวัดชีพจร/ความดันโลหิตเป็นทางเลือกหากร้านมีอุปกรณ์และผู้ร่วมโปรแกรมให้ความยินยอม",
+            "en": "Stress level before and after, plus a feeling state on a 1-5 scale, with optional heart rate or blood pressure if the venue measures and the guest consents."
+          }
+        },
+        {
+          "timepoint": {
+            "th": "T3 (วันที่ 7)",
+            "en": "T3 (day 7)"
+          },
+          "measures": {
+            "th": "เช็กอินติดตามผลว่า กลับไปใช้ชีวิตประจำวันได้ดีขึ้นไหม",
+            "en": "A follow-up check on whether you went back to your day better."
+          }
+        }
+      ],
+      "expertLayer": {
+        "th": "พิมพ์เขียวของ Calm Mind ได้รับการอนุมัติจากผู้เชี่ยวชาญของ Goodfill หนึ่งครั้งเพื่อใช้เป็นมาตรฐานของโปรแกรม และเคสที่ถูกตั้งค่าสถานะ (flagged) จะถูกทบทวนเป็นรายกรณีก่อนดำเนินการ เพื่อให้แน่ใจว่าผู้ที่ควรได้รับการดูแลโดยผู้เชี่ยวชาญได้รับคำแนะนำที่เหมาะสม",
+        "en": "The Calm Mind blueprint is approved once by a Goodfill expert as the program standard, and any flagged case is reviewed individually before it proceeds, so anyone who should be guided toward professional care receives the right recommendation."
+      },
+      "allowedClaim": {
+        "th": "ช่วยลดภาระความเครียดชั่วคราวผ่านการหายใจช้า การเคลื่อนไหวเบา ๆ การพักผ่านประสาทสัมผัสอย่างมีสติ และการผ่อนคลายร่างกาย",
+        "en": "Helps ease temporary stress load through slow breathing, gentle movement, mindful sensory rest and body relaxation."
+      },
+      "forbiddenClaims": [
+        {
+          "th": "ห้ามอ้างว่า: รักษาหรือบำบัดโรควิตกกังวล (anxiety)",
+          "en": "Do not claim: treats or cures anxiety."
+        },
+        {
+          "th": "ห้ามอ้างว่า: รักษาหรือบำบัดภาวะซึมเศร้า (depression)",
+          "en": "Do not claim: treats or cures depression."
+        },
+        {
+          "th": "ห้ามอ้างว่า: เป็นการบำบัด การรักษาทางจิตเวช หรือทดแทนการดูแลของผู้เชี่ยวชาญด้านสุขภาพจิต",
+          "en": "Do not claim: this is therapy, psychiatric treatment, or a substitute for professional mental-health care."
+        }
+      ],
+      "goals": [
+        "stress",
+        "calm",
+        "mood",
+        "workload"
+      ],
+      "pillars": [
+        "mind",
+        "air",
+        "food"
+      ],
+      "tier": "basic"
+    },
+    {
+      "id": "program-clear-head",
+      "blueprintNumber": 3,
+      "sortOrder": 3,
+      "slug": "clear-head",
+      "status": "draft",
+      "category": "clear_head",
+      "tripPhase": "during",
+      "name": {
+        "th": "Clear Head",
+        "en": "Clear Head"
+      },
+      "subtitle": {
+        "th": "เบาหัว",
+        "en": "Low-sensory recovery"
+      },
+      "image": "/programs/clear-head.png",
+      "durationLabel": {
+        "th": "ครึ่งวัน",
+        "en": "Half day"
+      },
+      "priceFrom": 3600,
+      "tagline": {
+        "th": "Clear Head (เบาหัว) — โปรแกรมดูแลความเบาสบายของศีรษะ สำหรับคนที่ไวต่อแสง เสียง ความเครียด และจังหวะการนอน พร้อมการคัดกรองโดยแพทย์ก่อนเริ่ม",
+        "en": "Clear Head — a comfort-for-the-head program for guests who are sensitive to light, noise, stress and sleep timing, with a doctor-supervised safety screen before you begin."
+      },
+      "programIntent": {
+        "th": "Clear Head ตั้งใจสร้างพื้นที่ครึ่งวันที่ลดสิ่งกระตุ้นรอบตัวลง ทั้งแสงจ้า เสียงดัง การขาดน้ำ และมื้อที่ตกหล่นระหว่างเที่ยว เพื่อให้คนที่ปวดหัวบ่อยหรือไวต่อสัมผัสได้พักในจังหวะที่ร่างกายและใจรับไหว โปรแกรมนี้คือการดูแลเชิงไลฟ์สไตล์และการผ่อนคลาย ไม่ใช่การรักษาทางการแพทย์ และทุกคนจะผ่านการคัดกรองความปลอดภัยโดยทีมและแพทย์ก่อนเริ่มเสมอ",
+        "en": "Clear Head is built to create a calm half-day that turns down everyday triggers — harsh light, loud noise, dehydration and the meals you skip while travelling — so that guests who are headache-prone or sensory-sensitive can rest at a pace their body and mind can handle. It is lifestyle care and relaxation, not medical treatment, and every guest passes a safety screen with our team and a doctor before the program begins."
+      },
+      "scenarioClaim": {
+        "th": "หลังเดินเที่ยวสมุยมาทั้งเช้า แดดจ้า เสียงรอบตัว และมื้อที่ลืมกินเริ่มทำให้หัวหนัก บ่ายนี้คุณก้าวเข้าสู่โปรแกรม Clear Head ที่ค่อย ๆ พาคุณออกจากความวุ่นวาย เริ่มจากการคัดกรองสั้น ๆ กับทีมและแพทย์ น้ำมะพร้าวสมุยเย็น ๆ กับของว่างเบา ๆ แล้วเข้าสู่ห้องแสงสลัวที่เงียบสงบ การคลายกล้ามเนื้อคอ บ่า และศีรษะอย่างนุ่มนวล ลมหายใจที่ช้าลง และมื้อท้องถิ่นที่ออกแบบให้เบาสบาย คุณออกจากที่นี่ด้วยศีรษะที่โล่งขึ้น และการ์ดบันทึกเล็ก ๆ ที่ช่วยให้คุณรู้จักตัวกระตุ้นของตัวเองดีขึ้น",
+        "en": "After a full morning out on Samui, the bright sun, the noise around you and the meal you forgot to eat start to make your head feel heavy. This afternoon you step into the Clear Head program, which gently leads you away from the buzz — beginning with a short screen with our team and a doctor, a chilled Samui young coconut and a light snack, then a quiet, low-lit room, a soft release through your neck, shoulders and scalp, slower breathing, and a light local meal designed to sit easy. You leave with a clearer head and a small diary card that helps you understand your own triggers a little better."
+      },
+      "suitableFor": {
+        "th": "เหมาะสำหรับผู้เข้าพักที่ปวดหัวบ่อยหรือมีแนวโน้มไมเกรน ไวต่อแสงจ้า เสียงดัง หรือกลิ่นแรง รวมถึงคนที่จังหวะการนอนรวน ดื่มน้ำน้อย หรือมักข้ามมื้ออาหารระหว่างทริป และอยากได้ช่วงเวลาพักที่อ่อนโยนต่อประสาทสัมผัส ทุกคนต้องผ่านการคัดกรองความปลอดภัยก่อน หากมีอาการที่ควรพบแพทย์ เราจะแนะนำให้ปรึกษาแพทย์ก่อนเสมอ",
+        "en": "This program is for guests who are headache-prone or have a tendency toward migraine, who are sensitive to bright light, loud noise or strong scent, and for those whose sleep timing has slipped, who are under-hydrated, or who keep skipping meals on their trip and want a gentle, sensory-kind pause. Everyone completes a safety screen first, and if anything suggests you should see a doctor, we will always guide you to medical care before continuing."
+      },
+      "whyItWorks": {
+        "th": "Clear Head วางลำดับตามกรอบไลฟ์สไตล์ SEEDS (การนอน การเคลื่อนไหว การกิน การจดบันทึก และความเครียด) เพราะสิ่งกระตุ้นที่พบบ่อยในคนปวดหัว เช่น การขาดน้ำ มื้อที่ตกหล่น แสง-เสียงที่มากเกินไป และความเครียดสะสม ล้วนเป็นสิ่งที่ดูแลได้ด้วยการปรับสภาพแวดล้อมและจังหวะของวัน เราจึงลดสิ่งกระตุ้นลงทีละชั้น เติมน้ำ ลดแสง-เสียง คลายกล้ามเนื้อ และชวนหายใจให้ช้าลง เพื่อช่วยให้ระบบประสาทค่อย ๆ ผ่อนคลาย นี่คือการดูแลความเบาสบายและการผ่อนคลาย ไม่ใช่การรักษาหรือการทำให้หายปวดหัว",
+        "en": "Clear Head follows the SEEDS lifestyle frame — sleep, exercise, eat, diary and stress — because the triggers most common among headache-prone guests, such as dehydration, skipped meals, too much light and noise, and built-up stress, are the kind that respond to changing your surroundings and the rhythm of your day. So we lower triggers one layer at a time: rehydrate, dim the light and quiet the noise, ease tight muscles, and invite slower breathing to help the nervous system gently down-regulate. This is comfort and relaxation care, not treatment and not a way to make a headache go away."
+      },
+      "coreMechanisms": [
+        {
+          "title": {
+            "th": "ลดภาระทางประสาทสัมผัส (แสง เสียง กลิ่น)",
+            "en": "Reducing the sensory load (light, noise, scent)"
+          },
+          "detail": {
+            "th": "สำหรับคนที่ไวต่อสัมผัส สภาพแวดล้อมที่มีแสงจ้าและเสียงดังคือสิ่งกระตุ้นโดยตรง การพักในห้องแสงสลัว เสียงเบา และกลิ่นอ่อน ช่วยลดสิ่งเร้าที่เข้ามาหาระบบประสาท ทำให้รู้สึกเบาสบายขึ้น",
+            "en": "For sensory-sensitive guests, a bright, loud environment is a direct trigger. Resting in a low-light, low-noise room with only a mild scent lowers the amount of stimulation reaching the nervous system, which can help the head feel lighter and more at ease."
+          }
+        },
+        {
+          "title": {
+            "th": "การเติมน้ำและมื้อที่สม่ำเสมอ",
+            "en": "Hydration and consistent meals"
+          },
+          "detail": {
+            "th": "การขาดน้ำและการข้ามมื้ออาหารเป็นสิ่งกระตุ้นอาการปวดหัวที่พบบ่อยมากระหว่างเดินทาง การเติมน้ำด้วยน้ำมะพร้าวสมุยที่ให้แร่ธาตุและโพแทสเซียม พร้อมของว่างและมื้อเบา ๆ ที่ตรงเวลา ช่วยรักษาจังหวะร่างกายให้คงที่",
+            "en": "Dehydration and skipped meals are among the most common headache triggers while travelling. Rehydrating with Samui young coconut, which provides electrolytes and potassium, alongside a light snack and an on-time, easy meal, helps keep the body's rhythm steady."
+          }
+        },
+        {
+          "title": {
+            "th": "การลดความตื่นตัวของระบบประสาทอัตโนมัติ",
+            "en": "Down-regulating autonomic arousal"
+          },
+          "detail": {
+            "th": "ความเครียดและความตึงของกล้ามเนื้อคอ-บ่า-ศีรษะมักมาคู่กับความรู้สึกหัวหนัก การคลายกล้ามเนื้ออย่างนุ่มนวลร่วมกับการหายใจช้า ๆ ช่วยกระตุ้นการตอบสนองแบบผ่อนคลาย (relaxation response) และลดความตื่นตัวลง โดยไม่ใช่การรักษาอาการปวดหัว",
+            "en": "Stress and tension through the neck, shoulders and scalp often travel together with a heavy-headed feeling. A gentle muscle release paired with slow breathing can engage the relaxation response and ease arousal — as comfort, never as a treatment for the headache itself."
+          }
+        }
+      ],
+      "triggers": [
+        {
+          "label": {
+            "th": "แนวโน้มไมเกรน / ปวดหัว",
+            "en": "Migraine / headache tendency"
+          },
+          "criterion": {
+            "th": "คะแนนแนวโน้มไมเกรนหรือปวดหัวตั้งแต่ 70 ขึ้นไป",
+            "en": "Migraine or headache tendency score of 70 or higher"
+          }
+        },
+        {
+          "label": {
+            "th": "ไวต่อแสงและเสียง",
+            "en": "Light and noise sensitivity"
+          },
+          "criterion": {
+            "th": "รู้สึกไวหรือไม่สบายตัวเมื่อเจอแสงจ้าหรือเสียงดัง",
+            "en": "Sensitivity or discomfort when exposed to bright light or loud noise"
+          }
+        },
+        {
+          "label": {
+            "th": "จังหวะการนอนรวน",
+            "en": "Sleep disruption"
+          },
+          "criterion": {
+            "th": "การนอนถูกรบกวนหรือจังหวะการนอนไม่สม่ำเสมอระหว่างทริป",
+            "en": "Disrupted or irregular sleep timing during the trip"
+          }
+        },
+        {
+          "label": {
+            "th": "ขาดน้ำ / ข้ามมื้ออาหาร",
+            "en": "Dehydration / skipped meals"
+          },
+          "criterion": {
+            "th": "ดื่มน้ำน้อยหรือมักข้ามมื้ออาหารระหว่างวัน",
+            "en": "Under-hydrated or frequently skipping meals during the day"
+          }
+        }
+      ],
+      "safetyGate": {
+        "th": "Clear Head เป็นโปรแกรมที่ต้องผ่านการคัดกรองความปลอดภัยโดยแพทย์ก่อนการจองเสมอ หากพบข้อใดข้อหนึ่งต่อไปนี้ ผู้เข้าพักจะต้องได้รับการพิจารณาจากแพทย์ก่อนเริ่มโปรแกรม ได้แก่ คะแนนปวดหัวตั้งแต่ 75 ขึ้นไป อาการปวดหัวแบบใหม่หรือรุนแรงผิดปกติ อาการทางระบบประสาท โรคประจำตัวที่สำคัญ การตั้งครรภ์ หรือการใช้ยารักษาไมเกรนหรือยาประจำอื่น ๆ อยู่ การคัดกรองนี้มีไว้เพื่อแยกผู้ที่เหมาะกับการดูแลเชิงผ่อนคลายออกจากผู้ที่ควรพบแพทย์ และเราจะไม่เริ่มโปรแกรมจนกว่าจะผ่านการคัดกรองนี้",
+        "en": "Clear Head always requires a doctor-supervised safety screen before booking. A guest must be reviewed by a doctor before the program begins if any of the following apply: a headache score of 75 or higher, a new or unusually severe headache, neurological symptoms, a major underlying condition, pregnancy, or ongoing migraine or other medication. This screen exists to separate guests suited to relaxation-based care from those who should see a doctor, and we will not start the program until it has been passed."
+      },
+      "safetyGateRequired": true,
+      "slots": [
+        {
+          "order": 1,
+          "slotCode": null,
+          "name": {
+            "th": "การคัดกรองความปลอดภัยเรื่องอาการปวดหัว",
+            "en": "Headache safety screen"
+          },
+          "duration": {
+            "th": "5-10 นาที",
+            "en": "5-10 minutes"
+          },
+          "evidenceLevel": "A",
+          "mechanism": {
+            "th": "เป็นด่านแรกที่ขาดไม่ได้ ใช้แยกผู้ที่เหมาะกับการดูแลเชิงผ่อนคลายออกจากผู้ที่ควรพบแพทย์ ก่อนเริ่มกิจกรรมใด ๆ",
+            "en": "An essential first gate that separates guests suited to relaxation care from those who should see a doctor, before anything else begins."
+          },
+          "fill": {
+            "type": "guidance",
+            "serviceId": null,
+            "menuId": null,
+            "partnerAssigned": true,
+            "partnerType": {
+              "th": "ทีม Goodfill ร่วมกับแพทย์ผู้เชี่ยวชาญ",
+              "en": "Goodfill team together with the expert doctor"
+            },
+            "note": {
+              "th": "ทีม Goodfill ทำการคัดกรองตามเกณฑ์ที่แพทย์กำหนด เคสที่ถูกตั้งธงจะส่งให้แพทย์พิจารณาก่อนเริ่มเสมอ",
+              "en": "The Goodfill team runs the screen using the doctor's criteria; any flagged case is reviewed by the doctor before the program starts."
+            }
+          }
+        },
+        {
+          "order": 2,
+          "slotCode": null,
+          "name": {
+            "th": "เติมน้ำและของว่างเบา ๆ ด้วยน้ำมะพร้าวสมุย",
+            "en": "Hydration and light snack with Samui young coconut"
+          },
+          "duration": {
+            "th": "10 นาที",
+            "en": "10 minutes"
+          },
+          "evidenceLevel": "B",
+          "mechanism": {
+            "th": "การขาดน้ำและการข้ามมื้อเป็นสิ่งกระตุ้นปวดหัวที่พบบ่อย น้ำมะพร้าวสมุยที่ปราศจากคาเฟอีนและให้แร่ธาตุกับโพแทสเซียมช่วยเติมน้ำอย่างอ่อนโยน",
+            "en": "Dehydration and skipped meals are common headache triggers; caffeine-free Samui young coconut with electrolytes and potassium offers gentle rehydration."
+          },
+          "fill": {
+            "type": "menu",
+            "serviceId": null,
+            "menuId": "ref-menu-samui-young-coconut",
+            "partnerAssigned": true,
+            "partnerType": {
+              "th": "พาร์ตเนอร์ร้านอาหารหรือเครื่องดื่ม wellness (เมนูอ้างอิง Samui Aromatic Young Coconut)",
+              "en": "Wellness food or beverage partner (reference menu: Samui Aromatic Young Coconut)"
+            },
+            "note": {
+              "th": "สล็อตนี้เสิร์ฟน้ำมะพร้าวสมุยพร้อมของว่างเบา ๆ เพื่อเติมน้ำและพลังงานก่อนเข้าสู่ช่วงพัก",
+              "en": "This slot delivers Samui young coconut with a light snack to rehydrate and steady energy before the rest phase."
+            }
+          }
+        },
+        {
+          "order": 3,
+          "slotCode": null,
+          "name": {
+            "th": "ช่วงพักในห้องแสงสลัว เสียงเบา",
+            "en": "Low-sensory quiet room"
+          },
+          "duration": {
+            "th": "20-30 นาที",
+            "en": "20-30 minutes"
+          },
+          "evidenceLevel": "B",
+          "mechanism": {
+            "th": "ลดภาระทางประสาทสัมผัสด้วยแสงน้อย เสียงเบา และกลิ่นอ่อน เพื่อให้ผู้ที่ไวต่อสัมผัสได้พักจากสิ่งเร้าที่กระตุ้นอาการ",
+            "en": "Lowers the sensory load with low light, low noise and a mild scent, giving sensory-sensitive guests a break from the stimulation that triggers symptoms."
+          },
+          "fill": {
+            "type": "unassigned",
+            "serviceId": null,
+            "menuId": null,
+            "partnerAssigned": false,
+            "partnerType": {
+              "th": "สปาหรือโรงแรมที่มีห้องเงียบและแสงสลัว",
+              "en": "Spa or hotel with a quiet, dim room"
+            },
+            "note": {
+              "th": "พาร์ตเนอร์ที่มีห้องเงียบ แสงสลัว และกลิ่นอ่อนเสียบเข้าสล็อตนี้ เพื่อมอบพื้นที่พักที่อ่อนโยนต่อประสาทสัมผัส",
+              "en": "A partner offering a dim, quiet room with a mild scent plugs in here to provide a sensory-kind space to rest."
+            }
+          }
+        },
+        {
+          "order": 4,
+          "slotCode": "B02",
+          "name": {
+            "th": "คลายกล้ามเนื้อคอ บ่า และศีรษะอย่างนุ่มนวล",
+            "en": "Gentle neck, shoulder and scalp release"
+          },
+          "duration": {
+            "th": "45-60 นาที",
+            "en": "45-60 minutes"
+          },
+          "evidenceLevel": "B",
+          "mechanism": {
+            "th": "ความตึงของกล้ามเนื้อคอ-บ่า-ศีรษะมักมาคู่กับความรู้สึกหัวหนัก การคลายกล้ามเนื้ออย่างนุ่มนวลช่วยให้ผ่อนคลาย โดยเป็นการดูแลเพื่อความสบาย ไม่ใช่การรักษาอาการปวดหัว",
+            "en": "Tension through the neck, shoulders and scalp often accompanies a heavy head; a gentle release supports relaxation as comfort care, not as a headache cure."
+          },
+          "fill": {
+            "type": "unassigned",
+            "serviceId": null,
+            "menuId": null,
+            "partnerAssigned": false,
+            "partnerType": {
+              "th": "พาร์ตเนอร์สปา",
+              "en": "Spa partner"
+            },
+            "note": {
+              "th": "พาร์ตเนอร์สปาเสียบเข้าด้วยทรีตเมนต์คลายกล้ามเนื้อแบบนุ่มนวล โดยกรอบชัดเจนว่าเป็นการผ่อนคลาย ไม่ใช่การรักษา",
+              "en": "A spa partner plugs in with a gentle muscle-release treatment, framed clearly as relaxation and not treatment."
+            }
+          }
+        },
+        {
+          "order": 5,
+          "slotCode": "R01",
+          "name": {
+            "th": "การหายใจและการผ่อนคลาย",
+            "en": "Breathing and relaxation"
+          },
+          "duration": {
+            "th": "8-10 นาที",
+            "en": "8-10 minutes"
+          },
+          "evidenceLevel": "A",
+          "mechanism": {
+            "th": "การหายใจช้า ๆ ช่วยกระตุ้นการตอบสนองแบบผ่อนคลายและลดความตื่นตัวจากความเครียด ซึ่งเป็นหนึ่งในตัวกระตุ้นที่พบบ่อย",
+            "en": "Slow breathing engages the relaxation response and lowers stress arousal, one of the common triggers."
+          },
+          "fill": {
+            "type": "guidance",
+            "serviceId": null,
+            "menuId": null,
+            "partnerAssigned": true,
+            "partnerType": {
+              "th": "ทีม Goodfill เป็นผู้นำ",
+              "en": "Goodfill team guidance"
+            },
+            "note": {
+              "th": "ทีม Goodfill นำช่วงหายใจและผ่อนคลายสั้น ๆ เพื่อช่วยลดความตื่นตัวก่อนเข้าสู่มื้ออาหาร",
+              "en": "The Goodfill team guides a short breathing and relaxation session to help ease arousal before the meal."
+            }
+          }
+        },
+        {
+          "order": 6,
+          "slotCode": "F03",
+          "name": {
+            "th": "มื้ออาหารที่ใส่ใจตัวกระตุ้น",
+            "en": "Trigger-aware meal"
+          },
+          "duration": {
+            "th": "30-45 นาที",
+            "en": "30-45 minutes"
+          },
+          "evidenceLevel": "B",
+          "mechanism": {
+            "th": "มื้อที่สม่ำเสมอช่วยรักษาจังหวะร่างกาย เสิร์ฟแบบใส่ใจคาเฟอีน ปราศจากแอลกอฮอล์ และไม่บังคับตัดอาหารใด ๆ เพราะตัวกระตุ้นด้านอาหารเป็นเรื่องเฉพาะตัวของแต่ละคน",
+            "en": "A consistent meal keeps the body's rhythm steady, served caffeine-aware and alcohol-free with no forced elimination, since food triggers are highly individual."
+          },
+          "fill": {
+            "type": "menu",
+            "serviceId": null,
+            "menuId": "ref-menu-paco-fern-prawn-salad",
+            "partnerAssigned": true,
+            "partnerType": {
+              "th": "พาร์ตเนอร์ร้านอาหาร wellness (เมนูอ้างอิง Paco Fern Salad with Fresh Prawns ที่เบาและโปรตีนสูง)",
+              "en": "Wellness restaurant partner (reference menu: Paco Fern Salad with Fresh Prawns, light and high in protein)"
+            },
+            "note": {
+              "th": "เสิร์ฟมื้อเบา เช่น ยำผักกูดกุ้งสด แบบใส่ใจคาเฟอีน ปราศจากแอลกอฮอล์ และไม่ตัดอาหารใดแบบเหมารวม",
+              "en": "Serves a light meal such as the paco fern prawn salad, caffeine-aware, alcohol-free, with no blanket elimination of any food."
+            }
+          }
+        },
+        {
+          "order": 7,
+          "slotCode": null,
+          "name": {
+            "th": "การ์ดบันทึกอาการปวดหัว",
+            "en": "Headache diary card"
+          },
+          "duration": {
+            "th": "3 นาที",
+            "en": "3 minutes"
+          },
+          "evidenceLevel": "A",
+          "mechanism": {
+            "th": "การจดบันทึกตามกรอบ SEEDS ช่วยให้ผู้เข้าพักเริ่มมองเห็นความเชื่อมโยงระหว่างการนอน ความเครียด การดื่มน้ำ อาหาร และแสง-เสียง กับตัวกระตุ้นเฉพาะตัวของตนเอง",
+            "en": "Diary-keeping along the SEEDS frame helps the guest begin to see how sleep, stress, hydration, food and light/noise connect to their own personal triggers."
+          },
+          "fill": {
+            "type": "guidance",
+            "serviceId": null,
+            "menuId": null,
+            "partnerAssigned": true,
+            "partnerType": {
+              "th": "เนื้อหาโดยทีม Goodfill",
+              "en": "Goodfill team content"
+            },
+            "note": {
+              "th": "ทีม Goodfill มอบการ์ดบันทึกให้ผู้เข้าพักติดตามการนอน ความเครียด การดื่มน้ำ อาหาร และแสง-เสียง เพื่อค้นหาตัวกระตุ้นเฉพาะตัว",
+              "en": "The Goodfill team provides a diary card for the guest to track sleep, stress, hydration, food and light/noise to find their personal triggers."
+            }
+          }
+        }
+      ],
+      "outcomeMetrics": [
+        {
+          "timepoint": {
+            "th": "T1 (ก่อนเริ่ม)",
+            "en": "T1 (before starting)"
+          },
+          "measures": {
+            "th": "บันทึกความรุนแรงและความถี่ของอาการปวดหัว คุณภาพการนอน การดื่มน้ำ และระดับความเครียดเป็นค่าตั้งต้น พร้อมระดับความสบาย 1-5 และความทนต่อแสง-เสียงในช่วงสั้น ๆ",
+            "en": "Baseline of headache severity and frequency, sleep, hydration and stress, plus a micro comfort rating from 1 to 5 and light/noise tolerance."
+          }
+        },
+        {
+          "timepoint": {
+            "th": "T2 (วันจบโปรแกรม)",
+            "en": "T2 (end of program)"
+          },
+          "measures": {
+            "th": "วัดชุดเดียวกับ T1 ซ้ำ ได้แก่ ความรุนแรงและความถี่ของอาการปวดหัว การนอน การดื่มน้ำ ความเครียด ความสบาย 1-5 และความทนต่อแสง-เสียง เพื่อดูการเปลี่ยนแปลง",
+            "en": "The same set as T1 repeated — headache severity and frequency, sleep, hydration, stress, micro comfort 1 to 5 and light/noise tolerance — to see the change."
+          }
+        },
+        {
+          "timepoint": {
+            "th": "T3 (วันที่ 7 ติดตามผล)",
+            "en": "T3 (day 7 follow-up)"
+          },
+          "measures": {
+            "th": "ความถี่ของอาการปวดหัวในวันที่ 7 และตัวกระตุ้นเฉพาะตัวที่ผู้เข้าพักระบุได้จากการจดบันทึก",
+            "en": "Headache frequency at day 7 and which personal triggers the guest has identified from their diary."
+          }
+        }
+      ],
+      "expertLayer": {
+        "th": "แพทย์เป็นผู้กำหนดเกณฑ์การคัดกรองทั้งหมดของโปรแกรม Clear Head และเป็นเจ้าของกระบวนการนี้ เคสที่ถูกตั้งธงจากการคัดกรอง เช่น คะแนนปวดหัวสูง อาการทางระบบประสาท โรคประจำตัว การตั้งครรภ์ หรือการใช้ยาประจำ จะถูกส่งให้แพทย์พิจารณาก่อนเริ่มโปรแกรมเสมอ ทีม Goodfill ทำหน้าที่ดูแลและประสานงานตามแนวทางที่แพทย์วางไว้ แต่การตัดสินใจว่าใครเหมาะหรือควรพบแพทย์ก่อนเป็นของแพทย์",
+        "en": "A doctor owns the screening criteria for the entire Clear Head program. Any case flagged by the screen — such as a high headache score, neurological symptoms, an underlying condition, pregnancy or ongoing medication — is always reviewed by a doctor before the program starts. The Goodfill team guides and coordinates the experience along the path the doctor has set, but the decision about who is suited and who should see a doctor first belongs to the doctor."
+      },
+      "allowedClaim": {
+        "th": "โปรแกรมดูแลความเบาสบายของศีรษะ สำหรับผู้เข้าพักที่ไวต่อแสง เสียง ความเครียด และจังหวะการนอน พร้อมการคัดกรองความปลอดภัยภายใต้การดูแลของแพทย์",
+        "en": "A comfort-for-the-head program for guests sensitive to light, noise, stress and sleep timing, with a doctor-supervised safety screen."
+      },
+      "forbiddenClaims": [
+        {
+          "th": "ห้ามอ้างว่า รักษาไมเกรน",
+          "en": "Do not claim it cures migraine"
+        },
+        {
+          "th": "ห้ามอ้างว่า แก้ไมเกรนได้อย่างถาวร",
+          "en": "Do not claim it permanently fixes migraine"
+        },
+        {
+          "th": "ห้ามใช้คำว่า ดีท็อกซ์ไมเกรน",
+          "en": "Do not use the phrase migraine detox"
+        },
+        {
+          "th": "ห้ามอ้างว่า บรรเทาอาการปวดหัวได้ทันที",
+          "en": "Do not claim instant headache relief"
+        }
+      ],
+      "goals": [
+        "headache",
+        "sensory",
+        "sleep",
+        "hydration"
+      ],
+      "pillars": [
+        "mind",
+        "air",
+        "food"
+      ],
+      "tier": "premium"
+    },
+    {
+      "id": "program-gut-reset",
+      "blueprintNumber": 4,
+      "sortOrder": 4,
+      "slug": "gut-reset",
+      "status": "draft",
+      "category": "gut_reset",
+      "tripPhase": "during",
+      "name": {
+        "th": "Gut Reset",
+        "en": "Gut Reset"
+      },
+      "subtitle": {
+        "th": "ลำไส้สบาย",
+        "en": "Digestive comfort"
+      },
+      "image": "/programs/gut-reset.png",
+      "durationLabel": {
+        "th": "ครึ่งวัน",
+        "en": "Half day"
+      },
+      "priceFrom": 2900,
+      "tagline": {
+        "th": "Gut Reset — มื้อและจังหวะที่ค่อย ๆ พาลำไส้กลับมาสบาย",
+        "en": "Gut Reset — meals and rhythm that gently bring digestive comfort back"
+      },
+      "programIntent": {
+        "th": "โปรแกรมครึ่งวันที่ออกแบบเมนูและกิจกรรมเพื่อสนับสนุนความสบายของระบบย่อยอาหาร การกินเป็นมื้อเป็นเวลา และการกินแบบเป็นมิตรกับลำไส้ ระหว่างทริปบนเกาะสมุย ไม่ใช่การดีท็อกซ์หรือการล้างลำไส้ แต่เป็นการพาร่างกายกลับเข้าสู่จังหวะการกินที่นุ่มนวลขึ้น ด้วยใยอาหาร ความหลากหลายของพืชผัก อาหารหมักในปริมาณพอเหมาะ และการดื่มน้ำให้เพียงพอ",
+        "en": "A half-day program whose menus and activities are designed to support digestive comfort, regular meals and gut-friendly eating during your Koh Samui trip. It is not a detox or a cleanse. It simply guides your body back into a gentler eating rhythm through fibre, plant diversity, a moderate amount of fermented food and good hydration."
+      },
+      "scenarioClaim": {
+        "th": "หลังหลายวันบนเกาะที่เต็มไปด้วยมื้อหนัก ของมัน และเวลากินที่เลื่อนไปเรื่อย ๆ เช้านี้ท้องของคุณรู้สึกอืดและไม่ค่อยเป็นจังหวะ โปรแกรม Gut Reset เริ่มต้นอย่างใจเย็น ด้วยการพูดคุยสั้น ๆ กับทีม Goodfill และนักโภชนาการ ตามด้วยการขยับตัวเบา ๆ ริมทะเลก่อนจะถึงมื้อ แล้วคุณจึงได้นั่งลงกับจานข้าวยำปักษ์ใต้ที่สด เบา และมีใยอาหารดี ค่อย ๆ กินอย่างรู้ตัว จบครึ่งวันนี้คุณไม่ได้รู้สึกว่าถูก ‘ล้าง’ อะไรออกไป แต่รู้สึกว่าท้องเบาขึ้น เป็นจังหวะขึ้น และมีแผนง่าย ๆ ที่จะดูแลลำไส้ต่อในอีกสามวันข้างหน้า",
+        "en": "After several island days of rich, oily meals and mealtimes that kept drifting later, this morning your stomach feels bloated and out of rhythm. The Gut Reset program opens calmly with a short conversation with the Goodfill team and a nutritionist, followed by gentle movement by the sea before you eat. Then you sit down to a fresh, light Southern Herb Rice Salad with good fibre and eat slowly and mindfully. By the end of the half day you do not feel like anything has been flushed out of you. You simply feel lighter, back in rhythm, and you leave with a simple plan to keep caring for your gut over the next three days."
+      },
+      "suitableFor": {
+        "th": "เหมาะสำหรับนักเดินทางที่รู้สึกท้องอืดหรือไม่สบายท้องเล็กน้อย กินไม่เป็นเวลาระหว่างทริป กินผักและใยอาหารน้อยกว่าปกติ หรือกินหนักและของมันต่อเนื่องจากการท่องเที่ยว และอยากกลับมากินเป็นมื้อเป็นเวลาแบบเบาสบายอีกครั้ง ไม่เหมาะสำหรับผู้ที่มีอาการเตือนทางสุขภาพที่ต้องพบแพทย์ก่อน (ดูเงื่อนไขด้านความปลอดภัย)",
+        "en": "For travellers who feel mildly bloated or have light digestive discomfort, who have been eating at irregular times during the trip, getting less vegetable and fibre than usual, or who have had heavy, oily holiday eating and want to return to lighter, regular meals. It is not for guests with warning symptoms that need a doctor first (see the safety conditions)."
+      },
+      "whyItWorks": {
+        "th": "โปรแกรมนี้ไม่ได้ ‘ล้าง’ ลำไส้ แต่ทำงานกับสิ่งที่มีหลักฐานสนับสนุนจริง คือ ใยอาหารและความหลากหลายของพืชผัก อาหารที่มีโพรไบโอติก/หมักในปริมาณพอเหมาะ การดื่มน้ำให้เพียงพอ และการกลับมากินเป็นมื้อเป็นเวลาอย่างเป็นจังหวะ ลำดับของวันถูกออกแบบให้ค่อยเป็นค่อยไป เริ่มจากการขยับตัวเบา ๆ ก่อนกิน ตามด้วยมื้อที่เน้นพืชผักและคุมปริมาณให้พอดี ไม่เผ็ดหรือมันเกินไป และไม่เพิ่มใยอาหารแบบกระทันหันจนทำให้ท้องทำงานหนัก เป้าหมายคือความสบายท้องที่รู้สึกได้ และนิสัยเล็ก ๆ ที่ทำต่อได้เอง",
+        "en": "This program does not cleanse your gut. It works with what the evidence actually supports: fibre and plant diversity, a moderate amount of fermented or probiotic-rich food, good hydration, and returning to regular, well-timed meals. The day is sequenced to stay gentle — light movement before eating, then a plant-forward, right-portioned meal that is not too spicy or greasy, without spiking fibre suddenly and overloading your gut. The aim is digestive comfort you can feel and small habits you can keep on your own."
+      },
+      "coreMechanisms": [
+        {
+          "title": {
+            "th": "ใยอาหารและความหลากหลายของพืชผัก",
+            "en": "Fibre and plant diversity"
+          },
+          "detail": {
+            "th": "มื้อที่เน้นใยอาหารและพืชผักหลากชนิด เช่น ข้าวยำปักษ์ใต้ที่มีผักและสมุนไพรสด ช่วยสนับสนุนการขับถ่ายที่เป็นจังหวะและความรู้สึกสบายท้อง โดยค่อย ๆ เพิ่มใยอาหารไม่ให้มากเกินไปในครั้งเดียว",
+            "en": "A meal built on fibre and a wide range of plants, such as the Southern Herb Rice Salad with its fresh vegetables and herbs, supports regular, comfortable digestion — adding fibre gradually rather than all at once."
+          }
+        },
+        {
+          "title": {
+            "th": "อาหารหมักในปริมาณพอเหมาะ",
+            "en": "A moderate amount of fermented food"
+          },
+          "detail": {
+            "th": "เครื่องเคียงหรือสมุนไพรท้องถิ่นที่ผ่านการหมักในปริมาณพอเหมาะ ใช้เป็นเลเยอร์ของรสและประสบการณ์ พร้อมฉลากสารก่อภูมิแพ้ที่ชัดเจน ไม่ใช่การ ‘ล้าง’ อะไรออกจากร่างกาย",
+            "en": "A modest fermented local side or herb adds a flavour and experience layer with a clear allergen label — not a way to flush anything out of the body."
+          }
+        },
+        {
+          "title": {
+            "th": "การดื่มน้ำและกินเป็นมื้อเป็นเวลา",
+            "en": "Hydration and regular meals"
+          },
+          "detail": {
+            "th": "การดื่มน้ำให้เพียงพอและการกลับมากินเป็นมื้อเป็นเวลาอย่างเป็นจังหวะ ช่วยสนับสนุนความสบายของระบบย่อยอาหาร โดยเฉพาะหลังช่วงทริปที่เวลากินเลื่อนไปมา",
+            "en": "Good hydration and returning to regular, well-timed meals support digestive comfort, especially after a trip where mealtimes kept drifting."
+          }
+        }
+      ],
+      "triggers": [
+        {
+          "label": {
+            "th": "ท้องอืด / ไม่สบายท้อง",
+            "en": "Bloating or digestive discomfort"
+          },
+          "criterion": {
+            "th": "รู้สึกอืด แน่นท้อง หรือไม่สบายท้องเล็กน้อยระหว่างทริป",
+            "en": "Feeling bloated, full or mildly uncomfortable in the stomach during the trip."
+          }
+        },
+        {
+          "label": {
+            "th": "กินไม่เป็นเวลา",
+            "en": "Irregular meals"
+          },
+          "criterion": {
+            "th": "เวลากินเลื่อนไปมา ข้ามมื้อ หรือกินดึกผิดจังหวะปกติ",
+            "en": "Mealtimes drifting, skipped meals, or eating late and off your usual rhythm."
+          }
+        },
+        {
+          "label": {
+            "th": "ผักและใยอาหารน้อย",
+            "en": "Low vegetable and fibre intake"
+          },
+          "criterion": {
+            "th": "กินผักและใยอาหารน้อยกว่าปกติในช่วงเดินทาง",
+            "en": "Eating fewer vegetables and less fibre than usual while travelling."
+          }
+        },
+        {
+          "label": {
+            "th": "กินหนักจากการท่องเที่ยว",
+            "en": "Heavy travel eating"
+          },
+          "criterion": {
+            "th": "มื้อหนัก ของมัน และเครื่องดื่มต่อเนื่องจากการเที่ยว",
+            "en": "Heavy, oily meals and drinks stacking up from holiday eating."
+          }
+        }
+      ],
+      "safetyGate": {
+        "th": "หากคุณมีอาการปวดท้องรุนแรง อุจจาระมีเลือดปน น้ำหนักลดโดยไม่ทราบสาเหตุ มีไข้ อาเจียนต่อเนื่อง แพ้อาหารรุนแรง โรคลำไส้เรื้อรัง หรือกำลังใช้ยาเกี่ยวกับระบบย่อยอาหาร โปรแกรมนี้ไม่เหมาะกับคุณในตอนนี้ และเราจะแนะนำให้ปรึกษาแพทย์หรือนักกำหนดอาหารก่อน Gut Reset เป็นโปรแกรมเพื่อความสบายท้องและการกินที่เป็นมิตรกับลำไส้เท่านั้น ไม่ใช่การรักษาอาการหรือโรคใด ๆ",
+        "en": "If you have severe abdominal pain, blood in your stool, unexplained weight loss, fever, persistent vomiting, a severe food allergy, chronic bowel disease, or you take digestive medication, this program is not right for you at the moment and we will refer you to a doctor or dietitian first. Gut Reset is only a program for digestive comfort and gut-friendly eating, not a treatment for any symptom or condition."
+      },
+      "safetyGateRequired": false,
+      "slots": [
+        {
+          "order": 1,
+          "slotCode": null,
+          "name": {
+            "th": "คัดกรองความสบายท้อง",
+            "en": "Digestive comfort screen"
+          },
+          "duration": {
+            "th": "5–8 นาที",
+            "en": "5–8 min"
+          },
+          "evidenceLevel": "A",
+          "mechanism": {
+            "th": "พูดคุยสั้น ๆ เพื่อแยกความไม่สบายท้องแบบ wellness ออกจากอาการเตือนที่ควรพบแพทย์ ก่อนเริ่มโปรแกรม เพื่อให้ทุกคนที่เดินต่อปลอดภัยและเหมาะสม",
+            "en": "A short conversation to separate ordinary wellness discomfort from red-flag symptoms that need a doctor, before the program begins, so everyone who continues is safe and suitable."
+          },
+          "fill": {
+            "type": "guidance",
+            "serviceId": null,
+            "menuId": null,
+            "partnerAssigned": true,
+            "partnerType": {
+              "th": "ทีม Goodfill + นักโภชนาการ",
+              "en": "Goodfill team + nutritionist"
+            },
+            "note": {
+              "th": "คัดกรองด้วยทีม Goodfill และนักโภชนาการ หากพบอาการเตือน (ปวดท้องรุนแรง เลือดในอุจจาระ น้ำหนักลดผิดปกติ ฯลฯ) จะส่งต่อแพทย์ก่อนและไม่เริ่มโปรแกรม",
+              "en": "Screened by the Goodfill team and a nutritionist. If a red flag appears (severe abdominal pain, blood in stool, unexplained weight loss, and so on), the guest is referred to a doctor first and the program does not start."
+            }
+          }
+        },
+        {
+          "order": 2,
+          "slotCode": "M01",
+          "name": {
+            "th": "ขยับตัวเบา ๆ ก่อนมื้อ",
+            "en": "Gentle pre-meal movement"
+          },
+          "duration": {
+            "th": "15–20 นาที",
+            "en": "15–20 min"
+          },
+          "evidenceLevel": "A",
+          "mechanism": {
+            "th": "ขยับตัวเบา ๆ ริมทะเลก่อนกิน เพื่อให้โปรแกรมไม่ได้เริ่มด้วยการกินทันที ช่วยให้ร่างกายเข้าสู่จังหวะที่ผ่อนคลายและพร้อมสำหรับมื้ออาหาร",
+            "en": "Light beachside movement before eating, so the program does not begin by eating immediately — easing the body into a relaxed rhythm and readiness for the meal."
+          },
+          "fill": {
+            "type": "service",
+            "serviceId": "hug-light-yoga-stretching",
+            "menuId": null,
+            "partnerAssigned": true,
+            "partnerType": {
+              "th": "พาร์ทเนอร์กิจกรรม wellness (Hug Samui)",
+              "en": "Wellness activity partner (Hug Samui)"
+            },
+            "note": {
+              "th": "เติมด้วย Greeting & Light Yoga Stretching ของ Hug Samui — การยืดเหยียดเบา ๆ สำหรับทุกระดับ ไม่ใช่การออกกำลังกายหนัก",
+              "en": "Filled by Hug Samui's Greeting & Light Yoga Stretching — a gentle, all-levels stretch flow, not a heavy workout."
+            }
+          }
+        },
+        {
+          "order": 3,
+          "slotCode": null,
+          "name": {
+            "th": "ช่วงสมุนไพรเพื่อความสบายท้อง",
+            "en": "Herbal comfort ritual"
+          },
+          "duration": {
+            "th": "10 นาที",
+            "en": "10 min"
+          },
+          "evidenceLevel": "C",
+          "mechanism": {
+            "th": "เลเยอร์ประสบการณ์ท้องถิ่นด้วยสมุนไพร สร้างจังหวะที่ผ่อนคลายและรู้ตัวก่อนมื้ออาหาร เป็นชั้นรสและประสบการณ์ที่เพิ่มความรื่นรมย์ให้กับมื้อนั้น",
+            "en": "A local herbal experience layer that creates a calm, mindful moment before the meal — an added layer of flavour and ritual to enjoy."
+          },
+          "fill": {
+            "type": "unassigned",
+            "serviceId": null,
+            "menuId": null,
+            "partnerAssigned": false,
+            "partnerType": {
+              "th": "พาร์ทเนอร์ wellness ท้องถิ่น",
+              "en": "Local wellness partner"
+            },
+            "note": {
+              "th": "พาร์ทเนอร์ wellness ท้องถิ่นนำพิธีกรรมสมุนไพรอ่อนโยนมาเสียบในสล็อตนี้ เป็นประสบการณ์ผ่อนคลายที่ช่วยเรื่องความสบายท้อง",
+              "en": "A local wellness partner brings a gentle herbal ritual to this slot — a relaxing experience that supports digestive comfort."
+            }
+          }
+        },
+        {
+          "order": 4,
+          "slotCode": "F02",
+          "name": {
+            "th": "มื้อเป็นมิตรกับลำไส้",
+            "en": "Gut-friendly meal"
+          },
+          "duration": {
+            "th": "45–60 นาที",
+            "en": "45–60 min"
+          },
+          "evidenceLevel": "B",
+          "mechanism": {
+            "th": "มื้อหลักที่เน้นใยอาหารสูง พืชผักเป็นหลัก และคุมปริมาณให้พอดี เป็นหัวใจของโปรแกรมในการสนับสนุนความสบายของระบบย่อยอาหารและการกินที่เป็นมิตรกับลำไส้",
+            "en": "A high-fibre, plant-forward, right-portioned main meal — the heart of the program for supporting digestive comfort and gut-friendly eating."
+          },
+          "fill": {
+            "type": "menu",
+            "serviceId": null,
+            "menuId": "ref-menu-southern-herb-rice-salad",
+            "partnerAssigned": true,
+            "partnerType": {
+              "th": "ครัว Hug Samui (เมนูอ้างอิง)",
+              "en": "Hug Samui kitchen (reference menu)"
+            },
+            "note": {
+              "th": "เติมด้วยข้าวยำปักษ์ใต้ (Southern Herb Rice Salad) ใยอาหารดี สมุนไพรและผักสดหลากชนิด เสิร์ฟน้ำบูดูแยกเพื่อคุมโซเดียม พร้อมฉลากสารก่อภูมิแพ้ (ปลาในน้ำบูดู กุ้งแห้ง/กะปิ)",
+              "en": "Filled by the Southern Herb Rice Salad — good fibre with many fresh herbs and vegetables, budu sauce served separately for sodium control, and a clear allergen label (fish in budu sauce, dried shrimp or shrimp paste)."
+            }
+          }
+        },
+        {
+          "order": 5,
+          "slotCode": null,
+          "name": {
+            "th": "เครื่องเคียงท้องถิ่นเบา ๆ (เลือกได้)",
+            "en": "Optional light local side"
+          },
+          "duration": {
+            "th": "เลือกได้",
+            "en": "Optional"
+          },
+          "evidenceLevel": "C",
+          "mechanism": {
+            "th": "เครื่องเคียงท้องถิ่นรสเบาเพิ่มความหลากหลายของพืชผักและรสชาติ ตั้งเป็นตัวเลือกเพราะแขกบางคนท้องอืดง่าย จึงให้เลือกได้ตามความสบายของแต่ละคน",
+            "en": "A light local side adds plant variety and flavour. It is optional because some guests bloat easily, so each guest can choose based on their own comfort."
+          },
+          "fill": {
+            "type": "menu",
+            "serviceId": null,
+            "menuId": "ref-menu-southern-sour-curry-prawns",
+            "partnerAssigned": true,
+            "partnerType": {
+              "th": "ครัว Hug Samui (เมนูอ้างอิง)",
+              "en": "Hug Samui kitchen (reference menu)"
+            },
+            "note": {
+              "th": "เติมด้วยแกงส้มปักษ์ใต้กุ้ง (Southern Sour Curry with Prawns) ไม่มีกะทิ ขมิ้นสด โปรตีนสูง เป็นตัวเลือกเสริม ข้ามได้หากแขกท้องอืดง่าย ฉลากสารก่อภูมิแพ้: กุ้ง กะปิ/น้ำปลา",
+              "en": "Filled by the Southern Sour Curry with Prawns — no coconut milk, fresh turmeric, high protein. An optional add that can be skipped if a guest bloats easily. Allergen label: prawns, shrimp paste or fish sauce."
+            }
+          }
+        },
+        {
+          "order": 6,
+          "slotCode": null,
+          "name": {
+            "th": "โน้ตจากนักโภชนาการ",
+            "en": "Nutritionist note"
+          },
+          "duration": {
+            "th": "ระหว่างมื้อ",
+            "en": "During the meal"
+          },
+          "evidenceLevel": "A",
+          "mechanism": {
+            "th": "อธิบายสั้น ๆ หนึ่งบรรทัดต่อจานว่าทำไมจานนั้นจึงเหมาะกับลำไส้ ช่วยให้แขกเข้าใจเหตุผลเชิงโภชนาการและนำไปใช้ต่อได้เอง โดยยังอยู่ในกรอบที่ไม่ใช่คำกล่าวอ้างทางการแพทย์",
+            "en": "A one-line-per-dish explanation of why each plate fits the gut, helping guests understand the nutrition reasoning and carry it forward — all within a non-medical frame."
+          },
+          "fill": {
+            "type": "guidance",
+            "serviceId": null,
+            "menuId": null,
+            "partnerAssigned": true,
+            "partnerType": {
+              "th": "ทีม Goodfill + นักโภชนาการ",
+              "en": "Goodfill team + nutritionist"
+            },
+            "note": {
+              "th": "ทีม Goodfill และนักกำหนดอาหารเขียนโน้ตสั้น 1 บรรทัดต่อจาน เช่น ใยอาหาร ความหลากหลายของพืช หรือไม่ใส่กะทิ เพื่อให้รู้ว่าทำไมจานนี้เหมาะ",
+              "en": "The Goodfill team and nutritionist add one supportive line per dish — for example fibre, plant diversity, or no coconut milk — so you know why each dish fits."
+            }
+          }
+        },
+        {
+          "order": 7,
+          "slotCode": null,
+          "name": {
+            "th": "แผนดูแลลำไส้ 3 วัน",
+            "en": "3-day gut comfort plan"
+          },
+          "duration": {
+            "th": "ก่อนจบโปรแกรม",
+            "en": "Before the program ends"
+          },
+          "evidenceLevel": "A",
+          "mechanism": {
+            "th": "แผนสั้น ๆ เพื่อทำต่อหลังโปรแกรม เน้นค่อย ๆ เพิ่มใยอาหารทีละน้อยและดื่มน้ำให้เพียงพอ เพื่อให้ความสบายท้องที่ได้ในวันนี้ต่อเนื่องไปถึง T3 ในวันที่ 7",
+            "en": "A short take-home plan focused on adding fibre gradually and staying well hydrated, so the comfort gained today carries through to the T3 day-7 check."
+          },
+          "fill": {
+            "type": "guidance",
+            "serviceId": null,
+            "menuId": null,
+            "partnerAssigned": true,
+            "partnerType": {
+              "th": "คอนเทนต์จาก Goodfill",
+              "en": "Goodfill content"
+            },
+            "note": {
+              "th": "Goodfill มอบแผน 3 วัน ค่อย ๆ เพิ่มใยอาหาร (ไม่เพิ่มทีเดียว) ดื่มน้ำสม่ำเสมอ และรักษามื้ออาหารให้เป็นเวลา",
+              "en": "Goodfill gives you a 3-day plan: add fibre gradually (not all at once), hydrate consistently, and keep regular meals."
+            }
+          }
+        }
+      ],
+      "outcomeMetrics": [
+        {
+          "timepoint": {
+            "th": "T1 (เริ่มต้น)",
+            "en": "T1 (baseline)"
+          },
+          "measures": {
+            "th": "ระดับความอืด/ความสบายท้อง ความสม่ำเสมอของมื้ออาหาร และปริมาณใยอาหารที่ได้รับ",
+            "en": "Bloating and comfort level, meal regularity, and fibre intake."
+          }
+        },
+        {
+          "timepoint": {
+            "th": "Micro (หลังมื้อ)",
+            "en": "Micro (after the meal)"
+          },
+          "measures": {
+            "th": "ความรู้สึกสบายท้องทันทีหลังมื้ออาหารของโปรแกรม",
+            "en": "Felt digestive comfort right after the program meal."
+          }
+        },
+        {
+          "timepoint": {
+            "th": "T2 (จบโปรแกรม)",
+            "en": "T2 (end of program)"
+          },
+          "measures": {
+            "th": "ระดับความอืด/ความสบายท้อง ความสม่ำเสมอของมื้ออาหาร และปริมาณใยอาหาร เทียบกับ T1",
+            "en": "Bloating and comfort level, meal regularity, and fibre intake compared with T1."
+          }
+        },
+        {
+          "timepoint": {
+            "th": "T3 (วันที่ 7)",
+            "en": "T3 (day 7)"
+          },
+          "measures": {
+            "th": "ความสบายท้องในวันที่ 7 และนิสัยการกินที่เป็นมิตรกับลำไส้ที่ยังทำต่อได้",
+            "en": "Day-7 digestive comfort and whether the gut-friendly habit was kept."
+          }
+        }
+      ],
+      "expertLayer": {
+        "th": "นักโภชนาการเป็นผู้รับผิดชอบการอนุมัติเมนูทั้งหมดของโปรแกรม โดยตรวจทานและอนุมัติเป็นชุดรายสัปดาห์ เพื่อให้ทุกมื้อยังคงเบา เป็นมิตรกับลำไส้ คุมปริมาณ และมีฉลากสารก่อภูมิแพ้ที่ชัดเจน ส่วนกรณีที่พบอาการเตือน (red flag) จะถูกส่งต่อให้แพทย์พิจารณาก่อนเสมอ",
+        "en": "A nutritionist owns approval of every menu in the program, reviewing and signing them off in weekly batches so each meal stays light, gut-friendly, portion-controlled and clearly allergen-labelled. Any red-flag case is always referred to a doctor for review first."
+      },
+      "allowedClaim": {
+        "th": "เมนูและกิจกรรมออกแบบมาเพื่อสนับสนุนความสบายของระบบย่อยอาหาร การกินเป็นมื้อเป็นเวลา และการกินที่เป็นมิตรกับลำไส้",
+        "en": "Menus and activities designed to support digestive comfort, regular meals and gut-friendly eating."
+      },
+      "forbiddenClaims": [
+        {
+          "th": "ห้ามใช้คำว่า ‘ดีท็อกซ์’ (detox)",
+          "en": "Do not say \"detox\"."
+        },
+        {
+          "th": "ห้ามอ้างว่า ‘ล้างสารพิษ’ ออกจากร่างกาย",
+          "en": "Do not claim it \"flushes toxins\" from the body."
+        },
+        {
+          "th": "ห้ามอ้างว่า ‘รักษา IBS’ หรือโรคลำไส้แปรปรวน",
+          "en": "Do not claim it \"treats IBS\"."
+        },
+        {
+          "th": "ห้ามอ้างว่า ‘ล้างลำไส้’ (cleanses the gut)",
+          "en": "Do not claim it \"cleanses the gut\"."
+        }
+      ],
+      "goals": [
+        "digestion",
+        "fiber",
+        "meals",
+        "detox"
+      ],
+      "pillars": [
+        "food",
+        "air",
+        "mind"
+      ],
+      "tier": "basic"
+    },
+    {
+      "id": "program-samui-reset",
+      "blueprintNumber": 5,
+      "sortOrder": 5,
+      "slug": "samui-reset",
+      "status": "draft",
+      "category": "samui_reset",
+      "tripPhase": "arrival",
+      "name": {
+        "th": "Samui Reset",
+        "en": "Samui Reset"
+      },
+      "subtitle": {
+        "th": "คลายล้าจากการเดินทาง",
+        "en": "Arrival & travel recovery"
+      },
+      "image": "/programs/samui-reset.png",
+      "durationLabel": {
+        "th": "ครึ่งวัน · วันแรกของทริป",
+        "en": "Half day · arrival"
+      },
+      "priceFrom": 2600,
+      "tagline": {
+        "th": "คลายล้าจากการเดินทาง พาร่างกายและใจกลับมาตั้งหลักตั้งแต่ชั่วโมงแรกบนเกาะสมุย",
+        "en": "Shake off travel fatigue and find your footing from the very first hours on Samui."
+      },
+      "programIntent": {
+        "th": "Samui Reset คือรูทีนต้อนรับวันแรกของทริปที่ออกแบบมาเพื่อช่วยให้ร่างกายปรับตัวหลังการเดินทางไกล ทั้งความเหนื่อยล้า อาการ jet lag การขาดน้ำ และความตึงของร่างกาย โดยอ้างอิงแนวทางการฟื้นตัวจากการเดินทางที่เน้นการรับแสงอย่างเหมาะสม การเติมน้ำ การจัดจังหวะการนอน และการขยับตัวเบา ๆ มากกว่าการพึ่งสปาเพียงอย่างเดียว",
+        "en": "Samui Reset is a travel-recovery, jet-lag-friendly arrival routine designed to help your body settle in after a long journey, easing travel fatigue, dehydration and stiffness. It draws on recovery practice that emphasises sensible light exposure, hydration, sleep timing and gentle movement, rather than relying on spa alone."
+      },
+      "scenarioClaim": {
+        "th": "หลังลงจากเครื่องและเดินทางมาทั้งวัน ตัวหนักอึ้ง คอบ่าตึง และยังงัวเงียกับเวลาที่ต่างไป คุณเริ่มต้นด้วยโปรแกรม Samui Reset ที่ค่อย ๆ พาคุณกลับมา เริ่มจากแก้วน้ำมะพร้าวเย็น ๆ เติมความสดชื่น คำแนะนำสั้น ๆ ว่าควรออกไปรับแสงตอนไหน แล้วยืดเส้นยืดสายเบา ๆ ริมทะเล ตามด้วยมื้อเบา ๆ ที่ย่อยง่าย พอตกค่ำคุณก็รู้สึกเบาขึ้น ตื่นตัวขึ้น และพร้อมจะออกไปสนุกกับทริปที่เพิ่งเริ่มต้น",
+        "en": "After stepping off the plane and travelling all day, your body feels heavy, your neck and shoulders are tight, and the time change has left you foggy. You begin with Samui Reset, which eases you back gently, starting with a cool glass of young coconut to refresh you, a short note on when to step into the light, and some easy stretching by the sea, followed by a light, easy-to-digest meal. By evening you feel lighter, more alert, and ready to enjoy the trip that is just beginning."
+      },
+      "suitableFor": {
+        "th": "เหมาะสำหรับผู้ที่เพิ่งเดินทางมาถึงเกาะสมุยในช่วง 48 ชั่วโมงแรกของทริป โดยเฉพาะคนที่บินไกลหรือข้ามโซนเวลา รู้สึกเพลีย พลังงานต่ำ ตัวตึง หรือร่างกายยังขาดน้ำ และอยากตั้งหลักให้พร้อมก่อนจะออกไปใช้เวลากับทริปอย่างเต็มที่",
+        "en": "Best for travellers who have just arrived on Samui within the first 48 hours of their trip, especially after a long flight or a time-zone change, who feel tired, low on energy, stiff, or under-hydrated, and want to settle in before making the most of the days ahead."
+      },
+      "whyItWorks": {
+        "th": "ลำดับของ Samui Reset ทำตามสิ่งที่แนวทางการฟื้นตัวจากการเดินทางและ jet lag ให้ความสำคัญ นั่นคือ การเติมน้ำให้พอ การรับแสงในจังหวะที่เหมาะกับทิศการเดินทาง และการขยับตัวเบา ๆ เพื่อช่วยให้รู้สึกตื่นตัวและปรับเข้ากับเวลาท้องถิ่นได้ง่ายขึ้น แทนที่จะพักผ่อนแบบเฉย ๆ การจัดวางทีละช่วงแบบนี้จึงช่วยพาร่างกายเข้าสู่จังหวะของวันใหม่อย่างเป็นธรรมชาติ และช่วยให้รู้สึกผ่อนคลายมากขึ้น",
+        "en": "The Samui Reset sequence follows what travel-recovery and jet-lag practice prioritise: getting enough fluids, timing light exposure to your direction of travel, and moving gently to help you feel more alert and adjust to local time, rather than simply resting passively. Layering these steps one after another helps guide your body into the rhythm of a new day more naturally and supports a greater sense of ease."
+      },
+      "coreMechanisms": [
+        {
+          "title": {
+            "th": "การเติมน้ำและเกลือแร่ (Rehydration)",
+            "en": "Rehydration and electrolytes"
+          },
+          "detail": {
+            "th": "การเดินทางไกลและอากาศในห้องโดยสารมักทำให้ร่างกายขาดน้ำ การเริ่มต้นด้วยน้ำเปล่าและน้ำมะพร้าวที่ให้เกลือแร่และโพแทสเซียมแบบไม่หวานจัด ช่วยเติมความชุ่มชื้นและทำให้รู้สึกสดชื่นขึ้น",
+            "en": "Long journeys and cabin air often leave the body dehydrated. Starting with plain water and young coconut, which provides electrolytes and potassium without being too sweet, helps replenish fluids and restore a sense of freshness."
+          }
+        },
+        {
+          "title": {
+            "th": "การจัดจังหวะแสงตามนาฬิกาชีวภาพ (Circadian light timing)",
+            "en": "Circadian light timing"
+          },
+          "detail": {
+            "th": "การรับแสงในจังหวะที่เหมาะกับทิศการเดินทางเป็นหัวใจของการปรับตัวจาก jet lag คำแนะนำสั้น ๆ ว่าควรออกไปรับแสงหรือหลีกเลี่ยงแสงช่วงไหน ช่วยให้ร่างกายค่อย ๆ ปรับเข้ากับเวลาท้องถิ่น",
+            "en": "Timing light exposure to your direction of travel is central to adjusting from jet lag. A short note on when to seek or avoid light helps your body gradually align with local time."
+          }
+        },
+        {
+          "title": {
+            "th": "การขยับตัวเบา ๆ และคลายความตึง (Gentle movement and release)",
+            "en": "Gentle movement and tension release"
+          },
+          "detail": {
+            "th": "การยืดเส้นเบา ๆ การเดินริมทะเล และการนวดผ่อนคลาย ช่วยให้เลือดไหลเวียน คลายความตึงที่สะสมจากการนั่งนาน และทำให้รู้สึกตื่นตัวมากขึ้นในเวลากลางวัน",
+            "en": "Light stretching, a walk by the sea, and a relaxing massage help circulation, ease the stiffness built up from sitting for hours, and support greater daytime alertness."
+          }
+        }
+      ],
+      "triggers": [
+        {
+          "label": {
+            "th": "ช่วง 48 ชั่วโมงแรกของทริป",
+            "en": "First 48 hours of the trip"
+          },
+          "criterion": {
+            "th": "เพิ่งเดินทางมาถึงและอยู่ในช่วง 48 ชั่วโมงแรกของทริปบนเกาะสมุย",
+            "en": "Recently arrived and within the first 48 hours of the trip on Samui."
+          }
+        },
+        {
+          "label": {
+            "th": "บินไกลหรือข้ามโซนเวลา",
+            "en": "Long flight or time-zone change"
+          },
+          "criterion": {
+            "th": "เดินทางด้วยเที่ยวบินที่ยาวนาน หรือข้ามโซนเวลาจนรู้สึกถึงผลของ jet lag",
+            "en": "Travelled on a long flight or across time zones and is feeling the effects of jet lag."
+          }
+        },
+        {
+          "label": {
+            "th": "พลังงานต่ำ (60 หรือน้อยกว่า)",
+            "en": "Low energy (60 or below)"
+          },
+          "criterion": {
+            "th": "ระดับพลังงานที่ประเมินได้อยู่ที่ 60 หรือต่ำกว่า",
+            "en": "Self-rated energy level is 60 or below."
+          }
+        },
+        {
+          "label": {
+            "th": "ร่างกายตึงและฝืด",
+            "en": "Body stiffness"
+          },
+          "criterion": {
+            "th": "รู้สึกตึงหรือฝืดตามร่างกายจากการนั่งหรือเดินทางนาน",
+            "en": "Reports stiffness in the body from prolonged sitting or travel."
+          }
+        },
+        {
+          "label": {
+            "th": "ภาวะขาดน้ำ",
+            "en": "Low hydration"
+          },
+          "criterion": {
+            "th": "มีสัญญาณของการได้รับน้ำไม่เพียงพอหลังการเดินทาง",
+            "en": "Shows signs of low hydration after travelling."
+          }
+        }
+      ],
+      "safetyGate": {
+        "th": "ก่อนเริ่มโปรแกรมจะมีการคัดกรองสุขภาพเบื้องต้นตามมาตรฐาน wellness ทั่วไป Samui Reset ไม่บังคับให้ทำแบบคัดกรองความปลอดภัยก่อนจอง แต่หากคุณรู้สึกไม่สบายเมื่อเดินทางมาถึง เช่น มีไข้ เวียนหัวมาก หรืออาการที่น่ากังวล ทีมงานจะแนะนำให้พักและปรึกษาผู้เชี่ยวชาญด้านสุขภาพก่อน แทนที่จะเริ่มกิจกรรมทันที",
+        "en": "A standard wellness screen is carried out before the program begins. Samui Reset does not require a mandatory safety screen to book, but if you feel unwell on arrival, for example with a fever, significant dizziness or any concerning symptoms, the team will advise you to rest and consult a health professional first rather than starting the activities right away."
+      },
+      "safetyGateRequired": false,
+      "slots": [
+        {
+          "order": 1,
+          "slotCode": null,
+          "name": {
+            "th": "เช็กอินเมื่อมาถึง",
+            "en": "Arrival check-in"
+          },
+          "duration": {
+            "th": "5 นาที",
+            "en": "5 min"
+          },
+          "evidenceLevel": "A",
+          "mechanism": {
+            "th": "เก็บข้อมูลสั้น ๆ เรื่องเที่ยวบิน เวลานอน การดื่มน้ำ และมื้อล่าสุด เพื่อปรับคำแนะนำให้เหมาะกับสภาพร่างกายและทิศทางการเดินทางของคุณ",
+            "en": "Captures a quick picture of your flight, sleep time, hydration and last meal, so the guidance can be tailored to your condition and direction of travel."
+          },
+          "fill": {
+            "type": "guidance",
+            "serviceId": null,
+            "menuId": null,
+            "partnerAssigned": true,
+            "partnerType": {
+              "th": "ทีม Goodfill (ผ่านแอป Goodfill)",
+              "en": "Goodfill team (via the Goodfill app)"
+            },
+            "note": {
+              "th": "ทำผ่านแอป Goodfill ใช้ข้อมูลนี้เป็นจุดตั้งต้นในการเลือกคำแนะนำเรื่องแสง การนอน และการพักในช่วงที่เหลือของโปรแกรม",
+              "en": "Done in the Goodfill app; this information is the starting point for choosing your light, sleep and rest guidance through the rest of the program."
+            }
+          }
+        },
+        {
+          "order": 2,
+          "slotCode": null,
+          "name": {
+            "th": "ขั้นตอนเติมน้ำ",
+            "en": "Hydration protocol"
+          },
+          "duration": {
+            "th": "10 นาที",
+            "en": "10 min"
+          },
+          "evidenceLevel": "B",
+          "mechanism": {
+            "th": "เติมน้ำและเกลือแร่ที่เสียไประหว่างเดินทาง ด้วยน้ำเปล่าและน้ำมะพร้าวที่ไม่หวานจัด ช่วยให้ร่างกายชุ่มชื้นและรู้สึกสดชื่นขึ้น",
+            "en": "Replenishes the fluids and electrolytes lost in transit with plain water and young coconut that is not too sweet, helping you rehydrate and feel fresher."
+          },
+          "fill": {
+            "type": "menu",
+            "serviceId": null,
+            "menuId": "ref-menu-samui-young-coconut",
+            "partnerAssigned": true,
+            "partnerType": {
+              "th": "เมนูจาก Hug Samui",
+              "en": "Menu from Hug Samui"
+            },
+            "note": {
+              "th": "เสิร์ฟ Samui Aromatic Young Coconut เครื่องดื่มปราศจากคาเฟอีนที่ให้โพแทสเซียมและเกลือแร่ คู่กับน้ำเปล่า เน้นเติมน้ำแบบไม่หวานจัด",
+              "en": "Serves the Samui Aromatic Young Coconut, a caffeine-free drink with potassium and electrolytes, paired with plain water, focused on rehydration without too much sweetness."
+            }
+          }
+        },
+        {
+          "order": 3,
+          "slotCode": null,
+          "name": {
+            "th": "คำแนะนำเรื่องแสงตามนาฬิกาชีวภาพ",
+            "en": "Circadian light suggestion"
+          },
+          "duration": {
+            "th": "3 นาที",
+            "en": "3 min"
+          },
+          "evidenceLevel": "A",
+          "mechanism": {
+            "th": "ให้คำแนะนำง่าย ๆ ว่าควรออกไปรับแสงหรือหลีกเลี่ยงแสงในจังหวะใด ตามทิศทางการเดินทาง เพื่อช่วยให้ร่างกายปรับเข้ากับเวลาท้องถิ่น",
+            "en": "Provides a simple suggestion on when to seek or avoid light based on your direction of travel, to help your body adjust to local time."
+          },
+          "fill": {
+            "type": "guidance",
+            "serviceId": null,
+            "menuId": null,
+            "partnerAssigned": true,
+            "partnerType": {
+              "th": "ทีม Goodfill (คอนเทนต์จาก Goodfill)",
+              "en": "Goodfill team (Goodfill content)"
+            },
+            "note": {
+              "th": "คอนเทนต์จาก Goodfill โดยใช้เทมเพลตคำแนะนำเรื่องจังหวะแสงที่ผ่านการอนุมัติจากผู้เชี่ยวชาญ ปรับตามทิศการเดินทางของคุณ",
+              "en": "Goodfill content delivered from an expert-approved light-timing template, adapted to your direction of travel."
+            }
+          }
+        },
+        {
+          "order": 4,
+          "slotCode": "M01",
+          "name": {
+            "th": "ขยับตัวเบา ๆ หรือเดินริมหาด",
+            "en": "Gentle mobility or beach walk"
+          },
+          "duration": {
+            "th": "20-30 นาที",
+            "en": "20-30 min"
+          },
+          "evidenceLevel": "A",
+          "mechanism": {
+            "th": "การขยับตัวเบา ๆ และการเดินริมทะเลช่วยกระตุ้นการไหลเวียน คลายความตึงจากการนั่งนาน และช่วยให้รู้สึกตื่นตัวและปรับเข้ากับเวลาท้องถิ่นได้ดีขึ้น",
+            "en": "Gentle movement and a walk by the sea support circulation, ease the stiffness from long sitting, and help you feel more alert and adjusted to local time."
+          },
+          "fill": {
+            "type": "service",
+            "serviceId": "hug-light-yoga-stretching",
+            "menuId": null,
+            "partnerAssigned": true,
+            "partnerType": {
+              "th": "Hug Samui (Greeting & Light Yoga Stretching)",
+              "en": "Hug Samui (Greeting & Light Yoga Stretching)"
+            },
+            "note": {
+              "th": "เติมด้วยคลาส Greeting & Light Yoga Stretching ของ Hug Samui การขยับตัวแบบมีไกด์ที่อ่อนโยนและเหมาะกับมือใหม่ หรือเลือกเดินริมหาดเบา ๆ แทนได้",
+              "en": "Filled by Hug Samui's Greeting & Light Yoga Stretching, gentle guided mobility that is beginner friendly, or a light beach walk as an alternative."
+            }
+          }
+        },
+        {
+          "order": 5,
+          "slotCode": "B01",
+          "name": {
+            "th": "นวดฟื้นฟูหลังการเดินทาง",
+            "en": "Travel recovery massage"
+          },
+          "duration": {
+            "th": "60-90 นาที",
+            "en": "60-90 min"
+          },
+          "evidenceLevel": "B",
+          "mechanism": {
+            "th": "การนวดผ่อนคลายช่วยคลายความตึงและความฝืดที่สะสมจากการเดินทางไกล และพาร่างกายเข้าสู่โหมดผ่อนคลาย",
+            "en": "A relaxing massage helps ease the stiffness and tightness built up from long travel and brings the body into a state of relaxation."
+          },
+          "fill": {
+            "type": "unassigned",
+            "serviceId": null,
+            "menuId": null,
+            "partnerAssigned": false,
+            "partnerType": {
+              "th": "พาร์ตเนอร์สปา",
+              "en": "Spa partner"
+            },
+            "note": {
+              "th": "ช่วงนี้เปิดให้พาร์ตเนอร์สปาเข้ามาเติม โดยเน้นการนวดเพื่อคลายความตึงและความผ่อนคลายหลังการเดินทาง ความยาว 60-90 นาที",
+              "en": "This slot is open for a spa partner to join, with a 60 to 90 minute massage focused on easing stiffness and supporting relaxation after travel."
+            }
+          }
+        },
+        {
+          "order": 6,
+          "slotCode": null,
+          "name": {
+            "th": "มื้อเบา ๆ จากวัตถุดิบท้องถิ่น",
+            "en": "Light local meal"
+          },
+          "duration": {
+            "th": "45 นาที",
+            "en": "45 min"
+          },
+          "evidenceLevel": "B",
+          "mechanism": {
+            "th": "มื้อเบาที่ย่อยง่ายและโปรตีนสูง ช่วยให้ร่างกายได้พลังงานโดยไม่หนักท้อง เหมาะกับช่วงที่ระบบย่อยยังปรับตัวจากการเดินทาง",
+            "en": "A light, easy-to-digest and high-protein meal gives the body energy without feeling heavy, suiting a digestion that is still adjusting after travel."
+          },
+          "fill": {
+            "type": "menu",
+            "serviceId": null,
+            "menuId": "ref-menu-paco-fern-prawn-salad",
+            "partnerAssigned": true,
+            "partnerType": {
+              "th": "เมนูจาก Hug Samui",
+              "en": "Menu from Hug Samui"
+            },
+            "note": {
+              "th": "เสิร์ฟ Paco Fern Salad with Fresh Prawns จานเบาโปรตีนสูง ไขมันอิ่มตัวต่ำมาก ให้ธาตุเหล็กและเบต้าแคโรทีน ย่อยง่าย ไม่หนักท้อง",
+              "en": "Serves the Paco Fern Salad with Fresh Prawns, a light high-protein dish very low in saturated fat that provides iron and beta-carotene, easy to digest and not heavy."
+            }
+          }
+        },
+        {
+          "order": 7,
+          "slotCode": null,
+          "name": {
+            "th": "การ์ดแผนสำหรับคืนนี้",
+            "en": "Tonight plan card"
+          },
+          "duration": {
+            "th": "3 นาที",
+            "en": "3 min"
+          },
+          "evidenceLevel": "A",
+          "mechanism": {
+            "th": "สรุปสั้น ๆ ว่าคืนนี้ควรจัดการเรื่องแสง อาหาร คาเฟอีน และการนอนอย่างไร เพื่อช่วยให้ปรับเข้ากับเวลาท้องถิ่นและพักผ่อนได้ดีขึ้น",
+            "en": "A short summary of how to handle light, food, caffeine and sleep tonight, to help you align with local time and rest better."
+          },
+          "fill": {
+            "type": "guidance",
+            "serviceId": null,
+            "menuId": null,
+            "partnerAssigned": true,
+            "partnerType": {
+              "th": "ทีม Goodfill (คอนเทนต์จาก Goodfill)",
+              "en": "Goodfill team (Goodfill content)"
+            },
+            "note": {
+              "th": "คอนเทนต์จาก Goodfill หมายเหตุสำคัญ จะไม่แทรกการงีบยาวให้โดยอัตโนมัติ จะแนะนำให้งีบเฉพาะเมื่อระบบประเมินจากเที่ยวบินและโซนเวลาแล้วเห็นว่าควรงีบเท่านั้น บางทิศทางการเดินทางควรอดทนตื่นจนถึงเวลานอนตามเวลาท้องถิ่น",
+              "en": "Goodfill content. Important note: a long nap is not auto-added; a nap is suggested only when the system, based on your flight and time zone, advises one, since some arrival directions should push through to local bedtime."
+            }
+          }
+        }
+      ],
+      "outcomeMetrics": [
+        {
+          "timepoint": {
+            "th": "T1 (ก่อนเริ่ม)",
+            "en": "T1 (baseline)"
+          },
+          "measures": {
+            "th": "ระดับพลังงาน การได้รับน้ำ ความตึงของร่างกาย และคุณภาพการนอนเมื่อคืน",
+            "en": "Energy level, hydration, body stiffness, and sleep last night."
+          }
+        },
+        {
+          "timepoint": {
+            "th": "Micro (ระหว่างโปรแกรม)",
+            "en": "Micro (in-session)"
+          },
+          "measures": {
+            "th": "ความรู้สึกสดชื่น ประเมินด้วยสเกล 1 ถึง 5",
+            "en": "Sense of freshness, rated on a 1 to 5 scale."
+          }
+        },
+        {
+          "timepoint": {
+            "th": "T2 (หลังจบโปรแกรม)",
+            "en": "T2 (post-program)"
+          },
+          "measures": {
+            "th": "ระดับพลังงาน และความพร้อมสำหรับทริปที่เหลือ",
+            "en": "Energy level and readiness for the rest of the trip."
+          }
+        },
+        {
+          "timepoint": {
+            "th": "T3 (วันถัดไป)",
+            "en": "T3 (next day)"
+          },
+          "measures": {
+            "th": "ระดับพลังงานในวันถัดไป",
+            "en": "Energy level the next day."
+          }
+        }
+      ],
+      "expertLayer": {
+        "th": "โครงสร้างของ Samui Reset จะถูกตรวจและอนุมัติโดยผู้เชี่ยวชาญหนึ่งครั้งในระดับ blueprint ส่วนคำแนะนำเรื่องจังหวะการรับแสง (light-timing guidance) ใช้เทมเพลตที่ผ่านการอนุมัติจากผู้เชี่ยวชาญแล้ว เพื่อให้คำแนะนำที่ส่งถึงคุณอ้างอิงแนวทางที่เชื่อถือได้และสอดคล้องกับทิศทางการเดินทางของคุณ",
+        "en": "The Samui Reset structure is reviewed and approved by an expert once at the blueprint level. The light-timing guidance is delivered from an expert-approved template, so the suggestions you receive are grounded in trusted practice and matched to your direction of travel."
+      },
+      "allowedClaim": {
+        "th": "รูทีนต้อนรับวันแรกของทริปที่ช่วยฟื้นตัวจากการเดินทางและเป็นมิตรกับ jet lag",
+        "en": "A travel-recovery, jet-lag-friendly arrival routine."
+      },
+      "forbiddenClaims": [
+        {
+          "th": "ห้ามอ้างว่า แก้ jet lag ได้ 100 เปอร์เซ็นต์",
+          "en": "Do not claim it 100% fixes jet lag."
+        },
+        {
+          "th": "ห้ามอ้างว่า รักษาหรือกำจัดอาการเหนื่อยล้าได้",
+          "en": "Do not claim it cures fatigue."
+        }
+      ],
+      "goals": [
+        "arrival",
+        "jetlag",
+        "hydration",
+        "energy"
+      ],
+      "pillars": [
+        "air",
+        "food",
+        "mind"
+      ],
+      "tier": "basic"
+    },
+    {
+      "id": "program-samui-recharge",
+      "blueprintNumber": 6,
+      "sortOrder": 6,
+      "slug": "samui-recharge",
+      "status": "draft",
+      "category": "samui_recharge",
+      "tripPhase": "departure",
+      "name": {
+        "th": "The Samui Recharge",
+        "en": "The Samui Recharge"
+      },
+      "subtitle": {
+        "th": "เติมพลังก่อนกลับ",
+        "en": "Pre-departure recharge"
+      },
+      "image": "/programs/samui-recharge.png",
+      "durationLabel": {
+        "th": "ครึ่งวัน–เต็มวัน",
+        "en": "Half to full day"
+      },
+      "priceFrom": 4500,
+      "tagline": {
+        "th": "เติมพลังก่อนกลับ ฟื้นตัวให้พร้อมก่อนขึ้นเครื่อง",
+        "en": "Recharge before you fly, with a clear before-after story"
+      },
+      "programIntent": {
+        "th": "โปรแกรมครึ่งวันถึงเต็มวันสำหรับช่วง 48 ชั่วโมงสุดท้ายก่อนเดินทางกลับ The Samui Recharge ออกแบบมาเพื่อช่วยให้คุณฟื้นพลังและพักฟื้นร่างกาย ด้วยการเคลื่อนไหวเบา ๆ การผ่อนคลาย การหายใจ มื้ออาหารที่สมดุล และสรุปผลก่อน-หลังที่ผู้เชี่ยวชาญลงนาม เพื่อให้คุณก้าวขึ้นเครื่องด้วยความรู้สึกเบาสบายและสดชื่น",
+        "en": "A half-to-full-day program for the final 48 hours of your trip. The Samui Recharge is designed to help you restore energy and recover before you fly home, through light movement, relaxation, breathing, a balanced meal, and an expert-signed before-after summary, so you board your flight feeling lighter and refreshed."
+      },
+      "scenarioClaim": {
+        "th": "พรุ่งนี้คุณต้องขึ้นเครื่องกลับบ้านแล้ว และร่างกายก็เริ่มส่งสัญญาณว่าเที่ยวมาเต็มที่ เช้านี้คุณเริ่มต้นกับ The Samui Recharge เช็กพลัง ความเครียด และการพักผ่อนสั้น ๆ ก่อนยืดเหยียดเบา ๆ ที่ไม่ทำให้เมื่อยตอนเดินทาง จากนั้นปล่อยให้นวดผ่อนคลายทั้งตัวคลายความตึงจากทริปที่ผ่านมา ปิดท้ายด้วยมื้ออำลาที่สมดุลและการ์ดสรุปผลก่อน-หลัง คุณจึงเดินเข้าสนามบินด้วยพลังที่กลับมาเต็มอีกครั้ง พร้อมแผนดูแลตัวเองต่อเมื่อถึงบ้าน",
+        "en": "Tomorrow you fly home, and your body is quietly telling you the trip was a full one. This morning you begin The Samui Recharge: a quick check of your energy, stress, and rest, then gentle stretching that won't leave you sore for the journey. You let a whole-body relaxation massage release the tension the trip left behind, and close with a balanced farewell meal and a before-after summary card. You walk into the airport with your energy restored and a simple plan to keep caring for yourself once you're home."
+      },
+      "suitableFor": {
+        "th": "เหมาะสำหรับผู้เดินทางในช่วง 48 ชั่วโมงสุดท้ายของทริป ที่ผ่านกิจกรรมและประสบการณ์มาหลายอย่างแล้ว และเริ่มรู้สึกว่าความเครียดสูงขึ้นหรือพลังลดลง อยากใช้วันสุดท้ายเพื่อฟื้นตัว ผ่อนคลาย และทบทวนทริป ก่อนกลับไปใช้ชีวิตประจำวัน",
+        "en": "For travelers in the last 48 hours of their trip who have already enjoyed several experiences and are starting to feel higher stress or lower energy. It is for anyone who wants to spend their final day recovering, relaxing, and reflecting before returning to everyday life."
+      },
+      "whyItWorks": {
+        "th": "ลำดับของโปรแกรมวางไว้เพื่อค่อย ๆ พาร่างกายและใจกลับสู่โหมดพักผ่อน การเคลื่อนไหวเบา ๆ ช่วยคลายความตึงโดยไม่ทำให้ล้าก่อนเดินทาง การนวดและการหายใจช่วยกระตุ้นการตอบสนองแบบผ่อนคลายของระบบประสาทอัตโนมัติ มื้ออาหารที่สมดุลและการดื่มน้ำให้เพียงพอช่วยเติมพลังอย่างนุ่มนวล และการ์ดสรุปก่อน-หลังทำให้คุณเห็นการเปลี่ยนแปลงของตัวเองอย่างชัดเจน ทั้งหมดนี้เป็นการสนับสนุนการฟื้นตัวตามธรรมชาติ ไม่ใช่การรักษาโรค",
+        "en": "The sequence is arranged to gently guide your body and mind back into a rest mode. Light movement eases tension without tiring you before travel; massage and breathing help invite the body's relaxation response and down-regulate the nervous system; a balanced, hydration-aware meal restores energy gently; and the before-after card lets you clearly see your own shift. Together these steps support natural recovery, rather than treating any condition."
+      },
+      "coreMechanisms": [
+        {
+          "title": {
+            "th": "การตอบสนองแบบผ่อนคลายและการปรับสมดุลระบบประสาทอัตโนมัติ",
+            "en": "Relaxation response and autonomic down-regulation"
+          },
+          "detail": {
+            "th": "การนวดผ่อนคลาย การหายใจช้า ๆ และจังหวะที่ไม่เร่งรีบ ช่วยกระตุ้นการตอบสนองแบบผ่อนคลายของร่างกาย ปรับระบบประสาทให้เข้าสู่โหมดพักและฟื้นตัว ทำให้รู้สึกผ่อนคลายและสงบขึ้นก่อนเดินทาง",
+            "en": "Whole-body relaxation massage, slow breathing, and an unhurried pace help invite the body's relaxation response, shifting the nervous system toward a rest-and-recover state so you feel calmer and more at ease before travel."
+          }
+        },
+        {
+          "title": {
+            "th": "การเคลื่อนไหวเบา ๆ เพื่อฟื้นตัว",
+            "en": "Gentle movement for recovery"
+          },
+          "detail": {
+            "th": "การยืดเหยียดและการเคลื่อนไหวแบบเบา ช่วยคลายความตึงของกล้ามเนื้อที่สะสมจากการเดินทางและกิจกรรมตลอดทริป โดยออกแบบให้ไม่หนักจนทำให้เมื่อยหรือล้าก่อนขึ้นเครื่อง",
+            "en": "Light stretching and low-intensity mobility help release the muscle tension that builds up from a full trip, calibrated to stay gentle so you are not sore or fatigued before your flight."
+          }
+        },
+        {
+          "title": {
+            "th": "โภชนาการที่สมดุลและการดื่มน้ำให้เพียงพอ",
+            "en": "Balanced nutrition and adequate hydration"
+          },
+          "detail": {
+            "th": "มื้ออาหารที่เน้นโปรตีนคุณภาพ ไขมันดีอย่างโอเมก้า-3 และเน้นการดื่มน้ำให้เพียงพอ ช่วยเติมพลังให้ร่างกายอย่างนุ่มนวล และเตรียมความพร้อมก่อนการเดินทางที่ทำให้ร่างกายขาดน้ำได้ง่าย",
+            "en": "A meal built around quality protein, healthy omega-3 fats, and a focus on staying well hydrated helps replenish energy gently and prepares the body for travel, which can easily leave you dehydrated."
+          }
+        }
+      ],
+      "triggers": [
+        {
+          "label": {
+            "th": "48 ชั่วโมงสุดท้ายของทริป",
+            "en": "Last 48 hours of the trip"
+          },
+          "criterion": {
+            "th": "แนะนำในช่วง 48 ชั่วโมงสุดท้ายก่อนเดินทางกลับ",
+            "en": "Suggested within the final 48 hours before departure"
+          }
+        },
+        {
+          "label": {
+            "th": "ความเครียดสูง",
+            "en": "Elevated stress"
+          },
+          "criterion": {
+            "th": "คะแนนความเครียดตั้งแต่ 65 ขึ้นไป",
+            "en": "Stress score of 65 or higher"
+          }
+        },
+        {
+          "label": {
+            "th": "พลังงานต่ำ",
+            "en": "Low energy"
+          },
+          "criterion": {
+            "th": "คะแนนพลังงาน 60 หรือต่ำกว่า",
+            "en": "Energy score of 60 or lower"
+          }
+        },
+        {
+          "label": {
+            "th": "ทำกิจกรรมมาแล้วหลายอย่าง",
+            "en": "Several services already completed"
+          },
+          "criterion": {
+            "th": "ใช้บริการหรือกิจกรรมในทริปมาแล้วหลายรายการ",
+            "en": "Has already completed several services during the trip"
+          }
+        }
+      ],
+      "safetyGate": {
+        "th": "ก่อนจองมีการคัดกรองสุขภาพเพื่อความปลอดภัยตามมาตรฐานเวลเนส (standard wellness screen) เพื่อให้แน่ใจว่ากิจกรรมเหมาะกับสภาพร่างกายของคุณในวันนั้น โปรแกรมนี้ไม่ได้บังคับให้ทำการคัดกรองความปลอดภัยพิเศษก่อนการจอง แต่ทีมงานจะทบทวนข้อมูลพื้นฐานเพื่อปรับกิจกรรมให้เหมาะสมและปลอดภัยสำหรับการเดินทางต่อ",
+        "en": "Before booking, a standard wellness screen is completed to make sure the activities suit how your body feels that day. This program does not require a special mandatory safety screen before booking, but the team reviews your basic information to adapt the session so it stays appropriate and safe ahead of your travel."
+      },
+      "safetyGateRequired": false,
+      "slots": [
+        {
+          "order": 1,
+          "slotCode": null,
+          "name": {
+            "th": "เช็กพลังก่อนบิน",
+            "en": "Pre-flight wellness check"
+          },
+          "duration": {
+            "th": "5-8 นาที",
+            "en": "5-8 min"
+          },
+          "evidenceLevel": "A",
+          "mechanism": {
+            "th": "บันทึกความเครียด พลังงาน และการพักผ่อน ณ จุดเริ่มต้น เพื่อใช้เป็นค่าตั้งต้นในการเปรียบเทียบก่อน-หลัง และปรับกิจกรรมให้เหมาะกับสภาพร่างกายในวันนั้น",
+            "en": "Captures stress, energy, and sleep at the start as a baseline for the before-after comparison and to tailor the day to how your body feels."
+          },
+          "fill": {
+            "type": "guidance",
+            "serviceId": null,
+            "menuId": null,
+            "partnerAssigned": true,
+            "partnerType": {
+              "th": "Goodfill team (แอป Goodfill)",
+              "en": "Goodfill team (Goodfill app)"
+            },
+            "note": {
+              "th": "ทำผ่านแอป Goodfill เป็นจุดเริ่มต้นของโปรแกรม เพื่อเก็บค่าตั้งต้นของความเครียด พลังงาน และการนอนหลับ",
+              "en": "Done in the Goodfill app to open the program and record baseline stress, energy, and sleep readings."
+            }
+          }
+        },
+        {
+          "order": 2,
+          "slotCode": "M01",
+          "name": {
+            "th": "ยืดเหยียดและโยคะเบา ๆ",
+            "en": "Gentle yoga and mobility"
+          },
+          "duration": {
+            "th": "30-45 นาที",
+            "en": "30-45 min"
+          },
+          "evidenceLevel": "A",
+          "mechanism": {
+            "th": "การเคลื่อนไหวและยืดเหยียดแบบเบา ช่วยคลายความตึงของกล้ามเนื้อจากทริป โดยออกแบบให้ไม่หนักจนทำให้เมื่อยก่อนเดินทาง",
+            "en": "Light movement and stretching release trip-related muscle tension, kept gentle so you are not left sore before traveling."
+          },
+          "fill": {
+            "type": "service",
+            "serviceId": "hug-light-yoga-stretching",
+            "menuId": null,
+            "partnerAssigned": true,
+            "partnerType": {
+              "th": "Hug Samui (Greeting & Light Yoga Stretching)",
+              "en": "Hug Samui (Greeting & Light Yoga Stretching)"
+            },
+            "note": {
+              "th": "เติมด้วยบริการ Light Yoga Stretching ของ Hug Samui ซึ่งเป็นการเคลื่อนไหวที่มีผู้นำ เหมาะสำหรับผู้เริ่มต้นและทุกระดับ",
+              "en": "Filled by Hug Samui's Light Yoga Stretching, a guided, beginner-friendly session suitable for all levels."
+            }
+          }
+        },
+        {
+          "order": 3,
+          "slotCode": "B01",
+          "name": {
+            "th": "นวดผ่อนคลายทั้งตัว",
+            "en": "Whole-body relaxation massage"
+          },
+          "duration": {
+            "th": "60-90 นาที",
+            "en": "60-90 min"
+          },
+          "evidenceLevel": "B",
+          "mechanism": {
+            "th": "การนวดผ่อนคลายช่วยกระตุ้นการตอบสนองแบบผ่อนคลาย ปรับระบบประสาทเข้าสู่โหมดพักฟื้น และเพิ่มความสบายตัวก่อนการเดินทาง",
+            "en": "A relaxation massage helps invite the relaxation response, shifts the nervous system toward recovery, and adds body comfort before travel."
+          },
+          "fill": {
+            "type": "unassigned",
+            "serviceId": null,
+            "menuId": null,
+            "partnerAssigned": false,
+            "partnerType": {
+              "th": "พาร์ตเนอร์สปา / นวดเพื่อสุขภาพ",
+              "en": "Spa or wellness massage partner"
+            },
+            "note": {
+              "th": "ช่องนี้เปิดให้พาร์ตเนอร์สปาเสียบเข้ามา เน้นการผ่อนคลายและความสบายตัว ไม่ใช่การรักษา",
+              "en": "An open slot for a spa partner to join, focused on relaxation and body comfort, not treatment."
+            }
+          }
+        },
+        {
+          "order": 4,
+          "slotCode": null,
+          "name": {
+            "th": "ทรีตเมนต์ผิวหน้า / สปา (ตัวเลือกเสริม)",
+            "en": "Optional facial or spa ritual"
+          },
+          "duration": {
+            "th": "45-60 นาที",
+            "en": "45-60 min"
+          },
+          "evidenceLevel": "C",
+          "mechanism": {
+            "th": "เป็นเลเยอร์ประสบการณ์ที่เพิ่มความรู้สึกพิเศษและการดูแลตัวเองในวันสุดท้าย ไม่ใช่แกนหลักของผลลัพธ์ด้านสุขภาพ",
+            "en": "An experience layer that adds a sense of pampering and self-care on your final day, not the clinical core of the outcome."
+          },
+          "fill": {
+            "type": "unassigned",
+            "serviceId": null,
+            "menuId": null,
+            "partnerAssigned": false,
+            "partnerType": {
+              "th": "พาร์ตเนอร์สปา",
+              "en": "Spa partner"
+            },
+            "note": {
+              "th": "ทรีตเมนต์เสริมจากพาร์ตเนอร์สปา เป็นชั้นประสบการณ์เพื่อการปรนนิบัติเพิ่มเติม ไม่นับรวมในการวัดผลของโปรแกรม",
+              "en": "An optional spa-partner add-on — a little extra pampering, offered as an experience layer rather than part of the measured outcome."
+            }
+          }
+        },
+        {
+          "order": 5,
+          "slotCode": null,
+          "name": {
+            "th": "มื้ออำลาที่สมดุล",
+            "en": "Balanced farewell meal"
+          },
+          "duration": {
+            "th": "45-60 นาที",
+            "en": "45-60 min"
+          },
+          "evidenceLevel": "B",
+          "mechanism": {
+            "th": "มื้ออาหารที่เน้นโปรตีนและโอเมก้า-3 พร้อมการดื่มน้ำให้เพียงพอ ช่วยเติมพลังอย่างนุ่มนวลและเตรียมร่างกายก่อนเดินทาง",
+            "en": "A protein- and omega-3-forward, hydration-aware meal replenishes energy gently and prepares the body before travel."
+          },
+          "fill": {
+            "type": "menu",
+            "serviceId": null,
+            "menuId": "hug-menu-baked-sea-bass-yellow-curry",
+            "partnerAssigned": true,
+            "partnerType": {
+              "th": "Hug Samui (ปลากะพงอบซอสแกงเหลือง)",
+              "en": "Hug Samui (Baked Sea Bass with Yellow Curry Sauce)"
+            },
+            "note": {
+              "th": "เติมด้วยเมนูปลากะพงอบซอสแกงเหลืองของ Hug Samui ซึ่งโปรตีนสูง มีโอเมก้า-3 และสมดุล เน้นแบบ plant-forward / โปรตีน และคำนึงถึงการดื่มน้ำ",
+              "en": "Filled by Hug Samui's Baked Sea Bass with Yellow Curry Sauce, high in protein, with omega-3 and a balanced, plant-forward, hydration-aware profile."
+            }
+          }
+        },
+        {
+          "order": 6,
+          "slotCode": "E01",
+          "name": {
+            "th": "การ์ดสรุปโดยผู้เชี่ยวชาญ",
+            "en": "Expert summary card"
+          },
+          "duration": {
+            "th": "5 นาที",
+            "en": "5 min"
+          },
+          "evidenceLevel": "A",
+          "mechanism": {
+            "th": "สรุปผลของวันให้เห็นภาพรวมชัดเจน จัดทำโดยทีม Goodfill และลงนามรับรองโดยผู้เชี่ยวชาญ เพื่อความน่าเชื่อถือ",
+            "en": "Summarizes your day clearly — prepared by the Goodfill team and signed off by an expert, for trust and credibility."
+          },
+          "fill": {
+            "type": "guidance",
+            "serviceId": null,
+            "menuId": null,
+            "partnerAssigned": true,
+            "partnerType": {
+              "th": "Goodfill team + ผู้เชี่ยวชาญ (แบบ async)",
+              "en": "Goodfill team plus expert (async)"
+            },
+            "note": {
+              "th": "ทีม Goodfill จัดทำการ์ดสรุปผล โดยมีผู้เชี่ยวชาญตรวจทานและลงนามกำกับให้คุณ",
+              "en": "The Goodfill team prepares your summary card, reviewed and signed off by an expert."
+            }
+          }
+        },
+        {
+          "order": 7,
+          "slotCode": null,
+          "name": {
+            "th": "การ์ดผลลัพธ์ T2",
+            "en": "T2 result card"
+          },
+          "duration": {
+            "th": "3 นาที",
+            "en": "3 min"
+          },
+          "evidenceLevel": "A",
+          "mechanism": {
+            "th": "แสดงผลก่อน-หลังของความเครียด พลังงาน และความพร้อมในการนอนหลับ ให้คุณเห็นการเปลี่ยนแปลงของตัวเองในวันนี้อย่างชัดเจน",
+            "en": "Shows the before-after of stress, energy, and sleep readiness so you can clearly see your own shift across the day."
+          },
+          "fill": {
+            "type": "guidance",
+            "serviceId": null,
+            "menuId": null,
+            "partnerAssigned": true,
+            "partnerType": {
+              "th": "Goodfill team (เนื้อหาในแอป)",
+              "en": "Goodfill team (in-app content)"
+            },
+            "note": {
+              "th": "เนื้อหาในแอป Goodfill ที่สรุปผลก่อน-หลังของความเครียด พลังงาน และความพร้อมในการนอนหลับ",
+              "en": "Goodfill in-app content presenting the before-after of stress, energy, and sleep readiness."
+            }
+          }
+        }
+      ],
+      "outcomeMetrics": [
+        {
+          "timepoint": {
+            "th": "T1 → T2 (วันโปรแกรม)",
+            "en": "T1 → T2 (program day)"
+          },
+          "measures": {
+            "th": "เปรียบเทียบความเครียด พลังงาน และความพร้อมในการนอนหลับ ก่อนและหลังโปรแกรม",
+            "en": "Before-after comparison of stress, energy, and sleep readiness"
+          }
+        },
+        {
+          "timepoint": {
+            "th": "T2 (สรุปผลโดยผู้เชี่ยวชาญ)",
+            "en": "T2 (expert-reviewed summary)"
+          },
+          "measures": {
+            "th": "สรุปผลก่อน-หลังที่ผู้เชี่ยวชาญลงนามรับรอง",
+            "en": "An expert-signed before-after summary"
+          }
+        },
+        {
+          "timepoint": {
+            "th": "T3 (วันที่ 7)",
+            "en": "T3 (day 7)"
+          },
+          "measures": {
+            "th": "ติดตามว่าผลลัพธ์ยังคงอยู่อย่างไรหลังกลับถึงบ้าน 7 วัน",
+            "en": "Follow-up on how the result held after 7 days at home"
+          }
+        }
+      ],
+      "expertLayer": {
+        "th": "การ์ดสรุปผลก่อน-หลังของคุณจัดทำและลงนามรับรองโดยผู้เชี่ยวชาญของ Goodfill เพื่อให้สรุปผลที่ได้ผ่านการตรวจสอบโดยคนจริง ไม่ใช่ระบบอัตโนมัติเพียงอย่างเดียว ส่วนเคสที่ต้องดูแลเป็นพิเศษจะได้รับการรีวิวจากผู้เชี่ยวชาญก่อนเริ่ม",
+        "en": "Your before-after summary is prepared and signed off by a Goodfill expert, so the result you receive has been reviewed by a real person rather than automation alone. Cases that need extra care are reviewed by an expert before you begin."
+      },
+      "allowedClaim": {
+        "th": "ช่วยฟื้นพลังและพักฟื้นร่างกายก่อนเดินทางกลับ พร้อมสรุปผลก่อน-หลัง",
+        "en": "Restore energy and recover before you fly home, with a before-after summary."
+      },
+      "forbiddenClaims": [
+        {
+          "th": "ห้ามอ้างว่า รักษาโรคหรือทำให้หายป่วย",
+          "en": "Do not claim that it cures illness."
+        },
+        {
+          "th": "ห้ามอ้างว่า รักษาหรือแก้ภาวะอ่อนเพลียเรื้อรัง (chronic fatigue)",
+          "en": "Do not claim that it treats chronic fatigue."
+        }
+      ],
+      "goals": [
+        "departure",
+        "recovery",
+        "stress",
+        "energy"
+      ],
+      "pillars": [
+        "food",
+        "air",
+        "mind"
+      ],
+      "tier": "deluxe"
+    },
+    {
+      "id": "program-workmode-recovery",
+      "blueprintNumber": 7,
+      "sortOrder": 7,
+      "slug": "workmode-recovery",
+      "status": "draft",
+      "category": "workmode_recovery",
+      "tripPhase": "anytime",
+      "name": {
+        "th": "Workmode Recovery",
+        "en": "Workmode Recovery"
+      },
+      "subtitle": {
+        "th": "ทำงานได้ ไม่หมดไฟ",
+        "en": "Recovery for working travellers"
+      },
+      "image": "/programs/workmode-recovery.png",
+      "durationLabel": {
+        "th": "เต็มวัน · มีแบบ 1–5 วัน",
+        "en": "Full day · 1–5 day options"
+      },
+      "priceFrom": 3400,
+      "tagline": {
+        "th": "ทำงานได้ ไม่หมดไฟ ด้วยจังหวะวันที่ออกแบบให้ฟื้นตัวระหว่างโฟกัส",
+        "en": "Keep working without burning out, with a day designed to recover between focus blocks."
+      },
+      "programIntent": {
+        "th": "Workmode Recovery คือโปรแกรมสำหรับ digital nomad ผู้ก่อตั้ง และคนทำงานทางไกลที่ยังต้องทำงานเต็มวันบนเกาะ แต่ไม่อยากให้การทำงานกัดกินพลังงานจนหมดไฟ เราไม่ได้ขอให้คุณหยุดทำงาน แต่ออกแบบจังหวะของทั้งวันใหม่ ให้ร่างกายและสมองได้ฟื้นตัวสั้น ๆ ระหว่างช่วงโฟกัส เพื่อช่วยลดความตึงเครียดจากงานและเติมพลังกลับเข้ามาอย่างต่อเนื่อง",
+        "en": "Workmode Recovery is a program for digital nomads, founders and remote workers who still need to work a full day on the island but do not want work to drain them into burnout. We do not ask you to stop working; instead we redesign the rhythm of the whole day so your body and mind get short recovery moments between focus blocks, helping reduce work strain and refill your energy throughout the day."
+      },
+      "scenarioClaim": {
+        "th": "เช้านี้คุณเริ่มต้นวันริมทะเลด้วยการยืดเหยียดเบา ๆ และรับแสงแดดอ่อน ก่อนจะนั่งลงทำงานในช่วงโฟกัสที่ไม่มีใครมารบกวน พอถึงบ่ายที่เริ่มล้า โปรแกรม Workmode Recovery พาคุณหายใจช้าลงสิบนาที แล้วปล่อยให้ร่างกายได้ขยับในสระตอนเย็นเพื่อคลายความตึงจากการนั่งทั้งวัน กลับถึงที่พักคุณยังทำงานได้ครบ แต่รู้สึกว่ายังมีแรงเหลือ ไม่ใช่หมดไฟเหมือนทุกวัน",
+        "en": "This morning you start your day by the sea with gentle stretching and soft sunlight, then sit down for a focus block where no one interrupts you. When the afternoon dip arrives, Workmode Recovery walks you through ten slow breaths, then lets your body move in the evening pool to release the stiffness of a day at the desk. Back at your stay you have still finished all your work, yet you feel like you have energy left over, not the usual end-of-day burnout."
+      },
+      "suitableFor": {
+        "th": "เหมาะสำหรับ digital nomad ผู้ก่อตั้งสตาร์ทอัพ และคนทำงานทางไกลที่ต้องทำงานอย่างน้อย 5 ชั่วโมงต่อวันระหว่างทริป รู้สึกพลังงานต่ำเรื้อรัง ความเครียดสะสมจากงาน หรือนอนหลับได้ไม่เต็มที่ และต้องการจังหวะการทำงานที่ยั่งยืนมากกว่าการพักร้อนแบบหยุดทุกอย่าง มีให้เลือกทั้งแบบ 1 วัน Workmode Reset, 3 วัน Nomad Recovery และ 5 วัน Founder Recovery",
+        "en": "For digital nomads, startup founders and remote workers who put in at least five working hours a day during their trip, feel chronic low energy, carry accumulated work stress or sleep less than they would like, and want a sustainable working rhythm rather than a stop-everything vacation. Available as a 1-day Workmode Reset, a 3-day Nomad Recovery, and a 5-day Founder Recovery."
+      },
+      "whyItWorks": {
+        "th": "โปรแกรมนี้ทำงานด้วยหลักง่าย ๆ ว่าการเคลื่อนไหวสม่ำเสมอช่วยสนับสนุนสุขภาพกายและใจ และการฝึกกาย-ใจอย่างการยืดเหยียดและการหายใจช่วยสนับสนุนคุณภาพการนอนและความรู้สึกผ่อนคลาย เราจึงสอดแทรกช่วงฟื้นตัวสั้น ๆ คั่นระหว่างช่วงโฟกัส ตั้งแต่แสงแดดยามเช้าที่ช่วยปลุกนาฬิกาชีวภาพ มื้อกลางวันที่ให้พลังงานนิ่ง ไม่ง่วง ไปจนถึงการหายใจรีเซ็ตและการขยับร่างกายตอนเย็น แต่ละจังหวะออกแบบเพื่อช่วยลดความตึงเครียดจากงานและให้ร่างกายฟื้นตัวระหว่างช่วงโฟกัส โดยไม่ขัดจังหวะการทำงานของคุณ",
+        "en": "The program works on a simple foundation: regular physical activity supports physical and mental health, and mind-body practices like stretching and breathing support sleep quality and a sense of relaxation. So we weave short recovery moments between your focus blocks, from morning sunlight that helps wake the circadian clock, to a lunch that keeps energy stable rather than drowsy, to a breathing reset and evening movement. Each beat is designed to help reduce work strain and let the body recover between focus blocks, without disrupting your work."
+      },
+      "coreMechanisms": [
+        {
+          "title": {
+            "th": "การเคลื่อนไหวสม่ำเสมอ",
+            "en": "Regular physical activity"
+          },
+          "detail": {
+            "th": "การขยับร่างกายเบา ๆ และสม่ำเสมอตลอดวัน ทั้งการยืดเหยียดตอนเช้าและการเคลื่อนไหวในน้ำตอนเย็น ช่วยสนับสนุนสุขภาพกายและใจ และช่วยคลายความตึงจากการนั่งทำงานนาน",
+            "en": "Light, regular movement across the day, from morning stretching to evening movement in the pool, supports physical and mental health and helps release the tension of long hours seated at work."
+          }
+        },
+        {
+          "title": {
+            "th": "การฝึกกาย-ใจ",
+            "en": "Mind-body practice"
+          },
+          "detail": {
+            "th": "การยืดเหยียดแบบมีสติและการหายใจช้าเป็นการฝึกกาย-ใจที่ช่วยสนับสนุนคุณภาพการนอนและความรู้สึกผ่อนคลาย ช่วยพาระบบประสาทอัตโนมัติให้สงบลงระหว่างวันทำงาน",
+            "en": "Mindful stretching and slow breathing are mind-body practices that support sleep quality and a sense of relaxation, helping the autonomic nervous system settle during the working day."
+          }
+        },
+        {
+          "title": {
+            "th": "การจัดจังหวะวันและนาฬิกาชีวภาพ",
+            "en": "Daily rhythm and circadian alignment"
+          },
+          "detail": {
+            "th": "การรับแสงแดดยามเช้า การกินมื้อที่ให้พลังงานนิ่ง และการลดการกระตุ้นก่อนนอน ช่วยจัดจังหวะวันให้สอดคล้องกับนาฬิกาชีวภาพ ทำให้พลังงานในแต่ละช่วงสม่ำเสมอขึ้นและพร้อมพักผ่อนตอนกลางคืน",
+            "en": "Morning sunlight, a stable-energy meal and lower stimulation before bed help align the day with the circadian clock, so energy stays steadier through each block and the body is ready to rest at night."
+          }
+        }
+      ],
+      "triggers": [
+        {
+          "label": {
+            "th": "ชั่วโมงทำงานระหว่างทริป",
+            "en": "Working hours during the trip"
+          },
+          "criterion": {
+            "th": "ทำงานตั้งแต่ 5 ชั่วโมงต่อวันขึ้นไประหว่างอยู่บนเกาะ",
+            "en": "Working five or more hours per day while on the island."
+          }
+        },
+        {
+          "label": {
+            "th": "พลังงานต่ำเรื้อรัง",
+            "en": "Chronic low energy"
+          },
+          "criterion": {
+            "th": "คะแนนพลังงาน 60 หรือต่ำกว่า",
+            "en": "Energy score of 60 or below."
+          }
+        },
+        {
+          "label": {
+            "th": "ความเครียดสูง",
+            "en": "High stress"
+          },
+          "criterion": {
+            "th": "คะแนนความเครียด 65 ขึ้นไป",
+            "en": "Stress score of 65 or above."
+          }
+        },
+        {
+          "label": {
+            "th": "คุณภาพการนอนต่ำ",
+            "en": "Low sleep quality"
+          },
+          "criterion": {
+            "th": "คะแนนการนอน 60 หรือต่ำกว่า",
+            "en": "Sleep score of 60 or below."
+          }
+        }
+      ],
+      "safetyGate": {
+        "th": "ก่อนจองทุกครั้งจะมีการคัดกรองสุขภาพเบื้องต้นตามมาตรฐาน wellness เพื่อให้แน่ใจว่าโปรแกรมนี้เหมาะกับคุณ หากพบสัญญาณของภาวะหมดไฟทางคลินิกหรือภาวะซึมเศร้า ทีมงานจะส่งต่อให้ผู้เชี่ยวชาญที่เหมาะสมแทนการเริ่มโปรแกรมทันที โปรแกรมนี้เป็นการสนับสนุนการผ่อนคลายและการฟื้นตัว ไม่ใช่การรักษา",
+        "en": "Before every booking we run a standard wellness screen to make sure the program is a good fit for you. If there are signs of clinical burnout or depression, our team refers you to appropriate care rather than starting the program. This program supports relaxation and recovery and is not a treatment."
+      },
+      "safetyGateRequired": false,
+      "slots": [
+        {
+          "order": 1,
+          "slotCode": "M01",
+          "name": {
+            "th": "ขยับร่างกายและรับแสงแดดยามเช้า",
+            "en": "Morning movement and sunlight"
+          },
+          "duration": {
+            "th": "20 นาที",
+            "en": "20 minutes"
+          },
+          "evidenceLevel": "A",
+          "mechanism": {
+            "th": "การยืดเหยียดเบา ๆ พร้อมรับแสงแดดยามเช้าช่วยปลุกนาฬิกาชีวภาพและเติมพลังให้พร้อมเริ่มวันทำงาน เป็นการเคลื่อนไหวสม่ำเสมอที่สนับสนุนสุขภาพกายและใจ",
+            "en": "Light stretching paired with morning sunlight helps wake the circadian clock and bring up energy before the workday, a piece of regular movement that supports physical and mental health."
+          },
+          "fill": {
+            "type": "service",
+            "serviceId": "hug-light-yoga-stretching",
+            "menuId": null,
+            "partnerAssigned": true,
+            "partnerType": {
+              "th": "พาร์ตเนอร์กิจกรรม wellness (Hug Samui)",
+              "en": "Wellness activity partner (Hug Samui)"
+            },
+            "note": {
+              "th": "เติมด้วยคลาส Greeting & Light Yoga Stretching ของ Hug Samui ที่เป็นการนำขยับร่างกายแบบนุ่มนวล เหมาะกับผู้เริ่มต้น เปิดวันด้วยการเคลื่อนไหวและแสงแดด",
+              "en": "Filled by Hug Samui Greeting & Light Yoga Stretching, a gentle guided mobility session that is beginner friendly, opening the day with movement and sunlight."
+            }
+          }
+        },
+        {
+          "order": 2,
+          "slotCode": null,
+          "name": {
+            "th": "ช่วงโฟกัสไร้สิ่งรบกวน",
+            "en": "Uninterrupted focus block"
+          },
+          "duration": {
+            "th": "90-120 นาที",
+            "en": "90-120 minutes"
+          },
+          "evidenceLevel": "A",
+          "mechanism": {
+            "th": "จัดช่วงทำงานโฟกัสยาวที่ไม่มีสิ่งรบกวน เพื่อให้ทำงานได้เต็มที่โดยไม่ขัดจังหวะ และจัดวันให้สอดคล้องกับช่วงพลังงานสูง ลดความเครียดจากการสลับงานไปมา",
+            "en": "A long, interruption-free focus block so you can work at full depth without disruption, scheduled to match your high-energy window and reduce the strain of constant task-switching."
+          },
+          "fill": {
+            "type": "guidance",
+            "serviceId": null,
+            "menuId": null,
+            "partnerAssigned": true,
+            "partnerType": {
+              "th": "ทีม Goodfill (คำแนะนำการจัดตารางและพื้นที่ทำงาน)",
+              "en": "Goodfill team (schedule and workspace guidance)"
+            },
+            "note": {
+              "th": "ทีม Goodfill ให้คำแนะนำเรื่องการจัดตารางและเลือกพื้นที่ทำงาน ไม่ได้หยุดงานของคุณ แต่ช่วยกันเวลาช่วงนี้ไว้ให้โฟกัสได้จริง",
+              "en": "The Goodfill team provides schedule and workspace guidance. It does not stop your work; it protects this window so you can genuinely focus."
+            }
+          }
+        },
+        {
+          "order": 3,
+          "slotCode": null,
+          "name": {
+            "th": "มื้อกลางวันพลังงานนิ่ง",
+            "en": "Stable-energy lunch"
+          },
+          "duration": {
+            "th": "มื้อกลางวัน",
+            "en": "Lunch"
+          },
+          "evidenceLevel": "B",
+          "mechanism": {
+            "th": "มื้อที่โปรตีนสูงและไม่หนักเกินไปช่วยให้พลังงานนิ่ง ไม่ง่วงหลังอาหาร พร้อมกลับเข้าสู่ช่วงทำงานบ่ายได้โดยไม่ดิ่ง เป็นการกินที่สนับสนุนจังหวะพลังงานของวัน",
+            "en": "A high-protein meal that is not too heavy keeps energy stable rather than drowsy after eating, so you return to the afternoon work block without a slump, a way of eating that supports the energy rhythm of the day."
+          },
+          "fill": {
+            "type": "menu",
+            "serviceId": null,
+            "menuId": "hug-menu-baked-sea-bass-yellow-curry",
+            "partnerAssigned": true,
+            "partnerType": {
+              "th": "พาร์ตเนอร์อาหาร wellness (Hug Samui)",
+              "en": "Wellness food partner (Hug Samui)"
+            },
+            "note": {
+              "th": "เติมด้วยเมนู Baked Sea Bass with Yellow Curry Sauce ของ Hug Samui ปลาอบโปรตีนสูง มีโอเมก้า-3 และใช้ฟักทองกับแครอทแทนกะทิเยอะ ทำให้เป็นมื้อที่เบาและให้พลังงานนิ่ง",
+              "en": "Filled by Hug Samui Baked Sea Bass with Yellow Curry Sauce, a high-protein baked fish with omega-3 that uses pumpkin and carrot instead of heavy coconut milk, making it a light, stable-energy meal."
+            }
+          }
+        },
+        {
+          "order": 4,
+          "slotCode": "R01",
+          "name": {
+            "th": "หายใจรีเซ็ตช่วงบ่าย",
+            "en": "Afternoon breathing reset"
+          },
+          "duration": {
+            "th": "10 นาที",
+            "en": "10 minutes"
+          },
+          "evidenceLevel": "A",
+          "mechanism": {
+            "th": "การหายใจช้า 10 นาทีระหว่างช่วงบ่ายช่วยพาระบบประสาทอัตโนมัติให้สงบลงและลดความเครียดสะสมในช่วงทำงาน เป็นการฝึกกาย-ใจสั้น ๆ ที่สนับสนุนความรู้สึกผ่อนคลาย",
+            "en": "Ten minutes of slow breathing in the afternoon helps settle the autonomic nervous system and ease stress that builds up during work, a short mind-body practice that supports a sense of relaxation."
+          },
+          "fill": {
+            "type": "guidance",
+            "serviceId": null,
+            "menuId": null,
+            "partnerAssigned": true,
+            "partnerType": {
+              "th": "ทีม Goodfill (นำการหายใจ)",
+              "en": "Goodfill team (guided breathing)"
+            },
+            "note": {
+              "th": "นำโดยทีม Goodfill เป็นช่วงหายใจรีเซ็ตสั้น ๆ คั่นระหว่างงาน เพื่อช่วยลดความตึงเครียดก่อนเข้าสู่ช่วงทำงานถัดไป",
+              "en": "Guided by the Goodfill team as a short breathing reset between work, helping reduce strain before the next stretch of work."
+            }
+          }
+        },
+        {
+          "order": 5,
+          "slotCode": null,
+          "name": {
+            "th": "คลายร่างกายช่วงเย็น",
+            "en": "Late-afternoon movement release"
+          },
+          "duration": {
+            "th": "45-60 นาที",
+            "en": "45-60 minutes"
+          },
+          "evidenceLevel": "B",
+          "mechanism": {
+            "th": "การขยับร่างกายแรงกระแทกต่ำในน้ำช่วยคลายความตึงคอ บ่า และหลังจากการนั่งทำงานทั้งวัน เป็นการเคลื่อนไหวสม่ำเสมอที่สนับสนุนสุขภาพกายและใจในช่วงปิดวันทำงาน",
+            "en": "Low-impact movement in the water helps release tightness in the neck, shoulders and back from a full day of sitting, a piece of regular movement that supports physical and mental health as the workday closes."
+          },
+          "fill": {
+            "type": "service",
+            "serviceId": "hug-aqua-aerobic",
+            "menuId": null,
+            "partnerAssigned": true,
+            "partnerType": {
+              "th": "พาร์ตเนอร์กิจกรรม wellness (Hug Samui)",
+              "en": "Wellness activity partner (Hug Samui)"
+            },
+            "note": {
+              "th": "เติมด้วย Aqua Aerobic ของ Hug Samui ช่วงเย็น การเคลื่อนไหวในสระแบบแรงกระแทกต่ำ สนุกและเข้าถึงง่าย เพื่อคลายความตึงจากการนั่งทำงาน",
+              "en": "Filled by Hug Samui Aqua Aerobic in the evening, an easygoing low-impact pool workout to ease the stiffness of a day spent seated at work."
+            }
+          }
+        },
+        {
+          "order": 6,
+          "slotCode": null,
+          "name": {
+            "th": "ลดแสงจอก่อนนอน (digital sunset)",
+            "en": "Digital sunset guide"
+          },
+          "duration": {
+            "th": "ช่วงเย็น",
+            "en": "Evening"
+          },
+          "evidenceLevel": "A",
+          "mechanism": {
+            "th": "การค่อย ๆ ลดการกระตุ้นจากหน้าจอก่อนนอนช่วยลดการกระตุ้นระบบประสาทและสนับสนุนการเข้าสู่โหมดพักผ่อน สอดคล้องกับนาฬิกาชีวภาพในช่วงค่ำ",
+            "en": "Gradually lowering screen stimulation before bed helps reduce nervous-system arousal and supports the shift into rest, in line with the circadian clock in the evening."
+          },
+          "fill": {
+            "type": "guidance",
+            "serviceId": null,
+            "menuId": null,
+            "partnerAssigned": true,
+            "partnerType": {
+              "th": "ทีม Goodfill (เนื้อหาแนะนำ)",
+              "en": "Goodfill team (guidance content)"
+            },
+            "note": {
+              "th": "เนื้อหาแนะนำจาก Goodfill เป็นไกด์ digital sunset ที่พาคุณลดแสงและการกระตุ้นจากหน้าจอลงทีละน้อยก่อนเข้านอน",
+              "en": "Goodfill guidance content, a digital sunset guide that walks you through lowering light and screen stimulation step by step before bed."
+            }
+          }
+        },
+        {
+          "order": 7,
+          "slotCode": null,
+          "name": {
+            "th": "การ์ดสุขอนามัยการนอน",
+            "en": "Sleep hygiene card"
+          },
+          "duration": {
+            "th": "กลางคืน",
+            "en": "Night"
+          },
+          "evidenceLevel": "A",
+          "mechanism": {
+            "th": "การ์ดสุขอนามัยการนอนช่วยจัดสภาพแวดล้อมและกิจวัตรก่อนนอนให้เอื้อต่อการพักผ่อน ต่อยอดจากตรรกะ Deep Sleep เพื่อสนับสนุนคุณภาพการนอนและการฟื้นพลังข้ามคืน",
+            "en": "A sleep hygiene card helps set up the environment and pre-bed routine for rest, continuing the Deep Sleep logic to support sleep quality and overnight recovery."
+          },
+          "fill": {
+            "type": "guidance",
+            "serviceId": null,
+            "menuId": null,
+            "partnerAssigned": true,
+            "partnerType": {
+              "th": "ทีม Goodfill (เนื้อหาแนะนำ)",
+              "en": "Goodfill team (guidance content)"
+            },
+            "note": {
+              "th": "เนื้อหาแนะนำจาก Goodfill เป็นการ์ดสุขอนามัยการนอนที่สรุปวิธีจัดห้อง ลดแสง และกิจวัตรก่อนนอน ต่อเนื่องจากตรรกะ Deep Sleep",
+              "en": "Goodfill guidance content, a sleep hygiene card summarising how to set up the room, dim the light and structure the pre-bed routine, continuing the Deep Sleep logic."
+            }
+          }
+        }
+      ],
+      "outcomeMetrics": [
+        {
+          "timepoint": {
+            "th": "T1 ก่อนเริ่ม (baseline)",
+            "en": "T1 baseline"
+          },
+          "measures": {
+            "th": "พลังงานช่วงเช้าและช่วงบ่าย ความเครียดก่อนและหลังช่วงทำงาน คุณภาพการนอน ความตึงคอและบ่า",
+            "en": "Energy in the morning and afternoon, stress before and after a work block, sleep quality, neck and shoulder discomfort."
+          }
+        },
+        {
+          "timepoint": {
+            "th": "T2 ระหว่างหรือหลังโปรแกรม",
+            "en": "T2 during or after the program"
+          },
+          "measures": {
+            "th": "วัดซ้ำพลังงานเช้า-บ่าย ความเครียดก่อนและหลังช่วงทำงาน คุณภาพการนอน และความตึงคอและบ่า เพื่อดูการเปลี่ยนแปลงเทียบกับ baseline",
+            "en": "Re-measure morning and afternoon energy, stress before and after a work block, sleep quality, and neck and shoulder discomfort to see change against baseline."
+          }
+        },
+        {
+          "timepoint": {
+            "th": "T3 ติดตามผล",
+            "en": "T3 follow-up"
+          },
+          "measures": {
+            "th": "ติดตามคุณภาพการนอนและระดับพลังงานที่คงอยู่ เพื่อดูว่าจังหวะการทำงานที่ยั่งยืนยังคงอยู่หรือไม่",
+            "en": "Follow up on sleep quality and sustained energy levels to see whether the sustainable working rhythm holds."
+          }
+        }
+      ],
+      "expertLayer": {
+        "th": "พิมพ์เขียวของโปรแกรม Workmode Recovery ได้รับการอนุมัติจากผู้เชี่ยวชาญหนึ่งครั้งเพื่อใช้เป็นมาตรฐาน และกรณีที่ถูกตั้งค่าสถานะ เช่น ผลคัดกรองที่ต้องดูเพิ่มเติม จะถูกส่งให้ผู้เชี่ยวชาญทบทวนเป็นรายกรณีก่อนดำเนินการต่อ",
+        "en": "The Workmode Recovery blueprint is expert-approved once to serve as the standard, and any flagged cases, such as screening results that need a closer look, are reviewed by an expert on a case-by-case basis before proceeding."
+      },
+      "allowedClaim": {
+        "th": "ช่วยลดความตึงเครียดจากงานและฟื้นตัวระหว่างช่วงโฟกัส",
+        "en": "Reduce work strain and recover between focus blocks."
+      },
+      "forbiddenClaims": [
+        {
+          "th": "ห้ามอ้างว่า รักษาภาวะหมดไฟ",
+          "en": "Do not claim it treats burnout."
+        },
+        {
+          "th": "ห้ามอ้างว่า รักษาหรือทำให้หายจากภาวะอ่อนล้า",
+          "en": "Do not claim it cures exhaustion."
+        }
+      ],
+      "goals": [
+        "work",
+        "energy",
+        "stress",
+        "sleep"
+      ],
+      "pillars": [
+        "air",
+        "mind",
+        "food"
+      ],
+      "tier": "premium"
+    }
+  ]
+}

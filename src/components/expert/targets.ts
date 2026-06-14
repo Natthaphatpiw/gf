@@ -29,8 +29,10 @@ export function buildTargetOptions(
       for (const item of day.items) {
         // Label uses the localised day word + EN activity (per spec),
         // value is a stable EN identifier.
-        const value = `Day ${day.day} · ${item.time} · ${item.activity.en}`;
-        const label = `${labels.day} ${day.day} · ${item.time} · ${item.activity[locale]}`;
+        const timeEn = typeof item.time === "string" ? item.time : item.time.en;
+        const timeLocale = typeof item.time === "string" ? item.time : item.time[locale];
+        const value = `Day ${day.day} · ${timeEn} · ${item.activity.en}`;
+        const label = `${labels.day} ${day.day} · ${timeLocale} · ${item.activity[locale]}`;
         options.push({
           value,
           label,

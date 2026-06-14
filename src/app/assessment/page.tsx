@@ -17,7 +17,7 @@ import type {
   GuestGender,
   WellnessProfile,
 } from "@/lib/types";
-import { QUIZ_QUESTIONS } from "@/data/questions";
+import { CHECKIN_QUESTIONS } from "@/data/checkin";
 import { useLocale, useT } from "@/lib/i18n";
 import common from "@/lib/i18n/dictionaries/common";
 import assessment from "@/lib/i18n/dictionaries/assessment";
@@ -26,12 +26,13 @@ import { ConsentCheckbox } from "@/components/ui/ConsentCheckbox";
 import { LeafMark } from "@/components/ui/Logo";
 import { storeGoals, storeProfile } from "@/lib/session";
 import { ProgressBar } from "@/components/assessment/ProgressBar";
-import { QuestionScreen } from "@/components/assessment/QuestionScreen";
+import { CheckinQuestionScreen } from "@/components/checkin/CheckinQuestionScreen";
 import { LoadingJourney } from "@/components/assessment/LoadingJourney";
 
 /* ============================================================
- * The Island Journey — a gamified wellness assessment.
- * Phases: intro -> per-scene play -> submitting -> redirect.
+ * Unified pre-booking compass.
+ * One anchored 7+1 flow gives the guest their archetype, package
+ * matching profile and T1 baseline for later post-program T2.
  * ============================================================ */
 
 type Phase = "intro" | "play" | "submitting" | "error";
@@ -47,9 +48,10 @@ export default function AssessmentPage() {
   const [gender, setGender] = useState<GuestGender | null>(null);
   const [step, setStep] = useState(0);
   const [answers, setAnswers] = useState<Record<string, string | number>>({});
+  const [hours, setHours] = useState<number | undefined>(undefined);
 
-  const total = QUIZ_QUESTIONS.length;
-  const question = QUIZ_QUESTIONS[step];
+  const total = CHECKIN_QUESTIONS.length;
+  const question = CHECKIN_QUESTIONS[step];
   const progress = ((step + 1) / total) * 100;
 
   const setAnswer = (value: string | number) => {
@@ -73,26 +75,23 @@ export default function AssessmentPage() {
 
   const buildInput = (): AssessmentInput => {
     const list: AssessmentAnswer[] = [];
-    let mbti = "";
     let note = "";
-    for (const q of QUIZ_QUESTIONS) {
+    for (const q of CHECKIN_QUESTIONS) {
       const v = answers[q.id];
       if (v === undefined || v === "") continue;
-      if (q.kind === "mbti") {
-        mbti = String(v);
-        continue;
-      }
       if (q.kind === "text") {
         note = String(v);
         continue;
       }
       list.push({ questionId: q.id, value: v });
     }
+    if (hours !== undefined) {
+      list.push({ questionId: "q5Hours", value: hours });
+    }
     return {
       locale,
       gender: gender ?? undefined,
       answers: list,
-      mbti: mbti || undefined,
       note: note || undefined,
       consent,
     };
@@ -161,10 +160,13 @@ export default function AssessmentPage() {
         <ProgressBar value={progress} />
       </div>
 
-      <QuestionScreen
+      <CheckinQuestionScreen
         question={question}
+        timepoint="T1"
         value={currentValue}
+        hours={hours}
         onAnswer={setAnswer}
+        onHours={setHours}
         onAdvance={goNext}
       />
 

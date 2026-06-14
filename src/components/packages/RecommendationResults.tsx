@@ -8,8 +8,8 @@ import { getPackage } from "@/data/packages";
 import { PackageCard } from "@/components/packages/PackageCard";
 
 /* ============================================================
- * RecommendationResults — Stage B output. Renders the 6 curated
- * packages grouped Basic (2) / Premium (2) / Deluxe (2), each
+ * RecommendationResults — Stage B output. Renders the 3 curated
+ * programs grouped Basic (1) / Premium (1) / Deluxe (1), each
  * group under its own tier eyebrow header.
  * ============================================================ */
 

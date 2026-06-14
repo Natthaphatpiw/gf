@@ -83,6 +83,16 @@ export interface WellnessProfile {
   gender?: GuestGender;
   /** Goals the system recommends, ordered by fit. */
   recommendedGoals: GoalId[];
+  /** Unified pre-booking baseline used as T1 for later T2 comparison. */
+  baselineCheckin?: AssessmentBaselineCheckin;
+  createdAt: string;
+}
+
+export interface AssessmentBaselineCheckin {
+  timepoint: "T1";
+  instrumentVersion: string;
+  answers: CheckinAnswers;
+  dials: CheckinDials;
   createdAt: string;
 }
 
@@ -91,7 +101,8 @@ export interface WellnessProfile {
 export type PackageTier = "basic" | "premium" | "deluxe";
 
 export interface ItineraryItem {
-  time: string;
+  /** A clock time ("09:30") or a bilingual duration label. */
+  time: string | LText;
   activity: LText;
   partner: string;
 }
@@ -128,7 +139,7 @@ export interface PackageMeal {
   nutrition: {
     calories: string;
     protein: string;
-    sugar: string;
+    carbs: string;
     fiber: string;
     sodium?: string;
   };
@@ -222,4 +233,158 @@ export interface RecommendRequest {
 
 export interface RecommendResponse {
   recommendations: PackageRecommendation[];
+}
+
+/* ---------------- Check-in (T1 / T2 body-mind compass) ---------------- */
+
+/** T1 = before the program starts, T2 = after it ends. */
+export type CheckinTimepoint = "T1" | "T2";
+
+/** The five dials shown on the before/after card. */
+export type DialKey = "stress" | "migraine" | "sleep" | "mind" | "energy";
+
+/**
+ * Raw answers as submitted. Closed questions store the option key;
+ * every anchored score is derived in code (never by the LLM).
+ */
+export interface CheckinAnswers {
+  /** Q1 sea-state mood. */
+  q1: string;
+  /** Q2 perceived control (PSS-4 flavour). */
+  q2: string;
+  /** Q3 headache frequency (timeframe differs T1/T2). */
+  q3: string;
+  /** Q4 sensory sensitivity today. */
+  q4: string;
+  /** Q5 last night's sleep quality. */
+  q5: string;
+  /** Q5 supplement — approximate hours slept. */
+  q5Hours?: number;
+  /** Q6 wellbeing moments (WHO-5 flavour). */
+  q6: string;
+  /** Q7 vitality VAS slider, 0-100 used directly. */
+  q7: number;
+  /** Q8 open text — the LLM's only scoring-free territory. */
+  q8?: string;
+}
+
+/** Staff-measured vitals — kept separate from dial scores. */
+export interface CheckinObjective {
+  bpSystolic?: number;
+  bpDiastolic?: number;
+  restingHr?: number;
+  weightKg?: number;
+  /** Sleep hours from the guest's wearable, if any. */
+  deviceSleepHours?: number;
+}
+
+export interface DialScore {
+  /** 0 - 100 */
+  value: number;
+  band: ScoreBand;
+}
+
+export type CheckinDials = Record<DialKey, DialScore>;
+
+export type DialTrend = "improved" | "steady" | "declined";
+
+/** T2-only before/after delta for one dial (deadband ±5 = steady). */
+export interface DialDelta {
+  dial: DialKey;
+  before: number;
+  after: number;
+  /** after - before */
+  delta: number;
+  /** Direction-aware: "improved" follows the dial's good direction. */
+  trend: DialTrend;
+}
+
+export type CheckinRedFlagType =
+  | "medication"
+  | "condition"
+  | "pregnancy"
+  | "recent_surgery"
+  | "severe_symptom"
+  | "mood_risk";
+
+export interface CheckinRedFlag {
+  type: CheckinRedFlagType;
+  detail: string;
+  /** Original wording from the guest's open answer. */
+  quote: string;
+  severity: "review" | "urgent";
+}
+
+export type CheckinSentiment = "neutral" | "positive" | "negative" | "mixed";
+
+/** LLM (validated) or rule-based interpretation layered over the scores. */
+export interface CheckinAnalysis {
+  languageDetected: string;
+  redFlags: CheckinRedFlag[];
+  preferences: string[];
+  goals: string[];
+  sentiment: CheckinSentiment;
+  testimonialCandidate: boolean;
+  expertReviewRequired: boolean;
+  urgent: boolean;
+  urgentMessage: LText | null;
+  summaryForCustomer: LText;
+  /** Staff brief bullets — always Thai (clinic-facing). */
+  summaryForStaff: string[];
+  source: "llm" | "rules";
+}
+
+export interface CheckinNextRecommendation {
+  packageId: string;
+  reason: LText;
+}
+
+/** T2-only narrative + next-step pick from the real catalog. */
+export interface CheckinT2Extras {
+  changeNarrative: LText;
+  highlightDial: DialKey;
+  nextRecommendation: CheckinNextRecommendation | null;
+}
+
+export interface WellnessCheckin {
+  /** Public check-in id, e.g. "CI-7F3K2A". */
+  id: string;
+  bookingId: string;
+  /** Linked T0 assessment, when the booking carries one. */
+  assessmentId?: string;
+  timepoint: CheckinTimepoint;
+  /** Deltas are only comparable within the same version. */
+  instrumentVersion: string;
+  locale: Locale;
+  answers: CheckinAnswers;
+  objective?: CheckinObjective;
+  dials: CheckinDials;
+  /** T2 only — vs the same booking's T1. */
+  deltas?: DialDelta[];
+  /** False when T1 was answered on a different instrument version. */
+  deltasComparable?: boolean;
+  analysis: CheckinAnalysis;
+  t2?: CheckinT2Extras;
+  /** Explicit health-data (sensitive) consent — PDPA. */
+  consent: boolean;
+  /** Separate opt-in to reuse the open answer as a testimonial. */
+  testimonialConsent?: boolean;
+  createdAt: string;
+}
+
+/** Minimal listing shape — no health data. */
+export interface CheckinSummary {
+  id: string;
+  timepoint: CheckinTimepoint;
+  instrumentVersion: string;
+  createdAt: string;
+}
+
+export interface CheckinSubmitBody {
+  bookingId: string;
+  timepoint: CheckinTimepoint;
+  locale: Locale;
+  consent: boolean;
+  answers: CheckinAnswers;
+  objective?: CheckinObjective;
 }

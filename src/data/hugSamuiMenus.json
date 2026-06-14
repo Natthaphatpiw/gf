@@ -1,0 +1,2153 @@
+{
+  "partnerId": "hug-samui",
+  "contentVersion": "menu-poc-2026-06-12",
+  "status": "draft",
+  "sourceNote": {
+    "th": "ข้อมูลเมนูชุดนี้เป็น POC จากข้อมูลที่ได้รับและ mock field เพิ่มเพื่อออกแบบ UX ก่อนนำไปตรวจทานเชิงโภชนาการจริง",
+    "en": "This menu dataset is a POC based on supplied information, with additional mock fields prepared for UX design before clinical nutrition review."
+  },
+  "futureRoutes": {
+    "partnerDetail": "/partners/hug-samui",
+    "services": "/partners/hug-samui/service",
+    "menus": "/partners/hug-samui/menus",
+    "wellnessFood": "/partners/hug-samui/wellness-food"
+  },
+  "positioning": {
+    "name": {
+      "th": "Local Wellness Kitchen",
+      "en": "Local Wellness Kitchen"
+    },
+    "summary": {
+      "th": "เมนูท้องถิ่นที่ถูกจัดระบบใหม่ให้เห็นทั้งรสชาติ เรื่องเล่าของเกาะ โภชนาการ ความปลอดภัย และบทบาทในแพ็กเกจ wellness",
+      "en": "Local dishes structured around island flavour, ingredient stories, nutrition, safety, and their role inside wellness journeys."
+    },
+    "databaseScope": {
+      "th": "หน้าเมนูแสดงเฉพาะเมนู Hug Samui ส่วนฐานข้อมูลเก็บทั้งเมนู Hug Samui และ reference menu สำหรับต่อยอดระบบ matching",
+      "en": "The menu page displays Hug Samui dishes only, while the dataset also stores reference menus for future matching logic."
+    }
+  },
+  "menus": [
+    {
+      "id": "hug-menu-beef-luk-riang-curry",
+      "partnerId": "hug-samui",
+      "isPartnerMenu": true,
+      "sourcePartner": {
+        "th": "Hug Samui",
+        "en": "Hug Samui"
+      },
+      "slug": "beef-luk-riang-curry",
+      "sortOrder": 1,
+      "status": "draft",
+      "name": {
+        "th": "แกงเนื้อลูกเหรียงมีทบอล",
+        "en": "Beef Luk Riang Curry"
+      },
+      "englishName": {
+        "th": "Southern beef meatball curry with luk riang",
+        "en": "Southern beef meatball curry with luk riang"
+      },
+      "summary": {
+        "th": "โปรตีนสูงและขมิ้นเป็นจุดแข็ง แต่กะทิ พริกแกง และน้ำปลาทำให้ไขมันอิ่มตัวสูงมากและโซเดียมเกือบเต็มลิมิตต่อวันในหนึ่งจาน",
+        "en": "High protein and turmeric are the strengths, while coconut milk, curry paste, and fish sauce push saturated fat very high and sodium close to a full daily limit."
+      },
+      "category": "main",
+      "course": {
+        "th": "จานหลัก",
+        "en": "Main course"
+      },
+      "price": {
+        "currency": "THB",
+        "amount": 220,
+        "label": {
+          "th": "฿220",
+          "en": "THB 220"
+        }
+      },
+      "serving": {
+        "th": "เสิร์ฟ 1 จาน",
+        "en": "Serves one"
+      },
+      "image": {
+        "publicPath": "/partners/hug-samui/menus/beef-luk-riang-curry.jpg",
+        "sourceFileName": "2.jpg",
+        "alt": {
+          "th": "แกงเนื้อลูกเหรียงมีทบอลของ Hug Samui",
+          "en": "Hug Samui beef luk riang curry"
+        }
+      },
+      "localStory": {
+        "th": "เครื่องแกงใต้ ขมิ้นสด และลูกเหรียงอ่อนให้กลิ่นรสแบบปักษ์ใต้ที่ชัดเจน เหมาะกับการเล่าเรื่องสมุนไพรท้องถิ่นบนเกาะ",
+        "en": "Southern curry paste, fresh turmeric, and young luk riang create a clear local flavour profile built around island herbs."
+      },
+      "heroIngredients": [
+        {
+          "th": "ขมิ้น",
+          "en": "Turmeric"
+        },
+        {
+          "th": "ลูกเหรียง",
+          "en": "Luk riang"
+        },
+        {
+          "th": "พริกแกงใต้",
+          "en": "Southern curry paste"
+        }
+      ],
+      "wellnessGoals": ["recharge", "anti_inflammation", "protein_support"],
+      "wellnessPillars": ["food"],
+      "wellnessTags": [
+        {
+          "th": "โปรตีนสูง",
+          "en": "High protein"
+        },
+        {
+          "th": "ขมิ้น",
+          "en": "Turmeric"
+        },
+        {
+          "th": "ต้องปรับสูตร",
+          "en": "Optimization needed"
+        }
+      ],
+      "grade": "optimize",
+      "nutrition": {
+        "caloriesKcal": 930,
+        "proteinG": 39,
+        "fatG": 75,
+        "carbG": 26,
+        "fiberG": 2,
+        "saturatedFat": {
+          "amountG": 46,
+          "dailyPercent": 229,
+          "level": "very_high"
+        },
+        "sodium": {
+          "amountMg": 1950,
+          "dailyPercent": 98,
+          "level": "high"
+        },
+        "highlights": [
+          {
+            "th": "โปรตีนสูง",
+            "en": "High protein"
+          },
+          {
+            "th": "มีขมิ้น",
+            "en": "Contains turmeric"
+          }
+        ]
+      },
+      "safety": {
+        "riskLevel": "moderate",
+        "allergenLabels": [
+          {
+            "th": "ปลาในน้ำปลา",
+            "en": "Fish in fish sauce"
+          },
+          {
+            "th": "อาจมีกลูเตน",
+            "en": "May contain gluten"
+          }
+        ],
+        "warnings": [
+          {
+            "th": "ควรเลี่ยงในผู้ที่ต้องจำกัดโซเดียมหรือไขมันอิ่มตัว",
+            "en": "Avoid or adjust for guests limiting sodium or saturated fat."
+          }
+        ],
+        "intakeFlags": ["high_saturated_fat", "high_sodium"]
+      },
+      "optimization": {
+        "status": "recommended",
+        "note": {
+          "th": "ลดกะทิ ใช้เนื้อที่ไขมันต่ำลง ลดน้ำปลาและพริกแกงประมาณ 30% โดยคงขมิ้นและลูกเหรียงไว้เป็นจุดแข็ง",
+          "en": "Reduce coconut milk, use leaner beef, and lower fish sauce and curry paste by about 30% while keeping turmeric and luk riang as the strength."
+        }
+      },
+      "match": {
+        "journeys": ["recharge"],
+        "packageRole": {
+          "th": "มื้อจำลองคุมปริมาณ",
+          "en": "Portion-controlled tasting meal"
+        },
+        "outcomes": [
+          {
+            "th": "อาหารอิ่มอุ่น",
+            "en": "Warm satiety"
+          },
+          {
+            "th": "โปรตีน",
+            "en": "Protein support"
+          }
+        ]
+      },
+      "expertReview": {
+        "status": "pending",
+        "reviewerExpertId": "panrawee-praditsorn",
+        "label": {
+          "th": "รอ ดร.ปานรวีร์ ยืนยัน",
+          "en": "Pending Dr. Panrawee review"
+        }
+      }
+    },
+    {
+      "id": "hug-menu-southern-grilled-pork-sataw",
+      "partnerId": "hug-samui",
+      "isPartnerMenu": true,
+      "sourcePartner": {
+        "th": "Hug Samui",
+        "en": "Hug Samui"
+      },
+      "slug": "southern-grilled-pork-sataw",
+      "sortOrder": 2,
+      "status": "draft",
+      "name": {
+        "th": "หมูปักษ์ใต้ย่าง สะตอพิวเร่",
+        "en": "Southern Grilled Pork with Sataw Puree"
+      },
+      "englishName": {
+        "th": "Southside grilled pork with sataw puree",
+        "en": "Southside grilled pork with sataw puree"
+      },
+      "summary": {
+        "th": "เป็นเมนูที่ไขมันสูงที่สุดจากหมูสามชั้น แต่มีทางปรับสูตรที่ทรงพลังมาก หากเปลี่ยนเป็นคอหมู พลังงานลดเกือบครึ่งและโปรตีนเพิ่มขึ้นจนกลายเป็นเมนู wellness ได้",
+        "en": "This is the richest dish because of pork belly, but it has strong optimization potential: switching to pork neck nearly halves calories and raises protein enough to become wellness-grade."
+      },
+      "category": "main",
+      "course": {
+        "th": "จานหลัก",
+        "en": "Main course"
+      },
+      "price": {
+        "currency": "THB",
+        "amount": 260,
+        "label": {
+          "th": "฿260",
+          "en": "THB 260"
+        }
+      },
+      "serving": {
+        "th": "เสิร์ฟ 1 จาน",
+        "en": "Serves one"
+      },
+      "image": {
+        "publicPath": "/partners/hug-samui/menus/southern-grilled-pork-sataw.jpg",
+        "sourceFileName": "3.jpg",
+        "alt": {
+          "th": "หมูปักษ์ใต้ย่าง สะตอพิวเร่ของ Hug Samui",
+          "en": "Hug Samui Southern grilled pork with sataw puree"
+        }
+      },
+      "localStory": {
+        "th": "หมักสามเกลอ ขมิ้น และสมุนไพรใต้ให้กลิ่นหอมชัด เสิร์ฟกับสะตอพิวเร่เพื่อเชื่อมรสชาติแบบภาคใต้กับการจัดจานร่วมสมัย",
+        "en": "A Southern marinade of garlic, coriander root, pepper, turmeric, and local herbs meets sataw puree in a modern island plating."
+      },
+      "heroIngredients": [
+        {
+          "th": "หมู",
+          "en": "Pork"
+        },
+        {
+          "th": "สะตอ",
+          "en": "Sataw"
+        },
+        {
+          "th": "ขมิ้น",
+          "en": "Turmeric"
+        }
+      ],
+      "wellnessGoals": ["recharge", "protein_support"],
+      "wellnessPillars": ["food"],
+      "wellnessTags": [
+        {
+          "th": "โปรตีน",
+          "en": "Protein"
+        },
+        {
+          "th": "ใยอาหารจากสะตอ",
+          "en": "Fiber from sataw"
+        },
+        {
+          "th": "ต้องปรับสูตร",
+          "en": "Optimization needed"
+        }
+      ],
+      "grade": "optimize",
+      "nutrition": {
+        "caloriesKcal": 1030,
+        "proteinG": 27,
+        "fatG": 96,
+        "carbG": 14,
+        "fiberG": 1,
+        "saturatedFat": {
+          "amountG": 38,
+          "dailyPercent": 190,
+          "level": "very_high"
+        },
+        "sodium": {
+          "amountMg": 1610,
+          "dailyPercent": 81,
+          "level": "high"
+        },
+        "highlights": [
+          {
+            "th": "โปรตีน",
+            "en": "Protein"
+          },
+          {
+            "th": "ใยอาหารจากสะตอ",
+            "en": "Sataw fiber"
+          }
+        ]
+      },
+      "safety": {
+        "riskLevel": "moderate",
+        "allergenLabels": [
+          {
+            "th": "ปลาในน้ำปลา",
+            "en": "Fish in fish sauce"
+          },
+          {
+            "th": "ถั่วเหลืองในซอส",
+            "en": "Soy in sauce"
+          }
+        ],
+        "warnings": [
+          {
+            "th": "ควรจำกัดสำหรับผู้ที่ต้องคุมไขมันอิ่มตัวและโซเดียม",
+            "en": "Limit for guests managing saturated fat and sodium."
+          }
+        ],
+        "intakeFlags": ["high_saturated_fat", "high_sodium"]
+      },
+      "optimization": {
+        "status": "recommended",
+        "note": {
+          "th": "เปลี่ยนจากหมูสามชั้นเป็นคอหมูหรือส่วนที่ไขมันต่ำลง ลดซอสหมักและน้ำปลา จะทำให้พลังงานลดลงมากและโปรตีนสูงขึ้น",
+          "en": "Switch pork belly to pork neck or a leaner cut, and reduce marinade sauce and fish sauce to lower calories while increasing protein density."
+        }
+      },
+      "match": {
+        "journeys": ["recharge"],
+        "packageRole": {
+          "th": "มื้อหลัง activity",
+          "en": "Post-activity meal"
+        },
+        "outcomes": [
+          {
+            "th": "อิ่มนาน",
+            "en": "Longer satiety"
+          },
+          {
+            "th": "โปรตีน",
+            "en": "Protein support"
+          }
+        ]
+      },
+      "expertReview": {
+        "status": "pending",
+        "reviewerExpertId": "panrawee-praditsorn",
+        "label": {
+          "th": "รอ ดร.ปานรวีร์ ยืนยัน",
+          "en": "Pending Dr. Panrawee review"
+        }
+      }
+    },
+    {
+      "id": "hug-menu-drunken-oysters",
+      "partnerId": "hug-samui",
+      "isPartnerMenu": true,
+      "sourcePartner": {
+        "th": "Hug Samui",
+        "en": "Hug Samui"
+      },
+      "slug": "drunken-oysters",
+      "sortOrder": 3,
+      "status": "draft",
+      "name": {
+        "th": "หอยเมาไวน์",
+        "en": "Drunken Oysters"
+      },
+      "englishName": {
+        "th": "Drunken oysters",
+        "en": "Drunken oysters"
+      },
+      "summary": {
+        "th": "โภชนาการดีเด่น แคลอรีต่ำ และมีสังกะสี วิตามิน B12 และโอเมก้า-3 แต่เป็นเมนูดิบจึงต้องคัดกรองผู้บริโภคและควบคุมความปลอดภัยก่อนขาย",
+        "en": "Nutrition is excellent with low calories plus zinc, vitamin B12, and omega-3, but the raw format makes guest screening and safety control essential."
+      },
+      "category": "seafood",
+      "course": {
+        "th": "จานเรียกน้ำย่อย",
+        "en": "Starter"
+      },
+      "price": {
+        "currency": "THB",
+        "amount": 180,
+        "label": {
+          "th": "฿180",
+          "en": "THB 180"
+        }
+      },
+      "serving": {
+        "th": "เสิร์ฟ 2 ตัว",
+        "en": "Two pieces"
+      },
+      "image": {
+        "publicPath": "/partners/hug-samui/menus/drunken-oysters.jpg",
+        "sourceFileName": "4.jpg",
+        "alt": {
+          "th": "หอยเมาไวน์ของ Hug Samui",
+          "en": "Hug Samui drunken oysters"
+        }
+      },
+      "localStory": {
+        "th": "หอยนางรมสดกับน้ำจิ้มซีฟู้ดเปรี้ยวเผ็ดและไวน์ขาว ให้รสทะเลที่สดและชัดเจน เหมาะกับเมนูที่ต้องเล่าเรื่องแหล่งวัตถุดิบ",
+        "en": "Fresh oysters with bright seafood dressing and white wine create a direct sea-to-table experience that depends on transparent sourcing."
+      },
+      "heroIngredients": [
+        {
+          "th": "หอยนางรม",
+          "en": "Oysters"
+        },
+        {
+          "th": "ไวน์ขาว",
+          "en": "White wine"
+        },
+        {
+          "th": "น้ำจิ้มซีฟู้ด",
+          "en": "Seafood dressing"
+        }
+      ],
+      "wellnessGoals": ["glow", "recharge", "mineral_support"],
+      "wellnessPillars": ["food"],
+      "wellnessTags": [
+        {
+          "th": "แคลอรีต่ำ",
+          "en": "Low calorie"
+        },
+        {
+          "th": "สังกะสีสูง",
+          "en": "High zinc"
+        },
+        {
+          "th": "ต้องคัดกรอง",
+          "en": "Screening required"
+        }
+      ],
+      "grade": "safety_gate",
+      "nutrition": {
+        "caloriesKcal": 95,
+        "proteinG": 4,
+        "fatG": 5,
+        "carbG": 7,
+        "fiberG": 1,
+        "saturatedFat": {
+          "amountG": 1,
+          "dailyPercent": 4,
+          "level": "low"
+        },
+        "sodium": {
+          "amountMg": 1210,
+          "dailyPercent": 60,
+          "level": "high"
+        },
+        "highlights": [
+          {
+            "th": "สังกะสีและ B12",
+            "en": "Zinc and B12"
+          },
+          {
+            "th": "โอเมก้า-3",
+            "en": "Omega-3"
+          }
+        ]
+      },
+      "safety": {
+        "riskLevel": "high",
+        "allergenLabels": [
+          {
+            "th": "หอย",
+            "en": "Shellfish"
+          },
+          {
+            "th": "แอลกอฮอล์",
+            "en": "Alcohol"
+          },
+          {
+            "th": "ปลาในน้ำปลา",
+            "en": "Fish in fish sauce"
+          }
+        ],
+        "warnings": [
+          {
+            "th": "ห้ามในหญิงตั้งครรภ์ ผู้มีภูมิคุ้มกันต่ำ ผู้สูงอายุ เด็กเล็ก และผู้มีโรคตับหรือทับซ้อน",
+            "en": "Not suitable for pregnant guests, immunocompromised guests, older adults, young children, or guests with liver disease or significant comorbidities."
+          }
+        ],
+        "intakeFlags": ["raw_shellfish", "alcohol", "health_profile_gate"]
+      },
+      "optimization": {
+        "status": "required",
+        "note": {
+          "th": "ต้องมี protocol ความปลอดภัยของดิบ ระบุแหล่งและเกรดหอย รักษา cold chain และให้จองผ่าน health-profile gate เท่านั้น",
+          "en": "Requires a raw-food safety protocol, declared oyster source and grade, continuous cold chain, and booking through a health-profile gate."
+        }
+      },
+      "match": {
+        "journeys": ["glow", "recharge"],
+        "packageRole": {
+          "th": "เมนูเฉพาะผู้ผ่านการคัดกรอง",
+          "en": "Screened guest only"
+        },
+        "outcomes": [
+          {
+            "th": "ผิว",
+            "en": "Skin support"
+          },
+          {
+            "th": "ภูมิคุ้มกัน",
+            "en": "Immune support"
+          }
+        ]
+      },
+      "expertReview": {
+        "status": "pending",
+        "reviewerExpertId": "panrawee-praditsorn",
+        "label": {
+          "th": "ต้องกำหนด protocol ก่อนขาย",
+          "en": "Safety protocol required before sale"
+        }
+      }
+    },
+    {
+      "id": "hug-menu-kua-kling-tortilla",
+      "partnerId": "hug-samui",
+      "isPartnerMenu": true,
+      "sourcePartner": {
+        "th": "Hug Samui",
+        "en": "Hug Samui"
+      },
+      "slug": "kua-kling-tortilla",
+      "sortOrder": 4,
+      "status": "draft",
+      "name": {
+        "th": "คั่วกลิ้งตอร์ติย่าครีมชีส",
+        "en": "Kua Kling Tortilla with Cream Cheese"
+      },
+      "englishName": {
+        "th": "Kua kling tortillas with cream cheese",
+        "en": "Kua kling tortillas with cream cheese"
+      },
+      "summary": {
+        "th": "โปรตีนสูงและสมุนไพรใต้ช่วยย่อย แต่ครีมชีสทำให้ไขมันอิ่มตัวสูงมาก หากเปลี่ยนเป็นไก่ ตอร์ติย่าโฮลวีต และครีมชีสไขมันต่ำ จะเบาลงได้ชัดเจน",
+        "en": "High protein and Southern herbs support digestion, but cream cheese drives saturated fat high. Chicken, whole-wheat tortilla, and lower-fat cream cheese would make it much lighter."
+      },
+      "category": "main",
+      "course": {
+        "th": "จานทานเล่น",
+        "en": "Share plate"
+      },
+      "price": {
+        "currency": "THB",
+        "amount": 240,
+        "label": {
+          "th": "฿240",
+          "en": "THB 240"
+        }
+      },
+      "serving": {
+        "th": "ตอร์ติย่า 2 แผ่น",
+        "en": "Two tortillas"
+      },
+      "image": {
+        "publicPath": "/partners/hug-samui/menus/kua-kling-tortilla.jpg",
+        "sourceFileName": "5.jpg",
+        "alt": {
+          "th": "คั่วกลิ้งตอร์ติย่าครีมชีสของ Hug Samui",
+          "en": "Hug Samui kua kling tortilla with cream cheese"
+        }
+      },
+      "localStory": {
+        "th": "คั่วกลิ้งแห้งเครื่องแกงใต้ ตะไคร้ และใบมะกรูด ถูกนำมาจัดเป็นฟิวชันที่เข้าถึงง่ายสำหรับนักท่องเที่ยว",
+        "en": "Dry Southern kua kling with curry paste, lemongrass, and kaffir lime leaf becomes an approachable fusion dish for travellers."
+      },
+      "heroIngredients": [
+        {
+          "th": "คั่วกลิ้ง",
+          "en": "Kua kling"
+        },
+        {
+          "th": "ตะไคร้",
+          "en": "Lemongrass"
+        },
+        {
+          "th": "ครีมชีส",
+          "en": "Cream cheese"
+        }
+      ],
+      "wellnessGoals": ["recharge", "digestion_support"],
+      "wellnessPillars": ["food"],
+      "wellnessTags": [
+        {
+          "th": "โปรตีนสูง",
+          "en": "High protein"
+        },
+        {
+          "th": "สมุนไพรใต้",
+          "en": "Southern herbs"
+        },
+        {
+          "th": "ต้องปรับสูตร",
+          "en": "Optimization needed"
+        }
+      ],
+      "grade": "optimize",
+      "nutrition": {
+        "caloriesKcal": 870,
+        "proteinG": 34,
+        "fatG": 65,
+        "carbG": 37,
+        "fiberG": null,
+        "saturatedFat": {
+          "amountG": 23,
+          "dailyPercent": 115,
+          "level": "very_high"
+        },
+        "sodium": {
+          "amountMg": 1510,
+          "dailyPercent": 76,
+          "level": "high"
+        },
+        "highlights": [
+          {
+            "th": "โปรตีนสูง",
+            "en": "High protein"
+          },
+          {
+            "th": "เครื่องแกงช่วยย่อย",
+            "en": "Digestive herbs"
+          }
+        ]
+      },
+      "safety": {
+        "riskLevel": "moderate",
+        "allergenLabels": [
+          {
+            "th": "นม",
+            "en": "Milk"
+          },
+          {
+            "th": "กลูเตน",
+            "en": "Gluten"
+          },
+          {
+            "th": "ปลาในน้ำปลา",
+            "en": "Fish in fish sauce"
+          }
+        ],
+        "warnings": [
+          {
+            "th": "ไขมันอิ่มตัวสูงจากครีมชีสและโซเดียมค่อนข้างสูง",
+            "en": "High saturated fat from cream cheese and relatively high sodium."
+          }
+        ],
+        "intakeFlags": ["high_saturated_fat", "high_sodium", "milk", "gluten"]
+      },
+      "optimization": {
+        "status": "recommended",
+        "note": {
+          "th": "ใช้ไก่สับ ตอร์ติย่าโฮลวีตหรือข้าวโพด และครีมชีสไขมันต่ำ เพื่อลดพลังงานเหลือประมาณ 660 kcal และลดไขมันอิ่มตัว",
+          "en": "Use minced chicken, whole-wheat or corn tortilla, and lower-fat cream cheese to bring the dish toward about 660 kcal and reduce saturated fat."
+        }
+      },
+      "match": {
+        "journeys": ["recharge"],
+        "packageRole": {
+          "th": "มื้อโปรตีนแบบทานง่าย",
+          "en": "Easy protein snack"
+        },
+        "outcomes": [
+          {
+            "th": "โปรตีน",
+            "en": "Protein support"
+          },
+          {
+            "th": "ช่วยย่อย",
+            "en": "Digestion support"
+          }
+        ]
+      },
+      "expertReview": {
+        "status": "pending",
+        "reviewerExpertId": "panrawee-praditsorn",
+        "label": {
+          "th": "รอ ดร.ปานรวีร์ ยืนยัน",
+          "en": "Pending Dr. Panrawee review"
+        }
+      }
+    },
+    {
+      "id": "hug-menu-spicy-tomato-mussels",
+      "partnerId": "hug-samui",
+      "isPartnerMenu": true,
+      "sourcePartner": {
+        "th": "Hug Samui",
+        "en": "Hug Samui"
+      },
+      "slug": "spicy-tomato-mussels",
+      "sortOrder": 5,
+      "status": "draft",
+      "name": {
+        "th": "หอยแมลงภู่ซอสมะเขือเทศเผ็ด",
+        "en": "Mussels in Spicy Tomato Sauce"
+      },
+      "englishName": {
+        "th": "Mussels in spicy tomato sauce",
+        "en": "Mussels in spicy tomato sauce"
+      },
+      "summary": {
+        "th": "เมนูเด่นของชุดนี้ ใช้ฐานมะเขือเทศและน้ำมันมะกอกแทนกะทิ ทำให้ไขมันอิ่มตัวต่ำมาก โซเดียมต่ำ และเล่าเป็นเมนู wellness ได้ชัดเจน",
+        "en": "The strongest wellness dish in this set: tomato and olive oil replace coconut milk, keeping saturated fat very low, sodium modest, and the wellness story easy to defend."
+      },
+      "category": "seafood",
+      "course": {
+        "th": "จานหลักหรือแชร์",
+        "en": "Main or sharing plate"
+      },
+      "price": {
+        "currency": "THB",
+        "amount": 320,
+        "label": {
+          "th": "฿320",
+          "en": "THB 320"
+        }
+      },
+      "serving": {
+        "th": "เสิร์ฟ 1 หม้อ",
+        "en": "One pot"
+      },
+      "image": {
+        "publicPath": "/partners/hug-samui/menus/spicy-tomato-mussels.jpg",
+        "sourceFileName": "6.jpg",
+        "alt": {
+          "th": "หอยแมลงภู่ซอสมะเขือเทศเผ็ดของ Hug Samui",
+          "en": "Hug Samui mussels in spicy tomato sauce"
+        }
+      },
+      "localStory": {
+        "th": "หอยแมลงภู่สดในซอสมะเขือเทศเคี่ยว แต่งรสด้วยกระเทียม ไวน์ขาว และสมุนไพรเมดิเตอร์เรเนียน พบทะเลได้ในจานเดียว",
+        "en": "Fresh mussels in a slow tomato sauce with garlic, white wine, and Mediterranean herbs create a clean sea-forward dish."
+      },
+      "heroIngredients": [
+        {
+          "th": "หอยแมลงภู่",
+          "en": "Mussels"
+        },
+        {
+          "th": "มะเขือเทศ",
+          "en": "Tomato"
+        },
+        {
+          "th": "น้ำมันมะกอก",
+          "en": "Olive oil"
+        }
+      ],
+      "wellnessGoals": ["recharge", "glow", "heart_support"],
+      "wellnessPillars": ["food"],
+      "wellnessTags": [
+        {
+          "th": "เกรด wellness",
+          "en": "Wellness grade"
+        },
+        {
+          "th": "ไขมันอิ่มตัวต่ำ",
+          "en": "Low saturated fat"
+        },
+        {
+          "th": "บำรุงเลือด",
+          "en": "Blood support"
+        }
+      ],
+      "grade": "wellness",
+      "nutrition": {
+        "caloriesKcal": 320,
+        "proteinG": 16,
+        "fatG": 17,
+        "carbG": 20,
+        "fiberG": null,
+        "saturatedFat": {
+          "amountG": 2.5,
+          "dailyPercent": 12,
+          "level": "low"
+        },
+        "sodium": {
+          "amountMg": 500,
+          "dailyPercent": 25,
+          "level": "moderate"
+        },
+        "highlights": [
+          {
+            "th": "โปรตีนไขมันต่ำ",
+            "en": "Lean protein"
+          },
+          {
+            "th": "ไลโคปีน",
+            "en": "Lycopene"
+          },
+          {
+            "th": "โอเมก้า-3",
+            "en": "Omega-3"
+          }
+        ]
+      },
+      "safety": {
+        "riskLevel": "moderate",
+        "allergenLabels": [
+          {
+            "th": "หอย",
+            "en": "Shellfish"
+          },
+          {
+            "th": "ปลาในแอนโชวีหรือน้ำปลา",
+            "en": "Fish in anchovy or fish sauce"
+          },
+          {
+            "th": "แอลกอฮอล์",
+            "en": "Alcohol"
+          }
+        ],
+        "warnings": [
+          {
+            "th": "ใช้หอยสดและปรุงให้สุกทั่วถึง โดยคุมแหล่งที่มาให้ชัดเจน",
+            "en": "Use fresh mussels, cook thoroughly, and keep source records clear."
+          }
+        ],
+        "intakeFlags": ["shellfish", "alcohol"]
+      },
+      "optimization": {
+        "status": "none",
+        "note": {
+          "th": "คงฐานมะเขือเทศและน้ำมันมะกอกไว้ ลดเกลือเพิ่มได้หากใช้ในแพ็กที่ต้องคุมโซเดียม",
+          "en": "Keep the tomato and olive-oil base. Sodium can be reduced further for stricter wellness programs."
+        }
+      },
+      "match": {
+        "journeys": ["recharge", "glow"],
+        "packageRole": {
+          "th": "เมนูหลักเกรด wellness",
+          "en": "Wellness-grade main dish"
+        },
+        "outcomes": [
+          {
+            "th": "พลังงาน",
+            "en": "Energy"
+          },
+          {
+            "th": "ผิว",
+            "en": "Skin support"
+          },
+          {
+            "th": "หัวใจ",
+            "en": "Heart support"
+          }
+        ]
+      },
+      "expertReview": {
+        "status": "pending",
+        "reviewerExpertId": "panrawee-praditsorn",
+        "label": {
+          "th": "รอ ดร.ปานรวีร์ ยืนยัน",
+          "en": "Pending Dr. Panrawee review"
+        }
+      }
+    },
+    {
+      "id": "hug-menu-baked-sea-bass-yellow-curry",
+      "partnerId": "hug-samui",
+      "isPartnerMenu": true,
+      "sourcePartner": {
+        "th": "Hug Samui",
+        "en": "Hug Samui"
+      },
+      "slug": "baked-sea-bass-yellow-curry",
+      "sortOrder": 6,
+      "status": "draft",
+      "name": {
+        "th": "ปลากะพงอบซอสแกงเหลือง",
+        "en": "Baked Sea Bass with Yellow Curry Sauce"
+      },
+      "englishName": {
+        "th": "Baked sea bass with yellow curry sauce",
+        "en": "Baked sea bass with yellow curry sauce"
+      },
+      "summary": {
+        "th": "ปลาอบไขมันต่ำและโปรตีนสูง ใช้ซอสที่ฉลาดด้วยฟักทองและแครอทแทนกะทิเยอะ จุดที่ต้องคุมคือกะทิในซอสที่ยังดันไขมันอิ่มตัวสูง",
+        "en": "Baked fish keeps the dish lean and protein-rich, while pumpkin and carrot thicken the sauce instead of heavy coconut milk. The remaining coconut milk still needs control."
+      },
+      "category": "main",
+      "course": {
+        "th": "จานหลัก fine dining",
+        "en": "Fine dining main"
+      },
+      "price": {
+        "currency": "THB",
+        "amount": 380,
+        "label": {
+          "th": "฿380",
+          "en": "THB 380"
+        }
+      },
+      "serving": {
+        "th": "ปลา 1 ชิ้น",
+        "en": "One fish portion"
+      },
+      "image": {
+        "publicPath": "/partners/hug-samui/menus/baked-sea-bass-yellow-curry.jpg",
+        "sourceFileName": "7.jpg",
+        "alt": {
+          "th": "ปลากะพงอบซอสแกงเหลืองของ Hug Samui",
+          "en": "Hug Samui baked sea bass with yellow curry sauce"
+        }
+      },
+      "localStory": {
+        "th": "ปลากะพงอบเนื้อนุ่มบนซอสแกงเหลืองปั้นเนียน ข้นด้วยฟักทองและแครอท หอมขมิ้นและเม็ดละมุนแบบ fine dining",
+        "en": "Tender baked sea bass sits on a refined yellow curry sauce thickened with pumpkin and carrot, carrying turmeric aroma in a fine-dining style."
+      },
+      "heroIngredients": [
+        {
+          "th": "ปลากะพง",
+          "en": "Sea bass"
+        },
+        {
+          "th": "ขมิ้น",
+          "en": "Turmeric"
+        },
+        {
+          "th": "ฟักทอง",
+          "en": "Pumpkin"
+        }
+      ],
+      "wellnessGoals": ["reset", "glow", "protein_support"],
+      "wellnessPillars": ["food"],
+      "wellnessTags": [
+        {
+          "th": "เกือบเกรด wellness",
+          "en": "Near wellness grade"
+        },
+        {
+          "th": "โปรตีนสูง",
+          "en": "High protein"
+        },
+        {
+          "th": "โอเมก้า-3",
+          "en": "Omega-3"
+        }
+      ],
+      "grade": "near_wellness",
+      "nutrition": {
+        "caloriesKcal": 430,
+        "proteinG": 33,
+        "fatG": 28,
+        "carbG": 9,
+        "fiberG": null,
+        "saturatedFat": {
+          "amountG": 19,
+          "dailyPercent": 93,
+          "level": "high"
+        },
+        "sodium": {
+          "amountMg": 970,
+          "dailyPercent": 48,
+          "level": "moderate"
+        },
+        "highlights": [
+          {
+            "th": "โปรตีนสูง",
+            "en": "High protein"
+          },
+          {
+            "th": "โอเมก้า-3",
+            "en": "Omega-3"
+          },
+          {
+            "th": "ขมิ้น",
+            "en": "Turmeric"
+          }
+        ]
+      },
+      "safety": {
+        "riskLevel": "moderate",
+        "allergenLabels": [
+          {
+            "th": "ปลา",
+            "en": "Fish"
+          },
+          {
+            "th": "กะทิในซอส",
+            "en": "Coconut milk in sauce"
+          }
+        ],
+        "warnings": [
+          {
+            "th": "ไขมันอิ่มตัวค่อนข้างสูงจากกะทิในซอส แต่สามารถลดได้ด้วยกะทิพร่องไขมัน",
+            "en": "Saturated fat remains relatively high from coconut milk in the sauce, but can be reduced with lighter coconut milk."
+          }
+        ],
+        "intakeFlags": ["fish", "moderate_saturated_fat"]
+      },
+      "optimization": {
+        "status": "recommended",
+        "note": {
+          "th": "เพิ่มฟักทองและแครอทเพื่อช่วยข้นซอส ลดกะทิหรือใช้กะทิพร่องไขมัน จะทำให้เมนูนี้ขึ้นเป็น wellness ได้เต็มตัว",
+          "en": "Use more pumpkin and carrot for body, and reduce or lighten coconut milk to move this dish fully into wellness-grade territory."
+        }
+      },
+      "match": {
+        "journeys": ["reset", "glow"],
+        "packageRole": {
+          "th": "มื้อหลักเบาแบบ fine dining",
+          "en": "Light fine-dining main"
+        },
+        "outcomes": [
+          {
+            "th": "ฟื้นฟู",
+            "en": "Recovery"
+          },
+          {
+            "th": "ผิว",
+            "en": "Skin support"
+          }
+        ]
+      },
+      "expertReview": {
+        "status": "pending",
+        "reviewerExpertId": "panrawee-praditsorn",
+        "label": {
+          "th": "รอ ดร.ปานรวีร์ ยืนยัน",
+          "en": "Pending Dr. Panrawee review"
+        }
+      }
+    },
+    {
+      "id": "hug-menu-tomato-cream-soup",
+      "partnerId": "hug-samui",
+      "isPartnerMenu": true,
+      "sourcePartner": {
+        "th": "Hug Samui",
+        "en": "Hug Samui"
+      },
+      "slug": "tomato-cream-soup",
+      "sortOrder": 7,
+      "status": "draft",
+      "name": {
+        "th": "ซุปมะเขือเทศครีม",
+        "en": "Tomato Cream Soup"
+      },
+      "englishName": {
+        "th": "Tomato cream soup with flatbread",
+        "en": "Tomato cream soup with flatbread"
+      },
+      "summary": {
+        "th": "starter อุ่นสบาย ได้ไลโคปีนจากมะเขือเทศจริง แต่เนยและครีมทำให้ไขมันอิ่มตัวสูงขึ้น ปรับให้เบาได้ง่ายด้วยกรีกโยเกิร์ตแทนครีม",
+        "en": "A warm starter with real tomato lycopene, but butter and cream raise saturated fat. It can be lightened easily with Greek yogurt instead of cream."
+      },
+      "category": "starter",
+      "course": {
+        "th": "ซุปหรือ starter",
+        "en": "Soup or starter"
+      },
+      "price": {
+        "currency": "THB",
+        "amount": 180,
+        "label": {
+          "th": "฿180",
+          "en": "THB 180"
+        }
+      },
+      "serving": {
+        "th": "เสิร์ฟ 1 ถ้วยพร้อมแป้งอบ",
+        "en": "One bowl with flatbread"
+      },
+      "image": {
+        "publicPath": "/partners/hug-samui/menus/tomato-cream-soup.jpg",
+        "sourceFileName": "8.jpg",
+        "alt": {
+          "th": "ซุปมะเขือเทศครีมของ Hug Samui",
+          "en": "Hug Samui tomato cream soup"
+        }
+      },
+      "localStory": {
+        "th": "มะเขือเทศเคี่ยวเนียนกับหอมใหญ่และโรสแมรี เสิร์ฟกับแป้งอบ เป็น starter สไตล์เวสเทิร์นที่วางในแพ็ก Reset ได้ง่าย",
+        "en": "Slow-cooked tomato with onion and rosemary, served with flatbread, makes an easy Western-style starter for Reset programs."
+      },
+      "heroIngredients": [
+        {
+          "th": "มะเขือเทศ",
+          "en": "Tomato"
+        },
+        {
+          "th": "โรสแมรี",
+          "en": "Rosemary"
+        },
+        {
+          "th": "ครีม",
+          "en": "Cream"
+        }
+      ],
+      "wellnessGoals": ["reset", "digestion_support", "glow"],
+      "wellnessPillars": ["food"],
+      "wellnessTags": [
+        {
+          "th": "ไลโคปีน",
+          "en": "Lycopene"
+        },
+        {
+          "th": "starter เบา",
+          "en": "Gentle starter"
+        },
+        {
+          "th": "ปรับเบาได้",
+          "en": "Easy to lighten"
+        }
+      ],
+      "grade": "optimize",
+      "nutrition": {
+        "caloriesKcal": 390,
+        "proteinG": 9,
+        "fatG": 18,
+        "carbG": 48,
+        "fiberG": 5,
+        "saturatedFat": {
+          "amountG": 11,
+          "dailyPercent": 55,
+          "level": "moderate"
+        },
+        "sodium": {
+          "amountMg": 310,
+          "dailyPercent": 15,
+          "level": "low"
+        },
+        "highlights": [
+          {
+            "th": "ไลโคปีน",
+            "en": "Lycopene"
+          },
+          {
+            "th": "ใยอาหาร",
+            "en": "Fiber"
+          }
+        ]
+      },
+      "safety": {
+        "riskLevel": "low",
+        "allergenLabels": [
+          {
+            "th": "นม",
+            "en": "Milk"
+          },
+          {
+            "th": "กลูเตน",
+            "en": "Gluten"
+          }
+        ],
+        "warnings": [
+          {
+            "th": "ไขมันอิ่มตัวจากเนยและครีม ปรับเบาได้ง่าย",
+            "en": "Saturated fat comes from butter and cream and is easy to lighten."
+          }
+        ],
+        "intakeFlags": ["milk", "gluten", "moderate_saturated_fat"]
+      },
+      "optimization": {
+        "status": "recommended",
+        "note": {
+          "th": "ใช้กรีกโยเกิร์ตแทนครีม ลดเนย เสิร์ฟแป้งโฮลวีต และเพิ่มใยอาหาร จะเหมาะกับแพ็ก Reset มากขึ้น",
+          "en": "Use Greek yogurt instead of cream, reduce butter, serve whole-grain flatbread, and increase fiber for a stronger Reset fit."
+        }
+      },
+      "match": {
+        "journeys": ["reset"],
+        "packageRole": {
+          "th": "starter เปิดมื้อ",
+          "en": "Opening starter"
+        },
+        "outcomes": [
+          {
+            "th": "ผิว",
+            "en": "Skin support"
+          },
+          {
+            "th": "สบายท้อง",
+            "en": "Digestive comfort"
+          }
+        ]
+      },
+      "expertReview": {
+        "status": "pending",
+        "reviewerExpertId": "panrawee-praditsorn",
+        "label": {
+          "th": "รอ ดร.ปานรวีร์ ยืนยัน",
+          "en": "Pending Dr. Panrawee review"
+        }
+      }
+    },
+    {
+      "id": "hug-menu-samui-octopus-coconut-curry",
+      "partnerId": "hug-samui",
+      "isPartnerMenu": true,
+      "sourcePartner": {
+        "th": "Hug Samui",
+        "en": "Hug Samui"
+      },
+      "slug": "samui-octopus-coconut-curry",
+      "sortOrder": 8,
+      "status": "draft",
+      "name": {
+        "th": "หมึกสายสมุยแกงกะทิ",
+        "en": "Samui Octopus in Coconut Milk Curry"
+      },
+      "englishName": {
+        "th": "Samui octopus in coconut milk curry",
+        "en": "Samui octopus in coconut milk curry"
+      },
+      "summary": {
+        "th": "หมึกสายเป็นโปรตีนไขมันต่ำและสับปะรดมีเอนไซม์ช่วยย่อย แต่กะทิ 235 มล. ทำให้ไขมันอิ่มตัวสูงมาก ลดกะทิเมื่อไร จุดเด่นของหมึกและสับปะรดจะชัดขึ้นทันที",
+        "en": "Octopus is a lean protein and pineapple supports digestion, but 235 ml of coconut milk drives saturated fat very high. Reducing coconut milk lets the octopus and pineapple shine."
+      },
+      "category": "seafood",
+      "course": {
+        "th": "จานหลัก",
+        "en": "Main course"
+      },
+      "price": {
+        "currency": "THB",
+        "amount": 340,
+        "label": {
+          "th": "฿340",
+          "en": "THB 340"
+        }
+      },
+      "serving": {
+        "th": "เสิร์ฟ 1 ชาม",
+        "en": "One bowl"
+      },
+      "image": {
+        "publicPath": "/partners/hug-samui/menus/samui-octopus-coconut-curry.jpg",
+        "sourceFileName": "9.jpg",
+        "alt": {
+          "th": "หมึกสายสมุยแกงกะทิของ Hug Samui",
+          "en": "Hug Samui Samui octopus in coconut milk curry"
+        }
+      },
+      "localStory": {
+        "th": "หมึกสายต้มในแกงกะทิ เปรี้ยวหวานด้วยสับปะรด หอมตะไคร้ ใบมะกรูด และโหระพา เป็นเมนูทะเลท้องถิ่นที่เล่าความเป็นเกาะได้ดี",
+        "en": "Tender octopus in coconut curry with pineapple, lemongrass, kaffir lime, and basil creates a clear island seafood story."
+      },
+      "heroIngredients": [
+        {
+          "th": "หมึกสาย",
+          "en": "Octopus"
+        },
+        {
+          "th": "สับปะรด",
+          "en": "Pineapple"
+        },
+        {
+          "th": "กะทิ",
+          "en": "Coconut milk"
+        }
+      ],
+      "wellnessGoals": ["recharge", "digestion_support", "protein_support"],
+      "wellnessPillars": ["food"],
+      "wellnessTags": [
+        {
+          "th": "โปรตีนสูง",
+          "en": "High protein"
+        },
+        {
+          "th": "ช่วยย่อย",
+          "en": "Digestive support"
+        },
+        {
+          "th": "ต้องปรับสูตร",
+          "en": "Optimization needed"
+        }
+      ],
+      "grade": "optimize",
+      "nutrition": {
+        "caloriesKcal": 700,
+        "proteinG": 31,
+        "fatG": 53,
+        "carbG": 27,
+        "fiberG": null,
+        "saturatedFat": {
+          "amountG": 45,
+          "dailyPercent": 225,
+          "level": "very_high"
+        },
+        "sodium": {
+          "amountMg": 1390,
+          "dailyPercent": 69,
+          "level": "high"
+        },
+        "highlights": [
+          {
+            "th": "โปรตีนสูง",
+            "en": "High protein"
+          },
+          {
+            "th": "เอนไซม์จากสับปะรด",
+            "en": "Pineapple enzymes"
+          }
+        ]
+      },
+      "safety": {
+        "riskLevel": "moderate",
+        "allergenLabels": [
+          {
+            "th": "หมึก",
+            "en": "Cephalopod"
+          },
+          {
+            "th": "ปลาในน้ำปลา",
+            "en": "Fish in fish sauce"
+          }
+        ],
+        "warnings": [
+          {
+            "th": "ไขมันอิ่มตัวสูงมากจากกะทิและโซเดียมสูง",
+            "en": "Very high saturated fat from coconut milk and high sodium."
+          }
+        ],
+        "intakeFlags": ["high_saturated_fat", "high_sodium", "seafood"]
+      },
+      "optimization": {
+        "status": "recommended",
+        "note": {
+          "th": "ลดกะทิหรือใช้กะทิพร่องไขมัน เพิ่มสับปะรดและสมุนไพรให้เด่นขึ้น จะทำให้เป็นเมนูทะเลเกรด wellness ได้มากขึ้น",
+          "en": "Reduce or lighten coconut milk, and let pineapple and herbs carry more flavour to move the dish toward a wellness seafood profile."
+        }
+      },
+      "match": {
+        "journeys": ["recharge"],
+        "packageRole": {
+          "th": "มื้อโปรตีนคุมปริมาณกะทิ",
+          "en": "Protein meal with coconut control"
+        },
+        "outcomes": [
+          {
+            "th": "โปรตีน",
+            "en": "Protein support"
+          },
+          {
+            "th": "ช่วยย่อย",
+            "en": "Digestion support"
+          }
+        ]
+      },
+      "expertReview": {
+        "status": "pending",
+        "reviewerExpertId": "panrawee-praditsorn",
+        "label": {
+          "th": "รอ ดร.ปานรวีร์ ยืนยัน",
+          "en": "Pending Dr. Panrawee review"
+        }
+      }
+    },
+    {
+      "id": "ref-menu-southern-herb-rice-salad",
+      "partnerId": "hug-samui",
+      "isPartnerMenu": false,
+      "sourcePartner": {
+        "th": "Reference menu",
+        "en": "Reference menu"
+      },
+      "slug": "southern-herb-rice-salad",
+      "sortOrder": 101,
+      "status": "draft",
+      "name": {
+        "th": "ข้าวยำปักษ์ใต้",
+        "en": "Southern Herb Rice Salad"
+      },
+      "englishName": {
+        "th": "Southern herb rice salad",
+        "en": "Southern herb rice salad"
+      },
+      "summary": {
+        "th": "จานสมุนไพรสดและผักรวมที่เป็นมื้อช่วยย่อยและบำรุงผิวในจานเดียว ใยอาหารดี แคลอรีไม่สูง จุดเดียวที่ต้องคุมคือโซเดียมจากน้ำบูดู",
+        "en": "A fresh herb and vegetable rice salad that supports digestion and skin in one plate, with good fiber and moderate calories. Sodium from budu sauce is the main control point."
+      },
+      "category": "main",
+      "course": {
+        "th": "จานเดียวครบหมู่",
+        "en": "Balanced one-plate meal"
+      },
+      "price": {
+        "currency": "THB",
+        "amount": 160,
+        "label": {
+          "th": "฿160",
+          "en": "THB 160"
+        }
+      },
+      "serving": {
+        "th": "เสิร์ฟ 1 จาน",
+        "en": "Serves one"
+      },
+      "image": {
+        "publicPath": "/partners/hug-samui/menus/southern-herb-rice-salad.jpg",
+        "sourceFileName": "o1.jpg",
+        "alt": {
+          "th": "ข้าวยำปักษ์ใต้ reference menu",
+          "en": "Southern herb rice salad reference menu"
+        }
+      },
+      "localStory": {
+        "th": "ข้าวคลุกสมุนไพรและผักสดหลายชนิด ราดน้ำบูดู ได้อาหารใต้ดั้งเดิมที่ครบเครื่องในจานเดียว",
+        "en": "Rice with many fresh herbs and vegetables, dressed with budu sauce, delivers a complete traditional Southern plate."
+      },
+      "heroIngredients": [
+        {
+          "th": "สมุนไพรใต้",
+          "en": "Southern herbs"
+        },
+        {
+          "th": "ผักสด",
+          "en": "Fresh vegetables"
+        },
+        {
+          "th": "น้ำบูดู",
+          "en": "Budu sauce"
+        }
+      ],
+      "wellnessGoals": ["detox", "glow", "reset"],
+      "wellnessPillars": ["food"],
+      "wellnessTags": [
+        {
+          "th": "ใยอาหารสูง",
+          "en": "High fiber"
+        },
+        {
+          "th": "สมุนไพรหลากชนิด",
+          "en": "Many herbs"
+        }
+      ],
+      "grade": "near_wellness",
+      "nutrition": {
+        "caloriesKcal": 380,
+        "proteinG": 14,
+        "fatG": 11,
+        "carbG": 59,
+        "fiberG": 5,
+        "saturatedFat": {
+          "amountG": 8.3,
+          "dailyPercent": 42,
+          "level": "moderate"
+        },
+        "sodium": {
+          "amountMg": 1400,
+          "dailyPercent": 70,
+          "level": "high"
+        },
+        "highlights": [
+          {
+            "th": "ใยอาหาร",
+            "en": "Fiber"
+          },
+          {
+            "th": "สมุนไพร",
+            "en": "Herbs"
+          }
+        ]
+      },
+      "safety": {
+        "riskLevel": "moderate",
+        "allergenLabels": [
+          {
+            "th": "ปลาในน้ำบูดู",
+            "en": "Fish in budu sauce"
+          },
+          {
+            "th": "กุ้งแห้งหรือกะปิ",
+            "en": "Dried shrimp or shrimp paste"
+          }
+        ],
+        "warnings": [
+          {
+            "th": "โซเดียมสูงจากน้ำบูดู ควรแยกน้ำบูดูให้ลูกค้าปรุงเอง",
+            "en": "High sodium from budu sauce; serve the sauce separately for guest control."
+          }
+        ],
+        "intakeFlags": ["high_sodium", "fish", "shellfish"]
+      },
+      "optimization": {
+        "status": "recommended",
+        "note": {
+          "th": "ลดน้ำบูดูหรือทำสูตรลดเกลือ ลดมะพร้าวคั่ว และคงสมุนไพรกับผักไว้เต็มที่",
+          "en": "Lower or reformulate budu sauce, reduce toasted coconut, and keep the herb and vegetable load high."
+        }
+      },
+      "match": {
+        "journeys": ["detox", "glow", "reset"],
+        "packageRole": {
+          "th": "เมนู reference สำหรับระบบ matching",
+          "en": "Reference dish for matching logic"
+        },
+        "outcomes": [
+          {
+            "th": "สบายท้อง",
+            "en": "Digestive comfort"
+          },
+          {
+            "th": "ผิว",
+            "en": "Skin support"
+          }
+        ]
+      },
+      "expertReview": {
+        "status": "pending",
+        "reviewerExpertId": "panrawee-praditsorn",
+        "label": {
+          "th": "รอ ดร.ปานรวีร์ ยืนยัน",
+          "en": "Pending Dr. Panrawee review"
+        }
+      }
+    },
+    {
+      "id": "ref-menu-paco-fern-prawn-salad",
+      "partnerId": "hug-samui",
+      "isPartnerMenu": false,
+      "sourcePartner": {
+        "th": "Reference menu",
+        "en": "Reference menu"
+      },
+      "slug": "paco-fern-prawn-salad",
+      "sortOrder": 102,
+      "status": "draft",
+      "name": {
+        "th": "ยำผักกูดกุ้งสด",
+        "en": "Paco Fern Salad with Fresh Prawns"
+      },
+      "englishName": {
+        "th": "Paco fern salad with fresh prawns",
+        "en": "Paco fern salad with fresh prawns"
+      },
+      "summary": {
+        "th": "เฟิร์นท้องถิ่นใต้ที่มีธาตุเหล็กและเบต้าแคโรทีน จับกับกุ้งสดให้โปรตีนสูง ไขมันอิ่มตัวแทบเป็นศูนย์ เป็นจานสุขภาพแท้",
+        "en": "Southern local fern brings iron and beta-carotene, while fresh prawns add high protein with almost no saturated fat. A true health-forward plate."
+      },
+      "category": "starter",
+      "course": {
+        "th": "ยำหรือสลัดท้องถิ่น",
+        "en": "Local salad"
+      },
+      "price": {
+        "currency": "THB",
+        "amount": 220,
+        "label": {
+          "th": "฿220",
+          "en": "THB 220"
+        }
+      },
+      "serving": {
+        "th": "เสิร์ฟ 1 จาน",
+        "en": "Serves one"
+      },
+      "image": {
+        "publicPath": "/partners/hug-samui/menus/paco-fern-prawn-salad.jpg",
+        "sourceFileName": "o2.jpg",
+        "alt": {
+          "th": "ยำผักกูดกุ้งสด reference menu",
+          "en": "Paco fern salad with fresh prawns reference menu"
+        }
+      },
+      "localStory": {
+        "th": "ผักกูดท้องถิ่นภาคใต้ลวกพอสุก ยำกับกุ้งสดลวก หอมแดง และน้ำยำมะนาว ให้รสสดและผักพื้นบ้านที่หาได้เฉพาะถิ่น",
+        "en": "Southern paco fern is lightly blanched and tossed with prawns, shallots, and lime dressing for a bright local salad."
+      },
+      "heroIngredients": [
+        {
+          "th": "ผักกูด",
+          "en": "Paco fern"
+        },
+        {
+          "th": "กุ้ง",
+          "en": "Prawns"
+        },
+        {
+          "th": "มะนาว",
+          "en": "Lime"
+        }
+      ],
+      "wellnessGoals": ["glow", "detox", "recharge"],
+      "wellnessPillars": ["food"],
+      "wellnessTags": [
+        {
+          "th": "โปรตีนสูง",
+          "en": "High protein"
+        },
+        {
+          "th": "ไขมันต่ำ",
+          "en": "Low fat"
+        },
+        {
+          "th": "บำรุงเลือด",
+          "en": "Blood support"
+        }
+      ],
+      "grade": "wellness",
+      "nutrition": {
+        "caloriesKcal": 120,
+        "proteinG": 20,
+        "fatG": 1,
+        "carbG": 12,
+        "fiberG": null,
+        "saturatedFat": {
+          "amountG": 0.2,
+          "dailyPercent": 1,
+          "level": "low"
+        },
+        "sodium": {
+          "amountMg": 880,
+          "dailyPercent": 44,
+          "level": "moderate"
+        },
+        "highlights": [
+          {
+            "th": "ธาตุเหล็ก",
+            "en": "Iron"
+          },
+          {
+            "th": "เบต้าแคโรทีน",
+            "en": "Beta-carotene"
+          }
+        ]
+      },
+      "safety": {
+        "riskLevel": "moderate",
+        "allergenLabels": [
+          {
+            "th": "กุ้ง",
+            "en": "Prawns"
+          },
+          {
+            "th": "ปลาในน้ำปลา",
+            "en": "Fish in fish sauce"
+          }
+        ],
+        "warnings": [
+          {
+            "th": "ลวกผักกูดให้สุกและลดน้ำปลาเพื่อลดโซเดียม",
+            "en": "Blanch paco fern properly and reduce fish sauce to manage sodium."
+          }
+        ],
+        "intakeFlags": ["shellfish", "fish", "moderate_sodium"]
+      },
+      "optimization": {
+        "status": "none",
+        "note": {
+          "th": "คงโครงสร้างเดิมได้ เพียงคุมโซเดียมในน้ำยำและคุณภาพกุ้ง",
+          "en": "The structure can stay. Control sodium in the dressing and keep prawn sourcing clear."
+        }
+      },
+      "match": {
+        "journeys": ["glow", "detox", "recharge"],
+        "packageRole": {
+          "th": "เมนู reference สำหรับระบบ matching",
+          "en": "Reference dish for matching logic"
+        },
+        "outcomes": [
+          {
+            "th": "ผิว",
+            "en": "Skin support"
+          },
+          {
+            "th": "พลังงาน",
+            "en": "Energy"
+          }
+        ]
+      },
+      "expertReview": {
+        "status": "pending",
+        "reviewerExpertId": "panrawee-praditsorn",
+        "label": {
+          "th": "รอ ดร.ปานรวีร์ ยืนยัน",
+          "en": "Pending Dr. Panrawee review"
+        }
+      }
+    },
+    {
+      "id": "ref-menu-southern-sour-curry-prawns",
+      "partnerId": "hug-samui",
+      "isPartnerMenu": false,
+      "sourcePartner": {
+        "th": "Reference menu",
+        "en": "Reference menu"
+      },
+      "slug": "southern-sour-curry-prawns",
+      "sortOrder": 103,
+      "status": "draft",
+      "name": {
+        "th": "แกงส้มปักษ์ใต้กุ้ง",
+        "en": "Southern Sour Curry with Prawns"
+      },
+      "englishName": {
+        "th": "Southern sour curry with prawns",
+        "en": "Southern sour curry with prawns"
+      },
+      "summary": {
+        "th": "เครื่องแกงขมิ้นสดแบบไม่ใส่กะทิช่วยเล่าเรื่องต้านการอักเสบ ความเปรี้ยวจากมะขามเสริมภูมิคุ้มกัน โปรตีนสูงและไขมันอิ่มตัวต่ำมาก จุดเดียวที่ต้องคุมคือโซเดียมจากกะปิ",
+        "en": "Fresh turmeric curry without coconut milk supports an anti-inflammatory story, tamarind adds brightness, protein is high, and saturated fat is minimal. Shrimp-paste sodium is the main control point."
+      },
+      "category": "soup",
+      "course": {
+        "th": "จานหลักทานกับข้าว",
+        "en": "Main served with rice"
+      },
+      "price": {
+        "currency": "THB",
+        "amount": 240,
+        "label": {
+          "th": "฿240",
+          "en": "THB 240"
+        }
+      },
+      "serving": {
+        "th": "เสิร์ฟ 1 ถ้วย",
+        "en": "One bowl"
+      },
+      "image": {
+        "publicPath": "/partners/hug-samui/menus/southern-sour-curry-prawns.jpg",
+        "sourceFileName": "o3.jpg",
+        "alt": {
+          "th": "แกงส้มปักษ์ใต้กุ้ง reference menu",
+          "en": "Southern sour curry with prawns reference menu"
+        }
+      },
+      "localStory": {
+        "th": "แกงส้มใต้ใช้เครื่องแกงขมิ้นสด กุ้งสด และผักรวมตามฤดู เปรี้ยวจากมะขาม เป็นเมนูใต้ขึ้นชื่อของสมุย",
+        "en": "Southern sour curry uses fresh turmeric paste, prawns, seasonal vegetables, and tamarind for one of the region's signature flavours."
+      },
+      "heroIngredients": [
+        {
+          "th": "ขมิ้น",
+          "en": "Turmeric"
+        },
+        {
+          "th": "กุ้ง",
+          "en": "Prawns"
+        },
+        {
+          "th": "มะขาม",
+          "en": "Tamarind"
+        }
+      ],
+      "wellnessGoals": ["detox", "reset", "anti_inflammation"],
+      "wellnessPillars": ["food"],
+      "wellnessTags": [
+        {
+          "th": "ต้านการอักเสบ",
+          "en": "Anti-inflammatory"
+        },
+        {
+          "th": "โปรตีนสูง",
+          "en": "High protein"
+        },
+        {
+          "th": "ไม่มีกะทิ",
+          "en": "No coconut milk"
+        }
+      ],
+      "grade": "wellness",
+      "nutrition": {
+        "caloriesKcal": 160,
+        "proteinG": 23,
+        "fatG": 1,
+        "carbG": 15,
+        "fiberG": 4,
+        "saturatedFat": {
+          "amountG": 0.2,
+          "dailyPercent": 1,
+          "level": "low"
+        },
+        "sodium": {
+          "amountMg": 1150,
+          "dailyPercent": 58,
+          "level": "high"
+        },
+        "highlights": [
+          {
+            "th": "ขมิ้นสด",
+            "en": "Fresh turmeric"
+          },
+          {
+            "th": "โปรตีนสูง",
+            "en": "High protein"
+          }
+        ]
+      },
+      "safety": {
+        "riskLevel": "moderate",
+        "allergenLabels": [
+          {
+            "th": "กุ้ง",
+            "en": "Prawns"
+          },
+          {
+            "th": "กะปิหรือปลาในน้ำปลา",
+            "en": "Shrimp paste or fish sauce"
+          }
+        ],
+        "warnings": [
+          {
+            "th": "โซเดียมค่อนข้างสูงจากกะปิและน้ำปลา แต่รสชาติเผ็ดเปรี้ยวปรับลดได้",
+            "en": "Sodium is relatively high from shrimp paste and fish sauce, but the sour-spicy profile can be adjusted."
+          }
+        ],
+        "intakeFlags": ["shellfish", "fish", "high_sodium"]
+      },
+      "optimization": {
+        "status": "recommended",
+        "note": {
+          "th": "ลดกะปิและน้ำปลา เพิ่มผักให้หลากหลาย จะช่วยลดโซเดียมและเพิ่มใยอาหาร",
+          "en": "Reduce shrimp paste and fish sauce, and add more vegetables to lower sodium and increase fiber."
+        }
+      },
+      "match": {
+        "journeys": ["detox", "reset"],
+        "packageRole": {
+          "th": "เมนู reference สำหรับระบบ matching",
+          "en": "Reference dish for matching logic"
+        },
+        "outcomes": [
+          {
+            "th": "ภูมิคุ้มกัน",
+            "en": "Immune support"
+          },
+          {
+            "th": "ความสบายท้อง",
+            "en": "Digestive comfort"
+          }
+        ]
+      },
+      "expertReview": {
+        "status": "pending",
+        "reviewerExpertId": "panrawee-praditsorn",
+        "label": {
+          "th": "รอ ดร.ปานรวีร์ ยืนยัน",
+          "en": "Pending Dr. Panrawee review"
+        }
+      }
+    },
+    {
+      "id": "ref-menu-samui-young-coconut",
+      "partnerId": "hug-samui",
+      "isPartnerMenu": false,
+      "sourcePartner": {
+        "th": "Reference menu",
+        "en": "Reference menu"
+      },
+      "slug": "samui-young-coconut",
+      "sortOrder": 104,
+      "status": "draft",
+      "name": {
+        "th": "มะพร้าวอ่อนน้ำหอมสมุย",
+        "en": "Samui Aromatic Young Coconut"
+      },
+      "englishName": {
+        "th": "Samui aromatic young coconut",
+        "en": "Samui aromatic young coconut"
+      },
+      "summary": {
+        "th": "เมนูเติมน้ำและอิเล็กโทรไลต์จากเกาะแห่งมะพร้าว ให้โพแทสเซียมธรรมชาติ คลายเพลียจากการเดินทาง และเหมาะเป็น welcome drink ของแพ็ก Reset",
+        "en": "A hydration and electrolyte menu from the island of coconuts, with natural potassium for travel fatigue and an easy role as a Reset welcome drink."
+      },
+      "category": "drink",
+      "course": {
+        "th": "เครื่องดื่มหรือของว่างสด",
+        "en": "Fresh drink or snack"
+      },
+      "price": {
+        "currency": "THB",
+        "amount": 120,
+        "label": {
+          "th": "฿120",
+          "en": "THB 120"
+        }
+      },
+      "serving": {
+        "th": "เสิร์ฟ 1 ลูก",
+        "en": "One young coconut"
+      },
+      "image": {
+        "publicPath": "/partners/hug-samui/menus/samui-young-coconut.jpg",
+        "sourceFileName": "o4.jpg",
+        "alt": {
+          "th": "มะพร้าวอ่อนน้ำหอมสมุย reference menu",
+          "en": "Samui aromatic young coconut reference menu"
+        }
+      },
+      "localStory": {
+        "th": "มะพร้าวน้ำหอมจากสมุย เสิร์ฟเย็นทั้งน้ำและเนื้ออ่อน เป็นภาพจำของเกาะที่เชื่อมกับ hydration ได้ชัดเจน",
+        "en": "A chilled Samui young coconut, served with both water and soft flesh, connects island identity with hydration."
+      },
+      "heroIngredients": [
+        {
+          "th": "น้ำมะพร้าว",
+          "en": "Coconut water"
+        },
+        {
+          "th": "เนื้อมะพร้าวอ่อน",
+          "en": "Young coconut flesh"
+        }
+      ],
+      "wellnessGoals": ["reset", "hydration", "recharge"],
+      "wellnessPillars": ["food", "air"],
+      "wellnessTags": [
+        {
+          "th": "เติมน้ำ",
+          "en": "Hydration"
+        },
+        {
+          "th": "อิเล็กโทรไลต์",
+          "en": "Electrolytes"
+        },
+        {
+          "th": "โพแทสเซียมสูง",
+          "en": "High potassium"
+        }
+      ],
+      "grade": "wellness",
+      "nutrition": {
+        "caloriesKcal": 76,
+        "proteinG": 2,
+        "fatG": 2.5,
+        "carbG": 11,
+        "fiberG": null,
+        "saturatedFat": {
+          "amountG": 2.3,
+          "dailyPercent": 12,
+          "level": "low"
+        },
+        "sodium": {
+          "amountMg": 110,
+          "dailyPercent": 5,
+          "level": "low"
+        },
+        "highlights": [
+          {
+            "th": "โพแทสเซียม",
+            "en": "Potassium"
+          },
+          {
+            "th": "เติมน้ำ",
+            "en": "Hydration"
+          }
+        ]
+      },
+      "safety": {
+        "riskLevel": "low",
+        "allergenLabels": [],
+        "warnings": [
+          {
+            "th": "มีน้ำตาลธรรมชาติ ผู้เป็นเบาหวานควรคุมปริมาณ และผู้จำกัดโพแทสเซียมควรระวัง",
+            "en": "Contains natural sugar; guests with diabetes should manage portions, and guests limiting potassium should use caution."
+          }
+        ],
+        "intakeFlags": ["natural_sugar", "high_potassium"]
+      },
+      "optimization": {
+        "status": "none",
+        "note": {
+          "th": "เหมาะเป็น welcome drink โดยควบคุมขนาดเสิร์ฟและไม่เติมน้ำเชื่อม",
+          "en": "Works well as a welcome drink when served in a controlled portion without added syrup."
+        }
+      },
+      "match": {
+        "journeys": ["reset", "recharge"],
+        "packageRole": {
+          "th": "welcome drink สำหรับแพ็ก Reset",
+          "en": "Reset package welcome drink"
+        },
+        "outcomes": [
+          {
+            "th": "เติมน้ำ",
+            "en": "Hydration"
+          },
+          {
+            "th": "สดชื่น",
+            "en": "Freshness"
+          }
+        ]
+      },
+      "expertReview": {
+        "status": "pending",
+        "reviewerExpertId": "panrawee-praditsorn",
+        "label": {
+          "th": "รอ ดร.ปานรวีร์ ยืนยัน",
+          "en": "Pending Dr. Panrawee review"
+        }
+      }
+    },
+    {
+      "id": "ref-menu-southern-turmeric-chicken-soup",
+      "partnerId": "hug-samui",
+      "isPartnerMenu": false,
+      "sourcePartner": {
+        "th": "Reference menu",
+        "en": "Reference menu"
+      },
+      "slug": "southern-turmeric-chicken-soup",
+      "sortOrder": 105,
+      "status": "draft",
+      "name": {
+        "th": "ไก่บ้านต้มขมิ้น",
+        "en": "Southern Turmeric Free-Range Chicken Soup"
+      },
+      "englishName": {
+        "th": "Southern turmeric free-range chicken soup",
+        "en": "Southern turmeric free-range chicken soup"
+      },
+      "summary": {
+        "th": "น้ำซุปอุ่นไม่มีคาเฟอีนช่วยผ่อนคลายก่อนนอน ไก่ให้ทริปโตเฟนและโปรตีนสูงเพื่อฟื้นร่างกาย ขมิ้นสดช่วยเล่าเรื่องต้านการอักเสบ",
+        "en": "A warm caffeine-free soup for evening relaxation, with chicken providing tryptophan and high protein for recovery, while fresh turmeric supports the anti-inflammatory story."
+      },
+      "category": "soup",
+      "course": {
+        "th": "ซุปหรือจานหลักเบา",
+        "en": "Soup or light main"
+      },
+      "price": {
+        "currency": "THB",
+        "amount": 260,
+        "label": {
+          "th": "฿260",
+          "en": "THB 260"
+        }
+      },
+      "serving": {
+        "th": "เสิร์ฟ 1 ถ้วย",
+        "en": "One bowl"
+      },
+      "image": {
+        "publicPath": "/partners/hug-samui/menus/southern-turmeric-chicken-soup.png",
+        "sourceFileName": "o5.png",
+        "alt": {
+          "th": "ไก่บ้านต้มขมิ้น reference menu",
+          "en": "Southern turmeric free-range chicken soup reference menu"
+        }
+      },
+      "localStory": {
+        "th": "ไก่บ้านต้มในน้ำซุปขมิ้นสด ตะไคร้ ข่า ใบมะกรูด และหอมแดง เป็นต้มใสสไตล์ใต้ที่ใช้ขมิ้นเป็นพระเอก",
+        "en": "Free-range chicken is simmered with fresh turmeric, lemongrass, galangal, kaffir lime leaf, and shallots in a clear Southern soup."
+      },
+      "heroIngredients": [
+        {
+          "th": "ไก่บ้าน",
+          "en": "Free-range chicken"
+        },
+        {
+          "th": "ขมิ้น",
+          "en": "Turmeric"
+        },
+        {
+          "th": "ตะไคร้",
+          "en": "Lemongrass"
+        }
+      ],
+      "wellnessGoals": ["deep_sleep", "recharge", "anti_inflammation"],
+      "wellnessPillars": ["food", "mind"],
+      "wellnessTags": [
+        {
+          "th": "โปรตีนสูง",
+          "en": "High protein"
+        },
+        {
+          "th": "หนุนการนอน",
+          "en": "Sleep support"
+        },
+        {
+          "th": "ต้านอักเสบ",
+          "en": "Anti-inflammatory"
+        }
+      ],
+      "grade": "wellness",
+      "nutrition": {
+        "caloriesKcal": 250,
+        "proteinG": 33,
+        "fatG": 11,
+        "carbG": 6,
+        "fiberG": null,
+        "saturatedFat": {
+          "amountG": 3,
+          "dailyPercent": 15,
+          "level": "low"
+        },
+        "sodium": {
+          "amountMg": 730,
+          "dailyPercent": 37,
+          "level": "moderate"
+        },
+        "highlights": [
+          {
+            "th": "โปรตีนสูง",
+            "en": "High protein"
+          },
+          {
+            "th": "ขมิ้นสด",
+            "en": "Fresh turmeric"
+          }
+        ]
+      },
+      "safety": {
+        "riskLevel": "low",
+        "allergenLabels": [
+          {
+            "th": "ปลาในน้ำปลา",
+            "en": "Fish in fish sauce"
+          }
+        ],
+        "warnings": [
+          {
+            "th": "โซเดียมจากน้ำปลา ลดได้ง่ายด้วยการใช้เกลือลดโซเดียมหรือลดน้ำปลา",
+            "en": "Sodium from fish sauce can be reduced easily by lowering fish sauce or using lower-sodium seasoning."
+          }
+        ],
+        "intakeFlags": ["moderate_sodium", "fish"]
+      },
+      "optimization": {
+        "status": "none",
+        "note": {
+          "th": "เหมาะเป็นมื้อเย็นก่อนนอนของแพ็ก Deep Sleep เพิ่มผักใบเขียวและลดน้ำปลาได้หากต้องคุมโซเดียม",
+          "en": "Suitable as a pre-sleep dinner for Deep Sleep programs; add leafy greens and reduce fish sauce when sodium needs tighter control."
+        }
+      },
+      "match": {
+        "journeys": ["deep_sleep", "recharge"],
+        "packageRole": {
+          "th": "มื้อเย็นก่อนนอน",
+          "en": "Pre-sleep dinner"
+        },
+        "outcomes": [
+          {
+            "th": "คุณภาพการนอน",
+            "en": "Sleep quality"
+          },
+          {
+            "th": "ฟื้นฟู",
+            "en": "Recovery"
+          }
+        ]
+      },
+      "expertReview": {
+        "status": "pending",
+        "reviewerExpertId": "panrawee-praditsorn",
+        "label": {
+          "th": "รอ ดร.ปานรวีร์ ยืนยัน",
+          "en": "Pending Dr. Panrawee review"
+        }
+      }
+    }
+  ]
+}

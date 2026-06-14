@@ -2,12 +2,12 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
-import { Heart } from "lucide-react";
+import { Heart, ShoppingBag, User } from "lucide-react";
 import { Logo } from "@/components/ui/Logo";
 import { useT, useLocale } from "@/lib/i18n";
 import common from "@/lib/i18n/dictionaries/common";
-import { getFavorites } from "@/lib/session";
+import accountDict from "@/lib/i18n/dictionaries/account";
+import { useAccount } from "@/lib/account";
 
 /* ============================================================
  * Desktop / tablet header. On mobile the tab bar handles nav,
@@ -46,20 +46,15 @@ function LocaleSwitch() {
 
 export function Header() {
   const t = useT(common);
+  const ta = useT(accountDict);
+  const { user, cartCount, favCount, openCart, openAuth } = useAccount();
   const pathname = usePathname();
-  const [favCount, setFavCount] = useState(0);
-
-  useEffect(() => {
-    const update = () => setFavCount(getFavorites().length);
-    update();
-    window.addEventListener("gc-session-change", update);
-    return () => window.removeEventListener("gc-session-change", update);
-  }, []);
 
   const links = [
     { href: "/", label: t.nav.home },
     { href: "/assessment", label: t.nav.assessment },
     { href: "/packages", label: t.nav.packages },
+    { href: "/experts", label: t.nav.experts },
     { href: "/bookings", label: t.nav.bookings },
   ];
 
@@ -90,11 +85,12 @@ export function Header() {
           })}
         </nav>
 
-        <div className="flex items-center gap-3">
-          <Link
-            href="/favorites"
+        <div className="flex items-center gap-2 sm:gap-3">
+          <button
+            type="button"
+            onClick={openCart}
             aria-label={t.nav.favorites}
-            className="relative grid h-9 w-9 place-items-center rounded-full text-teal-700 transition-colors hover:bg-teal-50"
+            className="relative hidden h-9 w-9 place-items-center rounded-full text-teal-700 transition-colors hover:bg-teal-50 sm:grid"
           >
             <Heart className="h-[18px] w-[18px]" />
             {favCount > 0 && (
@@ -102,7 +98,37 @@ export function Header() {
                 {favCount}
               </span>
             )}
-          </Link>
+          </button>
+
+          <button
+            type="button"
+            onClick={openCart}
+            aria-label={ta.cart.open}
+            className="relative grid h-9 w-9 place-items-center rounded-full text-teal-700 transition-colors hover:bg-teal-50"
+          >
+            <ShoppingBag className="h-[18px] w-[18px]" />
+            {cartCount > 0 && (
+              <span className="absolute -right-0.5 -top-0.5 grid h-4 min-w-4 place-items-center rounded-full bg-teal-700 px-1 text-[0.58rem] font-bold text-cream-50">
+                {cartCount}
+              </span>
+            )}
+          </button>
+
+          <button
+            type="button"
+            onClick={user ? openCart : openAuth}
+            aria-label={user ? ta.account.myAccount : ta.auth.loginTab}
+            className="grid h-9 w-9 place-items-center rounded-full text-teal-700 transition-colors hover:bg-teal-50"
+          >
+            {user ? (
+              <span className="grid h-7 w-7 place-items-center rounded-full bg-teal-700 text-[0.74rem] font-bold uppercase text-cream-50">
+                {user.firstName.charAt(0)}
+              </span>
+            ) : (
+              <User className="h-[18px] w-[18px]" />
+            )}
+          </button>
+
           <LocaleSwitch />
         </div>
       </div>

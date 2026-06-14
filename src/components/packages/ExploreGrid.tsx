@@ -9,7 +9,7 @@ import { PACKAGES } from "@/data/packages";
 import { PackageCard } from "@/components/packages/PackageCard";
 
 /* ============================================================
- * ExploreGrid — Stage C. All 15 packages with tier filter chips
+ * ExploreGrid — Stage C. All programs with tier filter chips
  * (all / basic / premium / deluxe).
  * ============================================================ */
 
