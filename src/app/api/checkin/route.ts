@@ -55,7 +55,7 @@ export async function POST(request: Request) {
   }
 
   const timepoint = body.timepoint as CheckinTimepoint;
-  if (timepoint !== "T1" && timepoint !== "T2") {
+  if (timepoint !== "T1" && timepoint !== "T2" && timepoint !== "T3") {
     return NextResponse.json({ error: "invalid_timepoint" }, { status: 400 });
   }
 
@@ -100,7 +100,8 @@ export async function POST(request: Request) {
 
   const dials = computeDials(answers);
 
-  // T2 needs the same booking's T1 to tell the before/after story.
+  // T2 and T3 tell a before/after story against the booking's baseline
+  // (the same booking's T1, or the T0 assessment when it carries one).
   let deltas;
   let deltasComparable: boolean | undefined;
   let linkedProfile;
@@ -111,7 +112,7 @@ export async function POST(request: Request) {
       linkedProfile = null;
     }
   }
-  if (timepoint === "T2") {
+  if (timepoint !== "T1") {
     const t1 = existing.find((c) => c.timepoint === "T1");
     const baseline = t1
       ? {
@@ -143,13 +144,13 @@ export async function POST(request: Request) {
 
   // Rule-based baseline always; LLM refines when available.
   const rules = ruleBasedAnalysis(ctx);
-  let { analysis, t2 } = rules;
+  let { analysis, t2, t3 } = rules;
   if (hasGeminiKey()) {
     try {
       const llm = await runCheckinLlm(ctx, getPackage(booking.packageId));
-      ({ analysis, t2 } = mergeLlmAnalysis(llm, rules, ctx));
+      ({ analysis, t2, t3 } = mergeLlmAnalysis(llm, rules, ctx));
     } catch {
-      ({ analysis, t2 } = rules); // graceful degrade
+      ({ analysis, t2, t3 } = rules); // graceful degrade
     }
   }
 
@@ -167,6 +168,7 @@ export async function POST(request: Request) {
     deltasComparable,
     analysis,
     t2,
+    t3,
     consent: true,
     createdAt: new Date().toISOString(),
   };

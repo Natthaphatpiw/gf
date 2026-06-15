@@ -32,8 +32,12 @@ function buildSystemPrompt(timepoint: CheckinTimepoint): string {
     "   - พบยา/โรคที่กระทบการนวดหรือสมุนไพร (เช่น ยาละลายลิ่มเลือด, ความดันสูง, เบาหวาน),",
     "     ตั้งครรภ์/ให้นมบุตร, หรือผ่าตัดภายใน 6 เดือน",
     "   - ความดันที่วัดได้ >= 160/100",
-    timepoint === "T2"
-      ? "5) เขียน change_narrative จาก deltas ที่ให้มาเท่านั้น (ห้ามแต่งตัวเลขเอง ใช้เฉพาะตัวเลขใน deltas)\n   และเลือก next_recommendation จาก next_catalog เท่านั้น (item_id ต้องตรงกับ id ใน catalog) พร้อมเหตุผล 1 ประโยค"
+    timepoint !== "T1"
+      ? `5) เขียน change_narrative จาก deltas ที่ให้มาเท่านั้น (ห้ามแต่งตัวเลขเอง ใช้เฉพาะตัวเลขใน deltas)${
+          timepoint === "T3"
+            ? " — รอบนี้คือการติดตามผล 30 วันหลังจบโปรแกรม deltas เทียบกับก่อนเริ่ม ให้เน้นว่าผลลัพธ์ยังอยู่ทนแค่ไหน"
+            : ""
+        }\n   และเลือก next_recommendation จาก next_catalog เท่านั้น (item_id ต้องตรงกับ id ใน catalog) พร้อมเหตุผล 1 ประโยค`
       : "",
     "",
     "กฎเหล็ก:",
@@ -71,7 +75,7 @@ function buildSystemPrompt(timepoint: CheckinTimepoint): string {
         urgent_message: null,
         summary_for_customer: { th: "...", en: "..." },
         summary_for_staff: ["ระวังกลิ่นแรง", "มียาละลายลิ่มเลือด — รอรีวิวก่อนนวดแรง"],
-        ...(timepoint === "T2"
+        ...(timepoint !== "T1"
           ? {
               t2_extras: {
                 change_narrative: { th: "...", en: "..." },
@@ -112,15 +116,15 @@ function buildUserPrompt(ctx: CheckinContext, pkg?: WellnessPackage): string {
   const input = {
     timepoint: ctx.timepoint,
     instrument_note:
-      ctx.timepoint === "T2"
-        ? "Q3 (headache) uses a different timeframe at T1 (last 7 days) vs T2 (during the program) — treat its delta as a trend indicator, not a strict measurement."
+      ctx.timepoint !== "T1"
+        ? "Q3 (headache) uses a different timeframe at each point (T1 last 7 days, T2 during the program, T3 last 30 days) — treat its delta as a trend indicator, not a strict measurement."
         : undefined,
     archetype: ctx.archetypeName
       ? `${ctx.archetypeName.th} (${ctx.archetypeName.en})`
       : null,
     dial_scores: dialScores,
     deltas:
-      ctx.timepoint === "T2" && ctx.deltas
+      ctx.timepoint !== "T1" && ctx.deltas
         ? ctx.deltas.map((d) => ({
             dial: d.dial,
             before: d.before,
@@ -139,7 +143,7 @@ function buildUserPrompt(ctx: CheckinContext, pkg?: WellnessPackage): string {
           nights: pkg.nights,
         }
       : null,
-    next_catalog: ctx.timepoint === "T2" ? nextCatalogForLlm() : undefined,
+    next_catalog: ctx.timepoint !== "T1" ? nextCatalogForLlm() : undefined,
   };
 
   return `INPUT (JSON):\n${JSON.stringify(input, null, 1)}`;

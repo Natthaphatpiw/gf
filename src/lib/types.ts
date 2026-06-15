@@ -235,10 +235,13 @@ export interface RecommendResponse {
   recommendations: PackageRecommendation[];
 }
 
-/* ---------------- Check-in (T1 / T2 body-mind compass) ---------------- */
+/* ---------------- Check-in (T1 / T2 / T3 body-mind compass) ---------------- */
 
-/** T1 = before the program starts, T2 = after it ends. */
-export type CheckinTimepoint = "T1" | "T2";
+/**
+ * T1 = before the program starts, T2 = right after it ends,
+ * T3 = the 30-day follow-up (does the change hold?).
+ */
+export type CheckinTimepoint = "T1" | "T2" | "T3";
 
 /** The five dials shown on the before/after card. */
 export type DialKey = "stress" | "migraine" | "sleep" | "mind" | "energy";
@@ -339,7 +342,7 @@ export interface CheckinNextRecommendation {
   reason: LText;
 }
 
-/** T2-only narrative + next-step pick from the real catalog. */
+/** T2/T3 narrative + next-step pick from the real catalog. */
 export interface CheckinT2Extras {
   changeNarrative: LText;
   highlightDial: DialKey;
@@ -359,12 +362,15 @@ export interface WellnessCheckin {
   answers: CheckinAnswers;
   objective?: CheckinObjective;
   dials: CheckinDials;
-  /** T2 only — vs the same booking's T1. */
+  /** T2 & T3 — vs the booking's baseline (T1 or the T0 assessment). */
   deltas?: DialDelta[];
-  /** False when T1 was answered on a different instrument version. */
+  /** False when the baseline was answered on a different instrument version. */
   deltasComparable?: boolean;
   analysis: CheckinAnalysis;
+  /** T2 only — change narrative + next pick. */
   t2?: CheckinT2Extras;
+  /** T3 only — 30-day durability narrative + next pick. */
+  t3?: CheckinT2Extras;
   /** Explicit health-data (sensitive) consent — PDPA. */
   consent: boolean;
   /** Separate opt-in to reuse the open answer as a testimonial. */

@@ -277,7 +277,7 @@ export async function getExpertQueue(): Promise<Booking[]> {
 export async function saveCheckin(checkin: WellnessCheckin): Promise<void> {
   const sb = getSupabase();
   if (sb) {
-    const { error } = await sb.from("checkins").insert({
+    const row: Record<string, unknown> = {
       id: checkin.id,
       booking_id: checkin.bookingId,
       assessment_id: checkin.assessmentId || null,
@@ -295,7 +295,11 @@ export async function saveCheckin(checkin: WellnessCheckin): Promise<void> {
       consent_at: new Date().toISOString(),
       testimonial_consent: checkin.testimonialConsent ?? false,
       created_at: checkin.createdAt,
-    });
+    };
+    // Only reference the t3_extras column for an actual T3 record, so existing
+    // T1/T2 check-ins keep working before the (additive) migration is applied.
+    if (checkin.t3 !== undefined) row.t3_extras = checkin.t3;
+    const { error } = await sb.from("checkins").insert(row);
     if (error) throw new Error(`Supabase insert failed: ${error.message}`);
     return;
   }
@@ -1251,6 +1255,7 @@ function rowToCheckin(row: any): WellnessCheckin {
     deltasComparable: row.deltas_comparable ?? undefined,
     analysis: row.analysis,
     t2: row.t2_extras ?? undefined,
+    t3: row.t3_extras ?? undefined,
     consent: row.consent,
     testimonialConsent: row.testimonial_consent ?? undefined,
     createdAt: row.created_at,

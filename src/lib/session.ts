@@ -18,6 +18,7 @@ const KEYS = {
   familyIds: "gc-family-ids",
   customer: "gc-customer",
   checkins: "gc-checkin-refs",
+  planProgress: "gc-plan-progress",
 };
 
 function read<T>(key: string): T | null {
@@ -106,12 +107,12 @@ export function addBookingRef(ref: BookingRef): void {
   write(KEYS.bookings, [ref, ...getBookingRefs()]);
 }
 
-/* ---------------- Check-in references (T1/T2) ---------------- */
+/* ---------------- Check-in references (T1/T2/T3) ---------------- */
 
 export interface CheckinRef {
   checkinId: string;
   bookingId: string;
-  timepoint: "T1" | "T2";
+  timepoint: "T1" | "T2" | "T3";
   createdAt: string;
 }
 
@@ -122,6 +123,38 @@ export function getCheckinRefs(): CheckinRef[] {
 export function addCheckinRef(ref: CheckinRef): void {
   const rest = getCheckinRefs().filter((r) => r.checkinId !== ref.checkinId);
   write(KEYS.checkins, [ref, ...rest]);
+}
+
+/* ---------------- 30-day self-care plan progress ---------------- */
+
+/** Per-booking check-off, stamped with the local day so it resets daily. */
+type PlanProgress = Record<string, { date: string; ids: string[] }>;
+
+function todayStamp(): string {
+  const d = new Date();
+  const m = String(d.getMonth() + 1).padStart(2, "0");
+  const day = String(d.getDate()).padStart(2, "0");
+  return `${d.getFullYear()}-${m}-${day}`;
+}
+
+export function getPlanProgress(bookingId: string): string[] {
+  const all = read<PlanProgress>(KEYS.planProgress) ?? {};
+  const entry = all[bookingId];
+  // A new local day starts the checklist fresh (the UI promises a daily reset).
+  return entry && entry.date === todayStamp() ? entry.ids : [];
+}
+
+export function togglePlanHabit(bookingId: string, habitId: string): string[] {
+  const all = read<PlanProgress>(KEYS.planProgress) ?? {};
+  const today = todayStamp();
+  const entry = all[bookingId];
+  const base = entry && entry.date === today ? entry.ids : [];
+  const current = new Set(base);
+  if (current.has(habitId)) current.delete(habitId);
+  else current.add(habitId);
+  const next = [...current];
+  write(KEYS.planProgress, { ...all, [bookingId]: { date: today, ids: next } });
+  return next;
 }
 
 /* ---------------- Remembered customer info ---------------- */

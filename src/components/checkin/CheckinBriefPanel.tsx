@@ -71,7 +71,11 @@ export function CheckinBriefPanel({ bookingId }: { bookingId: string }) {
           >
             <header className="flex flex-wrap items-center justify-between gap-2">
               <p className="text-sm font-semibold text-teal-900">
-                {c.timepoint === "T1" ? t.expertPanel.t1 : t.expertPanel.t2}
+                {c.timepoint === "T1"
+                  ? t.expertPanel.t1
+                  : c.timepoint === "T3"
+                    ? t.expertPanel.t3
+                    : t.expertPanel.t2}
                 <span className="ml-2 text-[0.68rem] font-medium text-ink-faint">
                   {c.id} · {formatDateTime(c.createdAt, locale)} ·{" "}
                   {c.instrumentVersion}

@@ -49,6 +49,7 @@ export function CheckinCard({
 
   const t1 = summaries.find((c) => c.timepoint === "T1");
   const t2 = summaries.find((c) => c.timepoint === "T2");
+  const t3 = summaries.find((c) => c.timepoint === "T3");
 
   return (
     <div className="rounded-3xl border border-teal-900/10 bg-white p-6 shadow-soft md:p-7">
@@ -94,7 +95,39 @@ export function CheckinCard({
             {t2 && (
               <DoneRow label={t.card.t2Done} viewLabel={t.card.view} id={t2.id} />
             )}
+
+            {/* T3 row — the 30-day follow-up */}
+            {t2 && !t3 && (
+              <div className="flex flex-wrap items-center gap-2.5">
+                <ButtonLink href={`/checkin/${bookingId}`} size="sm" variant="secondary">
+                  {t.card.t3Cta}
+                  <ArrowRight className="h-4 w-4" />
+                </ButtonLink>
+                <span className="text-[0.7rem] text-ink-faint">{t.card.t3Hint}</span>
+              </div>
+            )}
+            {t3 && (
+              <DoneRow label={t.card.t3Done} viewLabel={t.card.view} id={t3.id} />
+            )}
           </div>
+
+          {/* Program journey — the consolidated before/after + 30-day plan */}
+          {(t2 || t3) && (
+            <Link
+              href={`/journey/${bookingId}`}
+              className="mt-4 flex items-center justify-between gap-3 rounded-2xl border border-gold-400/40 bg-gold-100/30 px-4 py-3 transition-colors hover:bg-gold-100/60"
+            >
+              <span className="min-w-0">
+                <span className="block text-[0.84rem] font-semibold text-teal-900">
+                  {t.card.journeyCta}
+                </span>
+                <span className="block text-[0.7rem] leading-relaxed text-ink-soft">
+                  {t.card.journeyHint}
+                </span>
+              </span>
+              <ArrowRight className="h-4 w-4 shrink-0 text-teal-700" />
+            </Link>
+          )}
         </div>
       </div>
     </div>

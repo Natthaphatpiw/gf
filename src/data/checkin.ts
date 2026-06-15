@@ -37,8 +37,11 @@ export interface CheckinQuestion {
   prompt: LText;
   /** T2 wording when the timeframe differs (q3, q8). */
   promptT2?: LText;
+  /** T3 (30-day follow-up) wording when it differs (q3, q8). */
+  promptT3?: LText;
   hint?: LText;
   hintT2?: LText;
+  hintT3?: LText;
   options?: CheckinOption[];
   slider?: {
     min: number;
@@ -134,6 +137,10 @@ export const CHECKIN_QUESTIONS: CheckinQuestion[] = [
     promptT2: {
       th: "ตั้งแต่เริ่มโปรแกรม อาการปวดหัวแวะมาหาบ่อยแค่ไหน",
       en: "Since the program began, how often did headaches come visiting?",
+    },
+    promptT3: {
+      th: "ช่วง 30 วันหลังจบโปรแกรม อาการปวดหัวแวะมาหาบ่อยแค่ไหน",
+      en: "Over the 30 days since the program, how often did headaches come visiting?",
     },
     options: [
       {
@@ -299,6 +306,10 @@ export const CHECKIN_QUESTIONS: CheckinQuestion[] = [
     promptT2: {
       th: "จบโปรแกรมแล้วรู้สึกยังไงบ้าง ช่วงไหนชอบที่สุด และมีอะไรที่เราควรทำให้ดีขึ้น",
       en: "Now that the program has ended, how do you feel? Which moment did you love most, and what should we do better?",
+    },
+    promptT3: {
+      th: "ผ่านมา 30 วันแล้ว ผลลัพธ์ยังอยู่กับคุณไหม มีอะไรที่ทำต่อได้ หรืออยากให้เราช่วยดูแลเพิ่ม",
+      en: "It has been 30 days — did the benefits stick? What have you kept up, and how can we help you keep going?",
     },
     hint: {
       th: "เขียนภาษาไหนก็ได้ ข้ามได้ถ้าไม่มี",

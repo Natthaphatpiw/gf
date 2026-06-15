@@ -89,10 +89,16 @@ export function CheckinFlow({ bookingId }: { bookingId: string }) {
         if (!active) return;
         setBooking(bookingData.booking);
         setExisting(listData.checkins ?? []);
-        const hasT1 = (listData.checkins ?? []).some((c) => c.timepoint === "T1");
-        const hasT2 = (listData.checkins ?? []).some((c) => c.timepoint === "T2");
+        const list = listData.checkins ?? [];
+        const hasT1 = list.some((c) => c.timepoint === "T1");
+        const hasT2 = list.some((c) => c.timepoint === "T2");
+        const hasT3 = list.some((c) => c.timepoint === "T3");
         const hasAssessmentBaseline = Boolean(bookingData.booking.assessmentId);
-        setPhase(hasT2 && (hasT1 || hasAssessmentBaseline) ? "done" : "intro");
+        // Done once the whole arc exists: a baseline, the post-program T2, and
+        // the 30-day T3.
+        setPhase(
+          hasT3 && hasT2 && (hasT1 || hasAssessmentBaseline) ? "done" : "intro",
+        );
       } catch {
         if (active) setPhase("notfound");
       }
@@ -102,13 +108,14 @@ export function CheckinFlow({ bookingId }: { bookingId: string }) {
     };
   }, [bookingId]);
 
-  const timepoint: CheckinTimepoint = useMemo(
-    () =>
-      existing.some((c) => c.timepoint === "T1") || booking?.assessmentId
-        ? "T2"
-        : "T1",
-    [booking?.assessmentId, existing],
-  );
+  const timepoint: CheckinTimepoint = useMemo(() => {
+    const hasBaseline =
+      existing.some((c) => c.timepoint === "T1") || Boolean(booking?.assessmentId);
+    const hasT2 = existing.some((c) => c.timepoint === "T2");
+    if (!hasBaseline) return "T1";
+    if (!hasT2) return "T2";
+    return "T3";
+  }, [booking?.assessmentId, existing]);
 
   const question = CHECKIN_QUESTIONS[step];
   const currentValue = question ? answers[question.id] : undefined;
@@ -232,6 +239,7 @@ export function CheckinFlow({ bookingId }: { bookingId: string }) {
   if (phase === "done") {
     const t1 = existing.find((c) => c.timepoint === "T1");
     const t2 = existing.find((c) => c.timepoint === "T2");
+    const t3 = existing.find((c) => c.timepoint === "T3");
     return (
       <div className="mx-auto flex min-h-[60vh] max-w-lg flex-col items-center justify-center px-6 text-center">
         <div className="mb-5 text-teal-600">
@@ -240,15 +248,25 @@ export function CheckinFlow({ bookingId }: { bookingId: string }) {
         <h2 className="font-display text-2xl font-semibold text-teal-900">
           {t.gate.allDone}
         </h2>
-        <div className="mt-7 flex flex-col gap-3 md:flex-row">
+        <div className="mt-7">
+          <ButtonLink href={`/journey/${bookingId}`} size="lg">
+            {t.gate.viewJourney}
+          </ButtonLink>
+        </div>
+        <div className="mt-4 flex flex-wrap items-center justify-center gap-3">
           {t1 && (
-            <ButtonLink href={`/checkin/result/${t1.id}`} variant="secondary">
+            <ButtonLink href={`/checkin/result/${t1.id}`} variant="secondary" size="sm">
               {t.gate.viewT1}
             </ButtonLink>
           )}
           {t2 && (
-            <ButtonLink href={`/checkin/result/${t2.id}`}>
+            <ButtonLink href={`/checkin/result/${t2.id}`} variant="secondary" size="sm">
               {t.gate.viewT2}
+            </ButtonLink>
+          )}
+          {t3 && (
+            <ButtonLink href={`/checkin/result/${t3.id}`} variant="secondary" size="sm">
+              {t.gate.viewT3}
             </ButtonLink>
           )}
         </div>
@@ -279,20 +297,37 @@ export function CheckinFlow({ bookingId }: { bookingId: string }) {
 
   if (phase === "intro") {
     const pkg = booking ? getPackage(booking.packageId) : undefined;
-    const isT2 = timepoint === "T2";
+    const eyebrow =
+      timepoint === "T3"
+        ? t.intro.eyebrowT3
+        : timepoint === "T2"
+          ? t.intro.eyebrowT2
+          : t.intro.eyebrowT1;
+    const title =
+      timepoint === "T3"
+        ? t.intro.titleT3
+        : timepoint === "T2"
+          ? t.intro.titleT2
+          : t.intro.titleT1;
+    const lead =
+      timepoint === "T3"
+        ? t.intro.leadT3
+        : timepoint === "T2"
+          ? t.intro.leadT2
+          : t.intro.leadT1;
     return (
       <div className="mx-auto max-w-2xl px-5 pb-10 pt-8 md:pt-14">
         <div className="animate-rise text-center">
           <div className="mx-auto mb-5 w-fit text-teal-600 animate-breathe">
             <LeafMark className="h-14 w-14" />
           </div>
-          <p className="eyebrow">{isT2 ? t.intro.eyebrowT2 : t.intro.eyebrowT1}</p>
+          <p className="eyebrow">{eyebrow}</p>
           <h1 className="mt-3 font-display text-4xl font-semibold leading-tight text-teal-900 md:text-5xl">
-            {isT2 ? t.intro.titleT2 : t.intro.titleT1}
+            {title}
           </h1>
           <div className="ornament mx-auto mt-5 w-44" aria-hidden="true" />
           <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-ink-soft">
-            {isT2 ? t.intro.leadT2 : t.intro.leadT1}
+            {lead}
           </p>
 
           <div className="mt-6 flex flex-wrap items-center justify-center gap-3">

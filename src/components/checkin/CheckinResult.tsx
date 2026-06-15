@@ -124,13 +124,28 @@ export function CheckinResult({ checkinId }: { checkinId: string }) {
     );
   }
 
-  const isT2 = data.timepoint === "T2";
-  const deltas = isT2 && data.deltasComparable !== false ? data.deltas : undefined;
+  // T2 and T3 both carry before/after extras (vs the baseline).
+  const isOutcome = data.timepoint !== "T1";
+  const extras = data.t2 ?? data.t3;
+  const deltas =
+    isOutcome && data.deltasComparable !== false ? data.deltas : undefined;
   const deltaFor = (dial: DialKey): DialDelta | undefined =>
     deltas?.find((d) => d.dial === dial);
   const analysis = data.analysis;
-  const nextPkg = data.t2?.nextRecommendation
-    ? getPackage(data.t2.nextRecommendation.packageId)
+  const eyebrow =
+    data.timepoint === "T3"
+      ? t.result.eyebrowT3
+      : data.timepoint === "T2"
+        ? t.result.eyebrowT2
+        : t.result.eyebrowT1;
+  const title =
+    data.timepoint === "T3"
+      ? t.result.titleT3
+      : data.timepoint === "T2"
+        ? t.result.titleT2
+        : t.result.titleT1;
+  const nextPkg = extras?.nextRecommendation
+    ? getPackage(extras.nextRecommendation.packageId)
     : undefined;
 
   return (
@@ -144,11 +159,9 @@ export function CheckinResult({ checkinId }: { checkinId: string }) {
       </Link>
 
       <header className="animate-rise mt-4">
-        <p className="eyebrow">
-          {isT2 ? t.result.eyebrowT2 : t.result.eyebrowT1}
-        </p>
+        <p className="eyebrow">{eyebrow}</p>
         <h1 className="font-display mt-1.5 text-3xl font-semibold text-teal-900 md:text-4xl">
-          {isT2 ? t.result.titleT2 : t.result.titleT1}
+          {title}
         </h1>
         <p className="mt-1.5 text-[0.72rem] tracking-wide text-ink-faint">
           {t.result.refLabel}{" "}
@@ -210,7 +223,7 @@ export function CheckinResult({ checkinId }: { checkinId: string }) {
           ))}
         </div>
 
-        {isT2 && data.deltasComparable === false && (
+        {isOutcome && data.deltasComparable === false && (
           <p className="mt-5 border-t border-teal-900/10 pt-4 text-xs leading-relaxed text-ink-faint">
             {t.result.versionNote}
           </p>
@@ -222,15 +235,15 @@ export function CheckinResult({ checkinId }: { checkinId: string }) {
         )}
       </div>
 
-      {/* T2 — change narrative */}
-      {isT2 && data.t2 && (
+      {/* T2 / T3 — change narrative */}
+      {extras && (
         <div className="animate-rise-2 mt-6 rounded-3xl border border-teal-900/10 bg-teal-50/60 p-6 shadow-soft">
           <p className="eyebrow flex items-center gap-2">
             <Quote className="h-3.5 w-3.5 text-gold-500" />
             {t.result.narrativeTitle}
           </p>
           <p className="mt-3 text-sm leading-relaxed text-ink md:text-base">
-            {l(data.t2.changeNarrative)}
+            {l(extras.changeNarrative)}
           </p>
         </div>
       )}
@@ -250,8 +263,8 @@ export function CheckinResult({ checkinId }: { checkinId: string }) {
         </div>
       )}
 
-      {/* T2 — next step from the catalog */}
-      {isT2 && data.t2?.nextRecommendation && nextPkg && (
+      {/* T2 / T3 — next step from the catalog */}
+      {extras?.nextRecommendation && nextPkg && (
         <div className="animate-rise-3 mt-6 rounded-3xl border border-teal-900/10 bg-white p-6 shadow-soft">
           <p className="eyebrow">{t.result.nextTitle}</p>
           <h3 className="font-display mt-2 text-xl font-semibold text-teal-900">
@@ -259,7 +272,7 @@ export function CheckinResult({ checkinId }: { checkinId: string }) {
           </h3>
           <p className="mt-1 text-sm text-ink-soft">{l(nextPkg.tagline)}</p>
           <p className="mt-3 text-sm leading-relaxed text-ink">
-            {l(data.t2.nextRecommendation.reason)}
+            {l(extras.nextRecommendation.reason)}
           </p>
           <div className="mt-5">
             <ButtonLink href={`/packages/${nextPkg.id}`} size="sm">
@@ -270,8 +283,18 @@ export function CheckinResult({ checkinId }: { checkinId: string }) {
         </div>
       )}
 
-      {/* T2 — testimonial consent (separate PDPA opt-in) */}
-      {isT2 && analysis.testimonialCandidate && (
+      {/* See the full before/after journey */}
+      {isOutcome && (
+        <div className="animate-rise-3 mt-6 flex justify-center">
+          <ButtonLink href={`/journey/${data.bookingId}`} variant="secondary" size="sm">
+            <Compass className="h-4 w-4" />
+            {t.result.viewJourney}
+          </ButtonLink>
+        </div>
+      )}
+
+      {/* T2 / T3 — testimonial consent (separate PDPA opt-in) */}
+      {isOutcome && analysis.testimonialCandidate && (
         <div className="animate-rise-3 mt-6 flex items-start gap-3 rounded-3xl border border-gold-500/30 bg-cream-50 p-5 shadow-soft">
           <HeartHandshake className="mt-0.5 h-5 w-5 shrink-0 text-gold-500" />
           <div className="flex-1">

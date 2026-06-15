@@ -46,14 +46,13 @@ export function ConsultToggle({ packageId }: { packageId: string }) {
               aria-checked={on}
               aria-label={t.consultTitle}
               onClick={handleToggle}
-              className={`relative mt-0.5 h-7 w-12 shrink-0 rounded-full transition-colors duration-300 ${
+              className={`relative mt-0.5 h-7 w-12 shrink-0 rounded-full outline-none transition-colors duration-300 focus-visible:ring-2 focus-visible:ring-teal-600 focus-visible:ring-offset-2 focus-visible:ring-offset-cream-50 ${
                 on ? "bg-teal-700" : "bg-teal-900/15"
               }`}
             >
               <span
-                className={`absolute top-0.5 h-6 w-6 rounded-full bg-white shadow-soft transition-transform duration-300 ${
-                  on ? "translate-x-[1.375rem]" : "translate-x-0.5"
-                }`}
+                style={{ left: on ? "1.375rem" : "0.125rem" }}
+                className="absolute top-0.5 h-6 w-6 rounded-full bg-white shadow-soft transition-all duration-300"
               />
             </button>
           </div>

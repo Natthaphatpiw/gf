@@ -40,8 +40,17 @@ export function CheckinQuestionScreen({
   const t = useT(checkin);
 
   const prompt =
-    timepoint === "T2" && question.promptT2 ? question.promptT2 : question.prompt;
-  const hint = timepoint === "T2" && question.hintT2 ? question.hintT2 : question.hint;
+    timepoint === "T3"
+      ? question.promptT3 ?? question.promptT2 ?? question.prompt
+      : timepoint === "T2" && question.promptT2
+        ? question.promptT2
+        : question.prompt;
+  const hint =
+    timepoint === "T3"
+      ? question.hintT3 ?? question.hintT2 ?? question.hint
+      : timepoint === "T2" && question.hintT2
+        ? question.hintT2
+        : question.hint;
 
   return (
     <div key={`${question.id}-${timepoint}`} className="animate-fade">

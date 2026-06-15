@@ -155,7 +155,7 @@ create table if not exists public.checkins (
   booking_id          text not null references public.bookings (id),
   assessment_id       text references public.assessments (id),
 
-  timepoint           text not null check (timepoint in ('T1','T2')),
+  timepoint           text not null check (timepoint in ('T1','T2','T3')),
   -- wording/anchor version; deltas are only comparable within one version
   instrument_version  text not null,
   locale              text not null default 'th' check (locale in ('th','en')),
@@ -176,6 +176,8 @@ create table if not exists public.checkins (
   analysis            jsonb not null,
   -- T2 only: change narrative + next recommendation
   t2_extras           jsonb,
+  -- T3 only: 30-day durability narrative + next recommendation
+  t3_extras           jsonb,
 
   -- PDPA: explicit health-data (sensitive) consent
   consent             boolean not null default false,
@@ -192,6 +194,13 @@ comment on table public.checkins is
 
 create index if not exists checkins_booking_idx
   on public.checkins (booking_id, created_at);
+
+-- Migration (safe to re-run): extend an existing checkins table for the
+-- T3 30-day follow-up. New databases already get these from the table above.
+alter table public.checkins drop constraint if exists checkins_timepoint_check;
+alter table public.checkins
+  add constraint checkins_timepoint_check check (timepoint in ('T1','T2','T3'));
+alter table public.checkins add column if not exists t3_extras jsonb;
 
 -- ------------------------------------------------------------
 -- 6) updated_at trigger
@@ -534,6 +543,9 @@ create index if not exists proposal_slots_proposal_idx
   on public.proposal_slots (proposal_id, position);
 
 -- now that proposals exist, point the consultation's accepted proposal at it
+-- (drop-then-add so the whole script is safe to re-run)
+alter table public.consultations
+  drop constraint if exists consultations_accepted_proposal_fk;
 alter table public.consultations
   add constraint consultations_accepted_proposal_fk
   foreign key (accepted_proposal_id) references public.expert_proposals (id)

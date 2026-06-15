@@ -447,6 +447,12 @@ function customerSummaryRules(ctx: CheckinContext): LText {
       en: `Thank you for sharing. Right now your ${DIAL_NAMES[a].en.toLowerCase()} ${pa.en}, while your ${DIAL_NAMES[b].en.toLowerCase()} ${pb.en}. Your care team will use this compass to tune every step of the program${who ? ` for ${who.en}` : " for you"}.`,
     };
   }
+  if (ctx.timepoint === "T3") {
+    return {
+      th: `ผ่านมา 30 วันแล้ว ${DIAL_NAMES[a].th}ของคุณ${pa.th} และ${DIAL_NAMES[b].th}${pb.th} การดูแลตัวเองต่อที่บ้านกำลังได้ผล รักษาจังหวะนี้ไว้นะ`,
+      en: `Thirty days on, your ${DIAL_NAMES[a].en.toLowerCase()} ${pa.en} and your ${DIAL_NAMES[b].en.toLowerCase()} ${pb.en}. Your self-care at home is paying off — keep this rhythm going.`,
+    };
+  }
   return {
     th: `จบโปรแกรมแล้ว ${DIAL_NAMES[a].th}ของคุณ${pa.th} และ${DIAL_NAMES[b].th}${pb.th} ขอให้พาความรู้สึกนี้กลับไปดูแลตัวเองต่อที่บ้านนะ`,
     en: `As the program closes, your ${DIAL_NAMES[a].en.toLowerCase()} ${pa.en} and your ${DIAL_NAMES[b].en.toLowerCase()} ${pb.en}. Carry this feeling home with you.`,
@@ -524,6 +530,7 @@ function deltaPhrase(d: DialDelta): { th: string; en: string } {
 }
 
 function t2ExtrasRules(ctx: CheckinContext, urgent: boolean): CheckinT2Extras {
+  const isT3 = ctx.timepoint === "T3";
   const deltas = ctx.deltas ?? [];
   const improved = deltas
     .filter((d) => d.trend === "improved")
@@ -536,10 +543,15 @@ function t2ExtrasRules(ctx: CheckinContext, urgent: boolean): CheckinT2Extras {
     highlightDial = improved[0].dial;
     const main = deltaPhrase(improved[0]);
     const second = improved[1] ? deltaPhrase(improved[1]) : null;
-    changeNarrative = {
-      th: `ช่วงเวลาบนเกาะทำงานของมันแล้ว — ${main.th}${second ? ` และ${second.th}` : ""} ส่วนค่าอื่น ๆ ทรงตัวอยู่ในทิศทางที่ดี ให้ร่างกายค่อย ๆ เก็บผลลัพธ์นี้ต่อที่บ้าน`,
-      en: `Your time on the island has done its quiet work — ${main.en}${second ? `, and ${second.en}` : ""}, while the rest held steady in a good direction. Let your body keep collecting these gains at home.`,
-    };
+    changeNarrative = isT3
+      ? {
+          th: `ผ่านมา 30 วันแล้วผลลัพธ์ยังอยู่กับคุณ — ${main.th}${second ? ` และ${second.th}` : ""} เมื่อเทียบกับก่อนเริ่มโปรแกรม นี่คือสัญญาณว่าการดูแลตัวเองต่อที่บ้านได้ผลจริง`,
+          en: `Thirty days on, the change has stayed with you — ${main.en}${second ? `, and ${second.en}` : ""} compared with before the program. That is real proof your self-care at home is working.`,
+        }
+      : {
+          th: `ช่วงเวลาบนเกาะทำงานของมันแล้ว — ${main.th}${second ? ` และ${second.th}` : ""} ส่วนค่าอื่น ๆ ทรงตัวอยู่ในทิศทางที่ดี ให้ร่างกายค่อย ๆ เก็บผลลัพธ์นี้ต่อที่บ้าน`,
+          en: `Your time on the island has done its quiet work — ${main.en}${second ? `, and ${second.en}` : ""}, while the rest held steady in a good direction. Let your body keep collecting these gains at home.`,
+        };
   } else {
     // Nothing moved past the deadband — honest "steady" story.
     const ranked = [...DIAL_KEYS].sort(
@@ -548,10 +560,15 @@ function t2ExtrasRules(ctx: CheckinContext, urgent: boolean): CheckinT2Extras {
         distanceFromIdeal(b, ctx.dials[b].value),
     );
     highlightDial = ranked[0];
-    changeNarrative = {
-      th: "ค่าส่วนใหญ่ของคุณทรงตัวจากก่อนเริ่มโปรแกรม ซึ่งเป็นเรื่องปกติ — การฟื้นฟูที่แท้จริงมักค่อย ๆ ปรากฏในสัปดาห์ถัดไป ลองสังเกตการนอนและพลังงานของตัวเองต่ออีกสักระยะ",
-      en: "Most of your readings held steady from before the program — and that is normal. Real restoration often surfaces over the following weeks; keep noticing your sleep and energy a little longer.",
-    };
+    changeNarrative = isT3
+      ? {
+          th: "ค่าของคุณยังใกล้เคียงกับตอนเริ่มต้น — การรักษาระดับไว้ได้ตลอด 30 วันก็ถือเป็นชัยชนะ ลองทำตามแผนดูแลตัวเองต่ออีกสักระยะ แล้วสังเกตการนอนกับพลังงานของตัวเอง",
+          en: "Your readings are close to where you started — and holding the line for a full 30 days is itself a win. Keep following your self-care plan a little longer and watch your sleep and energy.",
+        }
+      : {
+          th: "ค่าส่วนใหญ่ของคุณทรงตัวจากก่อนเริ่มโปรแกรม ซึ่งเป็นเรื่องปกติ — การฟื้นฟูที่แท้จริงมักค่อย ๆ ปรากฏในสัปดาห์ถัดไป ลองสังเกตการนอนและพลังงานของตัวเองต่ออีกสักระยะ",
+          en: "Most of your readings held steady from before the program — and that is normal. Real restoration often surfaces over the following weeks; keep noticing your sleep and energy a little longer.",
+        };
   }
 
   let nextRecommendation: CheckinT2Extras["nextRecommendation"] = null;
@@ -581,6 +598,7 @@ function t2ExtrasRules(ctx: CheckinContext, urgent: boolean): CheckinT2Extras {
 export function ruleBasedAnalysis(ctx: CheckinContext): {
   analysis: CheckinAnalysis;
   t2?: CheckinT2Extras;
+  t3?: CheckinT2Extras;
 } {
   const text = (ctx.q8 ?? "").trim();
   const redFlags = scanRedFlags(text);
@@ -598,7 +616,7 @@ export function ruleBasedAnalysis(ctx: CheckinContext): {
     goals,
     sentiment,
     testimonialCandidate:
-      ctx.timepoint === "T2" && sentiment === "positive" && text.length >= 40,
+      ctx.timepoint !== "T1" && sentiment === "positive" && text.length >= 40,
     expertReviewRequired,
     urgent,
     urgentMessage: urgent ? URGENT_MESSAGE_FALLBACK : null,
@@ -607,9 +625,11 @@ export function ruleBasedAnalysis(ctx: CheckinContext): {
     source: "rules",
   };
 
+  const extras = ctx.timepoint !== "T1" ? t2ExtrasRules(ctx, urgent) : undefined;
   return {
     analysis,
-    t2: ctx.timepoint === "T2" ? t2ExtrasRules(ctx, urgent) : undefined,
+    t2: ctx.timepoint === "T2" ? extras : undefined,
+    t3: ctx.timepoint === "T3" ? extras : undefined,
   };
 }
 
@@ -692,9 +712,9 @@ function validateRedFlags(raw: unknown): CheckinRedFlag[] {
  */
 export function mergeLlmAnalysis(
   raw: LlmCheckinResult,
-  rules: { analysis: CheckinAnalysis; t2?: CheckinT2Extras },
+  rules: { analysis: CheckinAnalysis; t2?: CheckinT2Extras; t3?: CheckinT2Extras },
   ctx: CheckinContext,
-): { analysis: CheckinAnalysis; t2?: CheckinT2Extras } {
+): { analysis: CheckinAnalysis; t2?: CheckinT2Extras; t3?: CheckinT2Extras } {
   const open = raw.open_text_analysis ?? {};
   const base = rules.analysis;
 
@@ -740,7 +760,7 @@ export function mergeLlmAnalysis(
     goals: asStringArray(open.goals, 6),
     sentiment,
     testimonialCandidate:
-      ctx.timepoint === "T2" && open.testimonial_candidate === true,
+      ctx.timepoint !== "T1" && open.testimonial_candidate === true,
     expertReviewRequired,
     urgent,
     urgentMessage: urgent
@@ -751,18 +771,18 @@ export function mergeLlmAnalysis(
     source: "llm",
   };
 
-  let t2: CheckinT2Extras | undefined;
-  if (ctx.timepoint === "T2") {
-    const ruleT2 = rules.t2 ?? t2ExtrasRules(ctx, urgent);
+  let extras: CheckinT2Extras | undefined;
+  if (ctx.timepoint !== "T1") {
+    const ruleExtras = rules.t2 ?? rules.t3 ?? t2ExtrasRules(ctx, urgent);
     const ex = raw.t2_extras ?? {};
 
     const highlightRaw =
       typeof ex.highlight_dial === "string" ? ex.highlight_dial.trim() : "";
     const highlightDial = (DIAL_KEYS as string[]).includes(highlightRaw)
       ? (highlightRaw as DialKey)
-      : ruleT2.highlightDial;
+      : ruleExtras.highlightDial;
 
-    let nextRecommendation = urgent ? null : ruleT2.nextRecommendation;
+    let nextRecommendation = urgent ? null : ruleExtras.nextRecommendation;
     if (!urgent && ex.next_recommendation && typeof ex.next_recommendation === "object") {
       const rec = ex.next_recommendation as Record<string, unknown>;
       const itemId = typeof rec.item_id === "string" ? rec.item_id.trim() : "";
@@ -771,7 +791,7 @@ export function mergeLlmAnalysis(
           packageId: itemId,
           reason: asLText(
             rec.reason_one_liner,
-            ruleT2.nextRecommendation?.reason ?? {
+            ruleExtras.nextRecommendation?.reason ?? {
               th: "ก้าวต่อไปที่เหมาะกับผลเช็คอินของคุณ",
               en: "A next step matched to your check-in results.",
             },
@@ -780,12 +800,16 @@ export function mergeLlmAnalysis(
       }
     }
 
-    t2 = {
-      changeNarrative: asLText(ex.change_narrative, ruleT2.changeNarrative),
+    extras = {
+      changeNarrative: asLText(ex.change_narrative, ruleExtras.changeNarrative),
       highlightDial,
       nextRecommendation,
     };
   }
 
-  return { analysis, t2 };
+  return {
+    analysis,
+    t2: ctx.timepoint === "T2" ? extras : undefined,
+    t3: ctx.timepoint === "T3" ? extras : undefined,
+  };
 }
