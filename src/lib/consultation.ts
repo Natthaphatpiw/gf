@@ -41,12 +41,12 @@ export const CONSULT_STATUS_FLOW: ConsultStatus[] = [
 ];
 
 export const CONSULT_STATUS_LABEL: Record<ConsultStatus, LText> = {
-  awaiting_deposit: { th: "รอชำระค่ามัดจำ", en: "Awaiting deposit" },
+  awaiting_deposit: { th: "รอชำระเงิน", en: "Awaiting payment" },
   awaiting_expert: { th: "รอการตอบรับจากผู้เชี่ยวชาญ", en: "Awaiting expert" },
   expert_processing: { th: "รอผู้เชี่ยวชาญดำเนินการ", en: "Expert is working on it" },
   awaiting_customer: { th: "รอการยืนยันจากคุณ", en: "Awaiting your confirmation" },
   coordinating_partner: { th: "กำลังผสานงานกับพาร์ตเนอร์", en: "Coordinating with partners" },
-  payment: { th: "รอชำระเงิน", en: "Payment" },
+  payment: { th: "ชำระยอดคงเหลือ", en: "Final payment" },
   trip_started: { th: "เริ่มเดินทาง", en: "Trip started" },
   in_progress: { th: "อยู่ระหว่างการผ่อนคลาย", en: "In progress" },
   completed: { th: "จบแพ็กเกจแล้ว", en: "Completed" },

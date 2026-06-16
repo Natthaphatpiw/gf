@@ -513,3 +513,15 @@ export const EXPERTS: ExpertProfile[] = [
 export function getExpert(id: string): ExpertProfile | undefined {
   return EXPERTS.find((expert) => expert.id === id);
 }
+
+/** The experts we have verified data for — the only ones we surface. */
+export const FEATURED_EXPERT_IDS = [
+  "sawanan-watcharawanich",
+  "panrawee-praditsorn",
+];
+
+export function getFeaturedExperts(): ExpertProfile[] {
+  return FEATURED_EXPERT_IDS.map((id) => getExpert(id)).filter(
+    (e): e is ExpertProfile => Boolean(e),
+  );
+}

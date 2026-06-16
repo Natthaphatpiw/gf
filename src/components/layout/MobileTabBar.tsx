@@ -19,7 +19,7 @@ export function MobileTabBar() {
     { href: "/assessment", label: t.nav.assessment, icon: Sparkles },
     { href: "/packages", label: t.nav.packages, icon: Compass },
     { href: "/favorites", label: t.nav.favorites, icon: Heart },
-    { href: "/bookings", label: t.nav.bookings, icon: CalendarCheck },
+    { href: "/orders", label: t.nav.bookings, icon: CalendarCheck },
   ];
 
   return (

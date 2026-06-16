@@ -55,7 +55,7 @@ export function Header() {
     { href: "/assessment", label: t.nav.assessment },
     { href: "/packages", label: t.nav.packages },
     { href: "/experts", label: t.nav.experts },
-    { href: "/bookings", label: t.nav.bookings },
+    { href: "/orders", label: t.nav.bookings },
   ];
 
   return (

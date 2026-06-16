@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import { Check, MessageCircle, Sparkles, Video, X } from "lucide-react";
 import type { LText } from "@/lib/types";
 import type { ItemType } from "@/lib/account";
-import { EXPERTS } from "@/data/experts";
+import { getFeaturedExperts } from "@/data/experts";
 import {
   CONSULT_DEPOSIT_THB,
   CONSULT_TYPE_LABEL,
@@ -121,7 +121,9 @@ export function ConsultModal({
       />
       <div className="relative flex max-h-[92vh] w-full flex-col overflow-hidden rounded-t-[1.4rem] bg-cream-50 shadow-deep sm:max-h-[88vh] sm:max-w-lg sm:rounded-[1.4rem]">
         <header className="flex items-center justify-between border-b border-teal-900/10 px-5 py-4">
-          <h2 className="font-display text-lg font-semibold text-teal-900">{t.modal.title}</h2>
+          <h2 className="font-display text-lg font-semibold text-teal-900">
+            {purchase ? t.modal.purchaseTitle : t.modal.title}
+          </h2>
           <button
             type="button"
             aria-label={t.modal.close}
@@ -135,16 +137,33 @@ export function ConsultModal({
         <div className="min-h-0 flex-1 overflow-y-auto p-5">
           {step === "form" && (
             <div className="space-y-5">
-              <p className="text-[0.82rem] text-ink-soft">
-                {t.modal.forItem}{" "}
-                <span className="font-semibold text-teal-900">{l(item.itemName)}</span>
-              </p>
+              {/* Item being booked */}
+              <div className="flex items-center gap-3 rounded-[0.9rem] border border-teal-900/10 bg-white p-2.5 shadow-soft">
+                <span className="relative h-12 w-12 flex-none overflow-hidden rounded-[0.7rem] bg-teal-900">
+                  {item.itemImage && (
+                    <Image src={item.itemImage} alt={l(item.itemName)} fill sizes="48px" className="object-cover" />
+                  )}
+                </span>
+                <span className="min-w-0 flex-1">
+                  <span className="block text-[0.6rem] font-semibold uppercase tracking-[0.12em] text-ink-faint">
+                    {t.modal.forItem}
+                  </span>
+                  <span className="block truncate text-[0.9rem] font-semibold text-teal-900">
+                    {l(item.itemName)}
+                  </span>
+                </span>
+                {purchase && (
+                  <span className="flex-none whitespace-nowrap font-display text-base font-bold text-teal-800">
+                    ฿{payAmount.toLocaleString("en-US")}
+                  </span>
+                )}
+              </div>
 
               {/* Expert picker */}
               <div>
                 <p className="text-[0.78rem] font-semibold text-ink">{t.modal.chooseExpert}</p>
                 <div className="mt-2 space-y-2">
-                  {EXPERTS.map((e) => {
+                  {getFeaturedExperts().map((e) => {
                     const selected = expertId === e.id;
                     return (
                       <button

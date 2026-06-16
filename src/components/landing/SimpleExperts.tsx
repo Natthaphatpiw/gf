@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { BadgeCheck, X } from "lucide-react";
-import { EXPERTS, type ExpertProfile } from "@/data/experts";
+import { getFeaturedExperts, type ExpertProfile } from "@/data/experts";
 import { useL, useT } from "@/lib/i18n";
 import landing from "@/lib/i18n/dictionaries/landing";
 import { lockScroll, unlockScroll } from "@/lib/scroll-lock";
@@ -15,16 +15,12 @@ import { lockScroll, unlockScroll } from "@/lib/scroll-lock";
  * page, no carousel of stubs.
  * ============================================================ */
 
-const FEATURED_IDS = ["sawanan-watcharawanich", "panrawee-praditsorn"];
-
 export function SimpleExperts() {
   const t = useT(landing).expertShowcase;
   const l = useL();
   const [active, setActive] = useState<ExpertProfile | null>(null);
 
-  const experts = FEATURED_IDS.map((id) => EXPERTS.find((e) => e.id === id)).filter(
-    (e): e is ExpertProfile => Boolean(e),
-  );
+  const experts = getFeaturedExperts();
 
   return (
     <section className="bg-cream-100">

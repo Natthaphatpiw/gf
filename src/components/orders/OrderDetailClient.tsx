@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
-import { ArrowLeft, Check, Loader2 } from "lucide-react";
+import { ArrowLeft, ArrowRight, Check, Compass, Loader2, Star } from "lucide-react";
 import { useAccount } from "@/lib/account";
 import { useL, useT } from "@/lib/i18n";
 import consultDict from "@/lib/i18n/dictionaries/consult";
@@ -13,10 +13,25 @@ import {
   CONSULT_STATUS_LABEL,
   CONSULT_TYPE_LABEL,
   type Consultation,
+  type ConsultStatus,
 } from "@/lib/consultation";
 import { StatusBadge } from "@/components/orders/StatusBadge";
 import { ChatPanel } from "@/components/orders/ChatPanel";
 import { ManagedPlanPanel } from "@/components/orders/ManagedPlanPanel";
+import { CheckinCard } from "@/components/checkin/CheckinCard";
+import { ensureOrderBooking, getOrderBookingId } from "@/lib/order-booking";
+
+/** What the customer's "next step" button does at each status. */
+const CUSTOMER_NEXT: Partial<Record<ConsultStatus, ConsultStatus>> = {
+  awaiting_expert: "coordinating_partner",
+  expert_processing: "coordinating_partner",
+  awaiting_customer: "coordinating_partner",
+  coordinating_partner: "trip_started",
+  payment: "trip_started",
+  trip_started: "in_progress",
+  in_progress: "completed",
+  completed: "awaiting_feedback",
+};
 
 export function OrderDetailClient({ id }: { id: string }) {
   const t = useT(consultDict);
@@ -25,6 +40,8 @@ export function OrderDetailClient({ id }: { id: string }) {
   const [c, setC] = useState<Consultation | null>(null);
   const [loading, setLoading] = useState(true);
   const [paying, setPaying] = useState(false);
+  const [advancing, setAdvancing] = useState(false);
+  const [bookingId, setBookingId] = useState<string | null>(null);
   const fileRef = useRef<HTMLInputElement>(null);
 
   const load = useCallback(async () => {
@@ -60,6 +77,52 @@ export function OrderDetailClient({ id }: { id: string }) {
       setPaying(false);
     }
   }
+
+  async function advance(to: ConsultStatus) {
+    if (advancing) return;
+    setAdvancing(true);
+    try {
+      await fetch(`/api/consultations/${id}/advance`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ to }),
+      });
+      await load();
+    } finally {
+      setAdvancing(false);
+    }
+  }
+
+  // Once the trip is being coordinated, bridge the order to a booking so the
+  // pre/post check-in + journey become available.
+  useEffect(() => {
+    if (!c || !user) return;
+    if (c.itemType !== "package" && c.itemType !== "program") return;
+    const tripIdx = CONSULT_STATUS_FLOW.indexOf("coordinating_partner");
+    if (CONSULT_STATUS_FLOW.indexOf(c.status) < tripIdx) return;
+    const existing = getOrderBookingId(c.id);
+    if (existing) {
+      setBookingId(existing);
+      return;
+    }
+    let active = true;
+    ensureOrderBooking({
+      orderId: c.id,
+      packageId: c.itemId,
+      assessmentId: c.assessmentId,
+      customer: {
+        firstName: user.firstName,
+        lastName: user.lastName,
+        phone: user.phone,
+        email: user.email,
+      },
+    }).then((bid) => {
+      if (active && bid) setBookingId(bid);
+    });
+    return () => {
+      active = false;
+    };
+  }, [c, user]);
 
   if (ready && !user) {
     return (
@@ -98,6 +161,29 @@ export function OrderDetailClient({ id }: { id: string }) {
   const expert = getExpert(c.expertId);
   const currentIndex = CONSULT_STATUS_FLOW.indexOf(c.status);
   const cancelled = c.status === "cancelled";
+  const isPkg = c.itemType === "package" || c.itemType === "program";
+  const prepostVisible =
+    isPkg && currentIndex >= CONSULT_STATUS_FLOW.indexOf("coordinating_partner");
+  const nextStatus = CUSTOMER_NEXT[c.status];
+  const advanceLabel = (() => {
+    switch (c.status) {
+      case "awaiting_expert":
+      case "expert_processing":
+      case "awaiting_customer":
+        return t.detail.advanceConsultDone;
+      case "coordinating_partner":
+      case "payment":
+        return t.detail.advanceStartTrip;
+      case "trip_started":
+        return t.detail.advanceStartProgram;
+      case "in_progress":
+        return t.detail.advanceFinish;
+      case "completed":
+        return t.detail.advanceToFeedback;
+      default:
+        return "";
+    }
+  })();
 
   return (
     <div className="mx-auto max-w-2xl px-4 py-7 md:px-6 md:py-10">
@@ -196,6 +282,45 @@ export function OrderDetailClient({ id }: { id: string }) {
         <ManagedPlanPanel consultation={c} onDecided={load} />
       )}
 
+      {/* Pre / post check-in (bridged to a booking once the trip coordinates) */}
+      {prepostVisible && (
+        <section className="mt-4">
+          <div className="rounded-[0.9rem] border border-teal-900/10 bg-teal-50/50 px-4 py-3">
+            <p className="flex items-center gap-1.5 text-[0.86rem] font-semibold text-teal-900">
+              <Compass className="h-4 w-4 text-teal-600" />
+              {t.detail.prepostTitle}
+            </p>
+            <p className="mt-0.5 text-[0.76rem] leading-relaxed text-ink-soft">
+              {t.detail.prepostIntro}
+            </p>
+          </div>
+          {bookingId ? (
+            <div className="mt-3">
+              <CheckinCard bookingId={bookingId} hasAssessmentBaseline={Boolean(c.assessmentId)} />
+            </div>
+          ) : (
+            <div className="mt-3 flex justify-center py-3">
+              <Loader2 className="h-5 w-5 animate-spin text-teal-500" />
+            </div>
+          )}
+        </section>
+      )}
+
+      {/* Customer next step, or feedback at the end */}
+      {c.status === "awaiting_feedback" ? (
+        <FeedbackForm id={c.id} />
+      ) : nextStatus && c.status !== "awaiting_deposit" ? (
+        <button
+          type="button"
+          onClick={() => advance(nextStatus)}
+          disabled={advancing}
+          className="mt-5 flex w-full items-center justify-center gap-2 rounded-full bg-teal-700 py-3 text-[0.86rem] font-semibold text-cream-50 shadow-soft transition-colors hover:bg-teal-800 disabled:opacity-50"
+        >
+          {advancing ? t.detail.advancing : advanceLabel}
+          {!advancing && <ArrowRight className="h-4 w-4" />}
+        </button>
+      ) : null}
+
       {/* Status tracker */}
       <section className="mt-6">
         <p className="eyebrow">{t.detail.timeline}</p>
@@ -241,6 +366,99 @@ export function OrderDetailClient({ id }: { id: string }) {
         </ol>
       </section>
     </div>
+  );
+}
+
+function FeedbackForm({ id }: { id: string }) {
+  const t = useT(consultDict).detail;
+  const [rating, setRating] = useState(0);
+  const [comment, setComment] = useState("");
+  const [submitting, setSubmitting] = useState(false);
+  const [done, setDone] = useState(false);
+
+  useEffect(() => {
+    try {
+      if (window.localStorage.getItem(`gc-order-feedback:${id}`)) setDone(true);
+    } catch {
+      /* ignore */
+    }
+  }, [id]);
+
+  const submit = async () => {
+    if (!rating || submitting) return;
+    setSubmitting(true);
+    try {
+      const res = await fetch(`/api/consultations/${id}/feedback`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ rating, comment: comment.trim() || undefined }),
+      });
+      if (res.ok) {
+        try {
+          window.localStorage.setItem(`gc-order-feedback:${id}`, "1");
+        } catch {
+          /* ignore */
+        }
+        setDone(true);
+      }
+    } finally {
+      setSubmitting(false);
+    }
+  };
+
+  if (done) {
+    return (
+      <div className="mt-5 flex items-center justify-center gap-2 rounded-3xl bg-teal-50 px-4 py-4 text-[0.88rem] font-semibold text-teal-800">
+        <Check className="h-5 w-5 text-teal-600" />
+        {t.feedbackThanks}
+      </div>
+    );
+  }
+
+  return (
+    <section className="mt-5 rounded-3xl border border-teal-900/10 bg-white p-5 shadow-soft">
+      <p className="font-display text-lg font-semibold text-teal-900">{t.feedbackTitle}</p>
+      <p className="mt-1 text-[0.84rem] leading-relaxed text-ink-soft">{t.feedbackIntro}</p>
+
+      <p className="mt-4 text-[0.78rem] font-semibold text-ink">{t.feedbackRating}</p>
+      <div className="mt-1.5 flex gap-1">
+        {[1, 2, 3, 4, 5].map((n) => (
+          <button
+            key={n}
+            type="button"
+            aria-label={`${n}`}
+            onClick={() => setRating(n)}
+            className="p-0.5"
+          >
+            <Star
+              className={`h-7 w-7 transition-colors ${
+                n <= rating ? "fill-gold-500 text-gold-500" : "text-teal-900/20"
+              }`}
+            />
+          </button>
+        ))}
+      </div>
+
+      <label className="mt-4 block text-[0.78rem] font-semibold text-ink">
+        {t.feedbackComment}
+      </label>
+      <textarea
+        value={comment}
+        onChange={(e) => setComment(e.target.value)}
+        rows={3}
+        placeholder={t.feedbackPlaceholder}
+        className="mt-1.5 w-full resize-none rounded-[0.8rem] border border-teal-900/15 bg-cream-50 px-3.5 py-2.5 text-[0.86rem] text-ink outline-none focus:border-teal-600"
+      />
+
+      <button
+        type="button"
+        onClick={submit}
+        disabled={!rating || submitting}
+        className="mt-3 w-full rounded-full bg-teal-700 py-3 text-[0.86rem] font-semibold text-cream-50 shadow-soft transition-colors hover:bg-teal-800 disabled:opacity-50"
+      >
+        {submitting ? t.feedbackSubmitting : t.feedbackSubmit}
+      </button>
+    </section>
   );
 }
 
