@@ -159,6 +159,8 @@ export interface PackageRecommendation {
   reason: LText;
   /** 0-100 match score for display. */
   matchScore: number;
+  /** The single AI-highlighted pick within its tier (the ribboned hero). */
+  hero?: boolean;
 }
 
 /* ---------------- Booking ---------------- */

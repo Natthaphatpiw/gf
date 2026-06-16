@@ -5,12 +5,13 @@ import type { PackageRecommendation, PackageTier } from "@/lib/types";
 import { useT } from "@/lib/i18n";
 import packagesDict from "@/lib/i18n/dictionaries/packages";
 import { getPackage } from "@/data/packages";
-import { PackageCard } from "@/components/packages/PackageCard";
+import { RecommendationCard } from "@/components/packages/RecommendationCard";
 
 /* ============================================================
- * RecommendationResults — Stage B output. Renders the 3 curated
- * programs grouped Basic (1) / Premium (1) / Deluxe (1), each
- * group under its own tier eyebrow header.
+ * RecommendationResults — Stage B output. Renders the 9 curated
+ * packages grouped Basic (3) / Premium (3) / Deluxe (3), each
+ * group under its own tier header, with the AI's top pick per
+ * tier shown as a wider, ribboned hero card.
  * ============================================================ */
 
 const TIER_ORDER: PackageTier[] = ["basic", "premium", "deluxe"];
@@ -59,20 +60,26 @@ export function RecommendationResults({
       {TIER_ORDER.map((tier, ti) => {
         const group = recommendations.filter((r) => r.tier === tier);
         if (group.length === 0) return null;
+        // hero(es) first, then the rest
+        const ordered = [...group].sort(
+          (a, b) => (b.hero ? 1 : 0) - (a.hero ? 1 : 0),
+        );
         return (
           <div key={tier} className={`animate-rise-${Math.min(ti + 1, 3)}`}>
             <p className="eyebrow mb-3">{tierHeader[tier]}</p>
             <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
-              {group.map((rec) => {
+              {ordered.map((rec) => {
                 const pkg = getPackage(rec.packageId);
                 if (!pkg) return null;
                 return (
-                  <PackageCard
-                    key={rec.packageId}
-                    pkg={pkg}
-                    reason={rec.reason}
-                    matchScore={rec.matchScore}
-                  />
+                  <div key={rec.packageId} className={rec.hero ? "sm:col-span-2" : ""}>
+                    <RecommendationCard
+                      pkg={pkg}
+                      reason={rec.reason}
+                      matchScore={rec.matchScore}
+                      hero={rec.hero}
+                    />
+                  </div>
                 );
               })}
             </div>

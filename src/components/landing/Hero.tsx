@@ -40,10 +40,21 @@ export function Hero() {
         </p>
 
         <div className="animate-rise-3 mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
-          <ButtonLink href="/assessment" size="lg" className="w-full sm:w-auto">
-            {t.ctaPrimary}
-            <ArrowRight className="h-4 w-4" />
-          </ButtonLink>
+          <span className="relative w-full sm:w-auto">
+            <span
+              aria-hidden
+              className="pointer-events-none absolute -inset-1 rounded-full bg-gold-400/45 blur-md animate-pulse"
+            />
+            <ButtonLink
+              href="/assessment"
+              variant="gold"
+              size="lg"
+              className="relative w-full justify-center text-base font-semibold shadow-lift ring-1 ring-cream-50/50 transition-transform hover:scale-[1.03] sm:w-auto sm:text-lg"
+            >
+              {t.ctaPrimary}
+              <ArrowRight className="h-5 w-5" />
+            </ButtonLink>
+          </span>
           <ButtonLink
             href="/packages"
             variant="ghost"
@@ -54,7 +65,7 @@ export function Hero() {
           </ButtonLink>
         </div>
 
-        <p className="animate-rise-3 mt-4 text-xs font-medium tracking-wide text-gold-200">
+        <p className="animate-rise-3 mt-4 inline-flex items-center gap-1.5 text-xs font-semibold tracking-wide text-gold-200">
           {t.ctaNote}
         </p>
       </div>

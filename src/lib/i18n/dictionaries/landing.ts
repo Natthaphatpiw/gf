@@ -9,7 +9,7 @@ const landing = {
   th: {
     hero: {
       eyebrow: "เกาะสมุย · ประเทศไทย",
-      title: "ให้เกาะ\nได้ดูแลคุณ",
+      title: "ให้สมุย\nดูแลคุณ",
       subline:
         "เส้นทางเวลเนสที่ออกแบบเฉพาะคุณ ท่ามกลางอ่าวสีเทอร์ควอยซ์ มือของหมอนวดสมุนไพร และความเงียบที่หาไม่ได้ที่ไหน",
       ctaPrimary: "เริ่มประเมินตัวเอง",
@@ -117,9 +117,12 @@ const landing = {
       previous: "เลื่อนไปผู้เชี่ยวชาญก่อนหน้า",
       next: "เลื่อนไปผู้เชี่ยวชาญถัดไป",
       verified: "ยืนยันโปรไฟล์แล้ว",
-      viewProfile: "ดูโปรไฟล์",
+      viewProfile: "ดูข้อมูล",
       rating: "คะแนน",
       years: "ปีประสบการณ์",
+      specialties: "ความเชี่ยวชาญ",
+      credentials: "คุณวุฒิและประสบการณ์",
+      close: "ปิด",
     },
     featured: {
       eyebrow: "เส้นทางคัดสรร",
@@ -145,7 +148,7 @@ const landing = {
     },
     closing: {
       eyebrow: "การเดินทางของคุณรออยู่",
-      title: "ให้เกาะได้ดูแลคุณสักครั้ง",
+      title: "ให้สมุยดูแลคุณสักครั้ง",
       body: "ใช้เวลาประมาณสองนาที เพื่อเริ่มต้นเส้นทางเวลเนสที่ออกแบบมาเพื่อคุณคนเดียว",
       cta: "เริ่มประเมินตัวเอง",
       note: "ฟรี · ไม่มีข้อผูกมัด",
@@ -154,7 +157,7 @@ const landing = {
   en: {
     hero: {
       eyebrow: "KOH SAMUI · THAILAND",
-      title: "Let the island\ntake care of you",
+      title: "Let Samui\ncare for you",
       subline:
         "A wellness journey shaped around you alone, set between a turquoise bay, the hands of herbal healers and a stillness you will find nowhere else.",
       ctaPrimary: "Begin your assessment",
@@ -262,9 +265,12 @@ const landing = {
       previous: "Scroll to previous experts",
       next: "Scroll to next experts",
       verified: "Verified profile",
-      viewProfile: "View profile",
+      viewProfile: "View details",
       rating: "rating",
       years: "years of experience",
+      specialties: "Specialties",
+      credentials: "Credentials and experience",
+      close: "Close",
     },
     featured: {
       eyebrow: "CURATED JOURNEYS",
@@ -290,7 +296,7 @@ const landing = {
     },
     closing: {
       eyebrow: "YOUR JOURNEY AWAITS",
-      title: "Let the island take care of you",
+      title: "Let Samui care for you",
       body: "Take about two minutes to begin a wellness journey designed for you and you alone.",
       cta: "Begin your assessment",
       note: "Free · no commitment",

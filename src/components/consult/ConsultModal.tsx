@@ -29,14 +29,21 @@ type Step = "form" | "deposit" | "done";
 export function ConsultModal({
   item,
   onClose,
+  amount,
+  purchase = false,
 }: {
   item: ConsultItem;
   onClose: () => void;
+  /** Charge amount (THB). Defaults to the flat consult deposit. */
+  amount?: number;
+  /** Full-payment package purchase (vs a standalone consult deposit). */
+  purchase?: boolean;
 }) {
   const t = useT(consultDict);
   const l = useL();
   const router = useRouter();
   const fileRef = useRef<HTMLInputElement>(null);
+  const payAmount = amount ?? CONSULT_DEPOSIT_THB;
 
   const [step, setStep] = useState<Step>("form");
   const [expertId, setExpertId] = useState<string>("");
@@ -73,6 +80,7 @@ export function ConsultModal({
           consultType,
           note: note.trim() || undefined,
           assessmentId: getStoredProfile()?.id,
+          amount: payAmount,
         }),
       });
       if (!res.ok) throw new Error("create failed");
@@ -243,12 +251,18 @@ export function ConsultModal({
 
           {step === "deposit" && (
             <div className="space-y-4 text-center">
-              <h3 className="font-display text-xl font-semibold text-teal-900">{t.deposit.title}</h3>
-              <p className="text-[0.84rem] text-ink-soft">{t.deposit.intro}</p>
+              <h3 className="font-display text-xl font-semibold text-teal-900">
+                {purchase ? t.deposit.purchaseTitle : t.deposit.title}
+              </h3>
+              <p className="text-[0.84rem] text-ink-soft">
+                {purchase ? t.deposit.purchaseIntro : t.deposit.intro}
+              </p>
               <div className="mx-auto inline-flex items-baseline gap-2 rounded-[0.9rem] bg-white px-5 py-3 shadow-soft">
-                <span className="text-[0.72rem] text-ink-faint">{t.deposit.amountLabel}</span>
+                <span className="text-[0.72rem] text-ink-faint">
+                  {purchase ? t.deposit.totalLabel : t.deposit.amountLabel}
+                </span>
                 <span className="font-display text-2xl font-bold text-teal-800">
-                  {CONSULT_DEPOSIT_THB.toLocaleString("en-US")}
+                  {payAmount.toLocaleString("en-US")}
                 </span>
                 <span className="text-[0.7rem] text-ink-faint">{t.deposit.baht}</span>
               </div>

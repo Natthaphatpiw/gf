@@ -16,14 +16,16 @@ import {
 import { getHugSamuiService } from "@/data/hugSamuiServices";
 import { getHugSamuiMenu } from "@/data/hugSamuiMenus";
 import { getPartner } from "@/data/partners";
+import { LEGACY_PACKAGES, LEGACY_CARE_DETAILS } from "@/data/legacyPackages";
 
 /* ============================================================
- * Package catalog — derived from the 7 Goodfill evidence-based
- * wellness programs (the single source of truth, 3 tiers).
+ * Package catalog — 22 signature journeys across three tiers:
+ *   • 15 legacy curated packages (the island's trusted houses)
+ *   • 7 Goodfill evidence-based programs (Hug Samui-anchored)
  *
  * The rest of the app (recommender, booking, check-in, expert)
  * works with the WellnessPackage shape, so each program is
- * adapted to it here. The rich program detail lives at
+ * adapted to it here. The 7 programs' rich detail lives at
  * /programs/[slug]; this catalog powers the booking flow.
  * ============================================================ */
 
@@ -124,10 +126,19 @@ function toCareDetails(program: BlueprintProgram): PackageCareDetails {
   return { meals, notes };
 }
 
-export const PACKAGES: WellnessPackage[] = BLUEPRINT_PROGRAMS.map(toPackage);
+/** The 7 evidence-based programs adapted to the package shape. */
+export const PROGRAM_PACKAGES: WellnessPackage[] = BLUEPRINT_PROGRAMS.map(toPackage);
 
-export const PACKAGE_CARE_DETAILS: Record<string, PackageCareDetails> =
-  Object.fromEntries(BLUEPRINT_PROGRAMS.map((p) => [p.slug, toCareDetails(p)]));
+/** Slugs of the 7 program-derived packages (rich detail at /programs/[slug]). */
+export const PROGRAM_PACKAGE_IDS = new Set(BLUEPRINT_PROGRAMS.map((p) => p.slug));
+
+/** 15 legacy curated journeys + 7 Goodfill programs = 22, across 3 tiers. */
+export const PACKAGES: WellnessPackage[] = [...LEGACY_PACKAGES, ...PROGRAM_PACKAGES];
+
+export const PACKAGE_CARE_DETAILS: Record<string, PackageCareDetails> = {
+  ...LEGACY_CARE_DETAILS,
+  ...Object.fromEntries(BLUEPRINT_PROGRAMS.map((p) => [p.slug, toCareDetails(p)])),
+};
 
 export function getPackageCareDetails(id: string): PackageCareDetails | undefined {
   return PACKAGE_CARE_DETAILS[id];
@@ -137,10 +148,15 @@ export function getPackage(id: string): WellnessPackage | undefined {
   return PACKAGES.find((p) => p.id === id);
 }
 
-/** Compact catalog (with tier + category) the recommender LLM picks from. */
+/** Whether a package id is one of the 7 evidence-based programs. */
+export function isProgramPackage(id: string): boolean {
+  return PROGRAM_PACKAGE_IDS.has(id);
+}
+
+/** Compact catalog (tier + goals) the recommender LLM picks from — all 22. */
 export function catalogForLlm(): string {
-  return BLUEPRINT_PROGRAMS.map(
+  return PACKAGES.map(
     (p) =>
-      `- id: ${p.slug} | tier: ${p.tier} | category: ${p.category} | name: ${p.name.en} | ${p.tagline.en}`,
+      `- id: ${p.id} | tier: ${p.tier} | name: ${p.name.en} | ${p.tagline.en} | goals: ${p.goals.join(",")}`,
   ).join("\n");
 }

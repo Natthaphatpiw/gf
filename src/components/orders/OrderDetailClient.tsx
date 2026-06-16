@@ -141,6 +141,26 @@ export function OrderDetailClient({ id }: { id: string }) {
         </div>
       )}
 
+      {/* Customise the package plan (drag-and-drop) */}
+      {(c.itemType === "package" || c.itemType === "program") && (
+        <Link
+          href={`/orders/${c.id}/customize`}
+          className="mt-3 flex items-center justify-between gap-3 rounded-[0.9rem] border border-gold-400/40 bg-gold-100/30 px-4 py-3 transition-colors hover:bg-gold-100/60"
+        >
+          <span className="min-w-0">
+            <span className="block text-[0.86rem] font-semibold text-teal-900">
+              {t.customize.cta}
+            </span>
+            <span className="block text-[0.72rem] leading-relaxed text-ink-soft">
+              {t.customize.ctaHint}
+            </span>
+          </span>
+          <span aria-hidden className="flex-none text-teal-700">
+            ›
+          </span>
+        </Link>
+      )}
+
       {/* Deposit action */}
       {c.status === "awaiting_deposit" && (
         <div className="mt-4 rounded-[1rem] border border-gold-400/50 bg-gold-100/40 p-4">

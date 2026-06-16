@@ -60,6 +60,12 @@ export async function POST(req: Request) {
       ? body.assessmentId.trim().toUpperCase()
       : undefined;
   const itemImage = typeof body.itemImage === "string" ? body.itemImage : undefined;
+  // Package purchases pay the full price up front; standalone consults pay the
+  // flat deposit. The client passes `amount` for a full-payment purchase.
+  const amount =
+    typeof body.amount === "number" && Number.isFinite(body.amount) && body.amount > 0
+      ? Math.round(body.amount)
+      : CONSULT_DEPOSIT_THB;
 
   try {
     const consultation = await createConsultation({
@@ -72,7 +78,7 @@ export async function POST(req: Request) {
       consultType,
       note,
       assessmentId,
-      depositAmount: CONSULT_DEPOSIT_THB,
+      depositAmount: amount,
     });
     await logConsultationActivity(consultation.id, "customer", "consultation.created", {
       consultType,

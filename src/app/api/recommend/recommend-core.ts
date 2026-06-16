@@ -4,25 +4,24 @@ import type {
   Locale,
   PackageRecommendation,
   PackageTier,
+  WellnessPackage,
   WellnessProfile,
 } from "@/lib/types";
-import {
-  BLUEPRINT_PROGRAMS,
-  type BlueprintProgram,
-} from "@/data/blueprintPackages";
-import { CATEGORY_GOALS } from "@/data/packages";
+import { PACKAGES, getPackage } from "@/data/packages";
 
 /* ============================================================
- * Recommendation core — matches a guest to the 7 evidence-based
- * programs and returns exactly one per tier (1 basic + 1 premium
- * + 1 deluxe). Deterministic rule-based scoring is the graceful
- * fallback when Gemini is unavailable, and also validates /
- * completes whatever the model returns.
+ * Recommendation core — matches a guest to the 22-package
+ * catalog (15 legacy journeys + 7 programs) and returns three
+ * per tier (3 basic + 3 premium + 3 deluxe = 9), with the single
+ * best pick per tier flagged as the `hero`. Deterministic
+ * rule-based scoring is the graceful fallback when Gemini is
+ * unavailable, and also validates / completes the model output.
  * ============================================================ */
 
 export const TIERS: PackageTier[] = ["basic", "premium", "deluxe"];
 
-const PROGRAM_BY_SLUG = new Map(BLUEPRINT_PROGRAMS.map((p) => [p.slug, p]));
+/** How many picks to surface per tier. */
+const PER_TIER = 3;
 
 /** Stable per-id variation so tied scores don't all show the same %. */
 function jitter(id: string, range: number): number {
@@ -32,61 +31,66 @@ function jitter(id: string, range: number): number {
 }
 
 /**
- * Score a program against the guest's profile. The blueprint
- * category drives the match against stress / migraine tendency /
- * mental wellbeing; chosen goals + the archetype nudge it.
+ * Desire weight per goal derived from the guest's profile — high
+ * stress leans toward burnout/sleep care, high migraine tendency
+ * toward calmer/sleep journeys, a calm profile toward detox /
+ * active / plant-based exploration.
  */
-export function scoreProgram(
-  program: BlueprintProgram,
+function profileGoalWeights(primary: WellnessProfile): Record<GoalId, number> {
+  const stress = primary.stress.value;
+  const migraine = primary.migraine.value;
+  const lowWellbeing = 100 - primary.mental.value;
+
+  const w: Record<GoalId, number> = {
+    sleep_better: 0.5,
+    detox: 0.5,
+    burnout_recovery: 0.5,
+    active_fitness: 0.5,
+    plant_based_week: 0.5,
+    anti_aging_checkup: 0.5,
+  };
+
+  if (stress >= 55) {
+    w.burnout_recovery += 2;
+    w.sleep_better += 1;
+  } else if (stress >= 45) {
+    w.burnout_recovery += 1;
+  }
+  if (migraine >= 60) {
+    w.sleep_better += 1.5;
+    w.anti_aging_checkup += 0.5;
+  }
+  if (lowWellbeing >= 45) {
+    w.burnout_recovery += 1;
+    w.sleep_better += 0.5;
+  }
+  if (stress < 50 && migraine < 50 && lowWellbeing < 40) {
+    w.detox += 1;
+    w.active_fitness += 0.8;
+    w.plant_based_week += 0.6;
+    w.anti_aging_checkup += 0.4;
+  }
+  return w;
+}
+
+/** Score a package against the guest's profile + chosen goals. */
+export function scorePackage(
+  pkg: WellnessPackage,
   primary: WellnessProfile,
   goals: GoalId[],
   family: WellnessProfile[],
 ): number {
-  const stress = primary.stress.value;
-  const migraine = primary.migraine.value;
-  const lowWellbeing = 100 - primary.mental.value; // higher = needs more support
+  const w = profileGoalWeights(primary);
 
   let score = 1;
-  switch (program.category) {
-    case "deep_sleep":
-      score += stress >= 55 ? 2 : 0;
-      score += lowWellbeing >= 40 ? 1 : 0;
-      break;
-    case "calm_mind":
-      score += stress >= 60 ? 3 : stress >= 45 ? 1.5 : 0;
-      score += lowWellbeing >= 50 ? 1 : 0;
-      break;
-    case "clear_head":
-      score += migraine >= 60 ? 3 : 0;
-      score += migraine >= 75 ? 1.5 : 0;
-      break;
-    case "gut_reset":
-      score += 1;
-      score += stress < 55 && migraine < 55 ? 1 : 0;
-      break;
-    case "samui_reset":
-      score += 1.5;
-      score += stress >= 50 ? 0.5 : 0;
-      break;
-    case "samui_recharge":
-      score += 1.5;
-      score += stress >= 55 || lowWellbeing >= 45 ? 1 : 0;
-      break;
-    case "workmode_recovery":
-      score += stress >= 55 ? 2 : 0.5;
-      score += lowWellbeing >= 40 ? 1 : 0;
-      break;
-  }
-
-  const catGoals = CATEGORY_GOALS[program.category] ?? [];
-  score += catGoals.filter((g) => goals.includes(g)).length * 1;
-  score += catGoals.filter((g) => primary.recommendedGoals.includes(g)).length * 0.75;
+  for (const g of pkg.goals) score += w[g] ?? 0;
+  score += pkg.goals.filter((g) => goals.includes(g)).length * 1.2;
+  score += pkg.goals.filter((g) => primary.recommendedGoals.includes(g)).length * 0.8;
   if (family.length > 0) {
-    const all = family.flatMap((f) => f.recommendedGoals);
-    score += catGoals.filter((g) => all.includes(g)).length * 0.4;
+    const all = new Set(family.flatMap((f) => f.recommendedGoals));
+    score += pkg.goals.filter((g) => all.has(g)).length * 0.4;
   }
-
-  score += jitter(program.slug, 5) / 10;
+  score += jitter(pkg.id, 5) / 10;
   return score;
 }
 
@@ -97,8 +101,8 @@ function toMatchScore(score: number, best: number): number {
   return Math.round(58 + ratio * 41);
 }
 
-function presentScore(score: number, best: number, slug: string): number {
-  return Math.max(55, toMatchScore(score, best) - jitter(slug, 3));
+function presentScore(score: number, best: number, id: string): number {
+  return Math.max(55, toMatchScore(score, best) - jitter(id, 3));
 }
 
 /** "The Mountain Stone" stays as-is; "Quiet Tide" -> "a Quiet Tide". */
@@ -107,45 +111,46 @@ function withArticle(noun: string): string {
   return `${/^[aeiou]/i.test(noun) ? "an" : "a"} ${noun}`;
 }
 
-/** Template "why this fits you" copy in both languages, rotated per program. */
+/** Template "why this fits you" copy in both languages, rotated per package. */
 export function buildReason(
-  program: BlueprintProgram,
+  pkg: WellnessPackage,
   primary: WellnessProfile,
 ): LText {
   const a = primary.archetype.name;
-  const benefit = program.subtitle;
-  const variant = jitter(program.slug, 3);
+  const benefit = pkg.tagline;
+  const variant = jitter(pkg.id, 3);
 
   if (variant === 0) {
     return {
-      th: `ในฐานะ "${a.th}" โปรแกรม ${program.name.th} ที่เน้น "${benefit.th}" ตอบโจทย์คุณได้พอดี`,
-      en: `As ${withArticle(a.en)}, ${program.name.en} — focused on "${benefit.en}" — fits you beautifully.`,
+      th: `ในฐานะ "${a.th}" แพ็กเกจ ${pkg.name.th} — "${benefit.th}" — ตอบโจทย์คุณได้พอดี`,
+      en: `As ${withArticle(a.en)}, ${pkg.name.en} — "${benefit.en}" — fits you beautifully.`,
     };
   }
   if (variant === 1) {
     return {
-      th: `จากคะแนนของคุณ เราเลือก ${program.name.th} ที่ช่วยเรื่อง "${benefit.th}" มาให้โดยเฉพาะ`,
-      en: `Reading your scores, we picked ${program.name.en}, built to support "${benefit.en}".`,
+      th: `จากคะแนนของคุณ เราเลือก ${pkg.name.th} ที่เน้น "${benefit.th}" มาให้โดยเฉพาะ`,
+      en: `Reading your scores, we picked ${pkg.name.en}, leaning into "${benefit.en}".`,
     };
   }
   return {
-    th: `${program.name.th} เข้ากับจังหวะแบบ "${a.th}" ของคุณ และเน้นเรื่อง "${benefit.th}"`,
-    en: `${program.name.en} suits the ${a.en} in you and leans into "${benefit.en}".`,
+    th: `${pkg.name.th} เข้ากับจังหวะแบบ "${a.th}" ของคุณ และเน้นเรื่อง "${benefit.th}"`,
+    en: `${pkg.name.en} suits the ${a.en} in you and leans into "${benefit.en}".`,
   };
 }
 
 /**
- * Deterministic recommendation: the best-scoring program in each
- * tier. Always returns exactly one per tier (3 total).
+ * Deterministic recommendation: the top three packages in each
+ * tier (9 total), with the highest-scoring pick per tier flagged
+ * as the hero.
  */
 export function ruleBasedRecommendations(
   goals: GoalId[],
   primary: WellnessProfile,
   family: WellnessProfile[],
 ): PackageRecommendation[] {
-  const scored = BLUEPRINT_PROGRAMS.map((p) => ({
+  const scored = PACKAGES.map((p) => ({
     p,
-    score: scoreProgram(p, primary, goals, family),
+    score: scorePackage(p, primary, goals, family),
   }));
   const best = Math.max(...scored.map((s) => s.score), 1);
 
@@ -153,13 +158,16 @@ export function ruleBasedRecommendations(
   for (const tier of TIERS) {
     const top = scored
       .filter((s) => s.p.tier === tier)
-      .sort((a, b) => b.score - a.score)[0];
-    if (!top) continue;
-    out.push({
-      packageId: top.p.slug,
-      tier,
-      reason: buildReason(top.p, primary),
-      matchScore: presentScore(top.score, best, top.p.slug),
+      .sort((a, b) => b.score - a.score)
+      .slice(0, PER_TIER);
+    top.forEach((s, i) => {
+      out.push({
+        packageId: s.p.id,
+        tier,
+        reason: buildReason(s.p, primary),
+        matchScore: presentScore(s.score, best, s.p.id),
+        hero: i === 0,
+      });
     });
   }
   return out;
@@ -196,9 +204,10 @@ function coerceReason(reason: RawRec["reason"], fallback: LText): LText {
 }
 
 /**
- * Keep only valid program picks (trusting the catalog's real tier,
- * never the model's claimed tier), then top up each tier from the
- * rule-based ranking so the result is always exactly 1 / 1 / 1.
+ * Keep only valid picks (trusting the catalog's real tier, never
+ * the model's claimed tier), then top up each tier from the
+ * rule-based ranking so the result is always 3 / 3 / 3 = 9, with
+ * the highest-scoring pick per tier flagged as the hero.
  */
 export function normaliseRecommendations(
   raw: unknown,
@@ -212,48 +221,50 @@ export function normaliseRecommendations(
     ? ((raw as { recommendations: RawRec[] }).recommendations ?? [])
     : [];
 
-  const byTier: Record<PackageTier, PackageRecommendation | undefined> = {
-    basic: undefined,
-    premium: undefined,
-    deluxe: undefined,
+  const byTier: Record<PackageTier, PackageRecommendation[]> = {
+    basic: [],
+    premium: [],
+    deluxe: [],
   };
   const used = new Set<string>();
 
   for (const item of items) {
     const id = typeof item.packageId === "string" ? item.packageId : "";
-    const program = PROGRAM_BY_SLUG.get(id);
-    if (!program || used.has(program.slug) || byTier[program.tier]) continue;
-    used.add(program.slug);
-    byTier[program.tier] = {
-      packageId: program.slug,
-      tier: program.tier, // trust the catalog, never the model's claimed tier
-      reason: coerceReason(item.reason, buildReason(program, primary)),
+    const pkg = getPackage(id);
+    if (!pkg || used.has(pkg.id) || byTier[pkg.tier].length >= PER_TIER) continue;
+    used.add(pkg.id);
+    byTier[pkg.tier].push({
+      packageId: pkg.id,
+      tier: pkg.tier, // trust the catalog, never the model's claimed tier
+      reason: coerceReason(item.reason, buildReason(pkg, primary)),
       matchScore: clampScore(item.matchScore),
-    };
+    });
   }
 
-  const scored = BLUEPRINT_PROGRAMS.map((p) => ({
+  const scored = PACKAGES.map((p) => ({
     p,
-    score: scoreProgram(p, primary, goals, family),
+    score: scorePackage(p, primary, goals, family),
   })).sort((a, b) => b.score - a.score);
   const best = Math.max(...scored.map((s) => s.score), 1);
 
   const out: PackageRecommendation[] = [];
   for (const tier of TIERS) {
-    let pick = byTier[tier];
-    if (!pick) {
-      const top = scored.find((s) => s.p.tier === tier && !used.has(s.p.slug));
-      if (top) {
-        used.add(top.p.slug);
-        pick = {
-          packageId: top.p.slug,
-          tier,
-          reason: buildReason(top.p, primary),
-          matchScore: presentScore(top.score, best, top.p.slug),
-        };
-      }
+    const picks = byTier[tier];
+    // top up to PER_TIER from the rule-based ranking
+    for (const s of scored) {
+      if (picks.length >= PER_TIER) break;
+      if (s.p.tier !== tier || used.has(s.p.id)) continue;
+      used.add(s.p.id);
+      picks.push({
+        packageId: s.p.id,
+        tier,
+        reason: buildReason(s.p, primary),
+        matchScore: presentScore(s.score, best, s.p.id),
+      });
     }
-    if (pick) out.push(pick);
+    // highest match in the tier becomes the hero
+    picks.sort((a, b) => b.matchScore - a.matchScore);
+    picks.forEach((p, i) => out.push({ ...p, hero: i === 0 }));
   }
   return out;
 }
@@ -304,11 +315,12 @@ export function buildUserPrompt(
 
 export const SYSTEM_PROMPT = [
   "You are a wellness travel curator for Koh Samui, Thailand, working for Goodfill Care — a premium bilingual wellness booking platform.",
-  "Your task: from the supplied catalog, recommend exactly 3 programs for the guest (or family): exactly 1 of tier 'basic', exactly 1 of tier 'premium', and exactly 1 of tier 'deluxe'.",
-  "Match each pick to the guest's stress, migraine tendency, mental wellbeing, archetype, traits and chosen goals (e.g. high stress -> calm/sleep programs; high migraine tendency -> the headache-comfort program). For a family, balance the whole group.",
+  "Your task: from the supplied catalog, recommend exactly 9 packages for the guest (or family): exactly 3 of tier 'basic', exactly 3 of tier 'premium', and exactly 3 of tier 'deluxe'.",
+  "Order each tier from best fit to least, so the FIRST pick you list in each tier is your single strongest recommendation for that tier (it will be highlighted).",
+  "Match each pick to the guest's stress, migraine tendency, mental wellbeing, archetype, traits and chosen goals (e.g. high stress -> calm/sleep journeys; high migraine tendency -> the headache-comfort journey). For a family, balance the whole group.",
   "Write each 'reason' as 1-2 warm, premium-hospitality sentences addressed personally to the guest, in BOTH Thai (natural, polished) and English (natural, polished). No emoji. Never a medical-treatment claim.",
-  "matchScore is an integer 55-99 reflecting fit.",
-  'Respond with STRICT JSON ONLY, no prose, in this exact shape: {"recommendations":[{"packageId":"<id from catalog>","tier":"<that program\'s tier>","reason":{"th":"...","en":"..."},"matchScore":<int 55-99>}]} with exactly 3 items (1 basic + 1 premium + 1 deluxe) and no duplicate packageId.',
+  "matchScore is an integer 55-99 reflecting fit; the first pick in each tier should have the highest score in that tier.",
+  'Respond with STRICT JSON ONLY, no prose, in this exact shape: {"recommendations":[{"packageId":"<id from catalog>","tier":"<that package\'s tier>","reason":{"th":"...","en":"..."},"matchScore":<int 55-99>}]} with exactly 9 items (3 basic + 3 premium + 3 deluxe) and no duplicate packageId.',
 ].join("\n");
 
 export function isValidLocale(value: unknown): value is Locale {

@@ -25,6 +25,7 @@ import {
 } from "@/components/packages/PackageCard";
 import { ConsultToggle } from "@/components/packages/ConsultToggle";
 import { ConsultButton } from "@/components/consult/ConsultButton";
+import { BookPackageButton } from "@/components/packages/BookPackageButton";
 import { ItineraryTimeline } from "@/components/packages/ItineraryTimeline";
 
 /* ============================================================
@@ -213,14 +214,11 @@ export default function PackageDetailPage({
               {c.units.baht} / {c.units.perPerson}
             </span>
           </p>
-          <ButtonLink
-            href={`/booking/${pkg.id}`}
-            variant="primary"
-            size="md"
+          <BookPackageButton
+            pkg={pkg}
+            label={c.actions.bookNow}
             className="flex-1 sm:flex-none"
-          >
-            {c.actions.bookNow}
-          </ButtonLink>
+          />
         </div>
       </div>
     </div>

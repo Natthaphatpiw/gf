@@ -102,6 +102,39 @@ export const PARTNERS: PartnerProfile[] = [
     ],
   },
   {
+    id: "royal-samui-villa",
+    name: { th: "รอยัล เมืองสมุย วิลล่า", en: "Royal Samui Villa" },
+    category: {
+      th: "Wellness stay & retreat partner",
+      en: "Wellness stay & retreat partner",
+    },
+    location: { th: "เกาะสมุย สุราษฎร์ธานี", en: "Koh Samui, Surat Thani" },
+    summary: {
+      th: "วิลล่าพักผ่อนริมทะเลที่เป็นบ้านหลักของโปรแกรมพักฟื้น เน้นความเป็นส่วนตัว ความเงียบ และการดูแลแบบครบวงจร",
+      en: "A beachside villa retreat — the home base for restorative programmes, built around privacy, quiet and end-to-end care.",
+    },
+    story: {
+      th: "รอยัล เมืองสมุย วิลล่า คือพาร์ตเนอร์ที่พักหลักของ Goodfill Care ที่พักและพื้นที่ผ่อนคลายถูกออกแบบให้รองรับโปรแกรมเวลเนสที่ต้องการเวลาพักฟื้นต่อเนื่องหลายวัน",
+      en: "Royal Samui Villa is Goodfill Care's primary stay partner. Its rooms and calm common spaces are designed to host multi-day wellness programmes that need real, continuous recovery time.",
+    },
+    highlights: [
+      { th: "ห้องพักและพื้นที่ส่วนตัวริมทะเล", en: "Private beachside rooms and spaces" },
+      { th: "รองรับโปรแกรมพักฟื้นหลายวัน", en: "Built for multi-day restorative programmes" },
+      { th: "บริการดูแลแบบครบวงจรร่วมกับทีม Goodfill", en: "End-to-end care alongside the Goodfill team" },
+    ],
+    services: [
+      { th: "ที่พักสำหรับโปรแกรมเวลเนส", en: "Wellness-programme accommodation" },
+      { th: "พื้นที่ผ่อนคลายและฟื้นฟู", en: "Relaxation and recovery spaces" },
+      { th: "ประสานงานกับพาร์ตเนอร์บริการอื่น ๆ", en: "Coordination with service partners" },
+    ],
+    visitNotes: [
+      {
+        th: "รายละเอียดห้องพักและราคาจะอัปเดตหลังยืนยันกับพาร์ตเนอร์",
+        en: "Room details and pricing will be updated after partner confirmation.",
+      },
+    ],
+  },
+  {
     id: "sila-spa-samui",
     name: { th: "Sila Spa Samui", en: "Sila Spa Samui" },
     category: { th: "Spa & Thai healing", en: "Spa & Thai healing" },

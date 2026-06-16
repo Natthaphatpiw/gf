@@ -1,6 +1,7 @@
 "use client";
 
 import type { GoalId, WellnessProfile } from "@/lib/types";
+import type { PlanLineItem } from "@/lib/pricing";
 
 /* ============================================================
  * Client-side session memory (localStorage).
@@ -19,6 +20,7 @@ const KEYS = {
   customer: "gc-customer",
   checkins: "gc-checkin-refs",
   planProgress: "gc-plan-progress",
+  orderPlans: "gc-order-plans",
 };
 
 function read<T>(key: string): T | null {
@@ -155,6 +157,31 @@ export function togglePlanHabit(bookingId: string, habitId: string): string[] {
   const next = [...current];
   write(KEYS.planProgress, { ...all, [bookingId]: { date: today, ids: next } });
   return next;
+}
+
+/* ---------------- Customised order plan (drag-and-drop edit) ---------------- */
+
+export interface SavedOrderPlan {
+  items: PlanLineItem[];
+  total: number;
+  savedAt: string;
+}
+
+type OrderPlans = Record<string, SavedOrderPlan>;
+
+export function getOrderPlan(orderId: string): SavedOrderPlan | null {
+  const all = read<OrderPlans>(KEYS.orderPlans) ?? {};
+  return all[orderId.toUpperCase()] ?? null;
+}
+
+export function saveOrderPlan(
+  orderId: string,
+  items: PlanLineItem[],
+  total: number,
+): void {
+  const all = read<OrderPlans>(KEYS.orderPlans) ?? {};
+  all[orderId.toUpperCase()] = { items, total, savedAt: new Date().toISOString() };
+  write(KEYS.orderPlans, all);
 }
 
 /* ---------------- Remembered customer info ---------------- */

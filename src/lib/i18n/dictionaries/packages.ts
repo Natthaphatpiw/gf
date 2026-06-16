@@ -43,13 +43,18 @@ const packages = {
       loadingBody:
         "ผู้เชี่ยวชาญด้านเวลเนสของเรากำลังจับคู่เส้นทางที่เหมาะกับคุณที่สุด",
       resultsEyebrow: "คัดสรรเพื่อคุณ",
-      resultsTitle: "สามเส้นทางที่เหมาะกับคุณ",
+      resultsTitle: "เก้าเส้นทางที่เหมาะกับคุณ",
       resultsBody:
-        "หนึ่งตัวเลือกในแต่ละระดับ คัดจากผลประเมินและเป้าหมายของคุณ",
+        "สามตัวเลือกในแต่ละระดับ คัดจากผลประเมินและเป้าหมายของคุณ พร้อมหนึ่งตัวที่ AI แนะนำเป็นพิเศษในแต่ละระดับ",
       again: "ประมวลผลใหม่",
       tierBasic: "ระดับเบสิก",
       tierPremium: "ระดับพรีเมียม",
       tierDeluxe: "ระดับดีลักซ์",
+      heroBadge: "AI แนะนำพิเศษ",
+      discountBadge: "ส่วนลด {n}%",
+      inside: "ในแพ็กเกจนี้",
+      more: "+{n} อย่าง",
+      perPerson: "/ ต่อท่าน",
       error:
         "ขออภัย ไม่สามารถออกแบบแพ็กเกจได้ในขณะนี้ คุณยังสำรวจแพ็กเกจทั้งหมดได้ด้านล่าง",
     },
@@ -147,13 +152,18 @@ const packages = {
       loadingBody:
         "Our wellness curators are matching the journeys that suit you best.",
       resultsEyebrow: "Curated for you",
-      resultsTitle: "Three journeys made for you",
+      resultsTitle: "Nine journeys made for you",
       resultsBody:
-        "One pick at each level, drawn from your assessment and goals.",
+        "Three picks at each level from your assessment and goals — with one AI top pick highlighted per level.",
       again: "Curate again",
       tierBasic: "Basic",
       tierPremium: "Premium",
       tierDeluxe: "Deluxe",
+      heroBadge: "AI top pick",
+      discountBadge: "{n}% OFF",
+      inside: "What's inside",
+      more: "+{n} more",
+      perPerson: "/ person",
       error:
         "We could not curate your journeys just now. You can still explore every package below.",
     },
