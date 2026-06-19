@@ -43,9 +43,16 @@ export function SimpleExperts() {
               onClick={() => setActive(e)}
               className="group flex items-center gap-4 rounded-3xl border border-teal-900/10 bg-white p-4 text-left shadow-soft transition-all hover:-translate-y-0.5 hover:shadow-lift"
             >
-              <span className="relative h-16 w-16 flex-none overflow-hidden rounded-full bg-teal-900">
+              <span className="relative h-20 w-16 flex-none overflow-hidden rounded-2xl bg-teal-900">
                 {e.image && (
-                  <Image src={e.image} alt={l(e.name)} fill sizes="64px" className="object-cover" />
+                  <Image
+                    src={e.image}
+                    alt={l(e.name)}
+                    fill
+                    sizes="64px"
+                    className="object-cover"
+                    style={{ objectPosition: "top center" }}
+                  />
                 )}
               </span>
               <span className="min-w-0 flex-1">
@@ -111,9 +118,16 @@ function ExpertPopup({
         </button>
 
         <div className="flex items-center gap-4">
-          <span className="relative h-20 w-20 flex-none overflow-hidden rounded-full bg-teal-900">
+          <span className="relative h-24 w-20 flex-none overflow-hidden rounded-2xl bg-teal-900">
             {expert.image && (
-              <Image src={expert.image} alt={l(expert.name)} fill sizes="80px" className="object-cover" />
+              <Image
+                src={expert.image}
+                alt={l(expert.name)}
+                fill
+                sizes="80px"
+                className="object-cover"
+                style={{ objectPosition: "top center" }}
+              />
             )}
           </span>
           <div className="min-w-0">

@@ -176,9 +176,16 @@ export function ConsultModal({
                             : "border-teal-900/10 bg-white hover:bg-teal-50/40"
                         }`}
                       >
-                        <span className="relative h-10 w-10 flex-none overflow-hidden rounded-full bg-teal-800 text-cream-50">
+                        <span className="relative h-12 w-10 flex-none overflow-hidden rounded-xl bg-teal-800 text-cream-50">
                           {e.image ? (
-                            <Image src={e.image} alt={l(e.name)} fill sizes="40px" className="object-cover" />
+                            <Image
+                              src={e.image}
+                              alt={l(e.name)}
+                              fill
+                              sizes="40px"
+                              className="object-cover"
+                              style={{ objectPosition: "top center" }}
+                            />
                           ) : (
                             <span className="grid h-full w-full place-items-center text-sm font-bold">
                               {l(e.name).charAt(0)}

@@ -54,15 +54,16 @@ export function ExpertCard({
       </div>
 
       <div className="mt-5 flex flex-col items-center text-center">
-        <span className="grid h-20 w-20 place-items-center overflow-hidden rounded-full border border-teal-900/8 bg-cream-100 text-xl font-semibold text-teal-700 md:h-24 md:w-24">
+        <span className="grid aspect-[4/5] w-[4.75rem] place-items-center overflow-hidden rounded-2xl border border-teal-900/8 bg-cream-100 text-xl font-semibold text-teal-700 md:w-[5.5rem]">
           {expert.image ? (
             <Image
               src={expert.image}
               alt={name}
-              width={220}
-              height={220}
-              sizes="112px"
+              width={264}
+              height={330}
+              sizes="88px"
               className="h-full w-full object-cover"
+              style={{ objectPosition: "top center" }}
             />
           ) : (
             <span aria-hidden="true">{initials}</span>
