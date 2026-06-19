@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import {
   Cormorant_Garamond,
   Inter,
-  Sarabun,
+  Kanit,
 } from "next/font/google";
 import "./globals.css";
 import { LocaleProvider } from "@/lib/i18n";
@@ -13,7 +13,7 @@ import { Footer } from "@/components/layout/Footer";
 import { AuthModal } from "@/components/account/AuthModal";
 import { CartDrawer } from "@/components/account/CartDrawer";
 
-/* ----- Typography: serif display for Latin + Sarabun for Thai readability. */
+/* ----- Typography: serif display for Latin + Kanit for Thai readability. */
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
@@ -27,10 +27,10 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-const sarabun = Sarabun({
+const kanit = Kanit({
   subsets: ["thai"],
   weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-sarabun",
+  variable: "--font-kanit",
 });
 
 export const metadata: Metadata = {
@@ -54,7 +54,7 @@ export default function RootLayout({
   return (
     <html lang="th" data-scroll-behavior="smooth">
       <body
-        className={`${cormorant.variable} ${inter.variable} ${sarabun.variable} antialiased`}
+        className={`${cormorant.variable} ${inter.variable} ${kanit.variable} antialiased`}
       >
         <LocaleProvider>
           <AccountProvider>

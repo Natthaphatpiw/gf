@@ -9,16 +9,34 @@ const landing = {
   th: {
     hero: {
       eyebrow: "เกาะสมุย · ประเทศไทย",
-      title: "ให้สมุย\nดูแลคุณ",
+      title: "ความสุข\nเริ่มต้นได้ที่นี่",
       subline:
-        "เส้นทางเวลเนสที่ออกแบบเฉพาะคุณ ท่ามกลางอ่าวสีเทอร์ควอยซ์ มือของหมอนวดสมุนไพร และความเงียบที่หาไม่ได้ที่ไหน",
+        "เริ่มต้นเส้นทางเวลเนสที่ออกแบบ\nตามจังหวะชีวิตของคุณ ท่ามกลางทะเลสงบ\nการเยียวยาแบบไทย และความสบายใจ\nที่ได้พักบนเกาะสมุย",
       ctaPrimary: "เริ่มประเมินตัวเอง",
-      ctaNote: "ฟรี · ใช้เวลาเพียง 2 นาที",
       ctaSecondary: "ดูแพ็กเกจทั้งหมด",
+      highlights: [
+        "ฟรี · ใช้เวลาเพียง 2 นาที",
+        "แนะนำแพ็กเกจใน 10 ข้อ",
+        "เอไอช่วยจับคู่แพ็กเกจ",
+        "ผู้เชี่ยวชาญช่วยดูแลแผน",
+      ],
     },
     trust: {
       eyebrow: "ได้รับความไว้วางใจจาก",
       title: "บ้านแห่งการดูแลที่ดีที่สุดของเกาะ",
+      intro:
+        "รีสอร์ต รีทรีต และศูนย์เวลเนสที่สะท้อนมาตรฐานการดูแลของเกาะ",
+      listLabel: "รีสอร์ต รีทรีต และศูนย์เวลเนสบนเกาะสมุย",
+      partners: [
+        "คามาลายา",
+        "ซิกซ์เซนส์ สมุย",
+        "บันยันทรี สมุย",
+        "โฟร์ซีซันส์",
+        "แอบโซลูท แซงชัวรี",
+        "สมาหิตา รีทรีต",
+        "วิคาซา",
+        "โรงพยาบาลกรุงเทพสมุย",
+      ],
     },
     how: {
       eyebrow: "เพียงสามขั้นตอน",
@@ -83,36 +101,36 @@ const landing = {
     wellnessTypes: {
       title: "ประเภทเวลเนส",
       items: [
-        "Spa & Thai Healing",
-        "Sleep Recovery",
-        "Healthy Food",
-        "Fitness",
-        "Medical Checkup",
-        "Nature Retreat",
+        "สปาและการนวดไทย",
+        "ฟื้นฟูการนอน",
+        "อาหารเพื่อสุขภาพ",
+        "ฟิตเนส",
+        "ตรวจสุขภาพ",
+        "รีทรีตธรรมชาติ",
       ],
     },
     topBrands: {
-      title: "Top Brands",
+      title: "แบรนด์เด่น",
       intro:
-        "partner ที่เราคัดเข้ามาเพื่อช่วยออกแบบเส้นทางเวลเนสบนเกาะสมุยให้เป็นรูปธรรมมากขึ้น",
-      open: "ดูรายละเอียด partner",
+        "พาร์ตเนอร์ที่เราคัดเข้ามาเพื่อช่วยออกแบบเส้นทางเวลเนสบนเกาะสมุยให้เป็นรูปธรรมมากขึ้น",
+      open: "ดูรายละเอียดพาร์ตเนอร์",
       previous: "เลื่อนไปแบรนด์ก่อนหน้า",
       next: "เลื่อนไปแบรนด์ถัดไป",
     },
     careBridge: {
-      title: "จาก partner สู่แผนดูแลที่มั่นใจขึ้น",
+      title: "จากพาร์ตเนอร์สู่แผนดูแลที่มั่นใจขึ้น",
       body: "เราไม่ได้แค่รวมสถานที่ดี ๆ บนเกาะ แต่ให้ผู้เชี่ยวชาญช่วยมองภาพรวม เพื่อให้ทุกบริการที่เลือกมาเข้ากับร่างกาย เป้าหมาย และจังหวะชีวิตของคุณจริง ๆ",
       points: [
-        "partner คือประสบการณ์จริงบนเกาะ",
+        "พาร์ตเนอร์คือประสบการณ์จริงบนเกาะ",
         "ผู้เชี่ยวชาญคือชั้นความมั่นใจ",
-        "AI ช่วยจับคู่ให้เร็วขึ้น",
+        "เอไอช่วยจับคู่ให้เร็วขึ้น",
       ],
     },
     expertShowcase: {
       eyebrow: "ทีมผู้เชี่ยวชาญ",
       title: "มีคนช่วยดูแผนอยู่เบื้องหลัง",
       intro:
-        "ผู้เชี่ยวชาญของเราเข้ามาช่วยให้แพ็กเกจที่ออกแบบด้วย AI ไม่ใช่แค่สวยบนหน้าจอ แต่มีเหตุผลด้านสุขภาพ โภชนาการ การพักฟื้น และการดูแลใจรองรับ",
+        "ผู้เชี่ยวชาญของเราเข้ามาช่วยให้แพ็กเกจที่ออกแบบด้วยเอไอไม่ใช่แค่สวยบนหน้าจอ แต่มีเหตุผลด้านสุขภาพ โภชนาการ การพักฟื้น และการดูแลใจรองรับ",
       cta: "ดูผู้เชี่ยวชาญทั้งหมด",
       previous: "เลื่อนไปผู้เชี่ยวชาญก่อนหน้า",
       next: "เลื่อนไปผู้เชี่ยวชาญถัดไป",
@@ -157,16 +175,34 @@ const landing = {
   en: {
     hero: {
       eyebrow: "KOH SAMUI · THAILAND",
-      title: "Let Samui\ncare for you",
+      title: "Happiness\nbegins here",
       subline:
-        "A wellness journey shaped around you alone, set between a turquoise bay, the hands of herbal healers and a stillness you will find nowhere else.",
+        "Begin a wellness journey shaped around your rhythm, with quiet sea air, Thai healing traditions and the ease of being cared for on Koh Samui.",
       ctaPrimary: "Begin your assessment",
-      ctaNote: "Free · takes about 2 minutes",
       ctaSecondary: "Explore all packages",
+      highlights: [
+        "Free · takes about 2 minutes",
+        "Package guidance in 10 scenes",
+        "AI-assisted matching",
+        "Expert-reviewed care plans",
+      ],
     },
     trust: {
-      eyebrow: "TRUSTED ALONGSIDE",
-      title: "The island's most respected houses of care",
+      eyebrow: "SAMUI HOTELS & WELLNESS PLACES",
+      title: "Curated hotels and care places on the island",
+      intro:
+        "Hotel, resort and wellness place names within the Samui care context.",
+      listLabel: "Samui hotel, resort and wellness place names",
+      partners: [
+        "Kamalaya",
+        "Six Senses Samui",
+        "Banyan Tree Samui",
+        "Four Seasons",
+        "Absolute Sanctuary",
+        "Samahita Retreat",
+        "Vikasa",
+        "Bangkok Hospital Samui",
+      ],
     },
     how: {
       eyebrow: "JUST THREE STEPS",

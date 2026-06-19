@@ -1,73 +1,79 @@
 "use client";
 
+import { ArrowRight, MapPin } from "lucide-react";
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
 import { ButtonLink } from "@/components/ui/Button";
 import { useT } from "@/lib/i18n";
 import landing from "@/lib/i18n/dictionaries/landing";
 
 /* ============================================================
- * Hero — full-bleed island image with deep-teal wash,
- * content bottom-aligned, app-like on mobile.
+ * Hero - single wide image band, matching the supplied reference.
  * ============================================================ */
 
 export function Hero() {
   const t = useT(landing).hero;
 
   return (
-    <section className="relative flex min-h-[88svh] flex-col justify-end overflow-hidden">
-      <Image
-        src="/images/well1.jpeg"
-        alt=""
-        fill
-        priority
-        sizes="100vw"
-        className="object-cover"
-      />
-      {/* Deep teal gradient wash for legibility + brand mood */}
-      <div className="absolute inset-0 bg-gradient-to-t from-teal-900 via-teal-900/55 to-teal-900/25" />
-      <div className="absolute inset-0 bg-teal-900/20" />
+    <section className="bg-cream-50 pb-10">
+      <div className="relative min-h-[620px] w-full overflow-hidden bg-teal-950 shadow-deep sm:min-h-[660px] md:min-h-[520px] lg:min-h-[560px]">
+        <Image
+          src="/images/samui-meditation-hero.jpg"
+          alt=""
+          fill
+          priority
+          quality={100}
+          unoptimized
+          sizes="(min-width: 1280px) 1280px, 100vw"
+          className="object-cover object-[24%_center] md:object-center"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-teal-950/84 via-teal-900/44 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-teal-950/34 via-transparent to-transparent" />
 
-      <div className="relative z-10 mx-auto w-full max-w-6xl px-6 pb-16 pt-28 md:pb-24">
-        <p className="eyebrow animate-rise text-gold-200">{t.eyebrow}</p>
+        <div className="relative z-10 mx-auto flex min-h-[620px] w-full max-w-6xl items-center px-6 py-12 sm:min-h-[660px] sm:px-8 md:min-h-[520px] md:py-10 lg:min-h-[560px] lg:px-6">
+          <div className="min-w-0 w-full max-w-[calc(100vw-3rem)] md:max-w-[35rem]">
+            <div className="animate-rise inline-flex w-fit items-center gap-2 rounded-full border border-gold-400/30 bg-teal-950/34 px-3.5 py-2 text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-gold-100 shadow-soft backdrop-blur-md">
+              <MapPin className="h-3.5 w-3.5 text-gold-400" />
+              <span>{t.eyebrow}</span>
+            </div>
 
-        <h1 className="animate-rise-1 mt-4 max-w-3xl whitespace-pre-line font-display text-[2.85rem] font-medium leading-[1.05] text-cream-50 md:text-7xl md:leading-[1.02]">
-          {t.title}
-        </h1>
+            <h1 className="animate-rise-1 mt-5 whitespace-pre-line break-words font-display text-[3.05rem] font-semibold leading-[1.03] text-cream-50 drop-shadow-md [overflow-wrap:anywhere] sm:text-[4rem] md:text-[4.65rem] md:leading-[0.98]">
+              {t.title}
+            </h1>
 
-        <p className="animate-rise-2 mt-6 max-w-xl text-base leading-relaxed text-cream-100/90 md:text-lg">
-          {t.subline}
-        </p>
+            <p className="animate-rise-2 mt-5 whitespace-pre-line break-words text-[0.98rem] font-medium leading-8 text-cream-50/90 drop-shadow-sm [overflow-wrap:anywhere] md:text-base md:leading-7">
+              {t.subline}
+            </p>
 
-        <div className="animate-rise-3 mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
-          <span className="relative w-full sm:w-auto">
-            <span
-              aria-hidden
-              className="pointer-events-none absolute -inset-1 rounded-full bg-gold-400/45 blur-md animate-pulse"
-            />
-            <ButtonLink
-              href="/assessment"
-              variant="gold"
-              size="lg"
-              className="relative w-full justify-center text-base font-semibold shadow-lift ring-1 ring-cream-50/50 transition-transform hover:scale-[1.03] sm:w-auto sm:text-lg"
-            >
-              {t.ctaPrimary}
-              <ArrowRight className="h-5 w-5" />
-            </ButtonLink>
-          </span>
-          <ButtonLink
-            href="/packages"
-            variant="ghost"
-            size="lg"
-            className="w-full text-cream-50 hover:bg-cream-50/10 sm:w-auto"
-          >
-            {t.ctaSecondary}
-          </ButtonLink>
+            <div className="animate-rise-3 mt-6 grid w-full max-w-sm gap-3 sm:inline-flex sm:max-w-none sm:items-center">
+              <ButtonLink
+                href="/assessment"
+                variant="gold"
+                size="lg"
+                className="min-w-0 w-full justify-center px-7 py-3.5 text-sm font-semibold shadow-lift ring-1 ring-cream-50/25 transition-transform hover:scale-[1.02] sm:w-auto"
+              >
+                {t.ctaPrimary}
+                <ArrowRight className="h-5 w-5" />
+              </ButtonLink>
+              <ButtonLink
+                href="/packages"
+                variant="ghost"
+                size="lg"
+                className="min-w-0 w-full border border-cream-50/28 bg-transparent px-7 py-3.5 text-sm !text-cream-50 hover:bg-cream-50/10 sm:w-auto"
+              >
+                {t.ctaSecondary}
+              </ButtonLink>
+            </div>
+
+            <div className="animate-rise-3 mt-6 grid gap-2 text-[0.78rem] font-medium text-cream-50/82 sm:grid-cols-2 md:flex md:w-[48rem] md:flex-wrap md:gap-x-5 md:gap-y-2 md:text-[0.72rem]">
+              {t.highlights.map((item) => (
+                <span key={item} className="inline-flex min-w-0 items-center gap-2">
+                  <span className="h-1.5 w-1.5 flex-none rounded-full bg-gold-400" />
+                  <span className="break-words [overflow-wrap:anywhere]">{item}</span>
+                </span>
+              ))}
+            </div>
+          </div>
         </div>
-
-        <p className="animate-rise-3 mt-4 inline-flex items-center gap-1.5 text-xs font-semibold tracking-wide text-gold-200">
-          {t.ctaNote}
-        </p>
       </div>
     </section>
   );

@@ -1,40 +1,41 @@
 @import "tailwindcss";
 
 @theme {
-  /* ----- Goodfill Care palette (cream / deep teal / soft gold) ----- */
-  --color-cream-50: #fbf8f2;
-  --color-cream-100: #f6f1e7;
-  --color-cream-200: #efe6d4;
-  --color-cream-300: #e4d6bc;
+  /* ----- Goodfill Care palette (mist / deep teal / Samui gold) ----- */
+  --color-cream-50: #f7fffb;
+  --color-cream-100: #eef8f4;
+  --color-cream-200: #ddeee8;
+  --color-cream-300: #c7dfd6;
 
-  --color-teal-50: #eef5f1;
-  --color-teal-100: #deebe6;
-  --color-teal-200: #c2dcd2;
-  --color-teal-300: #95bfb1;
-  --color-teal-500: #2e8377;
-  --color-teal-600: #1a6b60;
-  --color-teal-700: #14524a;
-  --color-teal-800: #103d37;
-  --color-teal-900: #0b312c;
-  --color-teal-950: #07221e;
+  --color-teal-50: #eaf5f1;
+  --color-teal-100: #d7ebe4;
+  --color-teal-200: #b6d7cd;
+  --color-teal-300: #86b7a8;
+  --color-teal-500: #3f746a;
+  --color-teal-600: #285d54;
+  --color-teal-700: #124a40;
+  --color-teal-800: #073d34;
+  --color-teal-900: #00362e;
+  --color-teal-950: #002a23;
 
-  --color-sage-100: #e3ede6;
-  --color-sage-200: #cbdcd2;
-  --color-sage-300: #aec9bc;
+  --color-sage-100: #e0eee8;
+  --color-sage-200: #c2d8cf;
+  --color-sage-300: #9fbdb3;
 
-  --color-gold-100: #f0e7d3;
-  --color-gold-200: #e3d3ae;
-  --color-gold-400: #c8a86e;
-  --color-gold-500: #b99355;
-  --color-gold-600: #9a7740;
+  --color-gold-100: #f5e8c8;
+  --color-gold-200: #ebd495;
+  --color-gold-400: #d2a23b;
+  --color-gold-500: #c7952a;
+  --color-gold-600: #9b6e1e;
 
-  --color-ink: #1d2a27;
-  --color-ink-soft: #44544f;
-  --color-ink-faint: #74827d;
+  --color-ink: #172723;
+  --color-ink-soft: #3d5f57;
+  --color-ink-faint: #71877f;
 
   /* ----- Typography ----- */
-  --font-serif: var(--font-cormorant), var(--font-sarabun), "Cormorant Garamond", Georgia, serif;
-  --font-sans: var(--font-sarabun), var(--font-inter), Inter, system-ui, sans-serif;
+  --font-display: var(--font-kanit), var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
+  --font-serif: var(--font-kanit), var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
+  --font-sans: var(--font-kanit), var(--font-inter), Inter, system-ui, sans-serif;
 
   /* ----- Shadows ----- */
   --shadow-soft: 0 2px 16px rgba(16, 61, 55, 0.07);
@@ -56,7 +57,7 @@ html {
 body {
   background-color: var(--color-cream-100);
   color: var(--color-ink);
-  font-family: var(--font-sans);
+  font-family: var(--font-kanit), var(--font-inter), Inter, system-ui, sans-serif;
   font-size: 16px;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
@@ -64,7 +65,7 @@ body {
 }
 
 h1, h2, h3, .font-display {
-  font-family: var(--font-serif);
+  font-family: var(--font-kanit), var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
   letter-spacing: 0;
 }
 
@@ -155,4 +156,21 @@ p, li, button, input, textarea, select {
 }
 .animate-breathe {
   animation: breathe 5s ease-in-out infinite;
+}
+
+@keyframes brand-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.brand-marquee {
+  animation: brand-marquee 70s linear infinite;
+}
+
+.brand-marquee-reverse {
+  animation: brand-marquee 80s linear infinite reverse;
+}
+
+.brand-rail-mask {
+  mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
 }
