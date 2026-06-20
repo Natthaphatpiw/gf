@@ -59,7 +59,7 @@ const landing = {
       ],
     },
     pillars: {
-      eyebrow: "ครบทุกมิติของการดูแล",
+      eyebrow: "เกาะสมุย ดีท็อกซ์ และดูแลสุขภาพ",
       title: "เวลเนสที่โอบรับคุณทั้งกายและใจ",
       intro:
         "เราเชื่อมโยงทุกบ้านแห่งการดูแลของเกาะสมุยไว้ในที่เดียว แปดมิติที่ทำงานประสานกันเพื่อความเป็นอยู่ที่ดีของคุณอย่างแท้จริง",
@@ -225,7 +225,7 @@ const landing = {
       ],
     },
     pillars: {
-      eyebrow: "EVERY DIMENSION OF CARE",
+      eyebrow: "KOH SAMUI DETOX & WELLNESS CARE",
       title: "Wellness that holds all of you",
       intro:
         "We bring every house of care on Koh Samui into one place — eight dimensions working in concert for your genuine wellbeing.",
