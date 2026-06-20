@@ -18,7 +18,12 @@ export function ExpertsDirectoryClient() {
   const [filter, setFilter] = useState<ExpertFilter>("all");
 
   const filters = useMemo<ExpertFilter[]>(
-    () => ["all", ...EXPERT_CATEGORY_ORDER],
+    () => [
+      "all",
+      ...EXPERT_CATEGORY_ORDER.filter((cat) =>
+        EXPERTS.some((expert) => expert.category === cat),
+      ),
+    ],
     [],
   );
 
