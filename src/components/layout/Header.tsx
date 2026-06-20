@@ -59,11 +59,11 @@ export function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-40 border-b border-teal-900/8 bg-cream-100/90 backdrop-blur-md">
+    <header className="sticky top-0 z-40 border-b border-teal-900/8 bg-cream-50/90 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
         <Logo sub={t.brandSub} />
 
-        <nav className="hidden items-center gap-7 md:flex">
+        <nav className="hidden items-center gap-2 md:flex">
           {links.map((link) => {
             const active =
               link.href === "/"
@@ -73,10 +73,11 @@ export function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`text-[0.8rem] font-medium tracking-wide transition-colors ${
+                aria-current={active ? "page" : undefined}
+                className={`rounded-full px-3.5 py-2 text-[0.8rem] font-semibold tracking-wide transition-all ${
                   active
-                    ? "text-teal-800"
-                    : "text-ink-faint hover:text-teal-700"
+                    ? "bg-gold-500 text-white shadow-soft"
+                    : "text-ink-faint hover:bg-gold-100/70 hover:text-teal-800"
                 }`}
               >
                 {link.label}

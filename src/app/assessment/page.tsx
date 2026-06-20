@@ -121,7 +121,7 @@ export default function AssessmentPage() {
   if (phase === "error") {
     return (
       <div className="mx-auto flex min-h-[70vh] max-w-lg flex-col items-center justify-center px-6 text-center">
-        <h2 className="font-display text-2xl font-semibold text-teal-900">
+        <h2 className="font-display text-2xl font-semibold text-gold-500">
           {t.error.title}
         </h2>
         <p className="mt-3 text-sm text-ink-soft">{tc.errors.generic}</p>
@@ -242,7 +242,7 @@ function Intro({
           <LeafMark className="h-14 w-14" />
         </div>
         <p className="eyebrow">{t.eyebrow}</p>
-        <h1 className="mt-3 font-display text-4xl font-semibold leading-tight text-teal-900 md:text-5xl">
+        <h1 className="mt-3 font-display text-4xl font-semibold leading-tight text-gold-500 md:text-5xl">
           {t.intro.title}
         </h1>
         <div className="ornament mx-auto mt-5 w-44" aria-hidden="true" />
@@ -308,7 +308,7 @@ function Intro({
                     aria-pressed={active}
                     className={`rounded-2xl border px-4 py-3 text-sm font-semibold transition-all ${
                       active
-                        ? "border-teal-700 bg-teal-700 text-cream-50 shadow-soft"
+                        ? "border-teal-500 bg-teal-500 text-white shadow-soft"
                         : "border-teal-900/10 bg-white text-teal-800 hover:border-teal-300"
                     }`}
                   >

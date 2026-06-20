@@ -25,7 +25,7 @@ export function WellnessTypes() {
   const t = useT(landing).wellnessTypes;
 
   return (
-    <section className="bg-white">
+    <section className="w-full bg-white">
       <div className="mx-auto max-w-6xl px-4 py-7 md:px-6 md:py-8">
         <h2 className="sr-only">{t.title}</h2>
         <div className="-mx-4 overflow-x-auto px-4 pb-1 no-scrollbar md:mx-0 md:overflow-visible md:px-0 md:pb-0">

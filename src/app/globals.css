@@ -2,34 +2,34 @@
 
 @theme {
   /* ----- Goodfill Care palette (mist / deep teal / Samui gold) ----- */
-  --color-cream-50: #f7fbf9;
-  --color-cream-100: #f2faf6;
-  --color-cream-200: #e2f1ec;
-  --color-cream-300: #c8e0d6;
+  --color-cream-50: #FAF6E8;
+  --color-cream-100: #FAF6E8;
+  --color-cream-200: #F3EEDC;
+  --color-cream-300: #EAE2CC;
 
-  --color-teal-50: #ebf6f2;
-  --color-teal-100: #d9ece5;
-  --color-teal-200: #b8dad0;
-  --color-teal-300: #8bbab0;
-  --color-teal-500: #3e625a;
-  --color-teal-600: #2d5048;
-  --color-teal-700: #1e4038;
-  --color-teal-800: #112f28;
+  --color-teal-50: #FAF6E8;
+  --color-teal-100: #F3EEDC;
+  --color-teal-200: #DCD3B8;
+  --color-teal-300: #15B5AA;
+  --color-teal-500: #066E6F;
+  --color-teal-600: #0C5F55;
+  --color-teal-700: #0C5F55;
+  --color-teal-800: #3D5C57;
   --color-teal-900: #09241f;
   --color-teal-950: #052c24;
 
-  --color-sage-100: #ebf3f0;
-  --color-sage-200: #cde0d9;
-  --color-sage-300: #a3c1b6;
+  --color-sage-100: #FAF6E8;
+  --color-sage-200: #F3EEDC;
+  --color-sage-300: #DCD3B8;
 
-  --color-gold-100: #f9f0d7;
-  --color-gold-200: #f3e0af;
-  --color-gold-400: #e4be63;
-  --color-gold-500: #d59f2a;
-  --color-gold-600: #a67718;
+  --color-gold-100: #FDF4DF;
+  --color-gold-200: #F9E7BE;
+  --color-gold-400: #E6B53B;
+  --color-gold-500: #C59622;
+  --color-gold-600: #C59622;
 
   --color-ink: #052c24;
-  --color-ink-soft: #3e625a;
+  --color-ink-soft: #3D5C57;
   --color-ink-faint: #6c8982;
 
   /* ----- Typography ----- */

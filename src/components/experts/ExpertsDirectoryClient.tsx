@@ -38,7 +38,7 @@ export function ExpertsDirectoryClient() {
         <div className="mx-auto max-w-6xl px-4 py-12 md:px-6 md:py-16">
           <div className="max-w-[44rem] animate-rise">
             <p className="eyebrow">{t.directory.eyebrow}</p>
-            <h1 className="mt-3 font-display text-3xl font-semibold leading-tight text-teal-900 md:text-[2.35rem]">
+            <h1 className="mt-3 font-display text-3xl font-semibold leading-tight text-gold-500 md:text-[2.35rem]">
               {t.directory.title}
             </h1>
             <p className="mt-4 text-[0.92rem] leading-relaxed text-ink-soft md:text-base">
@@ -57,7 +57,7 @@ export function ExpertsDirectoryClient() {
         <div className="mx-auto max-w-6xl px-4 py-10 md:px-6 md:py-14">
           <div className="grid gap-7 md:grid-cols-[minmax(0,0.8fr)_minmax(0,1fr)] md:items-start md:gap-12">
             <div>
-              <h2 className="font-display text-2xl font-semibold leading-tight text-teal-900 md:text-[2rem]">
+              <h2 className="font-display text-2xl font-semibold leading-tight text-gold-500 md:text-[2rem]">
                 {t.directory.trust.title}
               </h2>
               <p className="mt-3 text-[0.88rem] leading-relaxed text-ink-soft md:text-[0.95rem]">
@@ -88,7 +88,7 @@ export function ExpertsDirectoryClient() {
           <div className="mb-5 flex flex-col gap-4 md:mb-7 md:flex-row md:items-end md:justify-between">
             <div>
               <p className="eyebrow">{t.directory.filterLabel}</p>
-              <h2 className="mt-2 font-display text-2xl font-semibold text-teal-900 md:text-[2rem]">
+              <h2 className="mt-2 font-display text-2xl font-semibold text-gold-500 md:text-[2rem]">
                 {t.directory.rosterTitle}
               </h2>
             </div>

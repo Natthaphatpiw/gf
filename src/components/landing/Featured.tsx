@@ -24,17 +24,18 @@ export function Featured() {
   );
 
   return (
-    <section className="mx-auto max-w-6xl px-6 py-20 md:py-28">
-      <div className="mx-auto max-w-2xl text-center">
-        <p className="eyebrow">{t.eyebrow}</p>
-        <h2 className="mt-3 font-display text-3xl font-medium leading-tight text-teal-900 md:text-4xl">
-          {t.title}
-        </h2>
-        <div className="ornament my-6" />
-        <p className="text-sm leading-relaxed text-ink-soft md:text-base">
-          {t.intro}
-        </p>
-      </div>
+    <section className="bg-cream-50 py-20 md:py-28">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="mx-auto max-w-2xl text-center">
+          <p className="eyebrow">{t.eyebrow}</p>
+          <h2 className="mt-3 font-display text-3xl font-medium leading-tight text-gold-500 md:text-4xl">
+            {t.title}
+          </h2>
+          <div className="ornament my-6" />
+          <p className="text-sm leading-relaxed text-ink-soft md:text-base">
+            {t.intro}
+          </p>
+        </div>
 
       <div className="mt-12 grid gap-6 md:grid-cols-3">
         {packages.map((pkg) => (
@@ -47,6 +48,7 @@ export function Featured() {
           {t.cta}
           <ArrowRight className="h-4 w-4" />
         </ButtonLink>
+      </div>
       </div>
     </section>
   );

@@ -143,7 +143,7 @@ export default function PackagesPage() {
       {/* Page header */}
       <header className="animate-rise mb-8 text-center md:mb-12">
         <p className="eyebrow">{t.page.eyebrow}</p>
-        <h1 className="mt-2 font-display text-4xl font-semibold text-teal-900 md:text-5xl">
+        <h1 className="mt-2 font-display text-4xl font-semibold text-gold-500 md:text-5xl">
           {t.page.title}
         </h1>
         <div className="ornament mt-4" />
@@ -184,7 +184,7 @@ export default function PackagesPage() {
               <span className="animate-breathe absolute inset-0 rounded-full bg-teal-100" />
               <Loader2 className="relative h-7 w-7 animate-spin text-teal-700" />
             </span>
-            <h2 className="mt-5 font-display text-2xl font-semibold text-teal-900">
+            <h2 className="mt-5 font-display text-2xl font-semibold text-gold-500">
               {t.curate.loadingTitle}
             </h2>
             <p className="mt-2 max-w-xs text-sm leading-relaxed text-ink-soft">

@@ -40,13 +40,13 @@ export function GoalSelector({
             aria-pressed={active}
             className={`relative flex items-start gap-3.5 rounded-2xl border p-4 text-left transition-all duration-300 ${
               active
-                ? "border-teal-700 bg-teal-700 text-cream-50 shadow-lift"
+                ? "border-gold-500 bg-gold-500 text-white shadow-lift"
                 : "border-teal-900/10 bg-white text-ink hover:border-teal-300 hover:shadow-soft"
             }`}
           >
             <span
               className={`grid h-11 w-11 shrink-0 place-items-center rounded-xl transition-colors duration-300 ${
-                active ? "bg-cream-50/15 text-cream-50" : "bg-teal-50 text-teal-700"
+                active ? "bg-white/20 text-white" : "bg-teal-50 text-teal-700"
               }`}
             >
               <Icon className="h-5 w-5" strokeWidth={1.6} />
@@ -61,7 +61,7 @@ export function GoalSelector({
                   <span
                     className={`shrink-0 rounded-full px-2 py-0.5 text-[0.6rem] font-semibold uppercase tracking-wide ${
                       active
-                        ? "bg-cream-50/20 text-cream-50"
+                        ? "bg-white/20 text-white"
                         : "bg-gold-100 text-gold-600"
                     }`}
                   >
@@ -71,7 +71,7 @@ export function GoalSelector({
               </span>
               <span
                 className={`mt-1 block text-xs leading-relaxed ${
-                  active ? "text-cream-50/85" : "text-ink-soft"
+                  active ? "text-white/85" : "text-ink-soft"
                 }`}
               >
                 {l(goal.description)}
@@ -79,7 +79,7 @@ export function GoalSelector({
             </span>
 
             {active && (
-              <Check className="absolute right-3 top-3 h-4 w-4 text-cream-50" />
+              <Check className="absolute right-3 top-3 h-4 w-4 text-white" />
             )}
           </button>
         );

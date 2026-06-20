@@ -5,21 +5,22 @@ import landing from "@/lib/i18n/dictionaries/landing";
 
 /* ============================================================
  * TrustStrip - non-clickable hotel and wellness place names.
+ * Displays partner names in an elegant text-based horizontal strip.
+ * Styled in warm champagne gold with no line breaks.
  * ============================================================ */
 
 export function TrustStrip() {
   const t = useT(landing).trust;
-  const rail = [...t.partners, ...t.partners];
 
   return (
-    <section className="overflow-hidden bg-cream-50 py-12 md:py-16">
+    <section className="overflow-hidden bg-[#FAF6E8] py-10 md:py-14">
       <div className="mx-auto max-w-6xl px-6">
         <div className="mx-auto max-w-3xl text-center">
-          <p className="eyebrow">{t.eyebrow}</p>
-          <h2 className="mt-3 whitespace-pre-line break-words font-display text-[1.95rem] font-semibold leading-tight text-teal-900 [overflow-wrap:anywhere] sm:text-3xl md:text-[2.45rem]">
+          <p className="eyebrow text-gold-600 tracking-[0.16em]">{t.eyebrow}</p>
+          <h2 className="mt-3 font-display text-2xl font-semibold leading-tight text-gold-500 sm:text-3xl md:text-4xl">
             {t.title}
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl break-words text-sm font-medium leading-7 text-ink-soft [overflow-wrap:anywhere] md:text-base">
+          <p className="mx-auto mt-4 max-w-2xl text-sm font-medium leading-relaxed text-ink-soft md:text-base">
             {t.intro}
           </p>
         </div>
@@ -27,33 +28,16 @@ export function TrustStrip() {
 
       <div
         aria-label={t.listLabel}
-        className="mt-9 border-y border-teal-900/12 bg-teal-950 py-5 text-cream-50 shadow-soft"
+        className="mt-10 border-y border-teal-700/20 bg-teal-50 py-6 shadow-soft bg-gradient-to-r from-teal-500 to-teal-500"
       >
-        <div className="brand-rail-mask overflow-hidden">
-          <ul className="brand-marquee flex w-max items-center gap-9 whitespace-nowrap pr-9">
-            {rail.map((name, index) => (
+        <div className="w-full overflow-x-auto no-scrollbar px-6 md:px-12">
+          <ul className="flex flex-nowrap items-center justify-start md:justify-center gap-x-8 md:gap-x-12 py-1 mx-auto w-max min-w-full md:min-w-0">
+            {t.partners.map((name) => (
               <li
-                key={`${name}-${index}`}
-                aria-hidden={index >= t.partners.length}
-                className="inline-flex items-center gap-9 font-display text-[1.35rem] font-semibold leading-none tracking-wide text-cream-50 md:text-[1.75rem]"
+                key={name}
+                className="font-sans text-xs font-semibold tracking-widest text-gold-500 whitespace-nowrap sm:text-sm md:text-[15px] hover:text-gold-200 transition-colors duration-300 px-2"
               >
-                <span>{name}</span>
-                <span className="h-1.5 w-1.5 rounded-full bg-gold-400" />
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div className="brand-rail-mask mt-4 overflow-hidden">
-          <ul className="brand-marquee-reverse flex w-max items-center gap-9 whitespace-nowrap pr-9">
-            {rail.map((name, index) => (
-              <li
-                key={`${name}-reverse-${index}`}
-                aria-hidden={index >= t.partners.length}
-                className="inline-flex items-center gap-9 font-display text-[1.05rem] font-semibold leading-none tracking-wide text-gold-200/92 md:text-[1.35rem]"
-              >
-                <span>{name}</span>
-                <span className="h-px w-8 bg-gold-400/70" />
+                {name}
               </li>
             ))}
           </ul>

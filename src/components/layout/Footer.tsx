@@ -18,7 +18,7 @@ export function Footer() {
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
         <div className="flex flex-col items-start justify-between gap-8 md:flex-row md:items-center">
           <div className="flex items-center gap-3 text-cream-50">
-            <LeafMark className="h-10 w-10" />
+            <LeafMark className="h-10 w-10" variant="white" />
             <div>
               <p className="font-display text-xl font-semibold tracking-wide">
                 Goodfill Care

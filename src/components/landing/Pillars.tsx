@@ -32,14 +32,14 @@ const ICONS: LucideIcon[] = [
 ];
 
 const IMAGES: string[] = [
-  "/previews/pre1.webp",
-  "/previews/pre2.jpg",
-  "/previews/pre3.jpg",
-  "/previews/pre4.jpg",
-  "/previews/pre5.webp",
-  "/previews/pre6.webp",
-  "/previews/pre7.webp",
-  "/previews/pre8.jpg",
+  "/images/pe/b1.png",
+  "/images/pillar/Spa%20%26%20Thai%20Healing.jpg",
+  "/images/pillar/mind.jpg",
+  "/images/pillar/fitness.jpg",
+  "/images/pillar/food.jpg",
+  "/images/pillar/physician.jpg",
+  "/images/pillar/nature.jpg",
+  "/images/pillar/assistant.jpg",
 ];
 
 export function Pillars() {
@@ -50,7 +50,7 @@ export function Pillars() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="mx-auto max-w-2xl text-center">
           <p className="eyebrow">{t.eyebrow}</p>
-          <h2 className="mt-3 font-display text-3xl font-medium leading-tight text-teal-900 md:text-4xl">
+          <h2 className="mt-3 font-display text-3xl font-medium leading-tight text-gold-500 md:text-4xl">
             {t.title}
           </h2>
           <div className="ornament my-6" />
@@ -66,7 +66,7 @@ export function Pillars() {
             return (
               <div
                 key={item.name}
-                className="group relative overflow-hidden rounded-3xl aspect-[4/3] w-full shadow-soft transition-all duration-500 hover:-translate-y-1 hover:shadow-lift"
+                className="group relative overflow-hidden rounded-3xl aspect-[3/4] w-full shadow-soft transition-all duration-500 hover:-translate-y-1 hover:shadow-lift"
               >
                 {/* Background image */}
                 <Image

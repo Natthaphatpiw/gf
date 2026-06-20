@@ -36,7 +36,7 @@ export function OrdersClient() {
     <div className="mx-auto max-w-3xl px-4 py-8 md:px-6 md:py-12">
       <header className="mb-7 text-center">
         <p className="eyebrow">Goodfill Care</p>
-        <h1 className="mt-2 font-display text-3xl font-semibold text-teal-900 md:text-4xl">
+        <h1 className="mt-2 font-display text-3xl font-semibold text-gold-500 md:text-4xl">
           {t.orders.title}
         </h1>
         <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-ink-soft">

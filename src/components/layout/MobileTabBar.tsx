@@ -35,7 +35,7 @@ export function MobileTabBar() {
               key={tab.href}
               href={tab.href}
               className={`flex flex-col items-center gap-1 py-2.5 transition-colors ${
-                active ? "text-teal-800" : "text-ink-faint"
+                active ? "text-teal-500" : "text-ink-faint"
               }`}
             >
               <Icon

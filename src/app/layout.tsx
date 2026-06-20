@@ -37,6 +37,10 @@ export const metadata: Metadata = {
   title: "Goodfill Care — Samui Wellness",
   description:
     "A personal wellness journey on Koh Samui — assessment, curated packages and expert care, crafted for you.",
+  icons: {
+    icon: "/icon.ico",
+    apple: "/icon.ico",
+  },
 };
 
 export const viewport: Viewport = {

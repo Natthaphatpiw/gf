@@ -27,7 +27,7 @@ export function SimpleExperts() {
       <div className="mx-auto max-w-4xl px-4 py-12 md:px-6 md:py-16">
         <div className="text-center">
           <p className="eyebrow">{t.eyebrow}</p>
-          <h2 className="mt-2 font-display text-3xl font-semibold leading-tight text-teal-900 md:text-[2.05rem]">
+          <h2 className="mt-2 font-display text-3xl font-semibold leading-tight text-gold-500 md:text-[2.05rem]">
             {t.title}
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-[0.9rem] leading-relaxed text-ink-soft">
