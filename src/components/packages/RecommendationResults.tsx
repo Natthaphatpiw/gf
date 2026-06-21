@@ -35,13 +35,13 @@ export function RecommendationResults({
 
   return (
     <section className="space-y-8">
-      <header className="animate-rise rounded-[1.4rem] border border-teal-900 bg-gold-100/70 px-5 py-7 text-center shadow-soft md:px-8">
-        <p className="eyebrow">{t.resultsEyebrow}</p>
-        <h2 className="mt-2 font-display text-3xl font-semibold text-teal-900 md:text-4xl">
+      <header className="animate-rise rounded-[1.4rem] bg-[#1B3B36] px-5 py-7 text-center shadow-soft md:px-8">
+        <p className="eyebrow text-gold-200">{t.resultsEyebrow}</p>
+        <h2 className="mt-2 font-display text-3xl font-semibold text-cream-50 md:text-4xl">
           {t.resultsTitle}
         </h2>
         <div className="ornament mt-4" />
-        <p className="mx-auto mt-4 max-w-md text-sm leading-relaxed text-ink-soft">
+        <p className="mx-auto mt-4 max-w-md text-sm leading-relaxed text-cream-100/85">
           {t.resultsBody}
         </p>
         <button

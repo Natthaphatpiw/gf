@@ -50,7 +50,7 @@ export function Pillars() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="mx-auto max-w-2xl text-center">
           <p className="eyebrow">{t.eyebrow}</p>
-          <h2 className="mt-3 font-display text-3xl font-medium leading-tight text-gold-500 md:text-4xl">
+          <h2 className="mt-3 font-display text-2xl font-semibold leading-tight text-teal-900 sm:text-3xl md:text-4xl">
             {t.title}
           </h2>
           <div className="ornament my-6" />

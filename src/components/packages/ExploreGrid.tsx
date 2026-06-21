@@ -35,7 +35,7 @@ export function ExploreGrid() {
     <section className="space-y-6">
       <header className="animate-rise text-center">
         <p className="eyebrow">{t.eyebrow}</p>
-        <h2 className="mt-2 font-display text-3xl font-semibold text-gold-500 md:text-4xl">
+        <h2 className="mt-2 font-display text-3xl font-semibold text-teal-900 md:text-4xl">
           {t.title}
         </h2>
         <div className="ornament mt-4" />

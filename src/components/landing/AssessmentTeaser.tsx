@@ -30,7 +30,7 @@ export function AssessmentTeaser() {
 
         <div className="p-8 md:p-12">
           <p className="eyebrow">{t.eyebrow}</p>
-          <h2 className="mt-3 font-display text-3xl font-medium leading-tight text-gold-500 md:text-4xl">
+          <h2 className="mt-3 font-display text-2xl font-semibold leading-tight text-teal-900 sm:text-3xl md:text-4xl">
             {t.title}
           </h2>
           <p className="mt-5 text-sm leading-relaxed text-ink-soft md:text-base">

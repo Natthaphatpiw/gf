@@ -27,7 +27,7 @@ export function SimpleExperts() {
       <div className="mx-auto max-w-4xl px-4 py-12 md:px-6 md:py-16">
         <div className="text-center">
           <p className="eyebrow">{t.eyebrow}</p>
-          <h2 className="mt-2 font-display text-3xl font-semibold leading-tight text-gold-500 md:text-[2.05rem]">
+          <h2 className="mt-3 font-display text-2xl font-semibold leading-tight text-teal-900 sm:text-3xl md:text-4xl">
             {t.title}
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-[0.9rem] leading-relaxed text-ink-soft">
@@ -43,14 +43,14 @@ export function SimpleExperts() {
               onClick={() => setActive(e)}
               className="group flex items-center gap-4 rounded-3xl border border-teal-900/10 bg-white p-4 text-left shadow-soft transition-all hover:-translate-y-0.5 hover:shadow-lift"
             >
-              <span className="relative h-20 w-16 flex-none overflow-hidden rounded-2xl bg-teal-900">
+              <span className="relative h-20 w-16 flex-none overflow-hidden rounded-2xl bg-white">
                 {e.image && (
                   <Image
                     src={e.image}
                     alt={l(e.name)}
                     fill
                     sizes="64px"
-                    className="object-cover"
+                    className="scale-105 object-cover"
                     style={{ objectPosition: "top center" }}
                   />
                 )}
@@ -118,14 +118,14 @@ function ExpertPopup({
         </button>
 
         <div className="flex items-center gap-4">
-          <span className="relative h-24 w-20 flex-none overflow-hidden rounded-2xl bg-teal-900">
+          <span className="relative h-24 w-20 flex-none overflow-hidden rounded-2xl bg-white">
             {expert.image && (
               <Image
                 src={expert.image}
                 alt={l(expert.name)}
                 fill
                 sizes="80px"
-                className="object-cover"
+                className="scale-105 object-cover"
                 style={{ objectPosition: "top center" }}
               />
             )}

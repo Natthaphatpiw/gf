@@ -51,7 +51,7 @@ export default function ResultPage() {
         <div className="mb-5 grid h-16 w-16 place-items-center rounded-full bg-teal-50 text-teal-600">
           <Compass className="h-8 w-8" strokeWidth={1.5} />
         </div>
-        <h1 className="font-display text-2xl font-semibold text-gold-500">
+        <h1 className="font-display text-2xl font-semibold text-teal-900">
           {t.result.empty.title}
         </h1>
         <p className="mt-3 text-sm leading-relaxed text-ink-soft">
@@ -98,7 +98,7 @@ export default function ResultPage() {
 
           <div className="min-w-0">
             <p className="eyebrow">{t.result.heroEyebrow}</p>
-            <h1 className="mt-3 font-display text-4xl font-semibold leading-tight text-gold-500 sm:text-5xl md:text-6xl">
+            <h1 className="mt-3 font-display text-4xl font-semibold leading-tight text-teal-900 sm:text-5xl md:text-6xl">
               {l(profile.archetype.name)}
             </h1>
             <p className="mt-4 max-w-2xl text-sm leading-relaxed text-ink-soft sm:text-base">
@@ -132,7 +132,7 @@ export default function ResultPage() {
       <section className="animate-rise-1 mt-10">
         <div className="text-center">
           <p className="eyebrow">{t.result.dialEyebrow}</p>
-          <h2 className="mt-2 font-display text-3xl font-semibold text-gold-500 md:text-4xl">
+          <h2 className="mt-2 font-display text-3xl font-semibold text-teal-900 md:text-4xl">
             {t.result.dialTitle}
           </h2>
         </div>
@@ -168,7 +168,7 @@ export default function ResultPage() {
           <div className="grid gap-6 md:grid-cols-[0.7fr_1fr] md:gap-10">
             <div>
               <p className="eyebrow">{t.result.traitsEyebrow}</p>
-              <h2 className="mt-2 font-display text-3xl font-semibold leading-tight text-gold-500">
+              <h2 className="mt-2 font-display text-3xl font-semibold leading-tight text-teal-900">
                 {t.result.traitsTitle}
               </h2>
               <p className="mt-3 text-sm leading-relaxed text-ink-soft">
@@ -201,7 +201,7 @@ export default function ResultPage() {
 
       {/* ---------- share ---------- */}
       <section className="animate-rise mx-auto mt-8 max-w-3xl rounded-3xl border border-teal-900/10 bg-white p-6 text-center shadow-soft md:p-7">
-        <h2 className="font-display text-xl font-semibold text-gold-500">
+        <h2 className="font-display text-xl font-semibold text-teal-900">
           {t.result.shareTitle}
         </h2>
         <p className="mx-auto mt-2 max-w-sm text-sm leading-relaxed text-ink-soft">
@@ -219,7 +219,7 @@ export default function ResultPage() {
       <section className="animate-rise mx-auto mt-10 max-w-3xl">
         <div className="text-center">
           <div className="ornament mx-auto mb-4 w-40" aria-hidden="true" />
-          <h2 className="font-display text-2xl font-semibold leading-snug text-gold-500 md:text-3xl">
+          <h2 className="font-display text-2xl font-semibold leading-snug text-teal-900 md:text-3xl">
             {t.result.goalsTitle}
           </h2>
           <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-ink-soft">
