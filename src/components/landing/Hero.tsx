@@ -17,7 +17,7 @@ export function Hero() {
     <section className="bg-cream-50 pb-10">
       <div className="relative min-h-[620px] w-full overflow-hidden bg-teal-950 shadow-deep sm:min-h-[660px] md:min-h-[520px] lg:min-h-[560px]">
         <Image
-          src="/images/samui-meditation-hero.jpg"
+          src="/images/hero.jpg"
           alt=""
           fill
           priority
