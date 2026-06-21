@@ -16,7 +16,7 @@ export function TrustStrip() {
     <section className="overflow-hidden bg-cream-50 py-10 md:py-14">
       <div className="mx-auto max-w-6xl px-6">
         <div className="mx-auto max-w-3xl text-center">
-          <p className="eyebrow text-gold-600 tracking-[0.16em]">{t.eyebrow}</p>
+          <p className="eyebrow text-gold-600">{t.eyebrow}</p>
           <h2 className="mt-3 font-display text-2xl font-semibold leading-tight text-teal-900 sm:text-3xl md:text-4xl">
             {t.title}
           </h2>

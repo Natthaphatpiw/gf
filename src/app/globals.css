@@ -84,7 +84,38 @@ p, li, button, input, textarea, select {
 }
 
 :lang(th) .eyebrow {
-  letter-spacing: 0.16em;
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+
+:lang(th) .th-type {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+:lang(th) .quote-attribution {
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+
+/* Thai glyphs break apart when letter-spacing / uppercase chip styles are applied */
+:lang(th) .uppercase {
+  text-transform: none;
+}
+
+:lang(th) [class*="tracking-"] {
+  --tw-tracking: 0;
+  letter-spacing: 0;
+}
+
+@media (max-width: 640px) {
+  :lang(th) h1,
+  :lang(th) h2,
+  :lang(th) h3,
+  :lang(th) .font-display {
+    word-break: normal;
+    overflow-wrap: normal;
+  }
 }
 
 @media (max-width: 640px) {

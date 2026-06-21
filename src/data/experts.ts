@@ -101,10 +101,6 @@ export const EXPERTS: ExpertProfile[] = [
         en: "Former director of Chana Hospital, Songkhla.",
       },
       {
-        th: "เคยมีชื่อในบัญชีผู้มีคุณสมบัติเข้ารับการสรรหาเป็นกรรมการเขตสุขภาพเพื่อประชาชน เขตพื้นที่ 13 กรุงเทพมหานคร",
-        en: "Listed as a qualified candidate for a public health district committee in Bangkok Health Area 13.",
-      },
-      {
         th: "ประสบการณ์ผู้บริหารฝ่ายการแพทย์และงานพัฒนาคุณภาพบริการในโรงพยาบาลเอกชน",
         en: "Experience in medical executive work and service quality development in private hospitals.",
       },

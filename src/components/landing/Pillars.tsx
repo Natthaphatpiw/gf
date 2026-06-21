@@ -32,14 +32,14 @@ const ICONS: LucideIcon[] = [
 ];
 
 const IMAGES: string[] = [
-  "/images/pe/b1.png",
-  "/images/pillar/Spa%20%26%20Thai%20Healing.jpg",
-  "/images/pillar/mind.jpg",
-  "/images/pillar/fitness.jpg",
-  "/images/pillar/food.jpg",
-  "/images/pillar/physician.jpg",
-  "/images/pillar/nature.jpg",
-  "/images/pillar/assistant.jpg",
+  "/images/opt/wellness-stay.jpg",
+  "/images/opt/spa-healing.jpg",
+  "/images/opt/mind.jpg",
+  "/images/opt/fitness.jpg",
+  "/images/opt/food.jpg",
+  "/images/opt/physician.jpg",
+  "/images/opt/nature.jpg",
+  "/images/opt/assistant.jpg",
 ];
 
 export function Pillars() {
@@ -73,6 +73,7 @@ export function Pillars() {
                   src={bgImage}
                   alt={item.name}
                   fill
+                  quality={90}
                   sizes="(min-width: 768px) 25vw, 50vw"
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                   priority={i < 4}

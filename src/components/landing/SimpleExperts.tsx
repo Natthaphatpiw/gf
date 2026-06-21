@@ -2,17 +2,15 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { BadgeCheck, X } from "lucide-react";
+import { X } from "lucide-react";
 import { getFeaturedExperts, type ExpertProfile } from "@/data/experts";
 import { useL, useT } from "@/lib/i18n";
 import landing from "@/lib/i18n/dictionaries/landing";
 import { lockScroll, unlockScroll } from "@/lib/scroll-lock";
 
 /* ============================================================
- * SimpleExperts — the trimmed expert section: just the two
- * experts we have verified data for, shown as name + title.
- * Tapping a card opens a concise popup; no sprawling detail
- * page, no carousel of stubs.
+ * SimpleExperts — warm, human expert cards with portrait,
+ * personal quote and a soft popup for fuller detail.
  * ============================================================ */
 
 export function SimpleExperts() {
@@ -23,52 +21,66 @@ export function SimpleExperts() {
   const experts = getFeaturedExperts();
 
   return (
-    <section className="bg-cream-100">
-      <div className="mx-auto max-w-4xl px-4 py-12 md:px-6 md:py-16">
-        <div className="text-center">
+    <section className="relative overflow-hidden bg-gradient-to-b from-cream-100 via-cream-50 to-teal-50/35">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -right-16 top-8 h-56 w-56 rounded-full bg-gold-200/25 blur-3xl"
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -left-20 bottom-0 h-64 w-64 rounded-full bg-teal-200/20 blur-3xl"
+      />
+
+      <div className="relative mx-auto max-w-4xl px-4 py-14 md:px-6 md:py-20">
+        <div className="mx-auto max-w-2xl text-center">
           <p className="eyebrow">{t.eyebrow}</p>
-          <h2 className="mt-3 font-display text-2xl font-semibold leading-tight text-teal-900 sm:text-3xl md:text-4xl">
+          <h2 className="mt-3 font-display text-2xl font-semibold leading-snug text-teal-900 sm:text-3xl md:text-4xl">
             {t.title}
           </h2>
-          <p className="mx-auto mt-3 max-w-xl text-[0.9rem] leading-relaxed text-ink-soft">
+          <div className="ornament my-5" />
+          <p className="text-[0.92rem] leading-relaxed text-ink-soft md:text-base">
             {t.intro}
           </p>
         </div>
 
-        <div className="mt-8 grid gap-4 sm:grid-cols-2">
+        <div className="mt-10 grid gap-6 sm:grid-cols-2">
           {experts.map((e) => (
             <button
               key={e.id}
               type="button"
               onClick={() => setActive(e)}
-              className="group flex items-center gap-4 rounded-3xl border border-teal-900/10 bg-white p-4 text-left shadow-soft transition-all hover:-translate-y-0.5 hover:shadow-lift"
+              className="group flex flex-col overflow-hidden rounded-[1.75rem] border border-teal-900/8 bg-cream-50/95 text-left shadow-soft transition-all duration-500 hover:-translate-y-1 hover:border-teal-700/15 hover:shadow-lift"
             >
-              <span className="relative h-20 w-16 flex-none overflow-hidden rounded-2xl bg-white">
-                {e.image && (
-                  <Image
-                    src={e.image}
-                    alt={l(e.name)}
-                    fill
-                    sizes="64px"
-                    className="scale-105 object-cover"
-                    style={{ objectPosition: "top center" }}
-                  />
-                )}
-              </span>
-              <span className="min-w-0 flex-1">
-                <span className="flex items-center gap-1.5">
-                  <span className="font-display text-lg font-semibold text-teal-900">
-                    {l(e.name)}
-                  </span>
-                  {e.isVerified && <BadgeCheck className="h-4 w-4 flex-none text-teal-600" />}
+              <div className="px-6 pt-8 pb-5 text-center">
+                <span className="relative mx-auto block h-[7.25rem] w-[7.25rem] overflow-hidden rounded-full bg-cream-200 shadow-soft ring-2 ring-gold-300/45 ring-offset-[3px] ring-offset-cream-50">
+                  {e.image && (
+                    <Image
+                      src={e.image}
+                      alt={l(e.name)}
+                      fill
+                      unoptimized
+                      sizes="116px"
+                      className="object-cover object-top contrast-[1.03] saturate-[1.04]"
+                    />
+                  )}
                 </span>
-                <span className="mt-0.5 block text-[0.84rem] leading-snug text-ink-soft">
+                <h3 className="mt-5 font-display text-[1.15rem] font-semibold leading-snug text-teal-900">
+                  {l(e.name)}
+                </h3>
+                <p className="mt-1.5 text-[0.84rem] leading-relaxed text-ink-soft">
                   {l(e.title)}
+                </p>
+              </div>
+
+              <blockquote className="flex-1 px-6 pb-5 text-center font-display text-[0.9rem] italic leading-relaxed text-teal-800/92">
+                “{l(e.quote)}”
+              </blockquote>
+
+              <div className="border-t border-teal-900/6 bg-white/40 px-6 py-4 text-center">
+                <span className="text-[0.82rem] font-medium text-teal-700 transition-colors group-hover:text-teal-900">
+                  {t.viewProfile}
                 </span>
-                <span className="mt-1.5 inline-block text-[0.76rem] font-semibold text-gold-600 transition-transform group-hover:translate-x-0.5">
-                  {t.viewProfile} →
-                </span>
-              </span>
+              </div>
             </button>
           ))}
         </div>
@@ -117,49 +129,42 @@ function ExpertPopup({
           <X className="h-5 w-5" />
         </button>
 
-        <div className="flex items-center gap-4">
-          <span className="relative h-24 w-20 flex-none overflow-hidden rounded-2xl bg-white">
+        <div className="text-center">
+          <span className="relative mx-auto block h-28 w-28 overflow-hidden rounded-full bg-cream-200 shadow-soft ring-2 ring-gold-300/45 ring-offset-[3px] ring-offset-cream-50">
             {expert.image && (
               <Image
                 src={expert.image}
                 alt={l(expert.name)}
                 fill
-                sizes="80px"
-                className="scale-105 object-cover"
-                style={{ objectPosition: "top center" }}
+                unoptimized
+                sizes="112px"
+                className="object-cover object-top contrast-[1.03] saturate-[1.04]"
               />
             )}
           </span>
-          <div className="min-w-0">
-            <h3 className="font-display text-xl font-semibold leading-snug text-teal-900">
-              {l(expert.name)}
-            </h3>
-            <p className="mt-0.5 text-[0.86rem] text-ink-soft">{l(expert.title)}</p>
-            {expert.isVerified && (
-              <span className="mt-1.5 inline-flex items-center gap-1 text-[0.74rem] font-semibold text-teal-700">
-                <BadgeCheck className="h-3.5 w-3.5" />
-                {t.verified}
-              </span>
-            )}
-          </div>
+          <h3 className="mt-5 font-display text-xl font-semibold leading-snug text-teal-900">
+            {l(expert.name)}
+          </h3>
+          <p className="mt-1 text-[0.88rem] leading-relaxed text-ink-soft">{l(expert.title)}</p>
+          {expert.isVerified && (
+            <p className="mt-2 text-[0.74rem] text-teal-700">{t.verified}</p>
+          )}
         </div>
 
-        <p className="mt-4 rounded-2xl bg-teal-50/70 px-4 py-3 text-[0.86rem] italic leading-relaxed text-teal-800">
+        <blockquote className="mt-5 rounded-2xl border border-teal-900/8 bg-teal-50/60 px-5 py-4 text-center font-display text-[0.92rem] italic leading-relaxed text-teal-800">
           “{l(expert.quote)}”
-        </p>
+        </blockquote>
 
-        <p className="mt-4 text-[0.88rem] leading-relaxed text-ink">{l(expert.shortBio)}</p>
+        <p className="mt-5 text-[0.88rem] leading-relaxed text-ink">{l(expert.shortBio)}</p>
 
         {expert.specialties.length > 0 && (
-          <div className="mt-4">
-            <p className="text-[0.66rem] font-semibold uppercase tracking-[0.12em] text-gold-600">
-              {t.specialties}
-            </p>
-            <div className="mt-2 flex flex-wrap gap-1.5">
+          <div className="mt-5">
+            <p className="text-[0.72rem] font-semibold text-gold-600">{t.specialties}</p>
+            <div className="mt-2.5 flex flex-wrap gap-2">
               {expert.specialties.map((s, i) => (
                 <span
                   key={i}
-                  className="rounded-full bg-sage-100 px-2.5 py-1 text-[0.76rem] font-medium text-teal-800"
+                  className="rounded-full bg-sage-100 px-3 py-1 text-[0.76rem] font-medium text-teal-800"
                 >
                   {l(s)}
                 </span>
@@ -169,14 +174,12 @@ function ExpertPopup({
         )}
 
         {expert.credentials.length > 0 && (
-          <div className="mt-4">
-            <p className="text-[0.66rem] font-semibold uppercase tracking-[0.12em] text-gold-600">
-              {t.credentials}
-            </p>
-            <ul className="mt-2 space-y-1.5">
+          <div className="mt-5">
+            <p className="text-[0.72rem] font-semibold text-gold-600">{t.credentials}</p>
+            <ul className="mt-2.5 space-y-2">
               {expert.credentials.map((c, i) => (
-                <li key={i} className="flex gap-2 text-[0.84rem] leading-relaxed text-ink-soft">
-                  <span className="mt-1.5 h-1 w-1 flex-none rounded-full bg-gold-500" />
+                <li key={i} className="flex gap-2.5 text-[0.84rem] leading-relaxed text-ink-soft">
+                  <span className="mt-2 h-1 w-1 flex-none rounded-full bg-gold-500" />
                   <span>{l(c)}</span>
                 </li>
               ))}

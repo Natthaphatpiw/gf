@@ -11,7 +11,7 @@ const landing = {
       eyebrow: "เกาะสมุย · ประเทศไทย",
       title: "ความสุข\nเริ่มต้นได้ที่นี่",
       subline:
-        "เริ่มต้นเส้นทางเวลเนสที่ออกแบบ\nตามจังหวะชีวิตของคุณ ท่ามกลางทะเลสงบ\nการเยียวยาแบบไทย และความสบายใจ\nที่ได้พักบนเกาะสมุย",
+        "เริ่มต้นเส้นทางเวลเนสที่ออกแบบตามจังหวะชีวิตของคุณ ท่ามกลางทะเลสงบ การเยียวยาแบบไทย และความสบายใจที่ได้พักบนเกาะสมุย",
       ctaPrimary: "เริ่มประเมินตัวเอง",
       ctaSecondary: "ดูแพ็กเกจทั้งหมด",
       highlights: [
@@ -128,14 +128,14 @@ const landing = {
     },
     expertShowcase: {
       eyebrow: "ทีมผู้เชี่ยวชาญ",
-      title: "มีคนช่วยดูแผนอยู่เบื้องหลัง",
+      title: "ช่วยดูแลแผนของคุณคุณอยู่เบื้องหลัง",
       intro:
-        "ผู้เชี่ยวชาญของเราเข้ามาช่วยให้แพ็กเกจที่ออกแบบด้วยเอไอไม่ใช่แค่สวยบนหน้าจอ แต่มีเหตุผลด้านสุขภาพ โภชนาการ การพักฟื้น และการดูแลใจรองรับ",
+        "แพทย์และนักโภชนาการที่เราร่วมงานด้วยจะช่วยตรวจทานแผนของคุณอย่างใส่ใจ — ให้ทุกขั้นตอนมีเหตุผลด้านสุขภาพ โภชนาการ และการพักฟื้นที่อุ่นใจ",
       cta: "ดูผู้เชี่ยวชาญทั้งหมด",
       previous: "เลื่อนไปผู้เชี่ยวชาญก่อนหน้า",
       next: "เลื่อนไปผู้เชี่ยวชาญถัดไป",
       verified: "ยืนยันโปรไฟล์แล้ว",
-      viewProfile: "ดูข้อมูล",
+      viewProfile: "ทำความรู้จัก",
       rating: "คะแนน",
       years: "ปีประสบการณ์",
       specialties: "ความเชี่ยวชาญ",
@@ -294,14 +294,14 @@ const landing = {
     },
     expertShowcase: {
       eyebrow: "EXPERT TEAM",
-      title: "Real expertise behind the plan",
+      title: "Real people caring for you behind the scenes",
       intro:
-        "Our experts help ensure AI-designed packages are not only beautiful on screen, but supported by practical thinking across health, nutrition, recovery and mind care.",
+        "The physicians and dietitians we work with review your plan with genuine care — so every step feels grounded in health, nutrition and recovery you can trust.",
       cta: "View all experts",
       previous: "Scroll to previous experts",
       next: "Scroll to next experts",
       verified: "Verified profile",
-      viewProfile: "View details",
+      viewProfile: "Get to know them",
       rating: "rating",
       years: "years of experience",
       specialties: "Specialties",

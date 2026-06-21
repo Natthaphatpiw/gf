@@ -18,6 +18,7 @@ export function QuoteBreak() {
         src="/images/well2.jpeg"
         alt=""
         fill
+        quality={90}
         sizes="100vw"
         className="object-cover"
       />
@@ -28,7 +29,7 @@ export function QuoteBreak() {
         <blockquote className="font-display text-2xl font-medium italic leading-snug text-cream-50 md:text-4xl md:leading-tight">
           “{t.text}”
         </blockquote>
-        <p className="mt-8 text-xs font-semibold uppercase tracking-[0.22em] text-gold-200">
+        <p className="quote-attribution mt-8 text-xs font-semibold uppercase tracking-[0.22em] text-gold-200">
           {t.attribution}
         </p>
       </div>

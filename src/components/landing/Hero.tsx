@@ -3,7 +3,7 @@
 import { ArrowRight, MapPin } from "lucide-react";
 import Image from "next/image";
 import { ButtonLink } from "@/components/ui/Button";
-import { useT } from "@/lib/i18n";
+import { useLocale, useT } from "@/lib/i18n";
 import landing from "@/lib/i18n/dictionaries/landing";
 
 /* ============================================================
@@ -11,7 +11,9 @@ import landing from "@/lib/i18n/dictionaries/landing";
  * ============================================================ */
 
 export function Hero() {
+  const { locale } = useLocale();
   const t = useT(landing).hero;
+  const th = locale === "th";
 
   return (
     <section className="bg-cream-50 pb-10">
@@ -31,16 +33,20 @@ export function Hero() {
 
         <div className="relative z-10 mx-auto flex min-h-[620px] w-full max-w-6xl items-center px-6 py-12 sm:min-h-[660px] sm:px-8 md:min-h-[520px] md:py-10 lg:min-h-[560px] lg:px-6">
           <div className="min-w-0 w-full max-w-[calc(100vw-3rem)] md:max-w-[35rem]">
-            <div className="animate-rise inline-flex w-fit items-center gap-2 rounded-full border border-gold-400/30 bg-teal-950/34 px-3.5 py-2 text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-gold-100 shadow-soft backdrop-blur-md">
+            <div
+              className={`animate-rise inline-flex w-fit items-center gap-2 rounded-full border border-gold-400/30 bg-teal-950/34 px-3.5 py-2 text-[0.72rem] font-semibold text-gold-100 shadow-soft backdrop-blur-md ${
+                th ? "th-type" : "uppercase tracking-[0.18em]"
+              }`}
+            >
               <MapPin className="h-3.5 w-3.5 text-gold-400" />
               <span>{t.eyebrow}</span>
             </div>
 
-            <h1 className="animate-rise-1 mt-5 whitespace-pre-line break-words font-display text-[3.05rem] font-semibold leading-[1.03] text-teal-900 drop-shadow-md [overflow-wrap:anywhere] sm:text-[4rem] md:text-[4.65rem] md:leading-[0.98]">
+            <h1 className="animate-rise-1 mt-5 whitespace-pre-line font-display text-[2.65rem] font-semibold leading-[1.12] text-teal-900 drop-shadow-md sm:text-[3.5rem] sm:leading-[1.06] md:text-[4.65rem] md:leading-[0.98]">
               {t.title}
             </h1>
 
-            <p className="animate-rise-2 mt-5 whitespace-pre-line break-words text-[0.98rem] font-medium leading-8 text-cream-50/90 drop-shadow-sm [overflow-wrap:anywhere] md:text-base md:leading-7">
+            <p className="animate-rise-2 mt-5 text-[0.98rem] font-medium leading-relaxed text-cream-50/90 drop-shadow-sm md:text-base md:leading-7">
               {t.subline}
             </p>
 
@@ -68,7 +74,7 @@ export function Hero() {
               {t.highlights.map((item) => (
                 <span key={item} className="inline-flex min-w-0 items-center gap-2">
                   <span className="h-1.5 w-1.5 flex-none rounded-full bg-gold-400" />
-                  <span className="break-words [overflow-wrap:anywhere]">{item}</span>
+                  <span>{item}</span>
                 </span>
               ))}
             </div>

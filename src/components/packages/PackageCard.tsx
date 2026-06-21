@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Check, Heart, Clock, ShoppingBag } from "lucide-react";
 import type { LText, WellnessPackage } from "@/lib/types";
-import { useL, useT } from "@/lib/i18n";
+import { useLocale, useL, useT } from "@/lib/i18n";
 import common from "@/lib/i18n/dictionaries/common";
 import accountDict from "@/lib/i18n/dictionaries/account";
 import { useAccount } from "@/lib/account";
@@ -22,9 +22,12 @@ const TIER_STYLES: Record<WellnessPackage["tier"], string> = {
 
 export function TierBadge({ tier }: { tier: WellnessPackage["tier"] }) {
   const t = useT(common);
+  const { locale } = useLocale();
   return (
     <span
-      className={`inline-block rounded-full px-3 py-1 text-[0.62rem] font-semibold uppercase tracking-[0.16em] ${TIER_STYLES[tier]}`}
+      className={`inline-block rounded-full px-3 py-1 text-[0.68rem] font-semibold leading-none ${TIER_STYLES[tier]} ${
+        locale === "en" ? "uppercase tracking-[0.16em]" : ""
+      }`}
     >
       {t.tier[tier]}
     </span>
@@ -123,6 +126,7 @@ export function PackageCard({
           src={pkg.image}
           alt={l(pkg.name)}
           fill
+          quality={90}
           sizes="(max-width: 768px) 100vw, 33vw"
           className="object-cover transition-transform duration-700 group-hover:scale-105"
         />
