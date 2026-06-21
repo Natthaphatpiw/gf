@@ -98,9 +98,9 @@ const packages = {
       madeForTitle: "เหมาะสำหรับ",
       consultTitle: "ปรึกษานักโภชนาการและแพทย์ก่อนจอง",
       consultBody:
-        "เมื่อเปิดใช้งาน หลังการจอง ทีมแพทย์และนักโภชนาการของเราจะทบทวนแพ็กเกจนี้เทียบกับผลประเมินของคุณ และอาจปรับมื้ออาหาร สถานที่ หรือที่พักให้เหมาะกับคุณยิ่งขึ้นก่อนยืนยัน",
+        "หลังจอง ทีมแพทย์และนักโภชนาการจะช่วยปรับมื้อ สถานที่ และที่พักให้เหมาะกับคุณก่อนยืนยัน",
       consultOn: "เปิดใช้งานแล้ว",
-      consultOff: "ยังไม่เปิดใช้งาน",
+      consultOff: "ยังไม่ได้เปิด — แต่เปิดได้เมื่ออยากให้ผู้เชี่ยวชาญช่วยดู",
       notFoundTitle: "ไม่พบแพ็กเกจที่คุณค้นหา",
       notFoundBody: "แพ็กเกจนี้อาจถูกย้ายหรือไม่มีอยู่แล้ว",
       notFoundCta: "กลับไปดูแพ็กเกจทั้งหมด",
@@ -204,9 +204,9 @@ const packages = {
       madeForTitle: "Made for",
       consultTitle: "Consult a nutritionist and doctor before booking",
       consultBody:
-        "When enabled, after you book, our medical and nutrition team reviews this package against your assessment and may fine-tune meals, venues or accommodation to suit you better before confirming.",
+        "When enabled, our medical and nutrition team fine-tunes meals, venues and accommodation to suit you before confirming your booking.",
       consultOn: "Enabled",
-      consultOff: "Not enabled",
+      consultOff: "Not enabled yet — turn it on when you want expert review",
       notFoundTitle: "We could not find this journey",
       notFoundBody: "This package may have moved or no longer exists.",
       notFoundCta: "Back to all journeys",

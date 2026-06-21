@@ -42,7 +42,7 @@ export function Hero() {
               <span>{t.eyebrow}</span>
             </div>
 
-            <h1 className="animate-rise-1 landing-heading mt-5 whitespace-pre-line font-display text-[2.65rem] font-semibold leading-[1.12] text-teal-900 drop-shadow-md sm:text-[3.5rem] sm:leading-[1.06] md:text-[4.65rem] md:leading-[0.98]">
+            <h1 className="animate-rise-1 landing-heading mt-5 whitespace-pre-line font-display text-[2.65rem] font-semibold leading-[1.12] text-gold-400 drop-shadow-[0_2px_16px_rgba(15,45,42,0.55)] sm:text-[3.5rem] sm:leading-[1.06] md:text-[4.65rem] md:leading-[0.98]">
               {t.title}
             </h1>
 

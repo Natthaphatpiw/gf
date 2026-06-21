@@ -62,8 +62,8 @@ export const EXPERTS: ExpertProfile[] = [
       en: "Helping each wellness plan become thoughtful, safe and grounded in real care quality.",
     },
     shortBio: {
-      th: "ประสบการณ์เด่นด้าน Medical Administration การพัฒนาคุณภาพบริการ และการเชื่อมระบบโรงพยาบาลกับการดูแลผู้เข้าพัก",
-      en: "Known for medical administration, service quality development and connecting hospital systems with guest care.",
+      th: "แพทย์ผู้บริหารที่เข้าใจทั้งระบบสุขภาพและการดูแลผู้เข้าพัก — อยู่ตรงนี้เพื่อให้คุณมั่นใจในทุกขั้นตอน",
+      en: "A physician-executive who understands both hospital systems and guest care — here so you can move forward with confidence.",
     },
     about: [
       {
@@ -171,8 +171,8 @@ export const EXPERTS: ExpertProfile[] = [
       en: "Designing healthy food guidance that connects nutrients, behaviour and real-life context.",
     },
     shortBio: {
-      th: "ผู้เชี่ยวชาญด้านโภชนาการชุมชน ระบบอาหารในโรงเรียน และ food environment จากสถาบันโภชนาการ มหาวิทยาลัยมหิดล",
-      en: "A community nutrition and food environment specialist from Mahidol University's Institute of Nutrition.",
+      th: "ช่วยออกแบบเมนูและแผนอาหารให้เข้ากับชีวิตจริง\nจากงานวิจัยโภชนาการ มหาวิทยาลัยมหิดล",
+      en: "She turns real-life eating into menus and guidance that actually fit you — from Mahidol University's Institute of Nutrition.",
     },
     about: [
       {
@@ -206,8 +206,8 @@ export const EXPERTS: ExpertProfile[] = [
     ],
     credentials: [
       {
-        th: "นักกำหนดอาหารวิชาชีพ สถาบันโภชนาการ มหาวิทยาลัยมหิดล",
-        en: "Registered dietitian, Institute of Nutrition, Mahidol University.",
+        th: "นักกำหนดอาหารมืออาชีพ — สถาบันโภชนาการ มหิดล",
+        en: "Registered dietitian — Institute of Nutrition, Mahidol University.",
       },
       {
         th: "M.Sc. Nutrition and Dietetics",

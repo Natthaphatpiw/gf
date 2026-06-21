@@ -155,7 +155,9 @@ function ExpertPopup({
           “{l(expert.quote)}”
         </blockquote>
 
-        <p className="mt-5 text-[0.88rem] leading-relaxed text-ink">{l(expert.shortBio)}</p>
+        <p className="landing-copy mt-5 whitespace-pre-line text-pretty text-[0.88rem] leading-relaxed text-ink">
+          {l(expert.shortBio)}
+        </p>
 
         {expert.specialties.length > 0 && (
           <div className="mt-5">
@@ -180,7 +182,7 @@ function ExpertPopup({
               {expert.credentials.map((c, i) => (
                 <li key={i} className="flex gap-2.5 text-[0.84rem] leading-relaxed text-ink-soft">
                   <span className="mt-2 h-1 w-1 flex-none rounded-full bg-gold-500" />
-                  <span>{l(c)}</span>
+                  <span className="landing-copy text-pretty">{l(c)}</span>
                 </li>
               ))}
             </ul>

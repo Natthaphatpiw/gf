@@ -77,7 +77,7 @@ export function ExpertCard({
         </p>
       </div>
 
-      <p className="mt-4 line-clamp-3 text-center text-[0.8rem] leading-relaxed text-ink-soft md:text-[0.86rem]">
+      <p className="landing-copy mt-4 line-clamp-3 whitespace-pre-line text-pretty text-center text-[0.8rem] leading-relaxed text-ink-soft md:text-[0.86rem]">
         {l(expert.shortBio)}
       </p>
 

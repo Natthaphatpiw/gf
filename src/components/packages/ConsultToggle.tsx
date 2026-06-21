@@ -56,11 +56,11 @@ export function ConsultToggle({ packageId }: { packageId: string }) {
               />
             </button>
           </div>
-          <p className="mt-2 text-sm leading-relaxed text-ink-soft">
+          <p className="landing-copy mt-2 text-pretty text-sm leading-relaxed text-ink-soft">
             {t.consultBody}
           </p>
           <p
-            className={`mt-3 text-xs font-semibold tracking-wide ${
+            className={`landing-copy mt-3 text-pretty text-xs font-semibold ${
               on ? "text-teal-700" : "text-ink-faint"
             }`}
           >

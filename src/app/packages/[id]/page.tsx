@@ -180,7 +180,7 @@ export default function PackageDetailPage({
         <section className="animate-rise-2 mt-10">
           <div className="rounded-3xl bg-sage-100 p-6 md:p-7">
             <p className="eyebrow text-teal-700">{t.madeForTitle}</p>
-            <p className="mt-3 text-sm leading-relaxed text-teal-900 md:text-base">
+            <p className="landing-copy mt-3 whitespace-pre-line text-pretty text-sm leading-relaxed text-teal-900 md:text-base">
               {l(pkg.suitableFor)}
             </p>
           </div>
@@ -259,7 +259,7 @@ function NutritionSection({ details }: { details: PackageCareDetails }) {
             {details.notes.map((note, i) => (
               <li key={i} className="flex gap-2.5 text-sm leading-relaxed text-ink-soft">
                 <Check className="mt-1 h-4 w-4 shrink-0 text-teal-700" />
-                <span>{l(note)}</span>
+                <span className="landing-copy text-pretty">{l(note)}</span>
               </li>
             ))}
           </ul>

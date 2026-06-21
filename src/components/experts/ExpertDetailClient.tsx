@@ -48,7 +48,7 @@ export function ExpertDetailClient({ expert }: { expert: ExpertProfile }) {
               <blockquote className="mt-5 max-w-2xl border-l-2 border-gold-400 pl-4 font-display text-xl font-semibold leading-snug text-teal-700 md:text-[1.55rem]">
                 {l(expert.quote)}
               </blockquote>
-              <p className="mt-4 max-w-2xl text-[0.9rem] leading-relaxed text-ink-soft md:text-[0.96rem]">
+              <p className="landing-copy mt-4 max-w-2xl whitespace-pre-line text-pretty text-[0.9rem] leading-relaxed text-ink-soft md:text-[0.96rem]">
                 {l(expert.shortBio)}
               </p>
               <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
@@ -153,7 +153,7 @@ export function ExpertDetailClient({ expert }: { expert: ExpertProfile }) {
               {expert.credentials.map((item) => (
                 <p
                   key={item.en}
-                  className="border-l border-gold-300 pl-4 text-[0.9rem] leading-relaxed text-ink-soft md:text-[0.96rem]"
+                  className="landing-copy border-l border-gold-300 pl-4 text-pretty text-[0.9rem] leading-relaxed text-ink-soft md:text-[0.96rem]"
                 >
                   {l(item)}
                 </p>

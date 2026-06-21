@@ -110,7 +110,7 @@ export function ProgramDetailClient({ program }: { program: BlueprintProgram }) 
 
         {/* Suitable for + why */}
         <Section icon={<Target className="h-4 w-4" />} title={t.detail.suitableFor}>
-          <p className="text-[0.9rem] leading-relaxed text-ink-soft md:text-[0.96rem]">
+          <p className="landing-copy whitespace-pre-line text-pretty text-[0.9rem] leading-relaxed text-ink-soft md:text-[0.96rem]">
             {l(program.suitableFor)}
           </p>
         </Section>
@@ -128,7 +128,7 @@ export function ProgramDetailClient({ program }: { program: BlueprintProgram }) 
                 <p className="font-display text-[1rem] font-semibold leading-tight text-teal-900">
                   {l(m.title)}
                 </p>
-                <p className="mt-1.5 text-[0.8rem] leading-relaxed text-ink-soft">
+                <p className="landing-copy mt-1.5 text-pretty text-[0.8rem] leading-relaxed text-ink-soft">
                   {l(m.detail)}
                 </p>
               </div>
