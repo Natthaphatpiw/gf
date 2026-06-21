@@ -2,23 +2,23 @@
 
 @theme {
   /* ----- Goodfill Care palette (mist / deep teal / Samui gold) ----- */
-  --color-cream-50: #FAF6E8;
-  --color-cream-100: #FAF6E8;
+  --color-cream-50: #F1FAF5;
+  --color-cream-100: #F1FAF5;
   --color-cream-200: #F3EEDC;
   --color-cream-300: #EAE2CC;
 
-  --color-teal-50: #FAF6E8;
+  --color-teal-50: #F1FAF5;
   --color-teal-100: #F3EEDC;
   --color-teal-200: #DCD3B8;
   --color-teal-300: #15B5AA;
   --color-teal-500: #066E6F;
-  --color-teal-600: #0C5F55;
-  --color-teal-700: #0C5F55;
+  --color-teal-600: #0D5E57;
+  --color-teal-700: #0D5E57;
   --color-teal-800: #3D5C57;
-  --color-teal-900: #09241f;
+  --color-teal-900: #1B3B36;
   --color-teal-950: #052c24;
 
-  --color-sage-100: #FAF6E8;
+  --color-sage-100: #F1FAF5;
   --color-sage-200: #F3EEDC;
   --color-sage-300: #DCD3B8;
 

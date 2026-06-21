@@ -13,7 +13,7 @@ export function TrustStrip() {
   const t = useT(landing).trust;
 
   return (
-    <section className="overflow-hidden bg-[#FAF6E8] py-10 md:py-14">
+    <section className="overflow-hidden bg-cream-50 py-10 md:py-14">
       <div className="mx-auto max-w-6xl px-6">
         <div className="mx-auto max-w-3xl text-center">
           <p className="eyebrow text-gold-600 tracking-[0.16em]">{t.eyebrow}</p>
