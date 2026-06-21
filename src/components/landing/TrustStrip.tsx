@@ -17,10 +17,10 @@ export function TrustStrip() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="mx-auto max-w-3xl text-center">
           <p className="eyebrow text-gold-600">{t.eyebrow}</p>
-          <h2 className="mt-3 font-display text-2xl font-semibold leading-tight text-teal-900 sm:text-3xl md:text-4xl">
+          <h2 className="landing-heading mt-3 font-display text-2xl font-semibold leading-snug text-teal-900 sm:text-3xl md:text-4xl">
             {t.title}
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-sm font-medium leading-relaxed text-ink-soft md:text-base">
+          <p className="landing-copy mx-auto mt-4 max-w-2xl text-sm text-ink-soft md:text-base">
             {t.intro}
           </p>
         </div>

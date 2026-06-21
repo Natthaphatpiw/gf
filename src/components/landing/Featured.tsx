@@ -28,11 +28,11 @@ export function Featured() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="mx-auto max-w-2xl text-center">
           <p className="eyebrow">{t.eyebrow}</p>
-          <h2 className="mt-3 font-display text-2xl font-semibold leading-tight text-teal-900 sm:text-3xl md:text-4xl">
+          <h2 className="landing-heading mt-3 font-display text-2xl font-semibold leading-snug text-teal-900 sm:text-3xl md:text-4xl">
             {t.title}
           </h2>
           <div className="ornament my-6" />
-          <p className="text-sm leading-relaxed text-ink-soft md:text-base">
+          <p className="landing-copy whitespace-pre-line text-sm text-ink-soft md:text-base">
             {t.intro}
           </p>
         </div>

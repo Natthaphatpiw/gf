@@ -11,13 +11,13 @@ const landing = {
       eyebrow: "เกาะสมุย · ประเทศไทย",
       title: "ความสุข\nเริ่มต้นได้ที่นี่",
       subline:
-        "เริ่มต้นเส้นทางเวลเนสที่ออกแบบตามจังหวะชีวิตของคุณ ท่ามกลางทะเลสงบ การเยียวยาแบบไทย และความสบายใจที่ได้พักบนเกาะสมุย",
+        "เริ่มต้นเส้นทางเวลเนสตามจังหวะชีวิตของคุณ\nท่ามกลางทะเลสงบ การเยียวยาแบบไทย และความสบายใจบนเกาะสมุย",
       ctaPrimary: "เริ่มประเมินตัวเอง",
       ctaSecondary: "ดูแพ็กเกจทั้งหมด",
       highlights: [
         "ฟรี · ใช้เวลาเพียง 2 นาที",
         "แนะนำแพ็กเกจใน 10 ข้อ",
-        "เอไอช่วยจับคู่แพ็กเกจ",
+        "คัดแพ็กเกจให้ตรงใจคุณ",
         "ผู้เชี่ยวชาญช่วยดูแลแผน",
       ],
     },
@@ -42,19 +42,19 @@ const landing = {
       eyebrow: "เพียงสามขั้นตอน",
       title: "เส้นทางของคุณ เริ่มต้นง่ายเพียงนี้",
       intro:
-        "ไม่มีแบบฟอร์มยืดยาว ไม่มีศัพท์ทางการแพทย์ที่ชวนงง มีเพียงการดูแลที่เข้าใจคุณตั้งแต่ลมหายใจแรก",
+        "ไม่มีแบบฟอร์มยืดยาว ไม่มีศัพท์ที่ชวนงง\nมีแค่การดูแลที่เข้าใจคุณตั้งแต่เริ่มต้น",
       steps: [
         {
-          title: "เล่นแบบประเมินสั้น ๆ",
-          body: "ตอบคำถามเบา ๆ 10 ข้อ ในเวลาประมาณสองนาที เพื่อให้เราเข้าใจร่างกาย จิตใจ และจังหวะชีวิตของคุณ",
+          title: "เริ่มด้วยแบบประเมินสั้น ๆ",
+          body: "ตอบคำถามเบา ๆ 10 ข้อ\nใช้เวลาแค่สองนาที — เพื่อให้เรารู้จักคุณมากขึ้น",
         },
         {
-          title: "เอไอออกแบบเส้นทางเฉพาะคุณ",
-          body: "ระบบของเราถักทอแพ็กเกจที่เหมาะกับคุณที่สุด จากสปา อาหาร การฝึกกาย และการดูแลใจทั่วทั้งเกาะ",
+          title: "เราคัดแพ็กเกจให้ตรงใจคุณ",
+          body: "จากสปา อาหาร การฝึกกาย และการดูแลใจ\nเราคัดแพ็กเกจที่เหมาะกับคุณ",
         },
         {
-          title: "ผู้เชี่ยวชาญปรับและยืนยัน",
-          body: "ทีมผู้เชี่ยวชาญด้านเวลเนสตรวจทาน ปรับให้ละเอียด และยืนยันทุกรายละเอียดก่อนการเดินทางของคุณ",
+          title: "ผู้เชี่ยวชาญช่วยตรวจทานให้อุ่นใจ",
+          body: "ทีมผู้เชี่ยวชาญช่วยพิจารณา\nปรับรายละเอียดก่อนเริ่มเดินทาง",
         },
       ],
     },
@@ -62,39 +62,39 @@ const landing = {
       eyebrow: "เกาะสมุย ดีท็อกซ์ และดูแลสุขภาพ",
       title: "เวลเนสที่โอบรับคุณทั้งกายและใจ",
       intro:
-        "เราเชื่อมโยงทุกบ้านแห่งการดูแลของเกาะสมุยไว้ในที่เดียว แปดมิติที่ทำงานประสานกันเพื่อความเป็นอยู่ที่ดีของคุณอย่างแท้จริง",
+        "เราเชื่อมโยงบ้านแห่งการดูแลของเกาะสมุยไว้ในที่เดียว\nแปดมิติที่ดูแลคุณทั้งกายและใจ",
       items: [
         {
           name: "ที่พักเพื่อเวลเนส",
-          body: "รีสอร์ตและรีทรีตริมทะเลที่ออกแบบมาเพื่อการพักผ่อนอย่างลึกซึ้ง",
+          body: "รีสอร์ตริมทะเล\nออกแบบมาเพื่อให้คุณพักจริง ๆ",
         },
         {
           name: "สปาและการนวดไทย",
-          body: "ศาสตร์การเยียวยาด้วยสมุนไพรและสัมผัสอันอ่อนโยนสืบทอดมาแต่โบราณ",
+          body: "นวดไทยและสมุนไพรท้องถิ่น\nสัมผัสอ่อนโยนเหมือนถูกดูแล",
         },
         {
           name: "จิตใจและสมาธิ",
-          body: "การเจริญสติ ฝึกหายใจ และเซสชันคืนสมดุลให้จิตใจสงบนิ่ง",
+          body: "สติ ลมหายใจ และเซสชัน\nที่ช่วยให้ใจสงบลง",
         },
         {
           name: "การฝึกกายและฟิตเนส",
-          body: "โยคะริมหาด มวยไทย และการฝึกความแข็งแรงกับครูผู้เชี่ยวชาญ",
+          body: "โยคะริมหาด มวยไทย\nฝึกกายกับครูที่เข้าใจจังหวะ",
         },
         {
           name: "อาหารเพื่อสุขภาพ",
-          body: "ครัวจากพืชและเมนูบำบัดที่ปรุงจากวัตถุดิบสดใหม่ของเกาะ",
+          body: "ครัวสุขภาพและเมนูบำบัด\nจากวัตถุดิบสดของเกาะ",
         },
         {
           name: "การแพทย์เชิงป้องกัน",
-          body: "การตรวจสุขภาพและคำปรึกษาจากแพทย์ เพื่อความอุ่นใจในทุกย่างก้าว",
+          body: "ตรวจสุขภาพและปรึกษาแพทย์\nเพื่อให้คุณเริ่มต้นอย่างอุ่นใจ",
         },
         {
           name: "ธรรมชาติและวัฒนธรรม",
-          body: "ป่าเขา ทะเล และมรดกทางวัฒนธรรมที่เติมเต็มจิตวิญญาณ",
+          body: "ทะเล ป่าเขา และวัฒนธรรม\nที่เติมความสงบให้หัวใจ",
         },
         {
-          name: "ผู้ช่วยส่วนตัวและการดูแล",
-          body: "ผู้ช่วยส่วนตัวที่คอยประสานทุกรายละเอียดตลอดการเดินทางของคุณ",
+          name: "ผู้ช่วยส่วนตัว",
+          body: "มีคนช่วยประสานทุกรายละเอียด\nตลอดการเดินทางของคุณ",
         },
       ],
     },
@@ -128,9 +128,9 @@ const landing = {
     },
     expertShowcase: {
       eyebrow: "ทีมผู้เชี่ยวชาญ",
-      title: "ช่วยดูแลแผนของคุณคุณอยู่เบื้องหลัง",
+      title: "ช่วยดูแลแผนของคุณอยู่เบื้องหลัง",
       intro:
-        "แพทย์และนักโภชนาการที่เราร่วมงานด้วยจะช่วยตรวจทานแผนของคุณอย่างใส่ใจ — ให้ทุกขั้นตอนมีเหตุผลด้านสุขภาพ โภชนาการ และการพักฟื้นที่อุ่นใจ",
+        "ทีมแพทย์และนักโภชนาการ\nช่วยตรวจทานแผนอย่างใส่ใจ",
       cta: "ดูผู้เชี่ยวชาญทั้งหมด",
       previous: "เลื่อนไปผู้เชี่ยวชาญก่อนหน้า",
       next: "เลื่อนไปผู้เชี่ยวชาญถัดไป",
@@ -146,7 +146,7 @@ const landing = {
       eyebrow: "เส้นทางคัดสรร",
       title: "สามเส้นทางที่ผู้คนหลงรัก",
       intro:
-        "จากหนึ่งวันแห่งการรีเซ็ต สู่ห้าวันแห่งการเยียวยาอันลึกซึ้ง เลือกจังหวะที่ใช่สำหรับคุณ",
+        "จากหนึ่งวันแห่งการรีเซ็ต\nสู่ห้าวันแห่งการเยียวยาที่ลึกซึ้ง",
       cta: "ดูแพ็กเกจทั้งหมด",
     },
     quote: {
@@ -156,7 +156,8 @@ const landing = {
     teaser: {
       eyebrow: "ค้นพบตัวตนของคุณ",
       title: "คุณคือนักเดินทางเวลเนสแบบใด",
-      body: "แบบประเมินของเราจะเผยอาร์คีไทป์เวลเนสประจำตัวคุณ จากแปดมิติของความเป็นอยู่ที่ดี พร้อมเส้นทางที่ออกแบบมาเพื่อคุณโดยเฉพาะ ทั้งหมดนี้ในเวลาประมาณสองนาที",
+      body:
+        "แบบประเมินของเราจะเผยอาร์คีไทป์เวลเนสของคุณ\nจากแปดมิติของความเป็นอยู่ที่ดี — ใช้เวลาแค่สองนาที",
       points: [
         "อาร์คีไทป์เวลเนสเฉพาะตัว 1 ใน 16 แบบ",
         "ข้อสังเกตเรื่องความเครียด การนอน และจิตใจ",
@@ -167,7 +168,7 @@ const landing = {
     closing: {
       eyebrow: "การเดินทางของคุณรออยู่",
       title: "ให้สมุยดูแลคุณสักครั้ง",
-      body: "ใช้เวลาประมาณสองนาที เพื่อเริ่มต้นเส้นทางเวลเนสที่ออกแบบมาเพื่อคุณคนเดียว",
+      body: "ใช้เวลาแค่สองนาที\nเพื่อเริ่มต้นเส้นทางที่ออกแบบมาเพื่อคุณ",
       cta: "เริ่มประเมินตัวเอง",
       note: "ฟรี · ไม่มีข้อผูกมัด",
     },
@@ -211,16 +212,16 @@ const landing = {
         "No long forms, no clinical jargon. Only care that understands you from the very first breath.",
       steps: [
         {
-          title: "Play a short assessment",
-          body: "Answer 10 gentle questions in about two minutes, so we understand your body, your mind and the rhythm of your days.",
+          title: "Begin with a gentle assessment",
+          body: "Answer 10 unhurried questions in about two minutes — so we can understand your body, mind and the rhythm of your days.",
         },
         {
-          title: "AI crafts your personal journey",
-          body: "Our system weaves the package that fits you best, drawn from spa, cuisine, movement and mind care across the whole island.",
+          title: "We curate what fits you",
+          body: "From spa, cuisine, movement and mind care across Koh Samui — we bring forward the packages that suit you best.",
         },
         {
-          title: "Experts refine and confirm",
-          body: "Our wellness specialists review, fine-tune every detail and confirm your itinerary before you ever set foot on the island.",
+          title: "Experts review with care",
+          body: "Our specialists help review, refine every detail and confirm each step before your journey begins.",
         },
       ],
     },
@@ -232,35 +233,35 @@ const landing = {
       items: [
         {
           name: "Wellness Stay",
-          body: "Seaside resorts and retreats designed for deep, unhurried rest.",
+          body: "Seaside resorts — made for rest that feels truly deep.",
         },
         {
           name: "Spa & Thai Healing",
-          body: "Ancient herbal rituals and the gentlest healing touch, passed down through generations.",
+          body: "Local herbs and Thai massage — a touch that feels cared for.",
         },
         {
           name: "Mind & Mental",
-          body: "Mindfulness, breathwork and sessions that return the mind to stillness.",
+          body: "Mindfulness, breathwork and sessions that gently settle the mind.",
         },
         {
           name: "Physical",
-          body: "Beach yoga, Muay Thai and strength training with seasoned teachers.",
+          body: "Beach yoga, Muay Thai — movement with teachers who read your pace.",
         },
         {
           name: "Healthy Food",
-          body: "Plant-based kitchens and healing menus built from the island's freshest produce.",
+          body: "Healing kitchens and menus from the island's freshest produce.",
         },
         {
           name: "Medical & Preventive",
-          body: "Health screening and physician consultations for quiet peace of mind.",
+          body: "Health screening and physician guidance — so you begin with confidence.",
         },
         {
           name: "Nature & Culture",
-          body: "Forest, sea and living heritage that nourish the spirit.",
+          body: "Sea, forest and local heritage — quiet nourishment for the heart.",
         },
         {
           name: "Concierge & Care",
-          body: "A personal host who orchestrates every detail throughout your journey.",
+          body: "Someone to coordinate every detail — throughout your journey.",
         },
       ],
     },
@@ -296,7 +297,7 @@ const landing = {
       eyebrow: "EXPERT TEAM",
       title: "Real people caring for you behind the scenes",
       intro:
-        "The physicians and dietitians we work with review your plan with genuine care — so every step feels grounded in health, nutrition and recovery you can trust.",
+        "Our physicians and dietitians review your plan with care — so you can begin with confidence.",
       cta: "View all experts",
       previous: "Scroll to previous experts",
       next: "Scroll to next experts",

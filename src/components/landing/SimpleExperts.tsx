@@ -34,11 +34,11 @@ export function SimpleExperts() {
       <div className="relative mx-auto max-w-4xl px-4 py-14 md:px-6 md:py-20">
         <div className="mx-auto max-w-2xl text-center">
           <p className="eyebrow">{t.eyebrow}</p>
-          <h2 className="mt-3 font-display text-2xl font-semibold leading-snug text-teal-900 sm:text-3xl md:text-4xl">
+          <h2 className="landing-heading mt-3 font-display text-2xl font-semibold leading-snug text-teal-900 sm:text-3xl md:text-4xl">
             {t.title}
           </h2>
           <div className="ornament my-5" />
-          <p className="text-[0.92rem] leading-relaxed text-ink-soft md:text-base">
+          <p className="landing-copy mx-auto max-w-md whitespace-pre-line text-[0.92rem] text-ink-soft md:max-w-lg md:text-base">
             {t.intro}
           </p>
         </div>
@@ -60,14 +60,14 @@ export function SimpleExperts() {
                       fill
                       unoptimized
                       sizes="116px"
-                      className="object-cover object-top contrast-[1.03] saturate-[1.04]"
+                      className="object-cover object-top"
                     />
                   )}
                 </span>
                 <h3 className="mt-5 font-display text-[1.15rem] font-semibold leading-snug text-teal-900">
                   {l(e.name)}
                 </h3>
-                <p className="mt-1.5 text-[0.84rem] leading-relaxed text-ink-soft">
+                <p className="landing-copy mt-1.5 text-balance text-[0.84rem] text-ink-soft">
                   {l(e.title)}
                 </p>
               </div>
@@ -138,7 +138,7 @@ function ExpertPopup({
                 fill
                 unoptimized
                 sizes="112px"
-                className="object-cover object-top contrast-[1.03] saturate-[1.04]"
+                className="object-cover object-top"
               />
             )}
           </span>

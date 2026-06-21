@@ -59,11 +59,11 @@ export function ExpertCard({
             <Image
               src={expert.image}
               alt={name}
-              width={264}
-              height={330}
+              width={305}
+              height={390}
+              unoptimized
               sizes="88px"
-              className="h-full w-full object-cover"
-              style={{ objectPosition: "top center" }}
+              className="h-full w-full object-cover object-top"
             />
           ) : (
             <span aria-hidden="true">{initials}</span>

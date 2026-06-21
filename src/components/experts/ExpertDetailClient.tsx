@@ -77,8 +77,9 @@ export function ExpertDetailClient({ expert }: { expert: ExpertProfile }) {
                     src={expert.image}
                     alt={name}
                     fill
+                    unoptimized
                     sizes="(min-width: 768px) 320px, 80vw"
-                    className="object-cover"
+                    className="object-cover object-top"
                     priority
                   />
                 ) : (

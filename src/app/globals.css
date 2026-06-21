@@ -118,6 +118,27 @@ p, li, button, input, textarea, select {
   }
 }
 
+/* Landing page copy — tuned for Thai mobile line breaks */
+.landing-heading {
+  text-wrap: balance;
+}
+
+.landing-copy {
+  text-wrap: pretty;
+  line-height: 1.7;
+}
+
+:lang(th) .landing-copy {
+  word-break: normal;
+  overflow-wrap: normal;
+}
+
+@media (max-width: 640px) {
+  :lang(th) .landing-copy {
+    line-height: 1.75;
+  }
+}
+
 @media (max-width: 640px) {
   body {
     font-size: 15.5px;

@@ -19,7 +19,7 @@ export function Hero() {
     <section className="bg-cream-50 pb-10">
       <div className="relative min-h-[620px] w-full overflow-hidden bg-teal-950 shadow-deep sm:min-h-[660px] md:min-h-[520px] lg:min-h-[560px]">
         <Image
-          src="/images/hero.jpg"
+          src="/images/opt/hero.jpg"
           alt=""
           fill
           priority
@@ -42,11 +42,11 @@ export function Hero() {
               <span>{t.eyebrow}</span>
             </div>
 
-            <h1 className="animate-rise-1 mt-5 whitespace-pre-line font-display text-[2.65rem] font-semibold leading-[1.12] text-teal-900 drop-shadow-md sm:text-[3.5rem] sm:leading-[1.06] md:text-[4.65rem] md:leading-[0.98]">
+            <h1 className="animate-rise-1 landing-heading mt-5 whitespace-pre-line font-display text-[2.65rem] font-semibold leading-[1.12] text-teal-900 drop-shadow-md sm:text-[3.5rem] sm:leading-[1.06] md:text-[4.65rem] md:leading-[0.98]">
               {t.title}
             </h1>
 
-            <p className="animate-rise-2 mt-5 text-[0.98rem] font-medium leading-relaxed text-cream-50/90 drop-shadow-sm md:text-base md:leading-7">
+            <p className="animate-rise-2 landing-copy mt-5 whitespace-pre-line text-[0.98rem] font-medium text-cream-50/90 drop-shadow-sm md:text-base">
               {t.subline}
             </p>
 
@@ -74,7 +74,7 @@ export function Hero() {
               {t.highlights.map((item) => (
                 <span key={item} className="inline-flex min-w-0 items-center gap-2">
                   <span className="h-1.5 w-1.5 flex-none rounded-full bg-gold-400" />
-                  <span>{item}</span>
+                  <span className="min-w-0 landing-copy">{item}</span>
                 </span>
               ))}
             </div>

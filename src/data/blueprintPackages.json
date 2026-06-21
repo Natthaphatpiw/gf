@@ -36,7 +36,7 @@
         "th": "หลับลึก ฟื้นเต็มที่",
         "en": "Sleep readiness & deep rest"
       },
-      "image": "/programs/deep-sleep-sanctuary.png",
+      "image": "/programs/opt/deep-sleep-sanctuary.jpg",
       "durationLabel": {
         "th": "ครึ่งวัน",
         "en": "Half day"
@@ -453,7 +453,7 @@
         "th": "ใจนิ่ง",
         "en": "Stress downshift"
       },
-      "image": "/programs/calm-mind.png",
+      "image": "/programs/opt/calm-mind.jpg",
       "durationLabel": {
         "th": "ครึ่งวัน",
         "en": "Half day"
@@ -850,7 +850,7 @@
         "th": "เบาหัว",
         "en": "Low-sensory recovery"
       },
-      "image": "/programs/clear-head.png",
+      "image": "/programs/opt/clear-head.jpg",
       "durationLabel": {
         "th": "ครึ่งวัน",
         "en": "Half day"
@@ -1261,7 +1261,7 @@
         "th": "ลำไส้สบาย",
         "en": "Digestive comfort"
       },
-      "image": "/programs/gut-reset.png",
+      "image": "/programs/opt/gut-reset.jpg",
       "durationLabel": {
         "th": "ครึ่งวัน",
         "en": "Half day"
@@ -1682,7 +1682,7 @@
         "th": "คลายล้าจากการเดินทาง",
         "en": "Arrival & travel recovery"
       },
-      "image": "/programs/samui-reset.png",
+      "image": "/programs/opt/samui-reset.jpg",
       "durationLabel": {
         "th": "ครึ่งวัน · วันแรกของทริป",
         "en": "Half day · arrival"
@@ -2105,7 +2105,7 @@
         "th": "เติมพลังก่อนกลับ",
         "en": "Pre-departure recharge"
       },
-      "image": "/programs/samui-recharge.png",
+      "image": "/programs/opt/samui-recharge.jpg",
       "durationLabel": {
         "th": "ครึ่งวัน–เต็มวัน",
         "en": "Half to full day"
@@ -2508,7 +2508,7 @@
         "th": "ทำงานได้ ไม่หมดไฟ",
         "en": "Recovery for working travellers"
       },
-      "image": "/programs/workmode-recovery.png",
+      "image": "/programs/opt/workmode-recovery.jpg",
       "durationLabel": {
         "th": "เต็มวัน · มีแบบ 1–5 วัน",
         "en": "Full day · 1–5 day options"

@@ -17,11 +17,11 @@ export function ClosingCTA() {
     <section className="bg-teal-900 px-6 py-24 md:py-32">
       <div className="mx-auto max-w-2xl text-center">
         <p className="eyebrow text-gold-200">{t.eyebrow}</p>
-        <h2 className="mt-3 font-display text-2xl font-semibold leading-tight text-cream-50 sm:text-3xl md:text-4xl">
+        <h2 className="landing-heading mt-3 font-display text-2xl font-semibold leading-snug text-cream-50 sm:text-3xl md:text-4xl">
           {t.title}
         </h2>
         <div className="ornament my-7" />
-        <p className="mx-auto max-w-md text-sm leading-relaxed text-cream-100/80 md:text-base">
+        <p className="landing-copy mx-auto max-w-md whitespace-pre-line text-sm text-cream-100/80 md:text-base">
           {t.body}
         </p>
 
