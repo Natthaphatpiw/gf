@@ -150,8 +150,8 @@ const landing = {
       cta: "ดูแพ็กเกจทั้งหมด",
     },
     quote: {
-      text: "ความสงบไม่ใช่สถานที่ที่คุณไปถึง แต่คือสิ่งที่คุณค้นพบ เมื่อโลกทั้งใบเงียบลงพอที่จะได้ยินตัวเอง",
-      attribution: "ปรัชญาแห่งการดูแลของเรา",
+      text: "ทะเลสงบ ลมอ่อน และคนที่เข้าใจจังหวะของคุณ\nนี่คือการเดินทางที่คุณไม่ต้องไปคนเดียว",
+      attribution: "เกาะสมุยรอคุณอยู่",
     },
     teaser: {
       eyebrow: "ค้นพบตัวตนของคุณ",
@@ -317,8 +317,8 @@ const landing = {
       cta: "Explore all packages",
     },
     quote: {
-      text: "Stillness is not a place you arrive at. It is what you discover once the world grows quiet enough to hear yourself again.",
-      attribution: "Our philosophy of care",
+      text: "Quiet sea, gentle air and people who understand your rhythm.\nThis is a journey you do not have to take alone.",
+      attribution: "Koh Samui is waiting for you",
     },
     teaser: {
       eyebrow: "DISCOVER YOURSELF",

@@ -26,10 +26,10 @@ export function QuoteBreak() {
 
       <div className="relative z-10 mx-auto max-w-3xl px-6 text-center">
         <div className="ornament mb-8" />
-        <blockquote className="font-display text-2xl font-medium italic leading-snug text-cream-50 md:text-4xl md:leading-tight">
+        <blockquote className="landing-heading landing-copy whitespace-pre-line font-display text-[1.45rem] font-medium italic leading-snug text-cream-50 sm:text-2xl md:text-4xl md:leading-tight">
           “{t.text}”
         </blockquote>
-        <p className="quote-attribution mt-8 text-xs font-semibold uppercase tracking-[0.22em] text-gold-200">
+        <p className="quote-attribution mt-8 text-sm font-medium text-gold-200">
           {t.attribution}
         </p>
       </div>
