@@ -20,7 +20,6 @@ import type { DialOutcome, OutcomeOverview, PackageOutcome } from "@/lib/outcome
 
 /* brand palette (literal hex, matches @theme tokens) */
 const TEAL = "#0D5E57";
-const TEAL_DEEP = "#1B3B36";
 const TEAL_BRIGHT = "#15B5AA";
 const GOLD = "#E6B53B";
 const GOLD_DEEP = "#C59622";
@@ -28,14 +27,6 @@ const SAGE = "#C9BE9C";
 const CREAM = "#F3EEDC";
 const INK_SOFT = "#3D5C57";
 const INK_FAINT = "#83968f";
-
-const DIAL_COLOR: Record<DialKey, string> = {
-  stress: TEAL_DEEP,
-  migraine: GOLD_DEEP,
-  sleep: TEAL,
-  mind: TEAL_BRIGHT,
-  energy: GOLD,
-};
 
 const DIAL_ORDER: DialKey[] = ["stress", "migraine", "sleep", "mind", "energy"];
 
@@ -348,20 +339,28 @@ function arcPath(cx: number, cy: number, rO: number, rI: number, a0: number, a1:
   return `M${x0} ${y0} A${rO} ${rO} 0 ${large} 1 ${x1} ${y1} L${x2} ${y2} A${rI} ${rI} 0 ${large} 0 ${x3} ${y3} Z`;
 }
 
+const STAR_COLOR: Record<number, string> = {
+  5: TEAL,
+  4: TEAL_BRIGHT,
+  3: GOLD,
+  2: GOLD_DEEP,
+  1: SAGE,
+};
+
 function DonutSection({ data }: { data: OutcomeOverview }) {
   const t = useT(impactDict);
-  const dials = orderedDials(data).filter((d) => d.improvementPoints > 0);
-  const total = dials.reduce((s, d) => s + d.improvementPoints, 0) || 1;
+  const slices = data.ratingDistribution;
+  const total = slices.reduce((s, r) => s + r.count, 0) || 1;
+  const satisfied = slices.filter((r) => r.stars >= 4).reduce((s, r) => s + r.share, 0);
 
   let acc = -Math.PI / 2;
-  const segs = dials.map((d) => {
-    const frac = d.improvementPoints / total;
+  const segs = slices.map((r) => {
+    const frac = r.count / total;
     const a0 = acc;
     const a1 = acc + frac * Math.PI * 2;
     acc = a1;
-    return { d, a0, a1, frac };
+    return { r, a0, a1, frac };
   });
-
   const cx = 100;
   const cy = 100;
 
@@ -372,28 +371,33 @@ function DonutSection({ data }: { data: OutcomeOverview }) {
         <div className="flex flex-col items-center gap-6 sm:flex-row sm:justify-center sm:gap-10">
           <svg viewBox="0 0 200 200" className="h-48 w-48 shrink-0" role="img" aria-label={t.donut.title}>
             {segs.map((s) => (
-              <path key={s.d.dial} d={arcPath(cx, cy, 92, 56, s.a0, s.a1)} fill={DIAL_COLOR[s.d.dial]} />
+              <path key={s.r.stars} d={arcPath(cx, cy, 92, 56, s.a0, s.a1)} fill={STAR_COLOR[s.r.stars]} />
             ))}
-            <text x={cx} y={cy - 4} fontSize={30} fontWeight={700} fill={TEAL} textAnchor="middle">
-              {total}
+            <text x={cx} y={cy - 4} fontSize={32} fontWeight={700} fill={TEAL} textAnchor="middle">
+              {data.avgRating.toFixed(1)}
             </text>
             <text x={cx} y={cy + 18} fontSize={11} fill={INK_FAINT} textAnchor="middle">
-              {t.unit}
+              {t.donut.centerLabel}
             </text>
           </svg>
           <ul className="w-full max-w-xs space-y-2.5">
             {segs.map((s) => (
-              <li key={s.d.dial} className="flex items-center gap-3 text-[0.86rem]">
-                <span className="h-3 w-3 flex-none rounded-sm" style={{ background: DIAL_COLOR[s.d.dial] }} />
-                <span className="flex-1 text-ink">{t.dialShort[s.d.dial]}</span>
-                <span className="font-semibold text-teal-800">
-                  {s.d.improvementPoints} {t.unit}
+              <li key={s.r.stars} className="flex items-center gap-3 text-[0.88rem]">
+                <span className="h-3 w-3 flex-none rounded-sm" style={{ background: STAR_COLOR[s.r.stars] }} />
+                <span className="flex flex-1 items-center gap-1.5 text-ink">
+                  <span className="font-semibold">{s.r.stars}</span>
+                  <Star className="h-3.5 w-3.5 fill-gold-400 text-gold-400" />
                 </span>
-                <span className="w-10 text-right text-ink-faint">{Math.round(s.frac * 100)}%</span>
+                <span className="w-12 text-right font-semibold text-teal-800">
+                  {Math.round(s.frac * 100)}%
+                </span>
               </li>
             ))}
           </ul>
         </div>
+        <p className="mt-5 rounded-2xl bg-teal-50/70 py-2.5 text-center text-[0.9rem] font-semibold text-teal-800">
+          {Math.round(satisfied * 100)}% {t.donut.satisfied}
+        </p>
       </ChartCard>
     </section>
   );
@@ -463,6 +467,18 @@ function HeatmapSection({ data }: { data: OutcomeOverview }) {
       </div>
 
       <ChartCard>
+        <div className="mb-4 flex items-center justify-center gap-2 text-[0.72rem] text-ink-faint">
+          <span>{t.heat.legendLow}</span>
+          <span
+            className="h-2.5 w-24 rounded-full sm:w-36"
+            style={{ background: `linear-gradient(to right, ${CREAM}, ${TEAL})` }}
+          />
+          <span>{t.heat.legendHigh}</span>
+          <span className="ml-2 flex items-center gap-1">
+            <span className="h-3 w-3 rounded-sm ring-2 ring-inset" style={{ boxShadow: `inset 0 0 0 2px ${GOLD}` }} />
+            {t.heat.best}
+          </span>
+        </div>
         <div className="overflow-x-auto no-scrollbar">
           <table className="w-full min-w-[520px] border-separate border-spacing-1 text-center">
             <thead>
@@ -480,6 +496,11 @@ function HeatmapSection({ data }: { data: OutcomeOverview }) {
             <tbody>
               {rows.map((p) => {
                 const pkg = getPackage(p.packageId);
+                const cells = DIAL_ORDER.map((dk) => ({
+                  dk,
+                  pts: Math.max(0, dialByKey(p, dk)?.improvementPoints ?? 0),
+                }));
+                const bestPts = Math.max(...cells.map((c) => c.pts));
                 return (
                   <tr key={p.packageId}>
                     <td className="px-2 py-1 text-left">
@@ -490,14 +511,19 @@ function HeatmapSection({ data }: { data: OutcomeOverview }) {
                         {pkg ? l(pkg.name) : p.packageId}
                       </Link>
                     </td>
-                    {DIAL_ORDER.map((dk) => {
-                      const pts = Math.max(0, dialByKey(p, dk)?.improvementPoints ?? 0);
+                    {cells.map(({ dk, pts }) => {
                       const ratio = pts / maxPts;
+                      const isBest = pts === bestPts && pts > 0;
                       return (
                         <td
                           key={dk}
-                          className="rounded-md px-1 py-1.5 text-[0.78rem] font-semibold tabular-nums"
-                          style={{ background: cellColor(ratio), color: ratio > 0.55 ? "#F1FAF5" : INK_SOFT }}
+                          className="rounded-md px-1 py-1.5 text-[0.78rem] tabular-nums"
+                          style={{
+                            background: cellColor(ratio),
+                            color: ratio > 0.55 ? "#F1FAF5" : INK_SOFT,
+                            fontWeight: isBest ? 800 : 600,
+                            boxShadow: isBest ? `inset 0 0 0 2px ${GOLD}` : undefined,
+                          }}
                         >
                           {pts}
                         </td>

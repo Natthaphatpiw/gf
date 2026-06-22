@@ -38,15 +38,21 @@ const impact = {
       axis: "ดัชนีสุขภาวะ (ยิ่งสูงยิ่งดี)",
     },
     donut: {
-      title: "การเปลี่ยนแปลงมาจากด้านไหนบ้าง",
-      intro: "แต่ละด้านมีส่วนช่วยให้ภาพรวมดีขึ้นมากน้อยแค่ไหน",
-      totalLabel: "จุดที่ดีขึ้นรวม",
+      title: "ความพึงพอใจของแขก",
+      intro: "คะแนนที่แขกให้หลังจบโปรแกรม (เต็ม 5 ดาว)",
+      stars: "{n} ดาว",
+      centerLabel: "เฉลี่ย",
+      satisfied: "ให้ 4–5 ดาว",
     },
     heat: {
-      title: "แต่ละแพ็กเกจช่วยดัชนีไหนมากที่สุด",
-      intro: "ยิ่งสีเข้ม = ค่าดัชนีนั้นเปลี่ยนแปลงเฉลี่ยมาก (จุด)",
+      title: "แต่ละแพ็กเกจเก่งด้านไหน",
+      intro:
+        "แถบที่เข้มที่สุดในแต่ละแถวคือจุดเด่นของแพ็กเกจนั้น — ตัวเลขคือค่าดัชนีที่ดีขึ้นเฉลี่ย (จุด) แตะชื่อเพื่อดูแพ็กเกจ",
       packageCol: "แพ็กเกจ",
       filterAll: "ทั้งหมด",
+      legendLow: "เปลี่ยนน้อย",
+      legendHigh: "เปลี่ยนมาก",
+      best: "จุดเด่น",
     },
     dialShort: {
       stress: "ความเครียด",
@@ -98,15 +104,21 @@ const impact = {
       axis: "Wellness index (higher is better)",
     },
     donut: {
-      title: "Where the change comes from",
-      intro: "How much each dial contributes to the total improvement",
-      totalLabel: "total points gained",
+      title: "How guests rated us",
+      intro: "Ratings from guests after they finished a program (out of 5 stars)",
+      stars: "{n} stars",
+      centerLabel: "average",
+      satisfied: "rated 4–5 stars",
     },
     heat: {
-      title: "Which index each package moves most",
-      intro: "Darker = a bigger average change on that index (points)",
+      title: "What each package is best at",
+      intro:
+        "The darkest cell in each row is that package's strength — numbers are the average index gain (points). Tap a name to view the package.",
       packageCol: "Package",
       filterAll: "All",
+      legendLow: "smaller change",
+      legendHigh: "bigger change",
+      best: "Strength",
     },
     dialShort: {
       stress: "Stress",

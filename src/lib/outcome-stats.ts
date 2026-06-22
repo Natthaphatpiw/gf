@@ -43,11 +43,19 @@ export interface PackageOutcome {
   headline: { dial: DialKey; improvementPct: number; improvedShare: number };
 }
 
+export interface RatingSlice {
+  stars: number;
+  count: number;
+  share: number;
+}
+
 export interface OutcomeOverview {
   totalParticipants: number;
   packagesMeasured: number;
   avgRating: number;
   satisfiedShare: number;
+  /** 5★→1★ counts (only non-empty buckets), for the satisfaction donut */
+  ratingDistribution: RatingSlice[];
   dials: DialOutcome[];
   headline: { dial: DialKey; improvementPct: number; improvedShare: number };
   byPackage: PackageOutcome[];
@@ -149,11 +157,25 @@ export function aggregateOutcomes(
 
   const dates = samples.map((s) => s.completedAt).sort();
 
+  const ratingCounts = [0, 0, 0, 0, 0]; // index 0 = 1★
+  for (const s of samples) {
+    const r = Math.max(1, Math.min(5, Math.round(s.rating)));
+    ratingCounts[r - 1]++;
+  }
+  const ratingDistribution: RatingSlice[] = [5, 4, 3, 2, 1]
+    .map((stars) => ({
+      stars,
+      count: ratingCounts[stars - 1],
+      share: samples.length ? ratingCounts[stars - 1] / samples.length : 0,
+    }))
+    .filter((r) => r.count > 0);
+
   return {
     totalParticipants: samples.length,
     packagesMeasured: byId.size,
     avgRating: overall.avgRating,
     satisfiedShare: overall.satisfiedShare,
+    ratingDistribution,
     dials: overall.dials,
     headline: overall.headline,
     byPackage,
