@@ -698,3 +698,30 @@ begin
     end if;
   end if;
 end $$;
+
+-- ============================================================
+-- 11) Outcome samples — anonymised, aggregate-only pre/post (T1 → T2)
+--     records that power the PUBLIC impact dashboard. Carries no PII:
+--     just a package, an archetype code, a coarse gender, a 1–5 rating
+--     and the 5 dial values before/after. Safe to surface as pooled
+--     statistics. (Idempotent — re-run anytime.)
+-- ============================================================
+
+create table if not exists public.outcome_samples (
+  id             text primary key,             -- OS-XXXXXX
+  package_id     text not null,
+  archetype_code text,
+  gender         text,
+  rating         int not null check (rating between 1 and 5),
+  before         jsonb not null,               -- { stress, migraine, sleep, mind, energy }
+  after          jsonb not null,
+  completed_at   timestamptz not null default now(),
+  created_at     timestamptz not null default now()
+);
+
+create index if not exists outcome_samples_package_idx
+  on public.outcome_samples (package_id);
+
+-- RLS: service-role only, like every other table. The dashboard API
+-- reads with the service role and only ever returns pooled aggregates.
+alter table public.outcome_samples enable row level security;

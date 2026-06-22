@@ -16,6 +16,7 @@ import type {
   ProposalSlotKind,
 } from "@/lib/consultation";
 import type { LText } from "@/lib/types";
+import type { OutcomeSample } from "@/lib/outcome-samples";
 
 /* ---------------- Account / cart / favourites types ---------------- */
 
@@ -359,6 +360,60 @@ export async function setCheckinTestimonialConsent(
   existing.testimonialConsent = granted;
   memory.checkins.set(existing.id, existing);
   return existing;
+}
+
+/* ---------------- Outcome samples (impact dashboard) ---------------- */
+
+function rowToOutcomeSample(row: Record<string, unknown>): OutcomeSample {
+  return {
+    id: row.id as string,
+    packageId: row.package_id as string,
+    archetypeCode: (row.archetype_code as string) ?? "",
+    gender: (row.gender as OutcomeSample["gender"]) ?? "unspecified",
+    rating: Math.max(1, Math.min(5, Number(row.rating ?? 3))),
+    before: row.before as OutcomeSample["before"],
+    after: row.after as OutcomeSample["after"],
+    completedAt: (row.completed_at as string) ?? "",
+  };
+}
+
+/**
+ * Pre/post samples that power the impact dashboard. Returns null when
+ * Supabase isn't configured (caller falls back to the in-code dataset),
+ * so the dashboard works in demo mode too.
+ */
+export async function getStoredOutcomeSamples(): Promise<OutcomeSample[] | null> {
+  const sb = getSupabase();
+  if (!sb) return null;
+  const { data, error } = await sb.from("outcome_samples").select("*");
+  if (error) throw new Error(`Supabase query failed: ${error.message}`);
+  return (data ?? []).map(rowToOutcomeSample);
+}
+
+/** Upsert the mock dataset into Supabase (no-op without Supabase). */
+export async function seedOutcomeSamples(
+  samples: OutcomeSample[],
+): Promise<{ inserted: number; demo: boolean }> {
+  const sb = getSupabase();
+  if (!sb) return { inserted: 0, demo: true };
+  const rows = samples.map((s) => ({
+    id: s.id,
+    package_id: s.packageId,
+    archetype_code: s.archetypeCode,
+    gender: s.gender,
+    rating: s.rating,
+    before: s.before,
+    after: s.after,
+    completed_at: s.completedAt,
+  }));
+  let inserted = 0;
+  for (let i = 0; i < rows.length; i += 500) {
+    const chunk = rows.slice(i, i + 500);
+    const { error } = await sb.from("outcome_samples").upsert(chunk, { onConflict: "id" });
+    if (error) throw new Error(`Supabase upsert failed: ${error.message}`);
+    inserted += chunk.length;
+  }
+  return { inserted, demo: false };
 }
 
 /* ---------------- Accounts (customers + password) ---------------- */

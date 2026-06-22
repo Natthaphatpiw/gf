@@ -15,6 +15,7 @@ const common = {
       experts: "ผู้เชี่ยวชาญ",
       favorites: "รายการที่ถูกใจ",
       bookings: "การจองของฉัน",
+      impact: "ผลลัพธ์",
     },
     actions: {
       start: "เริ่มเลย",
@@ -75,6 +76,7 @@ const common = {
       privacy: "นโยบายความเป็นส่วนตัว",
       contact: "ติดต่อเรา",
       rights: "สงวนลิขสิทธิ์",
+      impact: "ผลลัพธ์จริง",
     },
   },
   en: {
@@ -87,6 +89,7 @@ const common = {
       experts: "Experts",
       favorites: "Favourites",
       bookings: "My Bookings",
+      impact: "Results",
     },
     actions: {
       start: "Begin",
@@ -147,6 +150,7 @@ const common = {
       privacy: "Privacy policy",
       contact: "Contact us",
       rights: "All rights reserved",
+      impact: "Real outcomes",
     },
   },
 } satisfies Record<Locale, unknown>;

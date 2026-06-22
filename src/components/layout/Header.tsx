@@ -54,6 +54,7 @@ export function Header() {
     { href: "/", label: t.nav.home },
     { href: "/assessment", label: t.nav.assessment },
     { href: "/packages", label: t.nav.packages },
+    { href: "/impact", label: t.nav.impact },
     { href: "/experts", label: t.nav.experts },
     { href: "/orders", label: t.nav.bookings },
   ];

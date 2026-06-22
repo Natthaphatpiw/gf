@@ -39,6 +39,12 @@ export function Footer() {
           </p>
           <div className="flex gap-6">
             <Link
+              href="/impact"
+              className="transition-colors hover:text-cream-50"
+            >
+              {t.footer.impact}
+            </Link>
+            <Link
               href="/privacy"
               className="transition-colors hover:text-cream-50"
             >
