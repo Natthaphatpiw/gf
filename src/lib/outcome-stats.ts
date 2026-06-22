@@ -19,6 +19,12 @@ export interface DialOutcome {
   avgAfter: number;
   /** signed (after − before), rounded */
   avgDelta: number;
+  /** good-direction average change in index points (positive = improved) */
+  improvementPoints: number;
+  /** good-direction "higher is better" index (0–100) before, for the profile line */
+  goodBefore: number;
+  /** good-direction "higher is better" index (0–100) after */
+  goodAfter: number;
   /** direction-aware positive % (reduction for symptoms, gain for capacities) */
   improvementPct: number;
   /** 0–1 share of guests who moved in the good direction beyond the deadband */
@@ -66,12 +72,19 @@ function dialOutcome(dial: DialKey, samples: OutcomeSample[]): DialOutcome {
     return move >= DELTA_DEADBAND;
   }).length;
 
+  // "good-direction" index where higher always means better (for the profile line)
+  const goodBefore = lowerIsBetter ? 100 - avgBefore : avgBefore;
+  const goodAfter = lowerIsBetter ? 100 - avgAfter : avgAfter;
+
   return {
     dial,
     direction: DIAL_DIRECTION[dial],
     avgBefore: Math.round(avgBefore),
     avgAfter: Math.round(avgAfter),
     avgDelta: Math.round(avgAfter - avgBefore),
+    improvementPoints: Math.round(goodMove),
+    goodBefore: Math.round(goodBefore),
+    goodAfter: Math.round(goodAfter),
     improvementPct: Math.round(improvementPct),
     improvedShare: samples.length ? improvedCount / samples.length : 0,
   };
@@ -79,7 +92,7 @@ function dialOutcome(dial: DialKey, samples: OutcomeSample[]): DialOutcome {
 
 /** Good-direction movement of a dial in absolute points (always ≥ 0 when it improved). */
 function goodMovePoints(d: DialOutcome): number {
-  return d.direction === "lowerIsBetter" ? -d.avgDelta : d.avgDelta;
+  return d.improvementPoints;
 }
 
 function summarize(samples: OutcomeSample[]): {

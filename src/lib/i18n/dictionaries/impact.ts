@@ -2,51 +2,62 @@ import type { Locale } from "@/lib/types";
 
 /* ============================================================
  * Impact dashboard strings — the public, aggregate pre/post
- * outcomes page. Bilingual TH / EN. Templates use {pct}/{n}
- * placeholders the component fills in.
+ * outcomes page. Framed around how much the AVERAGE indices
+ * change (in points), shown as charts. Bilingual TH / EN.
+ * {pct}/{n}/{v} placeholders are filled in by the component.
  * ============================================================ */
 
 const impact = {
   th: {
     eyebrow: "ผลลัพธ์จริงจากแขกของเรา",
-    title: "สิ่งที่เปลี่ยนไป\nหลังการดูแล",
+    title: "ดัชนีสุขภาวะ\nเปลี่ยนไปเท่าไหร่",
     intro:
-      "ทุกตัวเลขด้านล่างมาจากการประเมินตัวเองก่อนเริ่ม (T1) และหลังจบโปรแกรม (T2) ของแขกจริง นำมารวมแบบไม่ระบุตัวตน เพื่อให้คุณเห็นว่าโปรแกรมของเราสร้างความเปลี่ยนแปลงได้จริงแค่ไหน",
+      "เรารวมแบบประเมินตัวเองก่อน (T1) และหลังจบโปรแกรม (T2) ของแขกจริงแบบไม่ระบุตัวตน แล้วดูว่าค่าดัชนีสุขภาวะทั้ง 5 ด้าน โดยเฉลี่ยขยับไปมากแค่ไหน",
     loading: "กำลังโหลดผลลัพธ์...",
+    unit: "จุด",
+    before: "ก่อน",
+    after: "หลัง",
+    decreased: "ลดลง",
+    increased: "เพิ่มขึ้น",
     stats: {
       guests: "แขกที่วัดผลก่อน–หลัง",
       satisfaction: "ความพึงพอใจเฉลี่ย",
       packages: "แพ็กเกจที่มีผลวัด",
     },
     highlights: {
-      title: "สิ่งที่แขกของเราบอกเล่า",
-      lessStress: "รู้สึกเครียดน้อยลง",
-      betterSleep: "นอนหลับได้ดีขึ้น",
-      moreEnergy: "มีพลังงานมากขึ้น",
-      ofGuests: "ของแขก",
+      title: "ดัชนีที่ขยับมากที่สุดโดยเฉลี่ย",
+      avg: "เฉลี่ย",
     },
-    dials: {
-      title: "ภาพรวมการเปลี่ยนแปลงทั้ง 5 ด้าน",
-      intro: "ค่าเฉลี่ยก่อนและหลังของแขกทุกคน รวมทุกแพ็กเกจ",
-      before: "ก่อน",
-      after: "หลัง",
-      reduced: "ลดลง",
-      improved: "ดีขึ้น",
-      guestsImproved: "{pct}% ของแขกดีขึ้นอย่างชัดเจน",
+    bar: {
+      title: "ค่าดัชนีเฉลี่ย ก่อน–หลังโปรแกรม",
+      intro: "ค่าเฉลี่ยของแขกทุกคน รวมทุกแพ็กเกจ (เต็ม 100)",
     },
-    packages: {
-      title: "ผลลัพธ์รายแพ็กเกจ",
-      intro: "เรียงตามด้านที่เปลี่ยนแปลงมากที่สุดของแต่ละแพ็กเกจ",
+    line: {
+      title: "ภาพรวมสุขภาวะยกระดับขึ้นทุกด้าน",
+      intro: "ปรับให้ทุกด้านเป็นทิศทาง “ยิ่งสูงยิ่งดี” เส้นหลังจึงอยู่เหนือเส้นก่อนเสมอ",
+      axis: "ดัชนีสุขภาวะ (ยิ่งสูงยิ่งดี)",
+    },
+    donut: {
+      title: "การเปลี่ยนแปลงมาจากด้านไหนบ้าง",
+      intro: "แต่ละด้านมีส่วนช่วยให้ภาพรวมดีขึ้นมากน้อยแค่ไหน",
+      totalLabel: "จุดที่ดีขึ้นรวม",
+    },
+    heat: {
+      title: "แต่ละแพ็กเกจช่วยดัชนีไหนมากที่สุด",
+      intro: "ยิ่งสีเข้ม = ค่าดัชนีนั้นเปลี่ยนแปลงเฉลี่ยมาก (จุด)",
+      packageCol: "แพ็กเกจ",
       filterAll: "ทั้งหมด",
-      participants: "แขก {n} คน",
-      rating: "ความพึงพอใจ",
-      topChange: "เปลี่ยนแปลงเด่น",
-      view: "ดูแพ็กเกจนี้",
-      empty: "ยังไม่มีผลลัพธ์ในหมวดนี้",
+    },
+    dialShort: {
+      stress: "ความเครียด",
+      migraine: "ไมเกรน",
+      sleep: "การนอน",
+      mind: "จิตใจ",
+      energy: "พลังงาน",
     },
     method: {
       title: "ที่มาของข้อมูล",
-      body: "ตัวเลขทั้งหมดมาจากแบบประเมินสุขภาวะที่แขกประเมินตนเองก่อนและหลังโปรแกรม โดยใช้มาตรวัดเดียวกันทุกครั้ง และนำมารวมแบบไม่ระบุตัวตน ตัวเลขเป็นค่าเฉลี่ยของกลุ่ม ไม่ใช่การรับประกันผลลัพธ์รายบุคคล",
+      body: "ตัวเลขทั้งหมดมาจากแบบประเมินสุขภาวะที่แขกประเมินตนเองก่อนและหลังโปรแกรม โดยใช้มาตรวัดเดียวกันทุกครั้ง และนำมาเฉลี่ยแบบไม่ระบุตัวตน เป็นค่าเฉลี่ยของกลุ่ม ไม่ใช่การรับประกันผลลัพธ์รายบุคคล",
       disclaimer:
         "โปรแกรมของเราเป็นการดูแลเชิงไลฟ์สไตล์เพื่อการพักฟื้น ไม่ใช่การวินิจฉัยหรือรักษาทางการแพทย์",
       updated: "อัปเดตล่าสุด",
@@ -59,44 +70,54 @@ const impact = {
   },
   en: {
     eyebrow: "Real outcomes from our guests",
-    title: "What changes\nafter the care",
+    title: "How far the\nindices move",
     intro:
-      "Every number below comes from real guests' own before (T1) and after (T2) wellness check-ins, pooled anonymously — so you can see how much our programs actually move the needle.",
+      "We pool real guests' own before (T1) and after (T2) self check-ins, anonymously, and look at how much the five wellness indices shift on average.",
     loading: "Loading outcomes…",
+    unit: "pts",
+    before: "Before",
+    after: "After",
+    decreased: "down",
+    increased: "up",
     stats: {
       guests: "guests measured before & after",
       satisfaction: "average satisfaction",
       packages: "packages with outcomes",
     },
     highlights: {
-      title: "What our guests tell us",
-      lessStress: "felt less stressed",
-      betterSleep: "slept better",
-      moreEnergy: "had more energy",
-      ofGuests: "of guests",
+      title: "The biggest average shifts",
+      avg: "on average",
     },
-    dials: {
-      title: "The five dials, before and after",
-      intro: "Average start and finish across every guest, all packages combined",
-      before: "Before",
-      after: "After",
-      reduced: "lower",
-      improved: "better",
-      guestsImproved: "{pct}% of guests clearly improved",
+    bar: {
+      title: "Average index, before & after",
+      intro: "Averaged across every guest, all packages combined (out of 100)",
     },
-    packages: {
-      title: "Outcomes by package",
-      intro: "Sorted by each package's biggest shift",
+    line: {
+      title: "The whole profile lifts on every dial",
+      intro: "Normalised so higher is better everywhere — the after-line sits above before",
+      axis: "Wellness index (higher is better)",
+    },
+    donut: {
+      title: "Where the change comes from",
+      intro: "How much each dial contributes to the total improvement",
+      totalLabel: "total points gained",
+    },
+    heat: {
+      title: "Which index each package moves most",
+      intro: "Darker = a bigger average change on that index (points)",
+      packageCol: "Package",
       filterAll: "All",
-      participants: "{n} guests",
-      rating: "satisfaction",
-      topChange: "Biggest change",
-      view: "View this package",
-      empty: "No outcomes in this group yet",
+    },
+    dialShort: {
+      stress: "Stress",
+      migraine: "Migraine",
+      sleep: "Sleep",
+      mind: "Mind",
+      energy: "Energy",
     },
     method: {
       title: "How we measure",
-      body: "All figures come from a self-reported wellness check-in taken before and after each program, on the same fixed instrument every time, then pooled anonymously. Numbers are group averages, not a guarantee of individual results.",
+      body: "All figures come from a self-reported wellness check-in taken before and after each program, on the same fixed instrument every time, then averaged anonymously. These are group averages, not a guarantee of individual results.",
       disclaimer:
         "Our programs are lifestyle wellness care for restoration — not medical diagnosis or treatment.",
       updated: "Last updated",
