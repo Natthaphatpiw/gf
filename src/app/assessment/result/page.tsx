@@ -80,8 +80,10 @@ export default function ResultPage() {
   };
 
   const shareGender = profile.gender ?? "female";
+  const shareCardUrl = siteUrl(
+    `/api/og/archetype/${profile.archetype.code.toUpperCase()}/${shareGender}`,
+  );
   const character = getArchetypeCharacter(profile.archetype.code, profile.gender);
-  const shareCharacter = getArchetypeCharacter(profile.archetype.code, shareGender);
   const sharePath = `/assessment/archetype/${profile.archetype.code.toUpperCase()}/${shareGender}`;
   const shareTitle = `${t.result.shareActionTitle} - ${l(profile.archetype.name)}`;
   const axisLabels = profile.archetype.code
@@ -218,7 +220,7 @@ export default function ResultPage() {
             shareTitle={shareTitle}
             shareText={shareTitle}
             shareUrl={siteUrl(sharePath)}
-            shareImageUrl={siteUrl(shareCharacter?.src ?? "/images/logo.png")}
+            shareImageUrl={shareCardUrl}
           />
         </div>
       </section>

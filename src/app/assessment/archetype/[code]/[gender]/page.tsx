@@ -28,11 +28,10 @@ export async function generateMetadata({
   if (!ARCHETYPE_CODES.includes(code) || !gender) return {};
 
   const archetype = getArchetype(code);
-  const character = getArchetypeCharacter(code, gender);
   const title = `${archetype.name.en} - Goodfill Care Wellness Character`;
   const description = archetype.description.en;
   const url = siteUrl(`/assessment/archetype/${code}/${gender}`);
-  const imageUrl = siteUrl(character?.src ?? "/images/logo.png");
+  const imageUrl = siteUrl(`/api/og/archetype/${code}/${gender}`);
 
   return {
     title,
@@ -50,7 +49,7 @@ export async function generateMetadata({
         {
           url: imageUrl,
           width: 1200,
-          height: 1200,
+          height: 630,
           alt: archetype.name.en,
         },
       ],
@@ -86,7 +85,7 @@ export default async function ArchetypeSharePage({
       archetype={archetype}
       characterSrc={character.src}
       shareUrl={siteUrl(path)}
-      shareImageUrl={siteUrl(character.src)}
+      shareImageUrl={siteUrl(`/api/og/archetype/${code}/${gender}`)}
     />
   );
 }

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { Link2, Check, Instagram, Share2 } from "lucide-react";
+import { Link2, Check, Instagram, Share2, Download } from "lucide-react";
 
 /* ============================================================
  * Social share row: Facebook, Instagram Story, LINE, Copy Link.
@@ -21,6 +21,7 @@ export type ShareIconLabels = {
   copy: string;
   copied: string;
   native: string;
+  save: string;
 };
 
 function CircleIcon({ label, onClick, children }: CircleIconProps) {
@@ -168,6 +169,25 @@ export function ShareIcons({
     window.open("https://www.instagram.com/", "_blank", "noopener,noreferrer");
   };
 
+  const handleDownloadCard = async () => {
+    if (!shareImageUrl) return;
+    try {
+      const res = await fetch(shareImageUrl);
+      if (!res.ok) return;
+      const blob = await res.blob();
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "goodfill-character.png";
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+    } catch {
+      /* download blocked — ignore */
+    }
+  };
+
   const handleCopyLink = async () => {
     if (!resolvedShareUrl) return;
     const ok = await copyToClipboard(resolvedShareUrl);
@@ -205,6 +225,11 @@ export function ShareIcons({
           <path d="M21.1 9.9c0-3.5-4.1-6.4-9.1-6.4S3 6.4 3 9.9c0 3.1 3.2 5.8 7.6 6.3.3 0 .7.3.8.7l.3 1.8c0 .2.2.4.4.4.2 0 .3 0 .4-.1.1 0 2.2-1.5 3-2.2 3.6-1 5.6-3.7 5.6-6.9zm-11.7 2H8.1V8c0-.3-.2-.5-.5-.5s-.5.2-.5.5v4.5c0 .3.2.5.5.5h1.8c.3 0 .5-.2.5-.5s-.2-.6-.5-.6zm2.4 0V8c0-.3-.2-.5-.5-.5s-.5.2-.5.5v4.5c0 .3.2.5.5.5s.5-.2.5-.5zm4.8-2.6H15c-.2 0-.3-.1-.3-.3V8c0-.3-.2-.5-.5-.5s-.5.2-.5.5v4.5c0 .3.2.5.5.5h2.1c.3 0 .5-.2.5-.5s-.2-.6-.5-.6zm3.3-1.9c0-.3-.2-.5-.5-.5h-2.1c-.3 0-.5.2-.5.5v4.5c0 .3.2.5.5.5h2.1c.3 0 .5-.2.5-.5s-.2-.6-.5-.6h-1.5V11h1.5c.3 0 .5-.2.5-.5s-.2-.6-.5-.6h-1.5V9.1h1.5c.3 0 .5-.2.5-.5z" />
         </svg>
       </CircleIcon>
+      {shareImageUrl && (
+        <CircleIcon label={labels.save} onClick={handleDownloadCard}>
+          <Download className="h-[18px] w-[18px]" strokeWidth={1.8} />
+        </CircleIcon>
+      )}
       <CircleIcon label={copied ? labels.copied : labels.copy} onClick={handleCopyLink}>
         {copied ? (
           <Check className="h-[18px] w-[18px] text-emerald-600 animate-scale" strokeWidth={2.2} />

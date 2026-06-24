@@ -95,6 +95,7 @@ const assessment = {
         copy: "คัดลอกลิงก์",
         copied: "คัดลอกลิงก์สำเร็จ",
         native: "แชร์ต่อไปยังแอปอื่น",
+        save: "บันทึกการ์ดรูปภาพ",
       },
       publicShare: {
         eyebrow: "คาแรกเตอร์เวลเนส",
@@ -211,6 +212,7 @@ const assessment = {
         copy: "Copy link",
         copied: "Link copied",
         native: "Share to another app",
+        save: "Save image card",
       },
       publicShare: {
         eyebrow: "Wellness character",
