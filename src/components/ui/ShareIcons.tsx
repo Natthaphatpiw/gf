@@ -24,6 +24,13 @@ export type ShareIconLabels = {
   save: string;
 };
 
+function isMobileDevice(): boolean {
+  return (
+    typeof navigator !== "undefined" &&
+    /android|iphone|ipad|ipod|mobile/i.test(navigator.userAgent)
+  );
+}
+
 function CircleIcon({ label, onClick, children }: CircleIconProps) {
   return (
     <button
@@ -93,8 +100,23 @@ export function ShareIcons({
     }
   };
 
-  const handleFacebookShare = () => {
+  const handleFacebookShare = async () => {
     if (!resolvedShareUrl) return;
+    // On mobile the facebook.com/sharer link is hijacked by the Facebook app
+    // (Universal/App Links) and opens the feed with no composer. The native
+    // share sheet → Facebook opens the real composer with the link + OG card.
+    if (isMobileDevice() && typeof navigator !== "undefined" && typeof navigator.share === "function") {
+      try {
+        await navigator.share({
+          title: shareTitle,
+          text: resolvedShareText,
+          url: resolvedShareUrl,
+        });
+      } catch {
+        /* cancelled or unavailable — don't fall back to the broken deep link */
+      }
+      return;
+    }
     window.open(
       `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(resolvedShareUrl)}`,
       "_blank",
