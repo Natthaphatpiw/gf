@@ -12,6 +12,7 @@ import { MobileTabBar } from "@/components/layout/MobileTabBar";
 import { Footer } from "@/components/layout/Footer";
 import { AuthModal } from "@/components/account/AuthModal";
 import { CartDrawer } from "@/components/account/CartDrawer";
+import { SITE_URL } from "@/lib/site";
 
 /* ----- Typography: serif display for Latin + Kanit for Thai readability. */
 
@@ -34,6 +35,7 @@ const kanit = Kanit({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: "Goodfill Care — Samui Wellness",
   description:
     "A personal wellness journey on Koh Samui — assessment, curated packages and expert care, crafted for you.",

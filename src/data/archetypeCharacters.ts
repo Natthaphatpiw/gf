@@ -19,6 +19,10 @@ const STYLE_TH =
 
 export const CHARACTER_FOLDER = "/archetypes/characters";
 
+const CHARACTER_IMAGE_FALLBACKS: Record<string, string> = {
+  "LAPB-male": "LAPB-female",
+};
+
 export const ARCHETYPE_CHARACTER_SPECS: Record<string, ArchetypeCharacterSpec> = {
   SAPB: {
     code: "SAPB",
@@ -199,7 +203,8 @@ export const ARCHETYPE_CHARACTER_SPECS: Record<string, ArchetypeCharacterSpec> =
 };
 
 export function characterFilename(code: string, gender: GuestGender): string {
-  return `${code.toUpperCase()}-${gender}.png`;
+  const baseName = `${code.toUpperCase()}-${gender}`;
+  return `${CHARACTER_IMAGE_FALLBACKS[baseName] ?? baseName}.png`;
 }
 
 export function getArchetypeCharacter(

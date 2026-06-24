@@ -20,6 +20,7 @@ import { CodeLetters } from "@/components/assessment/CodeLetters";
 import { UnlockCode } from "@/components/assessment/UnlockCode";
 import { GoalSelector } from "@/components/assessment/GoalSelector";
 import { getArchetypeCharacter } from "@/data/archetypeCharacters";
+import { siteUrl } from "@/lib/site";
 
 /* ============================================================
  * Assessment result — the shareable payoff of the journey.
@@ -78,7 +79,11 @@ export default function ResultPage() {
     router.push("/packages");
   };
 
+  const shareGender = profile.gender ?? "female";
   const character = getArchetypeCharacter(profile.archetype.code, profile.gender);
+  const shareCharacter = getArchetypeCharacter(profile.archetype.code, shareGender);
+  const sharePath = `/assessment/archetype/${profile.archetype.code.toUpperCase()}/${shareGender}`;
+  const shareTitle = `${t.result.shareActionTitle} - ${l(profile.archetype.name)}`;
   const axisLabels = profile.archetype.code
     .slice(0, 4)
     .split("")
@@ -210,7 +215,10 @@ export default function ResultPage() {
         <div className="mt-5 flex justify-center">
           <ShareIcons
             labels={t.result.shareActions}
-            shareTitle={t.result.shareActionTitle}
+            shareTitle={shareTitle}
+            shareText={shareTitle}
+            shareUrl={siteUrl(sharePath)}
+            shareImageUrl={siteUrl(shareCharacter?.src ?? "/images/logo.png")}
           />
         </div>
       </section>
