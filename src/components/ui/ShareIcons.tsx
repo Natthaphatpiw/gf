@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { Link2, Check, Instagram, Share2, Download } from "lucide-react";
+import { Link2, Check, Instagram, Share2, Download, Loader2 } from "lucide-react";
 
 /* ============================================================
  * Social share row: Facebook, Instagram Story, LINE, Copy Link.
@@ -62,6 +62,7 @@ export function ShareIcons({
 }) {
   const [resolvedShareUrl, setResolvedShareUrl] = useState(shareUrl ?? "");
   const [copied, setCopied] = useState(false);
+  const [saving, setSaving] = useState(false);
   const [isMobileShareAvailable, setIsMobileShareAvailable] = useState(false);
 
   useEffect(() => {
@@ -191,12 +192,35 @@ export function ShareIcons({
     window.open("https://www.instagram.com/", "_blank", "noopener,noreferrer");
   };
 
-  const handleDownloadCard = async () => {
-    if (!shareImageUrl) return;
+  const handleSaveCard = async () => {
+    if (!shareImageUrl || saving) return;
+    setSaving(true);
     try {
       const res = await fetch(shareImageUrl);
       if (!res.ok) return;
       const blob = await res.blob();
+      const file = new File([blob], "goodfill-character.png", {
+        type: blob.type || "image/png",
+      });
+
+      // Mobile: the native sheet's "Save Image" saves straight to Photos —
+      // far more convenient than a file download. Stay on this path even if
+      // the user cancels (don't drop them into a clunky download).
+      if (
+        typeof navigator !== "undefined" &&
+        typeof navigator.share === "function" &&
+        typeof navigator.canShare === "function" &&
+        navigator.canShare({ files: [file] })
+      ) {
+        try {
+          await navigator.share({ files: [file], title: shareTitle });
+        } catch {
+          /* cancelled — do nothing */
+        }
+        return;
+      }
+
+      // Desktop / no file-share support: direct download.
       const url = URL.createObjectURL(blob);
       const a = document.createElement("a");
       a.href = url;
@@ -206,7 +230,9 @@ export function ShareIcons({
       a.remove();
       URL.revokeObjectURL(url);
     } catch {
-      /* download blocked — ignore */
+      /* save blocked — ignore */
+    } finally {
+      setSaving(false);
     }
   };
 
@@ -248,8 +274,12 @@ export function ShareIcons({
         </svg>
       </CircleIcon>
       {shareImageUrl && (
-        <CircleIcon label={labels.save} onClick={handleDownloadCard}>
-          <Download className="h-[18px] w-[18px]" strokeWidth={1.8} />
+        <CircleIcon label={labels.save} onClick={handleSaveCard}>
+          {saving ? (
+            <Loader2 className="h-[18px] w-[18px] animate-spin" strokeWidth={1.8} />
+          ) : (
+            <Download className="h-[18px] w-[18px]" strokeWidth={1.8} />
+          )}
         </CircleIcon>
       )}
       <CircleIcon label={copied ? labels.copied : labels.copy} onClick={handleCopyLink}>
